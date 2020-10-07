@@ -1,0 +1,17 @@
+{
+ "package-id" : "hl7.fhir.us.medmorph",
+ "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph)", 
+ "canonical" : "http://hl7.org/fhir/us/fhir-medmorph", 
+ "introduction" : "The FHIR IG enables exchanging rosters of patients between Payers and Providers.",
+ "list" : [
+ {
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/HL7/fhir-medmorph",
+  "status" : "ci-build",
+  "current" : "true",
+  "sequence" : "DSTU1",
+  "fhirVersion" : "4.0.1"
+ }
+ ]
+}

@@ -1,0 +1,45 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="intro"> </a>
+  <h3>Introduction</h3>
+	<p>
+    The Making EHR Data More Available for Research and Public Health (MedMorph) project seeks to advance public health and patient-centered outcomes 
+    by using emerging health data and exchange standards, such as Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) and 
+    Clinical Quality Language (CQL), to develop and implement an interoperable solution that will enable access to clinical data. 
+    The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data is collected, 
+    used and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
+    The MedMorph project is funded by the Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE) 
+    Patient-Centered Outcomes Research Trust Fund and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) 
+    to advance research and public health goals.
+    </p>
+    <p>
+	The project is aiming to leverage the maturation of standards and requirements for certification of health information technology by the 
+	Office of the National Coordinator for Health IT (ONC) that underpin many EHRs. 
+	Examples such as Fast Healthcare Interoperability Resources (FHIR), the ONC 2015 Edition Common Clinical Data Set (CCDS), 
+	2015 Edition Cures Update - United States Core Data for Interoperability (USCDI) Version 1, February 2020 and 
+	standardized application programming interfaces (API) for patient services have created a health IT environment that is 
+	ripe for developing standards based scalable and extensible solutions to overcome interoperability challenges. 
+    </p>
+	<a name="technical"> </a>
+	<h3>Technical Overview</h3>
+	<p>
+    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
+    set important context).
+  </p>
+  <a name="walkthrough"> </a>
+  <p>
+    The main sections of this IG are:
+  </p>
+  <ul>
+    <li>
+      <a href="background.html">Background</a> - provides business context for the implementation guide and information that implementers should be
+      familiar with before reading the remainder of the IG.  There could be multiple pages for this.
+    </li>
+    <li>
+      <a href="spec.html">Detailed Specification</a> - The actual stuff implementers are expected to do.  (Could be multiple pages for this.)
+    </li>
+    <li>
+      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
+    </li>
+  </ul>
+</div>
