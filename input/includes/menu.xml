@@ -5,9 +5,14 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
       </b>
     </a>
+ 	<ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+    </ul>
     <ul class="dropdown-menu">
       <li>
-        <a href="background.html">Background</a>
+        <a href="background.html">Technical Overview</a>
       </li>
     </ul>
   </li>
