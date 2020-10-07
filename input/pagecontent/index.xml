@@ -20,12 +20,13 @@
 	standardized application programming interfaces (API) for patient services have created a health IT environment that is 
 	ripe for developing standards based scalable and extensible solutions to overcome interoperability challenges. 
     </p>
+	
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
 	<p>
     Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
     set important context).
-  </p>
+    </p>
   <a name="walkthrough"> </a>
   <p>
     The main sections of this IG are:
