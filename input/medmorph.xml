@@ -96,6 +96,11 @@
         <generation value="html"/>
       </page>
       <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="html"/>
+      </page>
+      <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
         <generation value="markdown"/>
