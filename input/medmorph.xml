@@ -93,12 +93,12 @@
       <page>
         <nameUrl value="background.html"/>
         <title value="Background"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="usecases.html"/>
         <title value="Use Cases"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="spec.html"/>

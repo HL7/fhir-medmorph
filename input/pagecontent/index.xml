@@ -20,21 +20,28 @@
 	standardized application programming interfaces (API) for patient services have created a health IT environment that is 
 	ripe for developing standards based scalable and extensible solutions to overcome interoperability challenges. 
     </p>
+    
+    <p>
+    The MedMorph project will create fully modeled use cases across three distinct areas namely hepatitis C virus [HCV], 
+    cancer reporting and health care surveys to inform the design of a scalable and extensible reference architecture 
+    to facilitate data exchange for both key patient-centered research questions and public health surveillance system requirements.
+    For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
+    </p>
 	
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
-	<p>
-    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
-    set important context).
-    </p>
   <a name="walkthrough"> </a>
   <p>
     The main sections of this IG are:
   </p>
   <ul>
     <li>
-      <a href="background.html">Background</a> - provides business context for the implementation guide and information that implementers should be
-      familiar with before reading the remainder of the IG.  There could be multiple pages for this.
+      <a href="background.html">Implementation Guide Overview</a> - provides context for the implementation guide and information that implementers should be
+      familiar with before reading the remainder of the IG.  
+    </li>
+    <li>
+      <a href="usecases.html">Use Cases and Workflows</a> - provides context for the implementation guide and information that implementers should be
+      familiar with before reading the remainder of the IG.  
     </li>
     <li>
       <a href="spec.html">Detailed Specification</a> - The actual stuff implementers are expected to do.  (Could be multiple pages for this.)
