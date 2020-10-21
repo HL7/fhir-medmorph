@@ -10,7 +10,7 @@
         <a href="{{site.data.info.assets}}background.html">Implementation Guide Overview</a>
       </li>
       <li>
-        <a href="{{site.data.info.assets}}usecases.html">Use Cases</a>
+        <a href="{{site.data.info.assets}}usecases.html">Use Cases and Workflows</a>
       </li>
     </ul>
   </li>
