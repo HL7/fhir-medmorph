@@ -5,14 +5,12 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
       </b>
     </a>
- 	<ul class="dropdown-menu">
+ 	<ul class="dropdown-menu">   
       <li>
-        <a href="usecases.html">Use Cases</a>
+        <a href="{{site.data.info.assets}}background.html">Implementation Guide Overview</a>
       </li>
-    </ul>
-    <ul class="dropdown-menu">
       <li>
-        <a href="background.html">Technical Overview</a>
+        <a href="{{site.data.info.assets}}usecases.html">Use Cases</a>
       </li>
     </ul>
   </li>
