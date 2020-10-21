@@ -38,12 +38,6 @@
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/mypatient"/>
-      </reference>
-      <description value="Overriding description because we can"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Library/example-sql"/>
       </reference>
       <description value="A test example"/>
@@ -59,20 +53,6 @@
 <reference value="MyLogicalModel/AS"/>
 </reference>
 </resource> -->
-    <resource>
-      <reference>
-        <reference value="Patient/example"/>
-      </reference>
-      <name value="Simple patient example"/>
-      <description value="A simple example showing how examples are defined and referenced"/>
-      <exampleCanonical value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/mypatient"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/valueset-no-codesystem"/>
-      </reference>
-      <name value="Value set for no code system"/>
-    </resource>
 <!--    <resource>
       <reference>
         <reference value="Library/example"/>
