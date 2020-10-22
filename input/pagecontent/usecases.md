@@ -35,9 +35,9 @@ This section defines the Actors and Systems that would be interacting to realize
 
 	Note: Knowledge artifacts do not contain any PHI or PII information.
 
-4. __Backend Services App__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The system uses the information supplied by the knowledge artifact repository to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and to whom the data should be reported. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to SMART on FHIR App which can be distributed to clinical care via EHR vendor specified processes. The EHR vendor specified processes are followed to enable the Backend Services App to use the EHR's FHIR APIs to access data. The healthcare organization is the one who is responsible for choosing and maintaining the Backend Services App within the organization.
+4. __Backend Service App__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The system uses the information supplied by the knowledge artifact repository to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and to whom the data should be reported. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to SMART on FHIR App which can be distributed to clinical care via EHR vendor specified processes. The EHR vendor specified processes are followed to enable the Backend Service App to use the EHR's FHIR APIs to access data. The healthcare organization is the one who is responsible for choosing and maintaining the Backend Service App within the organization.
 
-5. __Data/Trust Services__:  A set of services that can be used to pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research. These Data/Trust services are used as appropriate by the Backend Services App.  
+5. __Trust Service Provider__:  Trust Service Provider provides capabilities that can be used to pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organization. These capabilities are called as Trust Services. Trust Services are used when required appropriate by the Backend Service App.  
 
 6. __Trusted Third Party__: A system (e.g., HIE, RCKMS/AIMS Platform) at an intermediary organization that serves as a conduit to exchange data between healthcare organizations and PHAs. Trusted Third Parties perform the intermediary functions (e.g., apply business logic and informs the Reportability Response) using appropriate authorities and policies.
 
@@ -54,7 +54,7 @@ The following section outlines each of the MedMorph workflows, actors and their 
 
 #### Provisioning Workflow
 
-The provisioning workflow involves the activities where by a PHA or a Research Organization published a Knowledge Artifact specific to a use case. The published Knowledge Artifact is then downloaded by the Backend Services App. The Backend Services App may subscribe to notifications from the EHR based on data present within the Knowledge Artifact. The actors and steps involved in the workflow are as shown below.
+The provisioning workflow involves the activities where by a PHA or a Research Organization published a Knowledge Artifact specific to a use case. The published Knowledge Artifact is then downloaded by the Backend Service App. The Backend Service App may subscribe to notifications from the EHR based on data present within the Knowledge Artifact. The actors and steps involved in the workflow are as shown below.
 
 {::options parse_block_html="false" /}
 
@@ -67,7 +67,7 @@ The provisioning workflow involves the activities where by a PHA or a Research O
 
 #### Notification Workflow
 
-The notification workflow involves the activities where by a Provider as part of care delivery process updates a Patient's medical record within an EHR. The EHR based on the changes to the medical record and existing subscriptions will notify the Backend Services App of the changes in the medical record. The Backend Services App will perform actions such as querying the EHR for additional data, scheduling a reporting job, creating a report for submission based on the notification and the Knowledge Artifact data. The actors and steps involved in the workflow are as shown below.
+The notification workflow involves the activities where by a Provider as part of care delivery process updates a Patient's medical record within an EHR. The EHR based on the changes to the medical record and existing subscriptions will notify the Backend Service App of the changes in the medical record. The Backend Service App will perform actions such as querying the EHR for additional data, scheduling a reporting job, creating a report for submission based on the notification and the Knowledge Artifact data. The actors and steps involved in the workflow are as shown below.
 
  {::options parse_block_html="false" /}
 
@@ -79,7 +79,7 @@ The notification workflow involves the activities where by a Provider as part of
 
 #### Report Creation Workflow
 
-The Report Creation workflow involves the activities where by the Backend Services App collects the data necessary for creating the report to be submitted to the PHA or Research Organization. The Backend Services App may then perform additional activities such as Psuedonymization, Anonymization or de-identification based on specific use case and knowledge artifact. Finally the Backend Services App assembles the data in the required reporting format for submission. The actors and steps involved in the workflow are as shown below.
+The Report Creation workflow involves the activities where by the Backend Service App collects the data necessary for creating the report to be submitted to the PHA or Research Organization. The Backend Service App may then perform additional activities such as Psuedonymization, Anonymization or de-identification based on specific use case and knowledge artifact. Finally the Backend Service App assembles the data in the required reporting format for submission. The actors and steps involved in the workflow are as shown below.
 
  {::options parse_block_html="false" /}
 
@@ -92,7 +92,7 @@ The Report Creation workflow involves the activities where by the Backend Servic
 
 #### Data Submission Workflow
 
-The Data Submission Workflow involves the activities where by the Backend Services App packages the data and submits the data to the PHA or Research Organization. The data submission may occur through a Trusted Third Party as shown in the figure below. The actors and steps involved in the workflow are as shown below.
+The Data Submission Workflow involves the activities where by the Backend Service App packages the data and submits the data to the PHA or Research Organization. The data submission may occur through a Trusted Third Party as shown in the figure below. The actors and steps involved in the workflow are as shown below.
 
  {::options parse_block_html="false" /}
 
