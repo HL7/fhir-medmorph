@@ -12,7 +12,11 @@ Based on the above use cases, the reference architecture IG aims to minimize the
 
 ### Implementation Guides Types and their Relationships 
 
-The MedMorph project vision is to create this Reference Architecture Implementation Guide which is common to multiple public health and research use cases. However for each use case there will be specific data, workflow requirements and operational requirements that need to be considered for implementation. These use case specific content will be specified in other Implementation Guides called as **Content Implementation Guides**. It is expected that there will be one Content Implementation Guide per use case that needs to be operationalized. The relationship between Reference Architecture IG and the Content Implementation Guide is as shown in Figure 1 below.
+The MedMorph project vision is to create this Reference Architecture Implementation Guide which is common to multiple public health and research use cases. However for each use case there will be specific data, workflow requirements and operational requirements that need to be considered for implementation. These use case specific content will be specified in other Implementation Guides called as **Content Implementation Guides**. It is expected that there will be one Content Implementation Guide per use case that needs to be operationalized. 
+
+#### Relationship between MedMorph IG, Electronic Case Reporting (eCR) FHIR IG, and US Public Health (PH) Library 
+The eCR FHIR IG is currently published. The MedMorph Architecture IG and a newer version of eCR FHIR IG are being created for the January 2020 HL7 ballot cycle. However the US Public Health (PH) Library currently does not exist. The US PH Library will be created eventually to establish a baseline of common artifacts that will be used by multiple public health implementation guides including MedMorph, [Electronic Case Reporting (eCR) FHIR IG](http://hl7.org/fhir/us/ecr/),  and the other content implementation guides shown below. The initial content for the US PH Library will be derived from MedMorph and eCR FHIR IG. For the January 2020 HL7 ballot both MedMorph and eCR FHIR IGs will create artifacts that are aligned so that they can be moved to the US PH Library eventually. All artifacts which are candidates for being promoted to the US PH Library will use the words "us" or "US" and "ph" or "PH" as part of the profile definition, name and title elements. The relationships between the three IGs are as shown in Figure 1 below.
+
 
 
 {::options parse_block_html="false" /}
@@ -23,7 +27,21 @@ The MedMorph project vision is to create this Reference Architecture Implementat
 
 {::options parse_block_html="true" /}
 
-As shown in the above Figure, the MedMorph Reference Architecture IG is built on other foundational IGs such as US Core and Bulk Data IG which provide APIs for patient level data access and population level data access respectively. The MedMorph IG is used in turn by specific use cases. For example the Hepatitis C Virus IG would specify the profiles, search parameters and operations for use case specific requirements but would reuse the MedMorph IG to trigger events, submit data, process knowledge artifacts etc. 
+**NOTE to Reviewers:** 
+
+Although the US PH Library does not exist, it is being shown here as the direction that we will be taking under the guidance of the Public Health WG. The US PH Library will harmonize similar profiles from multiple IGs being produced under the sponsorship Public Health WG. This will ensure consistency across implementation guides, reduce profile proliferation and provide a starting point for future content implementation guides.  
+
+#### Relationship between MedMorph IG and US Core FHIR IG  
+
+As shown in the above Figure, the MedMorph Reference Architecture IG is built on other basic FHIR capabilities and the US Core IG.  From the US Core IG, MedMorph will use profiles as required for each use case. In addition to the profiles, For all public health reporting use cases being considered for MedMorph, the patient level FHIR APIs specified in US Core will be leveraged extensively by MedMorph and other content implementation guides.
+
+#### Relationship between MedMorph IG and FHIR Bulk Data Access
+ 
+For research use cases, specifically where data about multiple patients need to be retrieved, MedMorph will use FHIR Bulk Data Access specified in the BulkDataAccess IG. MedMorph IG will also leverage Backend Services Authorization protocols specifed in the BulkDataAccess IG to secure system to system communication transactions.
+
+#### Relationship between MedMorph IG and Content Implementation Guides 
+
+The MedMorph IG is an architecture IG and does not prescribe content specific to any use case. Rather it specifies the  the workflow processing, trigger mechanisms using PlanDefinition, ActivityDefinition, ValueSets etc, and  APIs for message routing using Bundle, MessageHeader etc. The Content Implementation Guide such as Health Care Survey IG would specify the profiles, search parameters and operations for use case specific requirements but would reuse the MedMorph IG to trigger events, submit data, process knowledge artifacts and manage workflows etc. 
 
 ### Guiding Principles 
 
@@ -148,7 +166,17 @@ Implementers should familiarize themselves with the FHIR resources and their pur
   </tr>
 </table>
 
-#### US Core IG
+#### Electronic Case Reporting eCR FHIR IG
+
+This implementation guide algins with the eCR FHIR IG where profiles exist for the resources identified in the previous section and implementers need to familiarize themselves with the eCR FHIR IG.
+
+<table>
+  <tr>
+    <td><a href="http://hl7.org/fhir/us/ecr/">eCR FHIR IG STU 1 - FHIR R4 based IG</a></td>
+  </tr>
+</table>
+
+#### US Core FHIR IG
 
 This implementation guide also builds on the US Core Implementation Guide where profiles exist for the resources identified in the previous section and implementers need to familiarize themselves with the US Core IG.
 
