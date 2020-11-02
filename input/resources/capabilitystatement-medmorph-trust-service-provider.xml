@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
+  <id value="medmorph-trust-service-provider"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>TrustServiceProvider</h2>
+      <p>(Requirements Definition Capability Statement)</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trust-service-provider</p>
+      <p>Published by: <b>HL7 International - Public Health Work Group</b>
+      </p>
+      <p>This profile defines the expected capabilities of the <i>MedMorph Trust Service Provider </i> actor.  
+      This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
+      <h2>General</h2>
+      <div class="table-wrapper">
+        <table>
+          <tbody>
+            <tr>
+              <th>FHIR Version:</th>
+              <td>4.0.1</td>
+            </tr>
+            <tr>
+              <th>Supported formats:</th>
+              <td>json</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST  behavior</h2>
+      <p>The primary focus of the Trust Service Provider is to allow the creation, modification and retrieval of Knowledge Artifacts.</p>
+      <p>
+        <b>Security:</b>
+      </p>
+      <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
+      <p>In addition the Trust Service Provider needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">Formal Specification - Security Section.</a></p>
+      <h3>Resource summary</h3>
+      <div class="table-wrapper">
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Search</th>
+              <th>Read</th>
+              <th>Read Version</th>
+              <th>Instance History</th>
+              <th>Resource History</th>
+              <th>Create</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr>
+              <th>PlanDefinition (<a href="StructureDefinition-medmorph-plandefintion.html">Profile</a>)</th>
+              <td>
+                <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a specific PlanDefinition Resource instance " href="#PlanDefinition-read">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a specific PlanDefinition Resource instance version" href="#PlanDefinition-vread">SHOULD</a>
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a specific PlanDefinition Resource instance" href="#PlanDefinition-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows updation of a specific PlanDefinition Resource instance" href="#PlanDefinition-update">SHALL</a>
+              </td>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        <h3>FHIR Operations summary</h3>
+        <p>The following FHIR operations SHALL be supported by the Trust Service Provider.</p>
+      </p>
+      <ul>
+        <li>
+          <a>None</a>
+        </li>
+      </ul>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-medmorph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="PlanDefinition-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>
+                <p>Allows discovery of existing PlanDefinition instances representing Knowledge Artifacts.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="PlanDefinition-read"> </a>
+                <span>read</span>
+              </th>
+              <td>
+                <p>Allows retrieval of a specific PlanDefinition instance.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="PlanDefinition-vread"> </a>
+                <span>vread</span>
+              </th>
+              <td>
+                <p>Allows retrieval of a historical version of a PlanDefinition instance.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="PlanDefinition-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of PlanDefinition instances</p>
+              </td>
+            </tr> 
+            <tr>
+              <th>
+                <a name="PlanDefinition-update"> </a>
+                <span>update</span>
+              </th>
+              <td>
+                <p>Allows Updation of PlanDefinition instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>identifier</th>
+              <td>token</td>
+              <td>Search using identifiers as allowed according to the FHIR specification.</td>
+            </tr>
+            <tr>
+              <th>name</th>
+              <td>string</td>
+              <td>Search using PlanDefinition name.</td>
+            </tr>
+            <tr>
+              <th>publisher</th>
+              <td>string</td>
+              <td>Search using publisher name.</td>
+            </tr>
+            <tr>
+              <th>title</th>
+              <td>string</td>
+              <td>Search using title.</td>
+            </tr>
+            <tr>
+              <th>version</th>
+              <td>string</td>
+              <td>Search using version.</td>
+            </tr>
+            <tr>
+              <th>name and version</th>
+              <td>string, string</td>
+              <td>Search using name and version.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+      <br/>
+      <br/>      
+    </div>
+  </text>
+  
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trust-service-provider"/>
+  <name value="KnowledgeArtifactRepository"/>
+  <title value="MedMorph Trust Service Provider"/>
+  <status value="draft"/>
+  <date value="2020-12-06"/>
+  <publisher value="HL7 International - Public Health Work Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
+    </telecom>
+  </contact>
+  <description value="This profile defines the expected capabilities of the ''Trust Service Provider'' actor when conforming to the MedMorph Architecture Implementation Guide.  
+  This role is responsible for allowing creation, modification and hosting of the Knowledge Artifacts."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="json"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="The focus of the Trust Service Provider is to allow creation, modification and hosting of Knowledge Artifacts using FHIR APIs. Typically Public Health Agencies/Research Organizations create the artifacts and EHRs/Healthcare Organizations retrieve the artifacts. "/>
+    <security>
+      <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
+    </security>
+    <resource>
+      <type value="PlanDefinition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing PlanDefinition instances."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific PlanDefinition instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="vread"/>
+        <documentation value="Allows retrieval of a historical version of a PlanDefinition instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a PlanDefinition resource instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows updation of a PlanDefinition resource instance."/>
+      </interaction>  
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="identifier"/>
+        <definition value="{{site.data.fhir.path}}search.html#token"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="name"/>
+        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="publisher"/>
+        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="title"/>
+        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

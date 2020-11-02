@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="atr-changetype"/>
+  <url value="http://hl7.org/fhir/us/davinci-atr/ValueSet/atr-changetype"/>
+  <version value="1.0.0"/>
+  <name value="DaVinciAtrChangeType"/>
+  <title value="Da Vinci ATR Change Types"/>
+  <status value="active"/>
+  <date value="2020-09-06"/>
+  <publisher value="HL7 Financial Management"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="The Da Vinci ATR Change Type Value Set is a &#39;starter set&#39; of codes for identifying the detailed changes associated with Member Attribution Lists."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/davinci-atr/CodeSystem/atr-changetype"/>
+    </include>
+  </compose>
+</ValueSet>
+

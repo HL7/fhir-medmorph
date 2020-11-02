@@ -35,31 +35,31 @@ This implementation guide sets expectations for the following systems using capa
   </thead>
   <tr>
     <td>Knowledge Artifact Repository</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Knowledge Artifact Repository Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-knowledge-artifact-repository.html">Knowledge Artifact Repository Capability Statement</a></td>
   </tr>
   <tr>
     <td>Backend Service App</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Backend Service App Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-backend-service-app.html">Backend Service App Capability Statement</a></td>
   </tr>
   <tr>
     <td>EHR</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">EHR Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-ehr.html">EHR Capability Statement</a></td>
   </tr>
   <tr>
     <td>Trust Service Provider</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Trust Service Provider Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-trust-service-provider.html">Trust Service Provider Capability Statement</a></td>
   </tr>
   <tr>
     <td>Trusted Third Party</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Trusted Third Party Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-trusted-third-party.html">Trusted Third Party Capability Statement</a></td>
   </tr>
     <tr>
     <td>Public Health Authority</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Public Health Authority Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-public-health-agency.html">Public Health Authority Capability Statement</a></td>
   </tr>
     <tr>
     <td>Research Organization</td>
-    <td><a href="{{site.data.fhir.path}}plandefinition.html">Research Organization Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-public-health-agency.html">Research Organization Capability Statement</a></td>
   </tr>
 </table>
 
@@ -107,7 +107,6 @@ The section outlines specific requirements that need to be followed in creating 
 
 
 #### Representing Terminologies
-
 
 
 #### Representing Expression Logic 
