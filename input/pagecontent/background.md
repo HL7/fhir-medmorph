@@ -187,18 +187,18 @@ This implementation guide also builds on the US Core Implementation Guide where 
 </table>
 
 
-#### Bulk Data IG
-Bulk Data IG will be used to retrieve population level information from EHRs subject to appropriate authorities and policies.
+#### Bulk Data Access
+For research use cases, Bulk Data Access implementation guide will be used to retrieve population level information from EHRs subject to appropriate authorities and policies.
 
 <table>
   <tr>
-    <td><a href="http://hl7.org/fhir/uv/bulkdata/index.html">Bulk Data IG - FHIR R4 based IG</a></td>
+    <td><a href="http://hl7.org/fhir/uv/bulkdata/index.html">Bulk Data Access IG - FHIR R4 based IG</a></td>
   </tr>
 </table>
 
 
 #### Backend Services Authorization
-The Backend Services Authorization is used to secure all the system interactions between the various actors that are part of the MedMorph Reference Architecture.
+The Backend Services Authorization is used to secure all system to system interactions between the various actors that are part of the MedMorph Architecture IG.
 
 <table>
   <tr>

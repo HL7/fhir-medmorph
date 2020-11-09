@@ -86,6 +86,46 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="provisioning.html"/>
+        <title value="Provisioning Workflow Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="subscription.html"/>
+        <title value="Subscriptions and Notifications"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="reportgeneration.html"/>
+        <title value="Report Generation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="reportsubmission.html"/>
+        <title value="Report Submission"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="trustservices.html"/>
+        <title value="Trust Services"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="researchdataextraction.html"/>
+        <title value="Research Data Extraction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="researchdataquery.html"/>
+        <title value="Research Data Access"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="credits.html"/>
+        <title value="Credits"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="downloads.html"/>
         <title value="Useful Downloads"/>
         <generation value="html"/>
