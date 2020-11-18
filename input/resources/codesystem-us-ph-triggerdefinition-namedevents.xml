@@ -20,19 +20,29 @@
   <content value="complete"/>
   <count value="10"/>
   <concept>
-    <code value="encounter-start"/>
-    <display value="Indicates the start of an encounter"/>
-    <definition value="Indicates the start of an encounter, where in encounter.period.low is populated with the start time."/>
-  </concept>
-  <concept>
-    <code value="encounter-close"/>
-    <display value="Indicates the close of an encounter"/>
-    <definition value="Indicates the closure of an encounter, where in encounter.period.high is populated with the end time."/>
+  	<code value="encounter-change"/>
+    <display value="Indicates a change in the patient's encounter records"/>
+    <definition value="Indicates a change in the patient's encounter records which includes starting an encounter, closing an encounter, modifying data elements of an encounter. Encounter change events would be triggered by monitoring the Encounter resource."/>
+	  <concept>
+    	<code value="encounter-start"/>
+   	 	<display value="Indicates the start of an encounter"/>
+    	<definition value="Indicates the start of an encounter, where in encounter.period.low is populated with the start time."/>
+  	  </concept>
+  	  <concept>
+	    <code value="encounter-close"/>
+	    <display value="Indicates the close of an encounter"/>
+	    <definition value="Indicates the closure of an encounter, where in encounter.period.high is populated with the end time."/>
+	  </concept>
+	  <concept>
+	    <code value="encounter-modified"/>
+	    <display value="Indicates modifications to data elements of an encounter"/>
+	    <definition value="Indicates changes to encounter codes, times, reason codes, diagnosis, discharge dispositions, locations etc. "/>
+	  </concept>
   </concept>
   <concept>
     <code value="diagnosis-change"/>
     <display value="Indicates a change in the patient's diagnosis"/>
-    <definition value="Indicates a change in the patient's diagnosis and it includes new diagnosis or modifications to existing diagnosis."/>
+    <definition value="Indicates a change in the patient's diagnosis and it includes new diagnosis or modifications to existing diagnosis. Diagnosis change events would be triggered by monitoring the Condition resource."/>
 	  <concept>
 	    <code value="new-diagnosis"/>
 	    <display value="New Diagnosis added"/>
@@ -41,13 +51,13 @@
 	  <concept>
 	    <code value="modified-diagnosis"/>
 	    <display value="Existing Diagnosis record has been modified"/>
-	    <definition value="Indicates that an existing diagnosis record in the patient's chart has been modified. This is equivalent to removing an existing diagnosis record (which may have been entered in error) and adding a new diagnosis record."/>
+	    <definition value="Indicates that an existing diagnosis record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing diagnosis record (which may have been entered in error) and adding a new diagnosis record."/>
 	  </concept>
   </concept>
   <concept>
     <code value="medication-change"/>
     <display value="Indicates a change in the patient's medications"/>
-    <definition value="Indicates a change in the patient's medications and it includes changes to Administered medications or Requested medications or Dispensed medications."/>
+    <definition value="Indicates a change in the patient's medications and it includes changes to Administered medications or Requested medications or Dispensed medications. Medication change events would be triggered by monitoring the MedicationRequest, MedicationDispense, MedicationStatement and MedicationAdministration resources."/>
 	  <concept>
 	    <code value="new-medication"/>
 	    <display value="New Medication added"/>
@@ -56,13 +66,13 @@
 	  <concept>
 	    <code value="modified-medication"/>
 	    <display value="Existing Medication record has been modified"/>
-	    <definition value="Indicates that an existing medication record in the patient's chart has been modified. This is equivalent to removing an existing medication record (which may have been entered in error) and adding a new medication record."/>
+	    <definition value="Indicates that an existing medication record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing medication record (which may have been entered in error) and adding a new medication record."/>
 	  </concept>
   </concept>
   <concept>
-    <code value="labresults-change"/>
+    <code value="labresult-change"/>
     <display value="Indicates a change in the patient's labresults"/>
-    <definition value="Indicates a change in the patient's lab results and it includes new lab results or modifications to existing lab results."/>
+    <definition value="Indicates a change in the patient's lab results and it includes new lab results or modifications to existing lab results. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory. LabResult events would be triggered by monitoring the Observation resource with an Observation.category=laboratory."/>
 	  <concept>
 	    <code value="new-labresult"/>
 	    <display value="New Lab Result added"/>
@@ -71,13 +81,13 @@
 	  <concept>
 	    <code value="modified-labresult"/>
 	    <display value="Existing Lab Result record has been modified"/>
-	    <definition value="Indicates that an existing lab result record in the patient's chart has been modified. This is equivalent to removing an existing lab result record (which may have been entered in error) and adding a new lab result record."/>
+	    <definition value="Indicates that an existing lab result record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing lab result record (which may have been entered in error) and adding a new lab result record. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory."/>
 	  </concept>
   </concept>
   <concept>
-    <code value="orders-change"/>
+    <code value="order-change"/>
     <display value="Indicates a change in the patient's orders"/>
-    <definition value="Indicates a change in the patient's orders and it includes new or modified ServiceRequests."/>
+    <definition value="Indicates a change in the patient's orders and it includes new or modified ServiceRequests. Order change events would be triggered by monitoring the ServiceRequest resource."/>
 	  <concept>
 	    <code value="new-order"/>
 	    <display value="New Order added"/>
@@ -86,12 +96,42 @@
 	  <concept>
 	    <code value="modified-order"/>
 	    <display value="Existing Order record has been modified"/>
-	    <definition value="Indicates that an existing ServiceRequest record in the patient's chart has been modified. This is equivalent to removing an existing ServiceRequest record (which may have been entered in error) and adding a new ServiceRequest record."/>
+	    <definition value="Indicates that an existing ServiceRequest record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing ServiceRequest record (which may have been entered in error) and adding a new ServiceRequest record."/>
 	  </concept>
   </concept>
   <concept>
-    <code value="demographics-change"/>
+    <code value="procedure-change"/>
+    <display value="Indicates a change in the patient's procedures"/>
+    <definition value="Indicates a change in the patient's procedures and it includes new procedures or modifications to existing procedures. Procedure events would be triggered by monitoring the Procedure resource."/>
+	  <concept>
+	    <code value="new-procedure"/>
+	    <display value="New Procedure added"/>
+	    <definition value="Indicates that a new procedure has been added to the patient's chart in the EHR"/>
+	  </concept>
+	  <concept>
+	    <code value="modified-procedure"/>
+	    <display value="Existing Procedure record has been modified"/>
+	    <definition value="Indicates that an existing procedure record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing procedure record (which may have been entered in error) and adding a new procedure record."/>
+	  </concept>
+  </concept>
+  <concept>
+    <code value="immunization-change"/>
+    <display value="Indicates a change in the patient's immunizations"/>
+    <definition value="Indicates a change in the patient's immunization and it includes new immunizations or modifications to existing immunization records. Immunization change events would be triggered by monitoring the Immunization resource."/>
+	  <concept>
+	    <code value="new-immunization"/>
+	    <display value="New Immunization added"/>
+	    <definition value="Indicates that a new immunization has been added to the patient's chart in the EHR"/>
+	  </concept>
+	  <concept>
+	    <code value="modified-immunization"/>
+	    <display value="Existing immunization record has been modified"/>
+	    <definition value="Indicates that an existing immunization record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing immunization record (which may have been entered in error) and adding a new immunization record."/>
+	  </concept>
+  </concept>
+  <concept>
+    <code value="demographic-change"/>
     <display value="Indicates change in patient demographics"/>
-    <definition value="Indicates that the Patient demographic attributes such as Date of Birth, Race, Ethnicity, Deceased date, Address, Telecom, Names have changed."/>
+    <definition value="Indicates that the Patient demographic attributes such as Date of Birth, Race, Ethnicity, Deceased date, Address, Telecom, Names have changed. Demographic change events would be triggered by monitoring the Patient resource."/>
   </concept>
  </CodeSystem>
