@@ -1,43 +1,16 @@
-This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to Knowledge Artifact Repository actor specifed in this MedMorph architecture implementation guide.  The specification focuses on the creation of  the Knowledge Artifacts and their access by the Backend Service App and/or EHRs. 
+This section of the implementation guide defines the specific requirements for a Trust Service Provider in the MedMorph context.
 
+### Trust Services
 
-### MedMorph Knowledge Artifact requirements
+Trust Service Provider enables trust services such as anonymization, de-identification, re-identification and psuedonymization. These services are uses when required. (For example, to send data to research organizations the data may have to be de-identified where as for public health reporting for cancer does not require de-identification of data).
 
-The section outlines specific requirements that need to be followed in creating MedMorph Knowledge Artifacts.
+The next section identifies specific requirements for Trust Service Provider:
 
-#### Representing workflow events
+* Trust Service Provider SHALL support the APIs defined by the [Trust Service Provider Capability Statement](CapabilityStatement-medmorph-trust-service-provider.html).
 
+* Trust Service Providers SHALL be able to re-identify bundles that were de-identified by itself using the de-identify operation.
 
+* Trust Service Providers MAY choose their own anonymization, de-identification, re-identification and psuedonymization algorithms.
 
-
-
-#### Representing Terminologies
-
-
-#### Representing Expression Logic 
-
-
-#### Representing Research Queries 
-
-
-#### Representing Security Requirements  
-
-
-#### Security and Privacy considerations
-
-
-### APIs
-
-#### Provisioning Workflow - Creation of a Knowledge Artifact
-
-
-**Precondition:**
-
-
-**API: **
-
-
-**Expected Result:**
-
-
+* Content IGs will identify specific data elements within resources that need to be processed by Trust Services based on the use case.
 

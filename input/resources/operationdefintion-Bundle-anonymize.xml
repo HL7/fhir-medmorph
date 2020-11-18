@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
+  <id value="Bundle-anonymize"/>
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-anonymize"/>
+  <name value="BundleAnonymize"/>
+  <title value="Generate Anonymized Bundle"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2020-11-19T21:48:56+10:00"/>
+  <publisher value="HL7 International - Public Health Work Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/phwg"/>
+    </telecom>
+  </contact>
+  <description value="Generates an anonymized bundle taking an instance of a Bundle containing PHI/PII data. The anonymization algorithm to be used is left to the implementers of the operation."/>
+  <code value="anonymize"/>
+  <resource value="Bundle"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="inputBundle"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="An input bundle instance that needs to be anonymized. "/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="outputBundle"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The anonymize bundle is returned back from the service."/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="issues"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A list of hints and warnings about problems encountered while anonymizing the bundle."/>
+    <type value="OperationOutcome"/>
+  </parameter>
+</OperationDefinition>

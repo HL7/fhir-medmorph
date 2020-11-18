@@ -18,7 +18,7 @@
   <caseSensitive value="true"/>
   <valueSet value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefinition-action"/>
   <content value="complete"/>
-  <count value="10"/>
+  <count value="11"/>
   <concept>
     <code value="initiate-reporting-workflow"/>
     <display value="Initiatie a reporting workflow"/>
@@ -29,9 +29,14 @@
     <display value="Execute a series of actions to accomplish reporting"/>
     <definition value="This is top level action that uses other defined actions to accomplish reporting for a specific context (e.g encounter)."/>
 	  <concept>
-	    <code value="check-reportability"/>
+	    <code value="check-trigger-codes"/>
 	    <display value="Evaluate candidate patient's data against trigger codes to determine reportability"/>
 	    <definition value="Evaluate candidate patient's data against trigger codes to determine reportability."/>
+	  </concept>
+	  <concept>
+	    <code value="check-participant-registration"/>
+	    <display value="Evaluate participants in encounter for reportability"/>
+	    <definition value="Evaluate encounter participants such as patient, practitioner, organization on whether they have been selected for reportability."/>
 	  </concept>
 	  <concept>
 	  	<code value="create-report"/>

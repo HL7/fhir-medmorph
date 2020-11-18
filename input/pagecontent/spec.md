@@ -63,7 +63,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 #### System Actors, Requirements and Capability Statements
 
-This implementation guide sets expectations for the following systems using capability statements as shown below:
+This implementation guide sets expectations for the following systems using workflow specific requirements and capability statements as shown below. Implementers are advised to review the workflow requirements and then review the capability statements before implementing the corresponding actor.
 
 
 <table>
