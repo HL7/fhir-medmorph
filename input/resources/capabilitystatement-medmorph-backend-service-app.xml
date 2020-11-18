@@ -74,13 +74,11 @@
             <tr>
               <th>Subscription (<a href="http://hl7.org/fhir/R4/subscription.html">Profile</a>)</th>
               <td>
-                <a title="Allows a user to search for existing Subscription instances" href="#Subscription-search-type">SHALL</a>
               </td>
               <td>
                 <a title="Allows retrieval of a specific Subscription Resource instance " href="#Subscription-read">SHALL</a>
               </td>
               <td>
-                <a title="Allows retrieval of a specific Subscription Resource instance version" href="#Subscription-vread">SHOULD</a>
               </td>
               <td>               
               </td>
