@@ -10,7 +10,7 @@
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Backend Service App </i> actor.  
-      This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
+      This actor is responsible for consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organiation. </p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Backend Service App is to allow the creation, modification and retrieval of Knowledge Artifacts.</p>
+      <p>The primary focus of the Backend Service App is to consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organiation.</p>
       <p>
         <b>Security:</b>
       </p>
@@ -51,7 +51,7 @@
           </thead>
           <tbody>
            <tr>
-              <th>PlanDefinition (<a href="StructureDefinition-medmorph-plandefintion.html">Profile</a>)</th>
+              <th>PlanDefinition (<a href="StructureDefinition-us-ph-plandefintion.html">Profile</a>)</th>
               <td>
                 <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
               </td>
@@ -66,10 +66,99 @@
               <td>
               </td>
               <td>
-                <a title="Allows creation of a specific PlanDefinition Resource instance" href="#PlanDefinition-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows updation of a specific PlanDefinition Resource instance" href="#PlanDefinition-update">SHALL</a>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <th>Subscription (<a href="http://hl7.org/fhir/R4/subscription.html">Profile</a>)</th>
+              <td>
+                <a title="Allows a user to search for existing Subscription instances" href="#Subscription-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a specific Subscription Resource instance " href="#Subscription-read">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a specific Subscription Resource instance version" href="#Subscription-vread">SHOULD</a>
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+             	 <a title="Allows creation of a specific Subscription Resource instance " href="#Subscription-create">SHALL</a>
+              </td>
+              <td>
+              	<a title="Allows Updation of a specific Subscription Resource instance " href="#Subscription-update">SHALL</a>
+              </td>
+              <td>
+                 <a title="Allows deletion of a specific Subscription Resource instance version" href="#Subscription-delete">SHALL</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Reporting Bundle (<a href="StructureDefinition-us-ph-reporting-bundle.html">Profile</a>)</th>
+              <td>
+             
+              </td>
+              <td>
+                
+              </td>
+              <td>
+                
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+             	 <a title="Allows creation of a specific Reporting Bundle Resource instance " href="#ReportingBundle-create">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <th>Content Bundle (<a href="StructureDefinition-us-ph-content-bundle.html">Profile</a>)</th>
+              <td>
+             
+              </td>
+              <td>
+                
+              </td>
+              <td>
+                
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+             	 <a title="Allows creation of a specific content Bundle Resource instance " href="#ContentBundle-create">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <th>MessageHeader (<a href="StructureDefinition-us-ph-messageheader.html">Profile</a>)</th>
+              <td>
+             
+              </td>
+              <td>
+                
+              </td>
+              <td>
+                
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+             	 <a title="Allows creation of a specific MessageHeader Resource instance " href="#MessageHeader-create">SHALL</a>
+              </td>
+              <td>
               </td>
               <td/>
             </tr>
@@ -82,7 +171,19 @@
       </p>
       <ul>
         <li>
-          <a>None</a>
+          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle psuedonymize</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-anonymize.html">Bundle anonymize</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-de-identify.html">Bundle de-identify</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-re-identify.html">Bundle re-identify</a>
+        </li>
+        <li>
+          <a href="https://www.hl7.org/fhir/messageheader-operation-process-message.html">Bundle process-message</a>
         </li>
       </ul>
       <br/>
