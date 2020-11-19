@@ -10,7 +10,7 @@
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Public Health Agency </i> actor.  
-      This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
+      This actor is responsible for defining Knowledge Artifacts, receiving public health reports and submit responses back to clinical care organizations.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Public Health Agency is to allow the creation, modification and retrieval of Knowledge Artifacts.</p>
+      <p>The primary focus of the Public Health Agency is to define Knowledge Artifacts, receive public health reports and submit responses back to clinical care organizations.</p>
       <p>
         <b>Security:</b>
       </p>
@@ -51,7 +51,7 @@
           </thead>
           <tbody>
            <tr>
-              <th>PlanDefinition (<a href="StructureDefinition-medmorph-plandefintion.html">Profile</a>)</th>
+              <th>PlanDefinition (<a href="StructureDefinition-us-ph-plandefintion.html">Profile</a>)</th>
               <td>
                 <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
               </td>
@@ -73,6 +73,63 @@
               </td>
               <td/>
             </tr>
+            <tr>
+              <th>Bundle (<a href="StructureDefinition-us-ph-reporting-bundle.html">Profile</a>)</th>
+              <td>
+              </td>
+              <td>               
+              </td>
+              <td>              
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a specific Reporting Bundle Resource instance" href="#ReportingBundle-create">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <th>Bundle (<a href="StructureDefinition-us-ph-content-bundle.html">Profile</a>)</th>
+              <td>
+              </td>
+              <td>               
+              </td>
+              <td>              
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a specific Content Bundle Resource instance" href="#ContentBundle-create">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <th>Bundle (<a href="StructureDefinition-us-ph-messageheader.html">Profile</a>)</th>
+              <td>
+              </td>
+              <td>               
+              </td>
+              <td>              
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a specific MessageHeader Resource instance" href="#MessageHeader-create">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td/>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -82,7 +139,7 @@
       </p>
       <ul>
         <li>
-          <a>None</a>
+          <a href="https://www.hl7.org/fhir/messageheader-operation-process-message.html">Bundle process-message</a>
         </li>
       </ul>
       <br/>
@@ -90,7 +147,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-medmorph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -197,7 +254,94 @@
         </table>
       </div>    
       <br/>
-      <br/>      
+      <br/> 
+      <h3>
+        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ReportingBundle-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of ReportingBundle instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/> 
+      <h3>
+        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ContentBundle-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of ContentBundle instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>     
+      <h3>
+        <a href="{{site.data.fhir.path}}messageheader.html">MessageHeader</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-messageheader.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-messageheader</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="MessageHeader-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of MessageHeader instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>     
     </div>
   </text>
   
@@ -214,19 +358,19 @@
     </telecom>
   </contact>
   <description value="This profile defines the expected capabilities of the ''Public Health Agency'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification and hosting of the Knowledge Artifacts."/>
+  This role is responsible for for defining Knowledge Artifacts, receiving public health reports and submit responses back to clinical care organizations."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
-    <mode value="server"/>
-    <documentation value="The focus of the Public Health Agency is to allow creation, modification and hosting of Knowledge Artifacts using FHIR APIs. Typically Public Health Agencies/Research Organizations create the artifacts and EHRs/Healthcare Organizations retrieve the artifacts. "/>
+    <mode value="client"/>
+    <documentation value="The focus of the Public Health Agency is to for define Knowledge Artifacts, receive public health reports and submit responses back to clinical care organizations. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
     <resource>
       <type value="PlanDefinition"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -295,5 +439,54 @@
         <type value="string"/>
       </searchParam>
     </resource>
+    <resource>
+      <type value="Bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a Reporting Bundle instance."/>
+      </interaction>
+
+    </resource>
+    <resource>
+      <type value="Bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a Content Bundle instance."/>
+      </interaction>
+    </resource>
+    <resource>
+      <type value="MessageHeader"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-messageheader"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a MessageHeader instance."/>
+      </interaction>
+    </resource>
+    <operation>
+       <name value="process-message"/> 
+       <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"/>
+    </operation>
+  </rest>
+  <rest>
+    <mode value="server"/>
+    <documentation value="The focus of the Backend Service App as a Server is to expose $process-message endpoint at the root of the FHIR server."/>
+    <security>
+      <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
+    </security>
+    <operation>
+       <name value="process-message"/> 
+       <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"/>
+    </operation>
   </rest>
 </CapabilityStatement>

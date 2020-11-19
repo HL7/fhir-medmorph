@@ -189,7 +189,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-medmorph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-plandefintion.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -296,12 +296,156 @@
         </table>
       </div>    
       <br/>
-      <br/>      
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
+      </h3>
+      <p>Profile: None
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Subscription-read"> </a>
+                <span>read</span>
+              </th>
+              <td>
+                <p>Allows retrieval of a specific Subscription instance.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of Subscription instances</p>
+              </td>
+            </tr> 
+            <tr>
+              <th>
+                <a name="Subscription-update"> </a>
+                <span>update</span>
+              </th>
+              <td>
+                <p>Allows Updation of Subscription instances</p>
+              </td>
+            </tr>   
+            <tr>
+              <th>
+                <a name="Subscription-delete"> </a>
+                <span>update</span>
+              </th>
+              <td>
+                <p>Allows Deletion of Subscription instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/> 
+      <h3>
+        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ReportingBundle-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of ReportingBundle instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/> 
+      <h3>
+        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ContentBundle-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of ContentBundle instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>     
+      <h3>
+        <a href="{{site.data.fhir.path}}messageheader.html">MessageHeader</a>
+      </h3>
+      <p>Profile: <a href="StructureDefinition-us-ph-messageheader.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-messageheader</a>
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="MessageHeader-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of MessageHeader instances</p>
+              </td>
+            </tr>   
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>     
+    
     </div>
   </text>
   
   <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-backend-service-app"/>
-  <name value="KnowledgeArtifactRepository"/>
+  <name value="BackendServiceApp"/>
   <title value="MedMorph Backend Service App"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
@@ -312,20 +456,19 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This profile defines the expected capabilities of the ''Backend Service App'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification and hosting of the Knowledge Artifacts."/>
+  <description value="This profile defines the expected capabilities of the ''Backend Service App'' actor when conforming to the MedMorph Architecture Implementation Guide."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
-    <mode value="server"/>
-    <documentation value="The focus of the Backend Service App is to allow creation, modification and hosting of Knowledge Artifacts using FHIR APIs. Typically Public Health Agencies/Research Organizations create the artifacts and EHRs/Healthcare Organizations retrieve the artifacts. "/>
+    <mode value="client"/>
+    <documentation value="The focus of the Backend Service App is to act as a client and access Knowledge Artifacts, create subscriptions, receive notifications, create message bundles, invoke trust services and submit reports. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
     <resource>
       <type value="PlanDefinition"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -347,20 +490,6 @@
         <code value="vread"/>
         <documentation value="Allows retrieval of a historical version of a PlanDefinition instance."/>
       </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a PlanDefinition resource instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="update"/>
-        <documentation value="Allows updation of a PlanDefinition resource instance."/>
-      </interaction>  
       <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -394,5 +523,101 @@
         <type value="string"/>
       </searchParam>
     </resource>
+    <resource>
+      <type value="Subscription"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific Subscription instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a Subscription instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows updation of a Subscription instance."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="delete"/>
+        <documentation value="Allows deletion of a Subscription instance."/>
+      </interaction>
+    </resource>
+    <resource>
+      <type value="Bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a Reporting Bundle instance."/>
+      </interaction>
+
+    </resource>
+    <resource>
+      <type value="Bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a Content Bundle instance."/>
+      </interaction>
+      <operation>
+        <name value="psuedonymize"/> 
+        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-psuedonymize"/>
+      </operation>
+      <operation>
+        <name value="anonymize"/> 
+        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-anonymize"/>
+      </operation>
+      <operation>
+        <name value="de-identify"/> 
+        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-de-identify"/>
+      </operation>
+      <operation>
+        <name value="re-identify"/> 
+        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-re-identify"/>
+      </operation>
+    </resource>
+    <resource>
+      <type value="MessageHeader"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-messageheader"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a MessageHeader instance."/>
+      </interaction>
+    </resource>
+    <operation>
+       <name value="process-message"/> 
+       <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"/>
+    </operation>
+  </rest>
+  <rest>
+    <mode value="server"/>
+    <documentation value="The focus of the Backend Service App as a Server is to expose $process-message endpoint at the root of the FHIR server."/>
+    <security>
+      <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
+    </security>
+    <operation>
+       <name value="process-message"/> 
+       <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"/>
+    </operation>
   </rest>
 </CapabilityStatement>

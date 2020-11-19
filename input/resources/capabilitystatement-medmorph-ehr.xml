@@ -10,7 +10,7 @@
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph EHR </i> actor.  
-      This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
+      This actor is responsible for publishing Subscription Topics based on Named Events, generate notifications base on subscriptions and support US Core FHIR APIs.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the EHR is to allow the creation, modification and retrieval of Knowledge Artifacts.</p>
+      <p>The primary focus of the EHR is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs.</p>
       <p>
         <b>Security:</b>
       </p>
@@ -51,27 +51,48 @@
           </thead>
           <tbody>
            <tr>
-              <th>PlanDefinition (<a href="StructureDefinition-medmorph-plandefintion.html">Profile</a>)</th>
+              <th>Subscription</th>
               <td>
-                <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows retrieval of a specific PlanDefinition Resource instance " href="#PlanDefinition-read">SHALL</a>
+                <a title="Allows retrieval of a specific Subscription Resource instances." href="#Subscription-read">SHALL</a>
               </td>
               <td>
-                <a title="Allows retrieval of a specific PlanDefinition Resource instance version" href="#PlanDefinition-vread">SHOULD</a>
               </td>
               <td>               
               </td>
               <td>
               </td>
               <td>
-                <a title="Allows creation of a specific PlanDefinition Resource instance" href="#PlanDefinition-create">SHALL</a>
+                <a title="Allows creation of a specific Subscription Resource instance" href="#Subscription-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows updation of a specific PlanDefinition Resource instance" href="#PlanDefinition-update">SHALL</a>
+                <a title="Allows updation of a specific Subscription Resource instance" href="#Subscription-update">SHALL</a>
               </td>
-              <td/>
+			  <td>
+                <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">SHALL</a>
+              </td>
+            </tr>
+            <tr>
+              <th>US Core APIs</th>
+              <td>
+                <a title="Allows search of a specific US Core Resource instances." href="#USCore-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a specific US Core Resource instances." href="#USCore-read">SHALL</a>
+              </td>
+              <td>
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+              </td>
+              <td>
+              </td>
+			  <td>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -88,9 +109,9 @@
       <br/>
       <br/>
       <h3>
-        <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
+        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-medmorph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition</a>
+      <p>Profile: None
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -104,105 +125,88 @@
           <tbody>
             <tr>
               <th>
-                <a name="PlanDefinition-search-type"> </a>
-                <span>search-type</span>
-              </th>
-              <td>
-                <p>Allows discovery of existing PlanDefinition instances representing Knowledge Artifacts.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="PlanDefinition-read"> </a>
+                <a name="Subscription-read"> </a>
                 <span>read</span>
               </th>
               <td>
-                <p>Allows retrieval of a specific PlanDefinition instance.</p>
+                <p>Allows retrieval of a specific Subscription instance.</p>
               </td>
             </tr>
             <tr>
               <th>
-                <a name="PlanDefinition-vread"> </a>
-                <span>vread</span>
-              </th>
-              <td>
-                <p>Allows retrieval of a historical version of a PlanDefinition instance.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="PlanDefinition-create"> </a>
+                <a name="Subscription-create"> </a>
                 <span>create</span>
               </th>
               <td>
-                <p>Allows creation of PlanDefinition instances</p>
+                <p>Allows creation of Subscription instances</p>
               </td>
             </tr> 
             <tr>
               <th>
-                <a name="PlanDefinition-update"> </a>
+                <a name="Subscription-update"> </a>
                 <span>update</span>
               </th>
               <td>
-                <p>Allows Updation of PlanDefinition instances</p>
+                <p>Allows Updation of Subscription instances</p>
               </td>
-            </tr>   
+            </tr> 
+            <tr>
+              <th>
+                <a name="Subscription-delete"> </a>
+                <span>update</span>
+              </th>
+              <td>
+                <p>Allows deletion of Subscription instances</p>
+              </td>
+            </tr>    
           </tbody>
         </table>
       </div>
       <br/>
-      <br/>
-      <h4>Search</h4>
+      <br/> 
+      <h3>
+        <a href="http://hl7.org/fhir/us/core">US Core APIs</a>
+      </h3>
+      <p>Profile: None
+      </p>
+      <h4>Interactions</h4>
       <div class="table-wrapper">
         <table class="list">
           <thead>
             <tr>
-              <th>Parameter</th>
-              <th>Type</th>
-              <th>Definition &amp; Chaining</th>
+              <th>Name</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>identifier</th>
-              <td>token</td>
-              <td>Search using identifiers as allowed according to the FHIR specification.</td>
+              <th>
+                <a name="USCore-search-type"> </a>
+                <span>search</span>
+              </th>
+              <td>
+                <p>Allows searching of pecific US Core resource profile instances.</p>
+              </td>
             </tr>
             <tr>
-              <th>name</th>
-              <td>string</td>
-              <td>Search using PlanDefinition name.</td>
-            </tr>
-            <tr>
-              <th>publisher</th>
-              <td>string</td>
-              <td>Search using publisher name.</td>
-            </tr>
-            <tr>
-              <th>title</th>
-              <td>string</td>
-              <td>Search using title.</td>
-            </tr>
-            <tr>
-              <th>version</th>
-              <td>string</td>
-              <td>Search using version.</td>
-            </tr>
-            <tr>
-              <th>name and version</th>
-              <td>string, string</td>
-              <td>Search using name and version.</td>
-            </tr>
+              <th>
+                <a name="USCore-read"> </a>
+                <span>read</span>
+              </th>
+              <td>
+                <p>Allows retrieval of specific US Core resource profile instances</p>
+              </td>
+            </tr> 
           </tbody>
         </table>
-      </div>    
+      </div>
       <br/>
-      <br/>      
+      <br/>     
     </div>
   </text>
   
   <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-ehr"/>
-  <name value="KnowledgeArtifactRepository"/>
+  <name value="MedMorphEhr"/>
   <title value="MedMorph EHR"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
@@ -214,86 +218,46 @@
     </telecom>
   </contact>
   <description value="This profile defines the expected capabilities of the ''EHR'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification and hosting of the Knowledge Artifacts."/>
+  This role is responsible for allowing creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The focus of the EHR is to allow creation, modification and hosting of Knowledge Artifacts using FHIR APIs. Typically Public Health Agencies/Research Organizations create the artifacts and EHRs/Healthcare Organizations retrieve the artifacts. "/>
+    <documentation value="The focus of the EHR is to allow creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
     <resource>
-      <type value="PlanDefinition"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="search-type"/>
-        <documentation value="Allows discovery of existing PlanDefinition instances."/>
-      </interaction>
+      <type value="Subscription"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows retrieval of a specific PlanDefinition instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHOULD"/>
-        </extension>
-        <code value="vread"/>
-        <documentation value="Allows retrieval of a historical version of a PlanDefinition instance."/>
+        <documentation value="Allows retrieval of a specific Subscription instance."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows creation of a PlanDefinition resource instance."/>
+        <documentation value="Allows creation of a Subscription resource instance."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows updation of a PlanDefinition resource instance."/>
+        <documentation value="Allows updation of a Subscription resource instance."/>
+      </interaction> 
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="delete"/>
+        <documentation value="Allows deletion of a Subscription resource instance."/>
       </interaction>  
-      <searchParam>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <name value="identifier"/>
-        <definition value="{{site.data.fhir.path}}search.html#token"/>
-        <type value="token"/>
-      </searchParam>
-      <searchParam>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <name value="name"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
-        <type value="string"/>
-      </searchParam>
-      <searchParam>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <name value="publisher"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
-        <type value="string"/>
-      </searchParam>
-      <searchParam>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <name value="title"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
-        <type value="string"/>
-      </searchParam>
     </resource>
   </rest>
 </CapabilityStatement>

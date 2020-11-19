@@ -51,7 +51,7 @@
           </thead>
           <tbody>
            <tr>
-              <th>PlanDefinition (<a href="StructureDefinition-medmorph-plandefintion.html">Profile</a>)</th>
+              <th>PlanDefinition (<a href="StructureDefinition-us-ph-plandefintion.html">Profile</a>)</th>
               <td>
                 <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
               </td>
@@ -90,7 +90,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-medmorph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -226,7 +226,7 @@
     </security>
     <resource>
       <type value="PlanDefinition"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/medmorph-plandefinition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
