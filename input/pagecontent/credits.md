@@ -10,6 +10,7 @@ Project leads:
 * Wendy Blumenthal (CDC)
 * Brian Gugerty (CDC)
 * Cindy Bush (CDC)
+* Aaron Harris (CDC)
 
 Project management and coordination:
 
