@@ -36,30 +36,6 @@
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
-    <resource>
-      <reference>
-        <reference value="Library/example-sql"/>
-      </reference>
-      <description value="A test example"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Library/example-image"/>
-      </reference>
-      <description value="A test image example"/>
-    </resource>
-<!--<resource>
-<reference>
-<reference value="MyLogicalModel/AS"/>
-</reference>
-</resource> -->
-<!--    <resource>
-      <reference>
-        <reference value="Library/example"/>
-      </reference>
-      <name value="Simple library example"/>
-      <description value="A simple example showing how library is pre-loaded"/>
-    </resource> -->
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
