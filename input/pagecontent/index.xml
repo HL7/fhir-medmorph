@@ -7,7 +7,7 @@
     by using emerging health data and exchange standards, such as Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) and 
     Clinical Quality Language (CQL), to develop and implement an interoperable solution that will enable access to clinical data. 
     The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data is collected, 
-    used and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
+    used, and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
     The MedMorph project is funded by the Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE) 
     Patient-Centered Outcomes Research Trust Fund and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) 
     to advance research and public health goals.
@@ -22,7 +22,7 @@
     </p>
     
     <p>
-    The MedMorph project will create fully modeled use cases across three distinct areas namely hepatitis C virus [HCV], 
+    The MedMorph project will create fully modeled use cases across three distinct areas; namely, hepatitis C virus (HCV), 
     cancer reporting and health care surveys to inform the design of a scalable and extensible reference architecture 
     to facilitate data exchange for both key patient-centered research questions and public health surveillance system requirements.
     For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
@@ -40,14 +40,13 @@
       familiar with before reading the remainder of the IG.  
     </li>
     <li>
-      <a href="usecases.html">Use Cases and Workflows</a> - provides context for the implementation guide and information that implementers should be
-      familiar with before reading the remainder of the IG.  
+      <a href="usecases.html">Use Cases</a> - describes the business need, actors, and workflows for the IG.  
     </li>
     <li>
-      <a href="spec.html">Detailed Specification</a> - The actual stuff implementers are expected to do.  (Could be multiple pages for this.)
+      <a href="spec.html">Detailed Specification</a> - defines the specific conformance requirements for systems wishing to conform to actors specified in the IG.
     </li>
     <li>
-      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
+      <a href="downloads.html">Useful Downloads</a> - provides the ability to download a copy of the entire implementation guide, artifact definitions, or examples.
     </li>
   </ul>
 </div>
