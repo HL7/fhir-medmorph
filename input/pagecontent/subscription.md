@@ -1,13 +1,13 @@
-This section of the implementation guide defines the specific requirements related to subscriptions and notifications.  The specification focuses on the creation of SubscriptionTopics in the EHR, Subscriptions to the topics by the Backend Service App and notifications from the EHR to the Backend Service App.
+This section of the implementation guide defines the specific requirements related to subscriptions and notifications.  The specification focuses on the creation of SubscriptionTopics in the EHR, Subscriptions to the topics by the Backend Service App, and notifications from the EHR to the Backend Service App.
 
 ### MedMorph Subscription Topics
 
-The MedMorph Architecture IG specifies that EHRs or other systems need to generate notifications based on subscriptions to trigger processes within a Backend Service App. The Backend Service App based on the notifications will initiate the reporting workflows based on PlanDefinition resources.
+The MedMorph Reference Architecture IG specifies that EHRs or other systems need to generate notifications based on subscriptions to trigger processes within a Backend Service App. The Backend Service App based on the notifications will initiate the reporting workflows based on PlanDefinition resources.
 
 **Note:** 
-FHIR Subscriptions capability is undergoing significant changes in FHIR R5 includng the introduction of SubscriptionTopic resource. However the MedMorph Architecture IG is based on FHIR R4 and will continue to be based on FHIR R4. There is an effort in HL7 currently to backport the FHIR R5 Subscription model in FHIR R4. Once the backport is finished the MedMorph IG will be updated to use the latest subscription capabilities.
+FHIR Subscriptions capability is undergoing significant changes in FHIR R5 including the introduction of the SubscriptionTopic resource. However, the MedMorph Reference Architecture IG is based on FHIR R4 and will continue to be based on FHIR R4. There is an effort in HL7 currently to backport the FHIR R5 Subscription model in FHIR R4. Once the backport is finished the MedMorph Reference Architecture IG will be updated to use the latest subscription capabilities.
 
-In FHIR R4, SubscriptionTopic resource does not exist, however Subscriptions exist. The next few sections will outline specific requirements for the EHR and the Backend Service App for subscriptions and notifications.
+In FHIR R4, the SubscriptionTopic resource does not exist, however Subscriptions exist. The next few sections will outline specific requirements for the EHR and the Backend Service App for subscriptions and notifications.
 
 #### Subscriptions and Notifications using SubscriptionTopic in FHIR R5
 
@@ -27,7 +27,7 @@ As the FHIR subscription capabilities get backported to FHIR R4, SubscriptionTop
 
 #### Subscriptions and Notifications using Subscription Resource in FHIR R4 
 
-The current FHIR R4 specification only supports Subscription Resource and hence until the SubscriptionTopic is backported to FHIR R4 the following requirements need to be followed to subscribe and receive notifications.
+The current FHIR R4 specification only supports the Subscription Resource and hence until the SubscriptionTopic is backported to FHIR R4 the following requirements need to be followed to subscribe and receive notifications.
 
 * EHRs SHALL support Subscription instance creation for resources identified by each of the named-events in the [Named Event Valueset](	http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-triggerdefinition-namedevent.html).
 
