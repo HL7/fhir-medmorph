@@ -2,7 +2,7 @@ This section of the implementation guide defines the specific requirements for a
 
 ### Trust Services
 
-Trust Service Provider enables trust services such as anonymization, de-identification, re-identification, and pseudonymization. These services are uses when required. (For example, to send data to research organizations the data may have to be de-identified whereas for public health reporting for cancer does not require de-identification of data).
+Trust Service Provider enables trust services such as anonymization, de-identification, re-identification, and pseudonymization. These services are used when required (e.g., to send data to research organizations the data may have to be de-identified whereas public health reporting for cancer does not require de-identification of data).
 
 The next section identifies specific requirements for Trust Service Provider:
 
