@@ -191,7 +191,7 @@
     </telecom>
   </contact>
   <description value="This profile defines the expected capabilities of the ''Trust Service Provider'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification and hosting of the Knowledge Artifacts."/>
+  This role is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
