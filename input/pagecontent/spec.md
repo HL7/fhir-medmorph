@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to actors specifed in this MedMorph architecture implementation guide.  The specification focuses on the creation of  the Knowledge Artifacts and their usage by the Backend Service App.  It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security and other implementation requirements.
+This section of the implementation guide defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of the Knowledge Artifacts and their usage by the Backend Service App. It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security, and other implementation requirements.
 
 
 ### Context
@@ -6,9 +6,9 @@ This section of the implementation guide defines the specific conformance requir
 #### Pre-reading
 Before reading this formal specification, implementers should first familiarize themselves with two other key portions of the specification:
 
-* The [Use Cases & Overview](usecases.html) page provides context for what this formal specification is trying to accomplish and will give a sense of both the business context and general process flow enabled by the formal specification below.
+* The [Use Cases & Overview](usecases.html) page provides both the business context and general process flow enabled by the formal specification.
 
-* The [Technical Background](background.html) page provides information about the underlying specifications and indicates what portions of them should be read and understood to have necessary foundation to understand the constraints and usage guidance described here.
+* The [Technical Background](background.html) page provides information about the underlying specifications and indicates what portions of each should be reviewed to have the necessary foundation to understand the constraints and usage guidance described here.
 
 
 #### Conventions
