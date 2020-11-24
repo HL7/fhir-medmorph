@@ -31,21 +31,11 @@ Technical Expert Panel Co-Chairs:
 * John W Loonsk (Johns Hopkins University/APHL)
 * Bill Lober (University of Washington)
 
-MedMorph FHIR Connectathon Testing Organizations:
-
-* Alphora (formerly Data Consulting Group (DCG))
-* Altarum
-* California Cancer Registry
-* Centers for Disease Control and Prevention (CDC)
-* Cerner Sandbox
-* College of American Pathologists (CAP)
-* eHealth Exchange
-* mTuitive
-
 Technical Expert Panel Members (Represented Organizations) included:
 
 * AHRQ
 * Allscripts
+* Alphora (formerly Data Consulting Group (DCG))
 * Alta Informatics & Solutions
 * Altarum
 * American Board of Family Medicine
@@ -56,7 +46,6 @@ Technical Expert Panel Members (Represented Organizations) included:
 * CDC
 * Cerner
 * CMS
-* Database Consulting Group (DCG)
 * Digital Infuzion
 * Duke
 * eClinical Works
@@ -90,6 +79,15 @@ Technical Expert Panel Members (Represented Organizations) included:
 * University of Washington
 * Washington State Department of Health
 
+MedMorph FHIR Connectathon Testing Organizations:
 
+* Alphora (formerly Data Consulting Group (DCG))
+* Altarum
+* California Cancer Registry
+* Centers for Disease Control and Prevention (CDC)
+* Cerner Sandbox
+* College of American Pathologists (CAP)
+* eHealth Exchange
+* mTuitive
 
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm, and expertise to this work.
