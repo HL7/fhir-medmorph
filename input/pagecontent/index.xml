@@ -9,11 +9,11 @@
     The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data is collected, 
     used, and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
     The MedMorph project is funded by the Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE) 
-    Patient-Centered Outcomes Research Trust Fund and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) 
+    Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) 
     to advance research and public health goals.
     </p>
     <p>
-	The project is aiming to leverage the maturation of standards and requirements for certification of health information technology by the 
+	The project aims to leverage the maturation of standards and requirements for certification of health information technology by the 
 	Office of the National Coordinator for Health IT (ONC) that underpin many EHRs. 
 	Examples such as Fast Healthcare Interoperability Resources (FHIR), the ONC 2015 Edition Common Clinical Data Set (CCDS), 
 	2015 Edition Cures Update - United States Core Data for Interoperability (USCDI) Version 1, February 2020 and 
@@ -22,7 +22,7 @@
     </p>
     
     <p>
-    The MedMorph project will create fully modeled use cases across three distinct areas; namely, hepatitis C virus (HCV), 
+    The MedMorph project will create fully modeled use cases across three distinct areas; hepatitis C virus (HCV), 
     cancer reporting and health care surveys to inform the design of a scalable and extensible reference architecture 
     to facilitate data exchange for both key patient-centered research questions and public health surveillance system requirements.
     For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
