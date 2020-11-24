@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture Implementation Guide.  The specification focuses on the creation of  the Knowledge Artifacts and their usage by the Backend Service App.  It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security and other implementation requirements.
+This section of the implementation guide defines the specific conformance requirements for systems wishing to conform to actors specifed in this MedMorph architecture implementation guide.  The specification focuses on the creation of  the Knowledge Artifacts and their usage by the Backend Service App.  It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security and other implementation requirements.
 
 
 ### Context
@@ -6,9 +6,9 @@ This section of the implementation guide defines the specific conformance requir
 #### Pre-reading
 Before reading this formal specification, implementers should first familiarize themselves with two other key portions of the specification:
 
-* The [Use Cases](usecases.html) page provides context for what this formal specification is trying to accomplish and will give a sense of both the business context and general process flow enabled by the formal specification below.
+* The [Use Cases & Overview](usecases.html) page provides context for what this formal specification is trying to accomplish and will give a sense of both the business context and general process flow enabled by the formal specification below.
 
-* The [Background](background.html) page provides information about the underlying specifications and indicates what portions of them should be read and understood to have necessary foundation to understand the constraints and usage guidance described here.
+* The [Technical Background](background.html) page provides information about the underlying specifications and indicates what portions of them should be read and understood to have necessary foundation to understand the constraints and usage guidance described here.
 
 
 #### Conventions
@@ -28,21 +28,21 @@ Actors and Systems asserting conformance to this implementation guide have to im
 ##### MUST SUPPORT Definition
 
 * Systems SHALL be capable of populating data elements as specified by the profiles and are returned using the specified APIs in the capability statement.
-* Systems SHALL be capable of processing resource instances containing the MUST SUPPPORT data elements without generating an error or causing the application to fail. In other words, Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
+* Systems SHALL be capable of processing resource instances containing the MUST SUPPPORT data elements without generating an error or causing the application to fail. In other words Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Systems SHALL NOT include the data elements in the resource instance returned from executing the API requests.
 * When accessing MedMorph data, Systems SHALL interpret missing data elements within resource instances returned from API requests as data not present.
 
 
 #### Profiles
-This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The implementation guide is based on FHIR [R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
+This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The implementation guide is based on FHIR [R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
 
 The full set of profiles defined in this implementation guide can be found by following the links on the [FHIR Artifacts](artifacts.html) page.
 
 
 #### US Core
-This implementation guide also leverages the [US Core](http://hl7.org/fhir/us/core) set of profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this Guide either leverages them directly or uses them as a base for any additional constraints needed to support the member attribution list use cases.  If no constraints are needed, this IG does not define any profiles.
+This implementation guide also leverages the [US Core](http://hl7.org/fhir/us/core) set of profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this Guide either leverages them directly or uses them as a base for any additional constraints needed to support the member attribution list use cases.  If no constraints are needed, this IG doesn't define any profiles.
 
-Where US Core profiles do not yet exist (e.g., PlanDefinition, Bundle), profiles have been created.
+Where US Core profiles do not yet exist (e.g. for PlanDefinition, Bundle), profiles have been created.
 
 
 #### SMART on FHIR Backend Services Authorization
@@ -80,6 +80,11 @@ This implementation guide sets expectations for the following systems using work
     <td><a href="CapabilityStatement-medmorph-knowledge-artifact-repository.html">Knowledge Artifact Repository Capability Statement</a></td>
   </tr>
   <tr>
+    <td/>
+    <td/>
+    <td/>
+  </tr>
+  <tr>
     <td>Backend Service App</td>
     <td>
     	   <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
@@ -90,9 +95,19 @@ This implementation guide sets expectations for the following systems using work
     <td><a href="CapabilityStatement-medmorph-backend-service-app.html">Backend Service App Capability Statement</a></td>
   </tr>
   <tr>
+    <td/>
+    <td/>
+    <td/>
+  </tr>
+  <tr>
     <td>EHR</td>
     <td><a href="subscription.html">Subscriptions and Notifications Requirements</a></td>
     <td><a href="CapabilityStatement-medmorph-ehr.html">EHR Capability Statement</a></td>
+  </tr>
+  <tr>
+    <td/>
+    <td/>
+    <td/>
   </tr>
   <tr>
     <td>Trust Service Provider</td>
@@ -100,11 +115,21 @@ This implementation guide sets expectations for the following systems using work
     <td><a href="CapabilityStatement-medmorph-trust-service-provider.html">Trust Service Provider Capability Statement</a></td>
   </tr>
   <tr>
+    <td/>
+    <td/>
+    <td/>
+  </tr>
+  <tr>
     <td>Trusted Third Party</td>
     <td><a href="reportsubmission.html">Report Forwarding Requirements</a></td>
     <td><a href="CapabilityStatement-medmorph-trusted-third-party.html">Trusted Third Party Capability Statement</a></td>
   </tr>
-    <tr>
+  <tr>
+    <td/>
+    <td/>
+    <td/>
+  </tr>
+  <tr>
     <td>Public Health Authority</td>    
     <td>
        <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
@@ -112,7 +137,12 @@ This implementation guide sets expectations for the following systems using work
     </td>
     <td><a href="CapabilityStatement-medmorph-public-health-agency.html">Public Health Authority Capability Statement</a></td>
   </tr>
-    <tr>
+  <tr>
+    <td/>
+    <td/>
+    <td/>
+  </tr>
+  <tr>
     <td>Research Organization</td>
     <td>
        <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
