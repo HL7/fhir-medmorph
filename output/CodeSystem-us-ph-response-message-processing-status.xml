@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="us-ph-response-message-processing-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">RRVS1<a name="us-ph-response-message-processing-status-RRVS1"> </a></td><td>Reportable data sent from clinical care to PHA.</td><td>Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style="white-space:nowrap">RRVS2<a name="us-ph-response-message-processing-status-RRVS2"> </a></td><td>Data sent from clinical care to PHA may be reportable.</td><td>May be reportable - the triggered condition may be reportable, but a full disposition was not achieved</td></tr><tr><td style="white-space:nowrap">RRVS3<a name="us-ph-response-message-processing-status-RRVS3"> </a></td><td>Data sent from clinical care to PHA is not reportable.</td><td>Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style="white-space:nowrap">RRVS4<a name="us-ph-response-message-processing-status-RRVS4"> </a></td><td>No Reporting rule met for the data setn from clinical care to PHA.</td><td>No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements.</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"/>
+  <version value="0.1.0"/>
+  <name value="USPublicHealthResponseMessageProcessingStatus"/>
+  <title value="US Public Health CodeSystem for Response Message Processing Status Codes"/>
+  <status value="active"/>
+  <date value="2020-09-06"/>
+  <publisher value="HL7 International - Public Health Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/ph"/>
+    </telecom>
+  </contact>
+  <description value="The US Public Health ValueSet UseContext CodeSystem is a &#39;starter set&#39; of codes supported for identifying response message processing status codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="RRVS1"/>
+    <display value="Reportable data sent from clinical care to PHA."/>
+    <definition value="Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."/>
+  </concept>
+  <concept>
+    <code value="RRVS2"/>
+    <display value="Data sent from clinical care to PHA may be reportable."/>
+    <definition value="May be reportable - the triggered condition may be reportable, but a full disposition was not achieved"/>
+  </concept>
+  <concept>
+    <code value="RRVS3"/>
+    <display value="Data sent from clinical care to PHA is not reportable."/>
+    <definition value="Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."/>
+  </concept>
+  <concept>
+    <code value="RRVS4"/>
+    <display value="No Reporting rule met for the data setn from clinical care to PHA."/>
+    <definition value="No reporting rule met &#x2013; no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements."/>
+  </concept>
+</CodeSystem>

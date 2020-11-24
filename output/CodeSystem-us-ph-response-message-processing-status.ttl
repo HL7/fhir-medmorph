@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-ph-response-message-processing-status"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RRVS1<a name=\"us-ph-response-message-processing-status-RRVS1\"> </a></td><td>Reportable data sent from clinical care to PHA.</td><td>Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style=\"white-space:nowrap\">RRVS2<a name=\"us-ph-response-message-processing-status-RRVS2\"> </a></td><td>Data sent from clinical care to PHA may be reportable.</td><td>May be reportable - the triggered condition may be reportable, but a full disposition was not achieved</td></tr><tr><td style=\"white-space:nowrap\">RRVS3<a name=\"us-ph-response-message-processing-status-RRVS3\"> </a></td><td>Data sent from clinical care to PHA is not reportable.</td><td>Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style=\"white-space:nowrap\">RRVS4<a name=\"us-ph-response-message-processing-status-RRVS4\"> </a></td><td>No Reporting rule met for the data setn from clinical care to PHA.</td><td>No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "USPublicHealthResponseMessageProcessingStatus"];
+  fhir:CodeSystem.title [ fhir:value "US Public Health CodeSystem for Response Message Processing Status Codes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2020-09-06"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "HL7 International - Public Health Work Group"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/ph" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "The US Public Health ValueSet UseContext CodeSystem is a 'starter set' of codes supported for identifying response message processing status codes."];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [
+     fhir:value "http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status";
+     fhir:link <http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status>
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "RRVS1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Reportable data sent from clinical care to PHA." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "RRVS2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Data sent from clinical care to PHA may be reportable." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "May be reportable - the triggered condition may be reportable, but a full disposition was not achieved" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "RRVS3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Data sent from clinical care to PHA is not reportable." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules." ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "RRVS4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "No Reporting rule met for the data setn from clinical care to PHA." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status.ttl> .
+
+# -------------------------------------------------------------------------------------
+

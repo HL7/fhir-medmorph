@@ -1,0 +1,188 @@
+{% raw %}<pre class="json"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a>" : "us-ph-triggerdefinition-namedevents",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;This code system http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-triggerdefinition-namedevents defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Lvl&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;encounter-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-encounter-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's encounter records&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's encounter records which includes starting an encounter, closing an encounter, modifying data elements of an encounter. Encounter change events would be triggered by monitoring the Encounter resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  encounter-start&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-encounter-start\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates the start of an encounter&lt;/td&gt;&lt;td&gt;Indicates the start of an encounter, where in encounter.period.low is populated with the start time.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  encounter-close&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-encounter-close\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates the close of an encounter&lt;/td&gt;&lt;td&gt;Indicates the closure of an encounter, where in encounter.period.high is populated with the end time.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  encounter-modified&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-encounter-modified\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates modifications to data elements of an encounter&lt;/td&gt;&lt;td&gt;Indicates changes to encounter codes, times, reason codes, diagnosis, discharge dispositions, locations etc. &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;diagnosis-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-diagnosis-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's diagnosis&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's diagnosis and it includes new diagnosis or modifications to existing diagnosis. Diagnosis change events would be triggered by monitoring the Condition resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-diagnosis&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-diagnosis\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Diagnosis added&lt;/td&gt;&lt;td&gt;Indicates that a new diagnosis has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-diagnosis&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-diagnosis\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing Diagnosis record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing diagnosis record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing diagnosis record (which may have been entered in error) and adding a new diagnosis record.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;medication-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-medication-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's medications&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's medications and it includes changes to Administered medications or Requested medications or Dispensed medications. Medication change events would be triggered by monitoring the MedicationRequest, MedicationDispense, MedicationStatement and MedicationAdministration resources.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-medication&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-medication\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Medication added&lt;/td&gt;&lt;td&gt;Indicates that a new MedicationRequest or MedicationDispense or MedicationAdministered or MedicationStatement has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-medication&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-medication\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing Medication record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing medication record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing medication record (which may have been entered in error) and adding a new medication record.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;labresult-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-labresult-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's labresults&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's lab results and it includes new lab results or modifications to existing lab results. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory. LabResult events would be triggered by monitoring the Observation resource with an Observation.category=laboratory.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-labresult&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-labresult\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Lab Result added&lt;/td&gt;&lt;td&gt;Indicates that a new Lab Result has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-labresult&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-labresult\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing Lab Result record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing lab result record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing lab result record (which may have been entered in error) and adding a new lab result record. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;order-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-order-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's orders&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's orders and it includes new or modified ServiceRequests. Order change events would be triggered by monitoring the ServiceRequest resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-order&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-order\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Order added&lt;/td&gt;&lt;td&gt;Indicates that a new ServiceRequest has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-order&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-order\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing Order record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing ServiceRequest record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing ServiceRequest record (which may have been entered in error) and adding a new ServiceRequest record.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;procedure-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-procedure-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's procedures&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's procedures and it includes new procedures or modifications to existing procedures. Procedure events would be triggered by monitoring the Procedure resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-procedure&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-procedure\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Procedure added&lt;/td&gt;&lt;td&gt;Indicates that a new procedure has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-procedure&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-procedure\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing Procedure record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing procedure record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing procedure record (which may have been entered in error) and adding a new procedure record.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;immunization-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-immunization-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's immunizations&lt;/td&gt;&lt;td&gt;Indicates a change in the patient's immunization and it includes new immunizations or modifications to existing immunization records. Immunization change events would be triggered by monitoring the Immunization resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  new-immunization&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-new-immunization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Immunization added&lt;/td&gt;&lt;td&gt;Indicates that a new immunization has been added to the patient's chart in the EHR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  modified-immunization&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-modified-immunization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Existing immunization record has been modified&lt;/td&gt;&lt;td&gt;Indicates that an existing immunization record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing immunization record (which may have been entered in error) and adding a new immunization record.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;demographic-change&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-demographic-change\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates change in patient demographics&lt;/td&gt;&lt;td&gt;Indicates that the Patient demographic attributes such as Date of Birth, Race, Ethnicity, Deceased date, Address, Telecom, Names have changed. Demographic change events would be triggered by monitoring the Patient resource.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;received-public-health-report&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-received-public-health-report\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates receipt of a public health report&lt;/td&gt;&lt;td&gt;Indicates that a public health report was submitted and received by a specific system. This event could trigger downstream processing and hence is designated as a named event.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;received-public-health-response&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-received-public-health-response\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indicates receipt of a public health response for a submitted public health report&lt;/td&gt;&lt;td&gt;Indicates that a public health response was received by a specific system for an already submitted public health report. This event could trigger downstream processing and hence is designated as a named event.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;manual-notification&lt;a name=\&quot;us-ph-triggerdefinition-namedevents-manual-notification\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;A Practitioner or their representatives notify the application about change in patient data&lt;/td&gt;&lt;td&gt;In some cases where automated notifications are not supported, a practitioner or their representative can initiate the public health report processing by notifying the application about change in a patient's data.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "USPublicHealthTriggerDefinitionNamedEvents",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "US Public Health TriggerDefinition Named Events",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2020-09-06",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "HL7 International - Public Health Work Group",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.org/Special/committees/ph"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "The US Public Health TriggerDefinition NamedEvents CodeSystem is a 'starter set' of codes supported for identifying named events to subscribe to in clinical workflows.",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-triggerdefinition-namedevent",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 10,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "encounter-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's encounter records",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's encounter records which includes starting an encounter, closing an encounter, modifying data elements of an encounter. Encounter change events would be triggered by monitoring the Encounter resource.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "encounter-start",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates the start of an encounter",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates the start of an encounter, where in encounter.period.low is populated with the start time."
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "encounter-close",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates the close of an encounter",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates the closure of an encounter, where in encounter.period.high is populated with the end time."
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "encounter-modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates modifications to data elements of an encounter",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates changes to encounter codes, times, reason codes, diagnosis, discharge dispositions, locations etc. "
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "diagnosis-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's diagnosis",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's diagnosis and it includes new diagnosis or modifications to existing diagnosis. Diagnosis change events would be triggered by monitoring the Condition resource.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-diagnosis",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Diagnosis added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new diagnosis has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-diagnosis",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing Diagnosis record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing diagnosis record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing diagnosis record (which may have been entered in error) and adding a new diagnosis record."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "medication-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's medications",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's medications and it includes changes to Administered medications or Requested medications or Dispensed medications. Medication change events would be triggered by monitoring the MedicationRequest, MedicationDispense, MedicationStatement and MedicationAdministration resources.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-medication",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Medication added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new MedicationRequest or MedicationDispense or MedicationAdministered or MedicationStatement has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-medication",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing Medication record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing medication record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing medication record (which may have been entered in error) and adding a new medication record."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "labresult-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's labresults",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's lab results and it includes new lab results or modifications to existing lab results. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory. LabResult events would be triggered by monitoring the Observation resource with an Observation.category=laboratory.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-labresult",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Lab Result added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new Lab Result has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-labresult",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing Lab Result record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing lab result record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing lab result record (which may have been entered in error) and adding a new lab result record. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "order-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's orders",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's orders and it includes new or modified ServiceRequests. Order change events would be triggered by monitoring the ServiceRequest resource.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-order",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Order added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new ServiceRequest has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-order",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing Order record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing ServiceRequest record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing ServiceRequest record (which may have been entered in error) and adding a new ServiceRequest record."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "procedure-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's procedures",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's procedures and it includes new procedures or modifications to existing procedures. Procedure events would be triggered by monitoring the Procedure resource.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-procedure",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Procedure added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new procedure has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-procedure",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing Procedure record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing procedure record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing procedure record (which may have been entered in error) and adding a new procedure record."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "immunization-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates a change in the patient's immunizations",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates a change in the patient's immunization and it includes new immunizations or modifications to existing immunization records. Immunization change events would be triggered by monitoring the Immunization resource.",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">concept</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "new-immunization",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "New Immunization added",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a new immunization has been added to the patient's chart in the EHR"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "modified-immunization",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Existing immunization record has been modified",
+          "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that an existing immunization record in the patient's chart has been modified. Sometimes this is equivalent to removing an existing immunization record (which may have been entered in error) and adding a new immunization record."
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "demographic-change",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates change in patient demographics",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that the Patient demographic attributes such as Date of Birth, Race, Ethnicity, Deceased date, Address, Telecom, Names have changed. Demographic change events would be triggered by monitoring the Patient resource."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "received-public-health-report",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates receipt of a public health report",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a public health report was submitted and received by a specific system. This event could trigger downstream processing and hence is designated as a named event."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "received-public-health-response",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indicates receipt of a public health response for a submitted public health report",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Indicates that a public health response was received by a specific system for an already submitted public health report. This event could trigger downstream processing and hence is designated as a named event."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "manual-notification",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "A Practitioner or their representatives notify the application about change in patient data",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "In some cases where automated notifications are not supported, a practitioner or their representative can initiate the public health report processing by notifying the application about change in a patient's data."
+    }
+  ]
+}</code></pre>
+{% endraw %}

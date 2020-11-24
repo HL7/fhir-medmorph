@@ -1,0 +1,62 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "us-ph-response-message-processing-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RRVS1<a name=\"us-ph-response-message-processing-status-RRVS1\"> </a></td><td>Reportable data sent from clinical care to PHA.</td><td>Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style=\"white-space:nowrap\">RRVS2<a name=\"us-ph-response-message-processing-status-RRVS2\"> </a></td><td>Data sent from clinical care to PHA may be reportable.</td><td>May be reportable - the triggered condition may be reportable, but a full disposition was not achieved</td></tr><tr><td style=\"white-space:nowrap\">RRVS3<a name=\"us-ph-response-message-processing-status-RRVS3\"> </a></td><td>Data sent from clinical care to PHA is not reportable.</td><td>Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules.</td></tr><tr><td style=\"white-space:nowrap\">RRVS4<a name=\"us-ph-response-message-processing-status-RRVS4\"> </a></td><td>No Reporting rule met for the data setn from clinical care to PHA.</td><td>No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements.</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status",
+  "version": "0.1.0",
+  "name": "USPublicHealthResponseMessageProcessingStatus",
+  "title": "US Public Health CodeSystem for Response Message Processing Status Codes",
+  "status": "active",
+  "date": "2020-09-06",
+  "publisher": "HL7 International - Public Health Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/ph"
+        }
+      ]
+    }
+  ],
+  "description": "The US Public Health ValueSet UseContext CodeSystem is a 'starter set' of codes supported for identifying response message processing status codes.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status",
+  "content": "complete",
+  "count": 4,
+  "concept": [
+    {
+      "code": "RRVS1",
+      "display": "Reportable data sent from clinical care to PHA.",
+      "definition": "Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."
+    },
+    {
+      "code": "RRVS2",
+      "display": "Data sent from clinical care to PHA may be reportable.",
+      "definition": "May be reportable - the triggered condition may be reportable, but a full disposition was not achieved"
+    },
+    {
+      "code": "RRVS3",
+      "display": "Data sent from clinical care to PHA is not reportable.",
+      "definition": "Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."
+    },
+    {
+      "code": "RRVS4",
+      "display": "No Reporting rule met for the data setn from clinical care to PHA.",
+      "definition": "No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements."
+    }
+  ]
+}

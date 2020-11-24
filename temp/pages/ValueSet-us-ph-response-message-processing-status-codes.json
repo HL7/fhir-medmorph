@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-ph-response-message-processing-status-codes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-us-ph-response-message-processing-status.html\"><code>http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status</code></a></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status-codes",
+  "version": "0.1.0",
+  "name": "USPublicHealthResponseMessageProcessingStatusCodes",
+  "title": "US Public Health Response Message Processing Status Codes",
+  "status": "active",
+  "date": "2020-09-06",
+  "publisher": "HL7 International - Public Health Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/ph"
+        }
+      ]
+    }
+  ],
+  "description": "The US Public Health Message Types Value Set is a 'starter set' of codes for identifying response message processing status for each message that was previously submitted from clinical care to PHA.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"
+      }
+    ]
+  }
+}

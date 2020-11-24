@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="us-ph-response-message-processing-status"/>
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"/>
+  <version value="1.0.0"/>
+  <name value="USPublicHealthResponseMessageProcessingStatus"/>
+  <title value="US Public Health CodeSystem for Response Message Processing Status Codes"/>
+  <status value="active"/>
+  <date value="2020-09-06"/>
+  <description value="The US Public Health ValueSet UseContext CodeSystem is a &#39;starter set&#39; of codes supported for identifying response message processing status codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="RRVS1"/>
+    <display value="Reportable data sent from clinical care to PHA."/>
+    <definition value="Reportable - the triggered condition was determined to be reportable for responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."/>
+  </concept>
+  <concept>
+    <code value="RRVS2"/>
+    <display value="Data sent from clinical care to PHA may be reportable."/>
+    <definition value="May be reportable - the triggered condition may be reportable, but a full disposition was not achieved"/>
+  </concept>
+  <concept>
+    <code value="RRVS3"/>
+    <display value="Data sent from clinical care to PHA is not reportable."/>
+    <definition value="Not reportable - all data needed for rule were available, but the condition was not determined to be reportable for the responsible jurisdiction on the basis of appropriate authoring jurisdiction rules."/>
+  </concept>
+  <concept>
+    <code value="RRVS4"/>
+    <display value="No Reporting rule met for the data setn from clinical care to PHA."/>
+    <definition value="No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements."/>
+  </concept>
+ </CodeSystem>

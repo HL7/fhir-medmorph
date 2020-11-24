@@ -1,0 +1,38 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='ext-expectedResponseTime' %}
+
+{% assign format = page.path | split: '.html'| first | split: '.' | last %}
+
+{% if format == 'xml' %}
+{% assign section = '7' %}
+{% elsif format == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='ext-expectedResponseTime' active=format %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: ExpectedResponseTime - {{format | upcase}} Profile</h2>
+
+<p>{{format | upcase}} representation of the ext-expectedResponseTime {{modelType | downcase }}.</p>
+
+<p><a href="StructureDefinition-ext-expectedResponseTime.{{format}}" no-download="true">Raw {{format}}</a> | <a href="StructureDefinition-ext-expectedResponseTime.{{format}}" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='ext-expectedResponseTime' %}
+
+  {%include StructureDefinition-ext-expectedResponseTime-{{format}}-html.xhtml%}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='ext-expectedResponseTime' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}
