@@ -358,7 +358,7 @@
     </telecom>
   </contact>
   <description value="This profile defines the expected capabilities of the ''Public Health Agency'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for for defining Knowledge Artifacts, receiving public health reports and submit responses back to clinical care organizations."/>
+  This role is responsible for defining Knowledge Artifacts, receiving public health reports, and submitting responses back to clinical care organizations."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
