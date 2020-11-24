@@ -2,7 +2,7 @@ This section of the implementation guide defines the specific requirements for s
 
 ### MedMorph Reports
 
-Reports that are created by the Backend Service App are intended to contain all the resource instances necessary to be send to the PHA/Research Organizations. The following are specific requirements for report creation and submission.
+Reports that are created by the Backend Service App are intended to contain all the resource instances necessary to be send to the PHA/Research Organizations. The following are specific requirements for report submission.
 
 #### Backend Service App Requirements for Messaging
 
