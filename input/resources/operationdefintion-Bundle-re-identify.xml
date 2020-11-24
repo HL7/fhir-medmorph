@@ -33,7 +33,7 @@
     <use value="out"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Upon successful re-identification, The re-identified bundle is returned back from the service."/>
+    <documentation value="Upon successful re-identification, the re-identified bundle is returned back from the service."/>
     <type value="Bundle"/>
   </parameter>
   <parameter>
