@@ -57,6 +57,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="researchusecases.html"/>
+        <title value="Research Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
         <generation value="markdown"/>

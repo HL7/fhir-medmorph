@@ -69,7 +69,7 @@ The following aspects are out-of-scope for the MedMorph Reference Architecture I
 * Enabling claims data access to research and public health.
 * Changes to the EHR data capture screens and/or changes to clinical workflows. Providers may use their choice of apps/screens/systems to enter the data into the EHR independent of the IG.
 * Any data not accessible by a FHIR API.
-* Clinical care setting policies such as the collection of consent for data sharing.
+* Policies and processes followed by healthcare organizations to allow data sharing,  collecting of consent, compliance with regulatory requirements are out-of-scope. The technical APIs to exchange required data for the use cases are in-scope as specified in the In-Scope section.
 
 
 ### Underlying Specifications

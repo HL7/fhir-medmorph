@@ -10,7 +10,10 @@
         <a href="{{site.data.info.assets}}background.html">Implementation Guide Overview</a>
       </li>
       <li>
-        <a href="{{site.data.info.assets}}usecases.html">Use Cases and Workflows</a>
+        <a href="{{site.data.info.assets}}usecases.html">Public Health Use Cases and Workflows</a>
+      </li>
+      <li>
+        <a href="{{site.data.info.assets}}researchusecases.html">Research Use Cases and Workflows</a>
       </li>
     </ul>
   </li>
