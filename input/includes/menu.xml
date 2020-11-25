@@ -26,7 +26,10 @@
         <a href="spec.html">Public Health Reporting Specification</a>
       </li>
       <li>
-        <a href="researchdataextraction.html">Research Data Partner Onboarding Sepcification</a>
+        <a href="researchdataextraction.html">Research Data Partner Onboarding Specification</a>
+      </li>
+      <li>
+        <a href="researchdataquery.html">Research Data Query Specification</a>
       </li>
     </ul>
   </li>
