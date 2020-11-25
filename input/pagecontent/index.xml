@@ -40,7 +40,10 @@
       familiar with before reading the remainder of the IG.  
     </li>
     <li>
-      <a href="usecases.html">Use Cases</a> - describes the business need, actors, and workflows for the IG.  
+      <a href="usecases.html">Public Health Use Cases</a> - describes the business need, actors, and workflows applicable for public health reporting in MedMorph.  
+    </li>
+    <li>
+      <a href="researchusecases.html">Research Use Cases</a> - describes the business need, actors, and workflows applicable for researcher data access in MedMorph.  
     </li>
     <li>
       <a href="spec.html">Detailed Specification</a> - defines the specific conformance requirements for systems wishing to conform to actors specified in the IG.

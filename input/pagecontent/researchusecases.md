@@ -70,7 +70,7 @@ FHIR is one of the data models that could also be used for research in the futur
 
 5. __Research Organization__: An organization that can access the data from clinical care or data repositories for research purposes with appropriate data use agreements, authorities, and policies.
 
-6. __Researcher Portal: A system that is used by the researcher to explore which data marts exist, compose queries, submit the queries, receive results for analysis.
+6. __Researcher Portal__: A system that is used by the researcher to explore which data marts exist, compose queries, submit the queries, receive results for analysis.
 
 7. __Query Translator and Submitter__: A system that interacts with the Researcher Portal to receive queries, translate queries and then submit the queries to the Backend Service App.
 

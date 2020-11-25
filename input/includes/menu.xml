@@ -23,7 +23,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec.html">Detailed Specification</a>
+        <a href="spec.html">Public Health Reporting Specification</a>
+      </li>
+      <li>
+        <a href="researchdataextraction.html">Research Data Partner Onboarding Sepcification</a>
       </li>
     </ul>
   </li>
