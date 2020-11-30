@@ -97,10 +97,10 @@
           </tbody>
         </table>
       </div>
-      <p>
+     
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the EHR.</p>
-      </p>
+      
       <ul>
         <li>
           <a>None</a>

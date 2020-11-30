@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="us-ph-plandefinition-action"/>
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefintion-action"/>
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefinition-action"/>
   <version value="1.0.0"/>
   <name value="USPublicHealthPlanDefinitionAction"/>
   <title value="US Public Health PlanDefinition Action"/>

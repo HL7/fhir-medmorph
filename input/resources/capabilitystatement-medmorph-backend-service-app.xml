@@ -51,7 +51,7 @@
           </thead>
           <tbody>
            <tr>
-              <th>PlanDefinition (<a href="StructureDefinition-us-ph-plandefintion.html">Profile</a>)</th>
+              <th>PlanDefinition (<a href="StructureDefinition-us-ph-plandefinition.html">Profile</a>)</th>
               <td>
                 <a title="Allows a user to search for existing PlanDefinition instances" href="#PlanDefinition-search-type">SHALL</a>
               </td>
@@ -163,10 +163,10 @@
           </tbody>
         </table>
       </div>
-      <p>
+      
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the Backend Service App.</p>
-      </p>
+      
       <ul>
         <li>
           <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle psuedonymize</a>
@@ -189,7 +189,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-plandefintion.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -495,7 +495,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <name value="identifier"/>
-        <definition value="{{site.data.fhir.path}}search.html#token"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-identifier"/>
         <type value="token"/>
       </searchParam>
       <searchParam>
@@ -503,7 +503,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <name value="name"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-name"/>
         <type value="string"/>
       </searchParam>
       <searchParam>
@@ -511,7 +511,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <name value="publisher"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-publisher"/>
         <type value="string"/>
       </searchParam>
       <searchParam>
@@ -519,7 +519,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <name value="title"/>
-        <definition value="{{site.data.fhir.path}}search.html#string"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-title"/>
         <type value="string"/>
       </searchParam>
     </resource>
@@ -557,24 +557,13 @@
     <resource>
       <type value="Bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Reporting Bundle instance."/>
-      </interaction>
-
-    </resource>
-    <resource>
-      <type value="Bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows creation of a Content Bundle instance."/>
+        <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
       </interaction>
       <operation>
         <name value="psuedonymize"/> 

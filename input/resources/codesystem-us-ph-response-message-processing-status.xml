@@ -16,7 +16,7 @@
     </coding>
   </jurisdiction>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status"/>
+  <valueSet value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status-codes"/>
   <content value="complete"/>
   <count value="4"/>
   <concept>

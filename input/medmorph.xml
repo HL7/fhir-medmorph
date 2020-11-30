@@ -5,7 +5,7 @@
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
   <name value="MakingEHRDataMoreAvailableToResearchAndPublicHealth"/>
-  <title value="Making EHR Data MOre available for Research and Public Health (MedMorph) "/>
+  <title value="Making EHR Data MOre available for Research and Public Health (MedMorph)"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -23,7 +23,7 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.us.medmorph"/>
+  <packageId value="hl7.fhir.us.fhir-medmorph"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->

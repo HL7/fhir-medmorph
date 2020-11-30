@@ -8,7 +8,7 @@ Reports that are created by the Backend Service App are intended to contain all 
 
 ##### Message Submission
 
-* The Backend Service App SHALL create reports to be sent to the PHA/RO in form of a Bundle of type 'message' as indicated by the profile [MedMorph Report Bundle](StructureDefinition-medmorph-bundle.html).
+* The Backend Service App SHALL create reports to be sent to the PHA/RO in form of a Bundle of type 'message' as indicated by the profile [MedMorph Report Bundle](StructureDefinition-us-ph-reporting-bundle.html).
 
 * The Backend Service App SHALL include the MessageHeader resource as the first entry in the Bundle. 
 

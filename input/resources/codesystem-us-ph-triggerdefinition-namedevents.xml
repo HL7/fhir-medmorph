@@ -36,7 +36,7 @@
 	  <concept>
 	    <code value="encounter-modified"/>
 	    <display value="Indicates modifications to data elements of an encounter"/>
-	    <definition value="Indicates changes to encounter codes, times, reason codes, diagnosis, discharge dispositions, locations etc. "/>
+	    <definition value="Indicates changes to encounter codes, times, reason codes, diagnosis, discharge dispositions, locations etc."/>
 	  </concept>
   </concept>
   <concept>

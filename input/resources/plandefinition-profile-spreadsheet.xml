@@ -20,7 +20,7 @@
   <WindowWidth>27640</WindowWidth>
   <WindowTopX>4300</WindowTopX>
   <WindowTopY>2760</WindowTopY>
-  <ActiveSheet>5</ActiveSheet>
+  <ActiveSheet>8</ActiveSheet>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -765,9 +765,6 @@
    </Borders>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#333399"/>
    <Interior/>
-  </Style>
-  <Style ss:ID="s150">
-   <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="12" ss:Color="#333333"/>
   </Style>
   <Style ss:ID="s151">
    <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
@@ -7749,13 +7746,12 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>1</TopRowBottomPane>
    <SplitVertical>1</SplitVertical>
-   <LeftColumnRightPane>3</LeftColumnRightPane>
+   <LeftColumnRightPane>1</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -7763,7 +7759,6 @@
     </Pane>
     <Pane>
      <Number>1</Number>
-     <ActiveCol>1</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>
@@ -8773,7 +8768,8 @@
     <Cell ss:StyleID="s129"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s129"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s129"/>
-    <Cell ss:StyleID="s150"><Data ss:Type="String">http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefintion-action</Data></Cell>
+    <Cell ss:StyleID="s62" ss:HRef="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefinition-action"><Data
+      ss:Type="String">http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefinition-action</Data></Cell>
     <Cell ss:StyleID="s129"/>
     <Cell ss:StyleID="s129"/>
     <Cell ss:StyleID="s129"/>
@@ -9246,6 +9242,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -9265,8 +9262,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>0</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

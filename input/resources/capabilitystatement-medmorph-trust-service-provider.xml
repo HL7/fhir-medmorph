@@ -98,10 +98,10 @@
           </tbody>
         </table>
       </div>
-      <p>
+     
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the Trust Service Provider.</p>
-      </p>
+      
       <ul>
         <li>
           <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle psuedonymize</a>
@@ -204,23 +204,13 @@
     <resource>
       <type value="Bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Reporting Bundle instance."/>
-      </interaction>
-    </resource>
-    <resource>
-      <type value="Bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows creation of a Content Bundle instance."/>
+        <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
       </interaction>
       <operation>
         <name value="psuedonymize"/> 

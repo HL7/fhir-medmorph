@@ -25,7 +25,7 @@
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="An input bundle instance that needs to be pseudonymized. "/>
+    <documentation value="An input bundle instance that needs to be pseudonymized."/>
     <type value="Bundle"/>
   </parameter>
   <parameter>

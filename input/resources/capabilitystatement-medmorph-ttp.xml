@@ -72,10 +72,10 @@
           </tbody>
         </table>
       </div>
-      <p>
+     
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the Trusted Third Party.</p>
-      </p>
+     
       <ul>
         <li>
           <a href="https://www.hl7.org/fhir/messageheader-operation-process-message.html">Bundle process-message</a>
