@@ -1,8 +1,9 @@
 {
- "package-id" : "hl7.fhir.us.medmorph",
+ "package-id" : "hl7.fhir.us.fhir-medmorph",
  "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph)", 
  "canonical" : "http://hl7.org/fhir/us/fhir-medmorph", 
- "introduction" : "The FHIR IG enables exchanging rosters of patients between Payers and Providers.",
+ "introduction" : "The MedMorph FHIR IG enables Public Health and Research Organizations to access EHR data without increasing provider burden.",
+ "category" : "Public Health",
  "list" : [
  {
   "version" : "current",
@@ -10,8 +11,17 @@
   "path" : "http://build.fhir.org/ig/HL7/fhir-medmorph",
   "status" : "ci-build",
   "current" : "true",
-  "sequence" : "DSTU1",
-  "fhirVersion" : "4.0.1"
+  "sequence" : "STU 1",
+  "fhirversion" : "4.0.1"
+ },
+ {
+  "version" : "0.1.0",  
+  "date" : "2021-01-01", 
+  "desc" : "STU 1 Ballot (Jan 2021 Ballot)",   
+  "path" : "http://hl7.org/fhir/us/fhir-medmorph/2021Jan/index.html",   
+  "status" : "ballot",   
+  "sequence" : "STU 1",
+  "fhirversion" : "4.0.1"
  }
  ]
 }
