@@ -59,13 +59,28 @@
             <code value="encounter-close"/> 
           </coding> 
         </reason> 
+        <focus>
+          <reference value="Bundle/content-bundle-example"/>
+        </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Patient/1"/>
+    <fullUrl value="Bundle/content-bundle-example"/>
     <resource>
       
+            <Bundle xmlns="http://hl7.org/fhir">
+        <id value="content-bundle-example"/> 
+        <meta>
+              <versionId value="1"/>
+              <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+              <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
+        </meta>
+        <type value="collection"/> 
+        <timestamp value="2020-11-20T11:15:33-10:00"/> 
+        <entry> 
+         <fullUrl value="Patient/1"/>
+          <resource> 
             <Patient> 
               <id value="1"/> 
               <text> 
@@ -97,6 +112,9 @@
                 <display value="Example Healthcare org"/> 
               </managingOrganization>
             </Patient> 
+          </resource> 
+        </entry> 
+      </Bundle>
           
     </resource>
   </entry>

@@ -59,6 +59,9 @@
             <code value="encounter-close"/> 
           </coding> 
         </reason> 
+        <focus>
+          <reference value="Communication/communication-example-cancer-pha-response"/>
+        </focus>
       </MessageHeader>
     </resource>
   </entry>
