@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>KnowledeArtifactRepository</h2>
       <p>(Requirements Definition Capability Statement)</p>
-      <p>Canonical URL: http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Knowledge Artifact Repository </i> actor.  
@@ -90,7 +90,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-plandefinition.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-plandefinition.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -201,7 +201,7 @@
     </div>
   </text>
   
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository"/>
+  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository"/>
   <name value="KnowledgeArtifactRepository"/>
   <title value="MedMorph Knowledge Artifact Repository"/>
   <status value="draft"/>
@@ -226,7 +226,7 @@
     </security>
     <resource>
       <type value="PlanDefinition"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>

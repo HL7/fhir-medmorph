@@ -5,7 +5,7 @@
     <versionId value="1"/>
     <lastUpdated value="2020-11-30T23:10:42.057+00:00"/>
     <profile
-             value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-valueset"/>
+             value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-valueset"/>
   </meta>
   <text>
     <status value="generated"/>
@@ -21,7 +21,7 @@
       <name value="CSTE Author"/>
     </valueContactDetail>
   </extension>
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
+  <url value="http://hl7.org/fhir/us/medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
   <version value="3.0.0"/>
   <name value="SNOMEDCancerCodesExample"/>
   <title value="SNOMED Cancer Codes Example"/>
@@ -50,7 +50,7 @@
     <valueCodeableConcept>
       <coding>
         <system
-                value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-valueset-usecontext-codes"/>
+                value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-valueset-usecontext-codes"/>
         <code value="ph-reporting"/>
         <display value="ValueSet is to be used in the context of public health reporting use cases."/>
       </coding>

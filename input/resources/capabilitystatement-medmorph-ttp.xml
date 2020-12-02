@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>TrustedThirdParty</h2>
       <p>(Requirements Definition Capability Statement)</p>
-      <p>Canonical URL: http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trusted-third-party</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trusted-third-party</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Trusted Third Party </i> actor.  
@@ -86,7 +86,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -115,7 +115,7 @@
     </div>
   </text>
   
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trusted-third-party"/>
+  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trusted-third-party"/>
   <name value="TrustedThirdParty"/>
   <title value="MedMorph Trusted Third Party"/>
   <status value="draft"/>
@@ -140,7 +140,7 @@
     </security>
     <resource>
       <type value="Bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -162,7 +162,7 @@
     </security>
     <resource>
       <type value="Bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>

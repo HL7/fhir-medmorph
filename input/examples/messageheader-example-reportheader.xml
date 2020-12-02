@@ -5,7 +5,7 @@
   <meta>
         <versionId value="1"/>
         <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
-        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-messageheader"/>
+        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
   </meta>
   <text> 
     <status value="generated"/> 
@@ -13,14 +13,14 @@
       <p>Reporting Data</p> 
     </div> 
   </text> 
-  <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-dataEncrypted">
+  <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-dataEncrypted">
                 <valueBoolean value="false"/>
   </extension>
-  <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-messageProcessingCategory">
+  <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-messageProcessingCategory">
                 <valueCode value="consequence"/>
   </extension>
   <eventCoding> 
-    <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
+    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
     <code value="cancer-report-message"/> 
   </eventCoding> 
   <destination> 
@@ -42,7 +42,7 @@
   </source> 
   <reason> 
     <coding> 
-      <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/> 
+      <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/> 
       <code value="encounter-close"/> 
     </coding> 
   </reason> 

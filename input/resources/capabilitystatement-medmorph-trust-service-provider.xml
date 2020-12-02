@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>TrustServiceProvider</h2>
       <p>(Requirements Definition Capability Statement)</p>
-      <p>Canonical URL: http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trust-service-provider</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trust-service-provider</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Trust Service Provider </i> actor.  
@@ -121,7 +121,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -150,7 +150,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
       </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle</a>
+      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -178,7 +178,7 @@
     </div>
   </text>
   
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/CapabilityStatement/medmorph-trust-service-provider"/>
+  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trust-service-provider"/>
   <name value="TrustServiceProvider"/>
   <title value="MedMorph Trust Service Provider"/>
   <status value="draft"/>
@@ -203,8 +203,8 @@
     </security>
     <resource>
       <type value="Bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-reporting-bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -214,19 +214,19 @@
       </interaction>
       <operation>
         <name value="psuedonymize"/> 
-        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-psuedonymize"/>
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-psuedonymize"/>
       </operation>
       <operation>
         <name value="anonymize"/> 
-        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-anonymize"/>
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-anonymize"/>
       </operation>
       <operation>
         <name value="de-identify"/> 
-        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-de-identify"/>
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-de-identify"/>
       </operation>
       <operation>
         <name value="re-identify"/> 
-        <definition value="http://hl7.org/fhir/us/fhir-medmorph/OperationDefinition/Bundle-re-identify"/>
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-re-identify"/>
       </operation>
     </resource>
   </rest>

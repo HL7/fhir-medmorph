@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="us-ph-message-types"/>
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-message-types"/>
+  <url value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-message-types"/>
   <version value="1.0.0"/>
   <name value="USPublicHealthMessageTypes"/>
   <title value="US Public Health Message Types"/>
@@ -24,7 +24,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-messageheader-message-types"/>
+      <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
     </include>
   </compose>
 </ValueSet>

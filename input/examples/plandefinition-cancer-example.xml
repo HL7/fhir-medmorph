@@ -5,14 +5,14 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
-        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
+        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
     </meta>
-    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-receiverAddress">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-receiverAddress">
                 <valueReference>
                     <reference value="Endpoint/example-ph-endpoint"/>
                 </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-authorSignature">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-authorSignature">
                 <valueSignature>
                     <type> 
                       <system value="urn:iso-astm:E1762-95:2013"/> 
@@ -28,17 +28,17 @@
                     <data value="Li4u"/>
                 </valueSignature>
     </extension>
-    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-asyncIndicator">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-asyncIndicator">
                 <valueBoolean value="true"/>
     </extension>
-    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-expectedResponseTime">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-expectedResponseTime">
                 <valueDuration>
                     <value value="1"/>
                     <system value="http://unitsofmeasure.org"/>
                     <code value="min"/>
                 </valueDuration>
     </extension>
-    <url value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/plandefinition-cancer-example"/>
+    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/plandefinition-cancer-example"/>
     <version value="1.0"/>
     <name value="PlanDefinitionCancerExample"/>
     <title value="PlanDefinition Cancer Reporting Example"/>
@@ -60,7 +60,7 @@
     <relatedArtifact>
         <type value="depends-on"/>
         <label value="Cancer Trigger Codes"/>
-        <resource value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
+        <resource value="http://hl7.org/fhir/us/medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
     </relatedArtifact>
 <!--    <library value="http://aphl.org/fhir/ecr/Library/RuleFiltersCancer|1.0.0"/> -->
     <action id="initiate-reporting-workflow">
@@ -68,15 +68,15 @@
         <textEquivalent value="Initiate Reporting Workflow"/>
         <code>
             <coding>
-                <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
                 <code value="initiate-reporting-workflow"/>
             </coding>
         </code>
         <trigger>
-            <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-us-ph-namedEventType">
+            <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-us-ph-namedEventType">
                 <valueCodeableConcept>
                     <coding>
-                        <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
+                        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
                         <code value="encounter-close"/>
                         <display value="Indicates the close of an encounter"/>
                     </coding>
@@ -101,7 +101,7 @@
         <action>
             <code>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
                     <code value="check-trigger-codes"/>
                 </coding>
             </code>
@@ -109,7 +109,7 @@
                 <kind value="applicability"/>
                 <expression>
                     <language value="text/fhirpath"/>
-                    <expression value="Condition.code.memberof(http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example)"/></expression>
+                    <expression value="Condition.code.memberof(http://hl7.org/fhir/us/medmorph/ValueSet/valueset-cancer-trigger-codes-example)"/></expression>
             </condition>
             <relatedAction>
                 <actionId value="create-report"/>
@@ -122,7 +122,7 @@
         <textEquivalent value="Create Report"/>
         <code>
             <coding>
-                <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
                 <code value="create-report"/>
             </coding>
         </code>

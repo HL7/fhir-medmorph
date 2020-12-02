@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="us-ph-response-message-processing-status-codes"/>
-  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-response-message-processing-status-codes"/>
+  <url value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-response-message-processing-status-codes"/>
   <version value="1.0.0"/>
   <name value="USPublicHealthResponseMessageProcessingStatusCodes"/>
   <title value="US Public Health Response Message Processing Status Codes"/>
@@ -24,7 +24,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"/>
+      <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-response-message-processing-status"/>
     </include>
   </compose>
 </ValueSet>
