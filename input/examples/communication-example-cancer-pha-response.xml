@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Communication xmlns="http://hl7.org/fhir">
+  <id value="communication-example-cancer-pha-response"/> 
+  <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-communication"/>
+  </meta>
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">Response message after processing a submitted public health cancer report</div> 
+  </text> 
+  <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-responseMessageStatus">
+                <valueCodeableConcept>
+                  <coding>
+                    <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-response-message-processing-status"/> 
+                    <code value="RRVS1"/> 
+                  </coding>
+                </valueCodeableConcept>
+  </extension>
+  <identifier> 
+    <system value="http://example.pha.org/"/> 
+    <value value="12345"/> 
+  </identifier> 
+  <status value="completed"/> 
+  <category> 
+    <coding> 
+      <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
+      <code value="cancer-response-message"/> 
+    </coding> 
+  </category> 
+  <subject> 
+    <reference value="Patient/1"/> 
+  </subject> 
+  
+  <sent value="2020-11-30T18:01:10-08:00"/> 
+  <received value="2020-11-30T18:01:14-08:00"/> 
+  <reasonCode> 
+    <coding> 
+      <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
+      <code value="cancer-report-message"/> 
+    </coding> 
+  </reasonCode> 
+</Communication> 

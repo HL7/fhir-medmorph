@@ -1,0 +1,101 @@
+{
+	"resourceType": "Patient",
+	"id": "1",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2019-04-23T10:30:54.819-04:00"
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dominique369 Ledner144</div>"
+	},
+	"identifier": [
+		{
+			"use": "official",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "MR",
+						"display": "Medical Record Number"
+					}
+				],
+				"text": "Medical Record Number"
+			},
+			"system": "http://example.healthcare.org",
+			"value": "1213208"
+		}
+	],
+	"active": true,
+	"name": [
+		{
+			"use": "official",
+			"family": "Ledner144",
+			"given": [
+				"Dominique369"
+			]
+		}
+	],
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "800-504-7344",
+			"use": "home"
+		},
+		{
+			"system": "email",
+			"value": "brian.gracia@example.healthcare.com"
+		}
+	],
+	"gender": "female",
+	"birthDate": "1965-06-22",
+	"deceasedBoolean": false,
+	"address": [
+		{
+			"use": "home",
+			"line": [
+				"25 Church St"
+			],
+			"city": "Bixby",
+			"state": "OK",
+			"postalCode": "74008",
+			"country": "USA"
+		}
+	],
+	"maritalStatus": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "36629006",
+				"display": "Legally married"
+			},
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+				"code": "M"
+			}
+		]
+	},
+	"communication": [
+		{
+			"language": {
+				"coding": [
+					{
+						"system": "urn:ietf:bcp:47",
+						"code": "en",
+						"display": "English"
+					}
+				]
+			},
+			"preferred": true
+		}
+	],
+	"generalPractitioner": [
+		{
+			"reference": "Practitioner/1"
+		}
+	],
+	"managingOrganization": {
+		"reference": "Organization/example-healthcare-org",
+		"display": "Healthcare Example"
+	}
+}

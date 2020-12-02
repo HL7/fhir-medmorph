@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="example-healthcare-org"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>Health Care Organization</p> 
+        </div>
+  </text>
+  <identifier>
+    <system value="http://example.healthcare.org/fhir"/>
+    <value value="1063494177"/>
+  </identifier>
+  <active value="true"/>
+  <name value="Example Healthcare Organization"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(917)932-2000"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <text value="3300 Mayland Avenue, Suite 227 Altanta GA"/>
+    <line value="4401 Peach Rd,"/>
+    <city value="Atlanta"/>
+    <state value="GA"/>
+    <postalCode value="81452"/>
+  </address>
+  <endpoint>
+    <reference value="Endpoint/example-healthcare-endpoint"/>
+  </endpoint>
+</Organization>

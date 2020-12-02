@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Group xmlns="http://hl7.org/fhir">
+  <id value="group-example-research"/>
+  <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/research-participant-group"/>
+  </meta> 
+  <text> 
+    <status value="additional"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p> Patients participating in Research </p> 
+      <ul> 
+        <li> Patient Ledner Dominique</li> 
+      </ul> 
+    </div> 
+  </text> 
+  <type value="person"/> 
+  <actual value="true"/> 
+  <managingEntity>
+    <reference value="Organization/example-healthcare-org"/>
+  </managingEntity>
+  <member> 
+    <entity> 
+      <reference value="Patient/1"/> 
+    </entity> 
+    <period> 
+      <start value="2020-11-10"/> 
+    </period> 
+  </member> 
+</Group> 

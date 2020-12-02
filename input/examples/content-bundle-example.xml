@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="content-bundle-example"/> 
+  <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-content-bundle"/>
+  </meta>
+  <type value="collection"/> 
+  <timestamp value="2020-11-20T11:15:33-10:00"/> 
+  <entry> 
+   <fullUrl value="Patient/1"/>
+    <resource> 
+      <Patient> 
+        <id value="1"/> 
+        <text> 
+          <status value="generated"/> 
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p> Patient Dominique Ledner</p>           
+          </div> 
+        </text> 
+        <identifier> 
+          <use value="usual"/> 
+          <type> 
+            <coding> 
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/> 
+              <code value="MR"/> 
+            </coding> 
+          </type> 
+          <system value="urn:oid:0.1.2.3.4.5.6.7"/> 
+          <value value="654321"/> 
+        </identifier> 
+        <active value="true"/> 
+        <name> 
+          <use value="official"/> 
+          <family value="Ledner"/> 
+          <given value="Dominique"/> 
+        </name> 
+        <gender value="male"/>  
+        <managingOrganization> 
+          <reference value="Organization/example-healthcare-org"/> 
+          <display value="Example Healthcare org"/> 
+        </managingOrganization>
+      </Patient> 
+    </resource> 
+  </entry> 
+</Bundle>

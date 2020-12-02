@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-cancer-trigger-codes-example"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-11-30T23:10:42.057+00:00"/>
+    <profile
+             value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-valueset"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes trigger code examples for cancer reporting</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-steward">
+    <valueContactDetail>
+      <name value="CSTE Steward"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-author">
+    <valueContactDetail>
+      <name value="CSTE Author"/>
+    </valueContactDetail>
+  </extension>
+  <url value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
+  <version value="3.0.0"/>
+  <name value="SNOMEDCancerCodesExample"/>
+  <title value="SNOMED Cancer Codes Example"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2018-08-01"/>
+  <publisher
+             value="HL7 Public Health Work Group (http://www.hl7.org/Special/committees/pher/index.cfm)"/>
+  <contact>
+    <name value="HL7 International - Public Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+  </contact>
+  <description
+               value="This example set of values contains diagnoses or problems that represent that the patient may have a potentially reportable condition regardless of the clinical presentation of the condition"/>
+  <useContext>
+    <code>
+      <system
+              value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="program"/>
+      <!-- ERROR in Build Tool, pulling wrong display string -->
+   <!--   <display value="Program"/> -->
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system
+                value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-valueset-usecontext-codes"/>
+        <code value="ph-reporting"/>
+        <display value="ValueSet is to be used in the context of public health reporting use cases."/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+    <text value="United States of America"/>
+  </jurisdiction>
+  <copyright
+             value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="281566005"/>
+            <display value="Abdominothoracic neuroblastoma"/>
+         </concept>
+    </include>
+ <!-- ERROR in Build Tool, not recognizing icd-10-cm codes
+   <include>
+      <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <concept>
+            <code value="C44.101"/>
+            <display value="Unspecified malignant neoplasm of skin of unspecified eyelid, including ?canthus (C44.101)"/>
+         </concept>
+    </include> -->
+   </compose>
+</ValueSet>

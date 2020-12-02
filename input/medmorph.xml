@@ -34,6 +34,137 @@
     <version value="3.1.0"/>
   </dependsOn>
   <definition>
+  
+   <resource>
+      <reference>
+        <reference value="Patient/1"/>
+      </reference>
+      <name value="Patient 1 - Example"/>
+      <description value="An example showing a Patient"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Practitioner/1"/>
+      </reference>
+      <name value="Practitioner Example"/>
+      <description value="An example showing a Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/example-pha-org"/>
+      </reference>
+      <name value="Public Health Organization Example"/>
+      <description value="An example showing a Public Health Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/example-healthcare-org"/>
+      </reference>
+      <name value="Healthcare Organization Example"/>
+      <description value="An example showing a HealthCare Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Endpoint/example-ph-endpoint"/>
+      </reference>
+      <name value="Public Health Organization Endpoint example"/>
+      <description value="An example showing a Public Health Organization Endpoint"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Endpoint/example-healthcare-endpoint"/>
+      </reference>
+      <name value="Healthcare Organization Endpoint example"/>
+      <description value="An example showing a Healthcare Organization Endpoint"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PlanDefinition/plandefinition-cancer-example"/>
+      </reference>
+      <name value="Plan Definition example for Cancer Reporting"/>
+      <description value="An example showing a Plan Definition for Cancer reporting"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MessageHeader/messageheader-example-reportheader"/>
+      </reference>
+      <name value="MessageHeader example used in the Cancer Reporting Bundle sent from Healthcare org to PHA"/>
+      <description value="MessageHeader example used in the Cancer Reporting Bundle sent from Healthcare org to PHA"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-cancer-trigger-codes-example"/>
+      </reference>
+      <name value="ValueSet example for Cancer Reporting"/>
+      <description value="An example showing a ValueSet for Cancer reporting"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Group/group-example-research"/>
+      </reference>
+      <name value="Group example showing patients participating in research at a healthcare organization"/>
+      <description value="Group example showing patients participating in research at a healthcare organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Group/group-example-survey"/>
+      </reference>
+      <name value="Group example showing Providers participating in healthcare surveys"/>
+      <description value="Group example showing Providers participating in healthcare surveys"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Communication/communication-example-cancer-pha-response"/>
+      </reference>
+      <name value="Communication example from PHA to Healthcare in response to a receieved cancer report"/>
+      <description value="Communication example from PHA to Healthcare in response to a receieved cancer report"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/content-bundle-example"/>
+      </reference>
+      <name value="Example of a Content Bundle containing Patient Data"/>
+      <description value="Example of a Content Bundle containing Patient Data"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/reporting-bundle-example"/>
+      </reference>
+      <name value="Example of a Reporting Bundle containing Message Header and Content Bundle"/>
+      <description value="Example of a Reporting Bundle containing Message Header and Content Bundle"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/specification-bundle-example"/>
+      </reference>
+      <name value="Example of a Specification Bundle for a Knolwedge Artifact containing a Plan Definition and Value Set"/>
+      <description value="Example of a Specification Bundle for a Knolwedge Artifact containing a Plan Definition and Value Set"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/response-bundle-example"/>
+      </reference>
+      <name value="Example of a Response Bundle for a submitted message containing a communication resource."/>
+      <description value="Example of a Response Bundle for a submitted message containing a communication resource."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    
+    
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <page>

@@ -1,0 +1,68 @@
+{
+	"resourceType": "Practitioner",
+	"id": "1",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2019-03-06T03:07:57.933-05:00"
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Joseph Nichols</div>"
+	},
+	"identifier": [
+		{
+			"use": "official",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "SB",
+						"display": "Social Beneficiary Identifier"
+					}
+				],
+				"text": "US Social Security Number"
+			},
+			"system": "http://hl7.org/fhir/sid/us-ssn",
+			"value": "000-00-0004"
+		}
+	],
+	"active": true,
+	"name": [
+		{
+			"use": "official",
+			"family": "Nichols",
+			"given": [
+				"Joseph",
+				"P"
+			],
+			"suffix": [
+				"MD"
+			]
+		}
+	],
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "800-277-1993",
+			"use": "mobile"
+		},
+		{
+			"system": "email",
+			"value": "joseph.shaw@example.com"
+		}
+	],
+	"address": [
+		{
+			"use": "home",
+			"line": [
+				"53 Sunset AveApt 9"
+			],
+			"city": "Tulsa",
+			"state": "OK",
+			"postalCode": "74126",
+			"country": "USA"
+		}
+	],
+	"gender": "male",
+	"birthDate": "1963-12-14"
+}

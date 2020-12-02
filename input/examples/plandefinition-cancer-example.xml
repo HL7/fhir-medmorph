@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="plandefinition-cancer-example"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+        <profile value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/us-ph-plandefinition"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-receiverAddress">
+                <valueReference>
+                    <reference value="Endpoint/example-ph-endpoint"/>
+                </valueReference>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-authorSignature">
+                <valueSignature>
+                    <type> 
+                      <system value="urn:iso-astm:E1762-95:2013"/> 
+                      <code value="1.2.840.10065.1.12.1.5"/> 
+                      <display value="Verification Signature"/> 
+                    </type> 
+                    <when value="2015-08-27T08:39:24+10:00"/> 
+                    <who> 
+                      <reference value="Organization/example-pha-org"/> 
+                    </who>   
+                    <targetFormat value="application/fhir+xml"/> 
+                    <sigFormat value="application/signature+xml"/> 
+                    <data value="Li4u"/>
+                </valueSignature>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-asyncIndicator">
+                <valueBoolean value="true"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-expectedResponseTime">
+                <valueDuration>
+                    <value value="1"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="min"/>
+                </valueDuration>
+    </extension>
+    <url value="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/plandefinition-cancer-example"/>
+    <version value="1.0"/>
+    <name value="PlanDefinitionCancerExample"/>
+    <title value="PlanDefinition Cancer Reporting Example"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+            <code value="workflow-definition"/>
+            <display value="Workflow Definition"/>
+        </coding>
+    </type>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2020-11-04T12:32:29.858-05:00"/>
+    <publisher value="MedMorph"/>
+    <description value="This is the Cancer Reporting Knowledge Artifact"/>
+    <effectivePeriod>
+        <start value="2020-11-01"/>
+    </effectivePeriod>
+    <relatedArtifact>
+        <type value="depends-on"/>
+        <label value="Cancer Trigger Codes"/>
+        <resource value="http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example"/>
+    </relatedArtifact>
+<!--    <library value="http://aphl.org/fhir/ecr/Library/RuleFiltersCancer|1.0.0"/> -->
+    <action id="initiate-reporting-workflow">
+        <description value="This action represents the start of a reporting workflow."/>
+        <textEquivalent value="Initiate Reporting Workflow"/>
+        <code>
+            <coding>
+                <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                <code value="initiate-reporting-workflow"/>
+            </coding>
+        </code>
+        <trigger>
+            <extension url="http://hl7.org/fhir/us/fhir-medmorph/StructureDefinition/ext-us-ph-namedEventType">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
+                        <code value="encounter-close"/>
+                        <display value="Indicates the close of an encounter"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <type value="named-event"/>
+            <name value="encounter-close"/>
+        </trigger>
+        <relatedAction>
+            <actionId value="check-trigger-codes"/>
+            <relationship value="before-start"/>
+            <offsetDuration>
+                <value value="1"/>
+                <system value="http://unitsofmeasure.org"/>              
+                <code value="min"/>
+            </offsetDuration>
+        </relatedAction>
+    </action>
+    <action id="check-trigger-codes">
+        <description value="This action represents the execution of the checking trigger codes in the  workflow."/>
+        <textEquivalent value="Check Trigger Codes"/>
+        <action>
+            <code>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <code value="check-trigger-codes"/>
+                </coding>
+            </code>
+            <condition>
+                <kind value="applicability"/>
+                <expression>
+                    <language value="text/fhirpath"/>
+                    <expression value="Condition.code.memberof(http://hl7.org/fhir/us/fhir-medmorph/ValueSet/valueset-cancer-trigger-codes-example)"/></expression>
+            </condition>
+            <relatedAction>
+                <actionId value="create-report"/>
+                <relationship value="before-start"/>
+            </relatedAction>
+        </action>
+    </action>
+    <action id="create-report">
+        <description value="This action represents the creation of a cancer report."/>
+        <textEquivalent value="Create Report"/>
+        <code>
+            <coding>
+                <system value="http://hl7.org/fhir/us/fhir-medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                <code value="create-report"/>
+            </coding>
+        </code>
+    </action>
+</PlanDefinition>
