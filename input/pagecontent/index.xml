@@ -22,7 +22,7 @@
     </p>
     
     <p>
-    The MedMorph project will create fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C Surveillance, 
+    The MedMorph project will create fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C (Hep C) Surveillance, 
     an infectious disease; Cancer Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These modeled use cases inform the design of a scalable and extensible reference architecture 
     to facilitate data exchange for key patient-centered research questions and public health information system requirements.
     For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
