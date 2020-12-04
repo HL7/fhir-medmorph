@@ -69,22 +69,21 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 
 3. __Data Mart__: Data Mart represents a system that will hold data that is to be accessed by researchers. Typically researchers do not access the EHR or operational data stores directly as they are used for clinical operations. In order to facilitate access to researchers healthcare organizations populate data stores that can be accessed by researchers. These data stores are called Data Marts in our abstract model. Typically these data stores are present within the healthcare organization, but could also be hosted externally to the healthcare organization. The data models that are used to store the data may depend on the types of research studies. The following are the commonly used data models for research.
 
-* PCORnet CDM
-* i2b2
-* OMOP
-* Sentinel
+	* PCORnet CDM
+	* i2b2
+	* OMOP
+	* Sentinel
+	* FHIR is one of the data models that could also be used for research in the future as it gets adopted in the research settings. 
 
-FHIR is one of the data models that could also be used for research in the future as it gets adopted in the research settings. 
+4. __Backend Service App__:  For research use cases, the Backend Service App represnts a system that resides within the clinical care setting and interacts with the EHRs, Data Marts and the systems used by the researchers. The system will use specific Knowledge Artifact resources to identify when data has to be extracted, when data has to be queried and how results have to be returned. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to SMART on FHIR App which can be distributed to clinical care via EHR vendor-specified processes. The EHR vendor-specified processes enable the Backend Service App to use the EHR's FHIR APIs to access data. The healthcare organization is responsible for choosing/developing and maintaining the Backend Service App within the organization.
 
-3. __Backend Service App__:  For research use cases, the Backend Service App represnts a system that resides within the clinical care setting and interacts with the EHRs, Data Marts and the systems used by the researchers. The system will use specific Knowledge Artifact resources to identify when data has to be extracted, when data has to be queried and how results have to be returned. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to SMART on FHIR App which can be distributed to clinical care via EHR vendor-specified processes. The EHR vendor-specified processes enable the Backend Service App to use the EHR's FHIR APIs to access data. The healthcare organization is responsible for choosing/developing and maintaining the Backend Service App within the organization.
+5. __Trust Service Provider__:  Trust Service Provider affords capabilities that can be used to translate data between different models, map terminologies between different data models, pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organizations. These capabilities are called Trust Services. Trust Services are used, when appropriate, by the Backend Service App.  
 
-4. __Trust Service Provider__:  Trust Service Provider affords capabilities that can be used to translate data between different models, map terminologies between different data models, pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organizations. These capabilities are called Trust Services. Trust Services are used, when appropriate, by the Backend Service App.  
+6. __Research Organization__: An organization that can access the data from clinical care or data repositories for research purposes with appropriate data use agreements, authorities, and policies.
 
-5. __Research Organization__: An organization that can access the data from clinical care or data repositories for research purposes with appropriate data use agreements, authorities, and policies.
+7. __Researcher Portal__: A system that is used by the researcher to explore which data marts exist, compose queries, submit the queries, receive results for analysis.
 
-6. __Researcher Portal__: A system that is used by the researcher to explore which data marts exist, compose queries, submit the queries, receive results for analysis.
+8. __Query Translator and Submitter__: A system that interacts with the Researcher Portal to receive queries, translate queries and then submit the queries to the Backend Service App.
 
-7. __Query Translator and Submitter__: A system that interacts with the Researcher Portal to receive queries, translate queries and then submit the queries to the Backend Service App.
-
-8. __Result Translator and Aggregator__: A system that interacts with the Backend Service App to receive results back from healthcare organizations and then translates the results as needed and aggregates the data if needed before forwarding the results to the Researcher Portal.
+9. __Result Translator and Aggregator__: A system that interacts with the Backend Service App to receive results back from healthcare organizations and then translates the results as needed and aggregates the data if needed before forwarding the results to the Researcher Portal.
 
