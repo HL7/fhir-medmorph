@@ -1,10 +1,10 @@
-### Business need
+### Business Need
  
 * Onboard a new research data partner to join a research network, contribute data that can be used for research. Current processes used to contribute data involve many non-standardized mechanisms and each data partner contributing data may use different structure (e.g., formats) and different semantics. In order for the data to be usable, the data will have to be transformed to some data model so that it can be queried and analyzed. This process when standardized will expedite onboarding processes and deliver better quality data at a lower cost. 
 
 * Once a data partner joins a research network and contributes data, a researcher should be able to perform queries to filter specific data sets and analyze the data to improve treatments and outcomes. Currently researchers are able to query data marts on a limited basis because of the variations in the data models (e.g., PCORnet CDM, i2b2, OMOP, FHIR) and the technologies (e.g., Microsoft SQL, Postgres SQL, SAS, etc.)  used to host the data mart. Standardizing these data access mechanisms will help overcome the hurdles faced by researchers in accessing data from EHRs.
 
-### Research Abstract Model for Onboarding a Data Partner to populate a Data Mart
+### Research Abstract Model for Onboarding a Data Partner to Populate a Data Mart
 
 Figure 4.1 below shows the research abstract model to onboard a data partner who can contribute data from their EHR system to populate a data mart.
 
