@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for onboarding a data partner to populate a data mart.
+This section defines the specific conformance requirements for onboarding a data partner to populate a data mart as specified in this MedMorph Reference Architecture IG.
 
 
 ### Requirements for EHR
@@ -48,7 +48,7 @@ Alternatively:
 1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study ? 
 ```
 
-#### Validating Consent before disclosing data
+#### Validating Consent Before Disclosing Data
 
 Disclosing data for research requires explicit patient consent. When the Backend Service App requests the EHR to export all the data for one or more patients, the EHRs FHIR Authorization Server has to validate the consent before sharing data for research. Again the process of enforcement of Consent varies by healthcare organization. MedMorph does not prescribe any standard mechanism to enforce Consent but assumes that the EHR Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented for their data to be shared.
 
@@ -112,7 +112,7 @@ Feedback Requested: Should MedMorph prescribe specific behavior/operation to tra
 ```
 
 
-### Sufficiency of US Core data elements
+### Sufficiency of US Core Data Elements
 
 US Core profiles contain data elements identified in the US regulations with a few additions that have been agreed upon by the EHR vendors as the most important data elements for payment, treatment and operations. However the research data models are richer in nature and contain significantly more data elements not present in the US Core profiles. 
 Acknowledging this fact, the MedMorph Architecture IG is prescribing US Core as starting point to build the framework. As the CDMH project completes, a Content IG could be developed for populating Data Marts leveraging CDMH work to create profiles to populate all the data elements required for each data model.
