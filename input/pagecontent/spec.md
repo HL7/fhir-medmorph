@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of the Knowledge Artifacts and their usage by the Backend Service App. It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security, and other implementation requirements.
+This section defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of the Knowledge Artifacts and their usage by the Backend Service App. It also describes the use of [SMART on FHIR Backend Services Authorization](http://hl7.org/fhir/uv/bulkdata/authorization/index.html) and provides guidance on privacy, security, and other implementation requirements.
 
 
 ### Context
