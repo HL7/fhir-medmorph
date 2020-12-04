@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific requirements for submitting reports that are created by the Backend Service App.
+This section defines the specific requirements for submitting reports that are created by the Backend Service App as specified in this MedMorph Reference Architecture IG.
 
 ### MedMorph Reports
 
@@ -46,7 +46,7 @@ Reports that are created by the Backend Service App are intended to contain all 
 
 * For each message submission, The Backend Service App SHALL provide the ability for an administrator or the provider to view the message submissions and message responses received. 
 
-##### APIs Used by Backend Service App to submit messages to TTP or PHA/Research Organization
+##### APIs Used by Backend Service App to Submit Messages to TTP or PHA/Research Organization
 
 ```
 For Message Submission to PHA/Research Organization directly:
@@ -58,13 +58,13 @@ POST [Trusted Third Party FHIR Endpoint]/$process-message when submitting via Tr
 Synchronous responses are received as part of the POST response.
 ```
 
-##### APIs Supported by Backend Service App to receive asynchronous response messages to TTP or PHA/Research Organization
+##### APIs Supported by Backend Service App to Receive Asynchronous Response Messages to TTP or PHA/Research Organization
 
 ```
 POST [Backend Service App Fhir Endpoint]/$process-message for receiving asynchronous message responses. 
 ```
 
-##### APIs Supported by Backend Service App to view responses for messages submitted
+##### APIs Supported by Backend Service App to View Responses for Messages Submitted
 
 ```
 ```
@@ -120,14 +120,14 @@ POST [Backend Service App FHIR Endpoint]/$process-message when forwarding a mess
 	- populate the MessageHeader.source.endpoint with the PHA/Research Organization FHIR endpoint.
 
 
-##### APIs supported by PHA/Research Organization to receive a message from Backend Service App or Trusted Third Party 
+##### APIs Supported by PHA/Research Organization to Receive a Message from Backend Service App or Trusted Third Party 
 
 ```
 POST [PHA or Research Organization FHIR Endpoint]/$process-message when receiving a message from Backend Service App or TTP. 
 For synchronous responses, the data is sent back as part of the POST response.
 ```
 
-##### APIs used by PHA/Resarch Organization to submit a message to Backend Service App or Trusted Third Party 
+##### APIs Used by PHA/Resarch Organization to Submit a Message to Backend Service App or Trusted Third Party 
 
 ```
 These APIs are used for sending asynchronous responses back to the healthcare organization directly or via the TTP.
