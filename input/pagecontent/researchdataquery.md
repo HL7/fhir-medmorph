@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for querying a data mart.
+This section defines the specific conformance requirements for querying a data mart as specified in this MedMorph Reference Architecture IG.
 
 ### Requirements for Researcher Portal
 
