@@ -39,7 +39,7 @@ Although the US PH Library does not exist yet, it is included to show the direct
 
 As shown in Figure 2.1 above, the MedMorph Reference Architecture IG is built on other basic FHIR capabilities and the US Core IG. The MedMorph Reference Architecture IG will use US CORE IG profiles as required for each use case. In addition to the profiles, the patient level FHIR APIs specified in US Core will be leveraged for all public health reporting use cases that can leverage the MedMorph Reference Architecture.
 
-#### Relationship between MedMorph IG and FHIR Bulk Data Access
+#### Relationship between MedMorph IG and FHIR Bulk Data Access IG
  
 For research use cases, specifically where data about multiple patients need to be retrieved, MedMorph will use FHIR Bulk Data Access specified in the BulkDataAccess IG. The MedMorph Reference Architecture IG will also leverage Backend Services Authorization protocols specified in the BulkDataAccess IG to secure system to system communication transactions.
 
@@ -168,7 +168,7 @@ Implementers should familiarize themselves with these FHIR resources and their p
   </tr>
 </table>
 
-#### Electronic Case Reporting eCR FHIR IG
+#### Electronic Case Reporting (eCR) FHIR IG
 
 The MedMorph Reference Architecture implementation guide aligns with the eCR FHIR IG where profiles exist for the resources identified in the previous section. Implementers need to familiarize themselves with the eCR FHIR IG.
 
@@ -189,7 +189,7 @@ The MedMorph Reference Architecture implementation guide also builds on the US C
 </table>
 
 
-#### Bulk Data Access
+#### Bulk Data Access IG
 For research use cases, the MedMorph Reference Architecture implementation guide will use the Bulk Data Access Implementation Guide to retrieve population level information from EHRs, subject to applying appropriate authorities and policies.
 
 <table>
