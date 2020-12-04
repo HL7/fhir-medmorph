@@ -82,7 +82,7 @@ The Notification Workflow involves the activities whereby a provider, as part of
 
 {::options parse_block_html="true" /}
 
-
+<br>
 
 #### Report Creation Workflow
 
@@ -98,7 +98,7 @@ The Report Creation Workflow involves the activities whereby the Backend Service
 
 {::options parse_block_html="true" /}
 
-
+<br>
 
 #### Data Submission Workflow
 
@@ -114,7 +114,7 @@ The Data Submission Workflow involves the activities whereby the Backend Service
 
 {::options parse_block_html="true" /}
 
-
+<br>
 
 #### Receiving Response/Acknowledgement Workflow (PUSH METHOD)
 
@@ -130,7 +130,7 @@ The Receiving Response/Acknowledgement Workflow involves the activities whereby 
 
 {::options parse_block_html="true" /}
 
-
+<br>
 
 #### Receiving Response/Acknowledgement Workflow (PULL METHOD)
 
@@ -146,3 +146,4 @@ The Receiving Response/Acknowledgement Workflow involves the activities whereby 
 
 {::options parse_block_html="true" /}
  
+<br>
