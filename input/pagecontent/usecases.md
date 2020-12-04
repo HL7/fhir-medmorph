@@ -1,4 +1,4 @@
-### Business need
+### Business Need
 
 * For Health Care Surveys: Identify and collect hospital (emergency department and inpatient care) and ambulatory care practice data and electronically report them to a system hosted at the federal level. Electronic reporting will increase the response rate of sampled hospitals and ambulatory health care providers to the National Hospital Care Survey (NHCS) and the National Ambulatory Medical Care Survey (NAMCS). This will also increase the volume, quality, completeness, and timeliness of the data submitted to the NHCS and NAMCS. Electronic reporting via automated means (without provider involvement) will reduce the burden associated with survey participation and reduce costs associated with recruiting hospital and ambulatory health care providers.
 
@@ -116,32 +116,32 @@ The Data Submission Workflow involves the activities whereby the Backend Service
 
 <br>
 
-#### Receiving Response/Acknowledgement Workflow (PUSH METHOD)
+#### Receiving Response/Acknowledgement Workflow (PUSH Method)
 
 The Receiving Response/Acknowledgement Workflow involves the activities whereby the PHA or Research Organization provides a response back to clinical care. This workflow depicts the PUSH method (i.e., PUSH from PHA/Research Organization to Clinical Care). The actors and steps involved in the workflow are shown in Figure 3.5 below.
 
-**Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH METHOD)**
+**Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH Method)**
 
  {::options parse_block_html="false" /}
 
 <figure>
-  <img height="600px" src="ResponseWorkflowPush.png" alt="Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH METHOD)" style="vertical-align:middle"/>
+  <img height="600px" src="ResponseWorkflowPush.png" alt="Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH Method)" style="vertical-align:middle"/>
 </figure>
 
 {::options parse_block_html="true" /}
 
 <br>
 
-#### Receiving Response/Acknowledgement Workflow (PULL METHOD)
+#### Receiving Response/Acknowledgement Workflow (PULL Method)
 
 The Receiving Response/Acknowledgement Workflow involves the activities whereby the PHA or Research Organization provides a response back to clinical care. This workflow depicts the PULL method (i.e., Clinical Care PULLS the response from PHA/Research Organization). The actors and steps involved in the workflow are shown in Figure 3.6 below.
 
-**Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL METHOD)**
+**Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method)**
 
  {::options parse_block_html="false" /}
 
 <figure>
-  <img height="600px" src="ResponseWorkflowPull.png" alt="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL METHOD)" style="vertical-align:middle"/>
+  <img height="600px" src="ResponseWorkflowPull.png" alt="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method)" style="vertical-align:middle"/>
 </figure>
 
 {::options parse_block_html="true" /}
