@@ -66,7 +66,7 @@ The Provisioning Workflow involves the activities whereby a PHA or a Research Or
 
 {::options parse_block_html="true" /}
 
-
+<br>
 
 #### Notification Workflow
 
