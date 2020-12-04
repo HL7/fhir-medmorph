@@ -46,6 +46,7 @@ Technical Expert Panel Members (Represented Organizations) included:
 * CDC
 * Cerner
 * CMS
+* College of American Pathologists (CAP)
 * Digital Infuzion
 * Duke
 * eClinical Works
