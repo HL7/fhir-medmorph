@@ -4,11 +4,11 @@ This section of the implementation guide defines the specific requirements for s
 ### Context
 
 #### Pre-reading
-Before reading this formal specification, implementers should first familiarize themselves with two other key portions of the specification:
+Before reading this formal specification, implementers should first be familiar with two other key portions of the specification:
 
-* The [Use Cases & Overview](usecases.html) page provides both the business context and general process flow enabled by the formal specification.
+* The [Use Cases](usecases.html) page provides the business context and general process flow enabled by the formal specification.
 
-* The [Technical Background](background.html) page provides information about the underlying specifications and indicates what portions of each should be reviewed to have the necessary foundation to understand the constraints and usage guidance described here.
+* The [Background](background.html) page provides information about the underlying specifications and indicates what portions of each should be reviewed in order to have the necessary foundation to understand the constraints and usage guidance described in this detailed specification.
 
 
 #### Conventions
@@ -27,38 +27,38 @@ Actors and Systems asserting conformance to this implementation guide have to im
 
 ##### MUST SUPPORT Definition
 
-* Systems SHALL be capable of populating data elements as specified by the profiles and are returned using the specified APIs in the capability statement.
-* Systems SHALL be capable of processing resource instances containing the MUST SUPPPORT data elements without generating an error or causing the application to fail. In other words Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
+* Systems SHALL be capable of populating data elements as specified by the profiles and data elements are returned using the specified APIs in the capability statement.
+* Systems SHALL be capable of processing resource instances containing the MUST SUPPPORT data elements without generating an error or causing the application to fail. In other words, Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Systems SHALL NOT include the data elements in the resource instance returned from executing the API requests.
 * When accessing MedMorph data, Systems SHALL interpret missing data elements within resource instances returned from API requests as data not present.
 
 
 #### Profiles
-This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The implementation guide is based on FHIR [R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
+This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The implementation guide is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
 
-The full set of profiles defined in this implementation guide can be found by following the links on the [FHIR Artifacts](artifacts.html) page.
+The full set of profiles defined in this implementation guide can be found by following the links on the MedMorph [FHIR Artifacts](artifacts.html) page.
 
 
 #### US Core
-This implementation guide also leverages the [US Core](http://hl7.org/fhir/us/core) set of profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this Guide either leverages them directly or uses them as a base for any additional constraints needed to support the member attribution list use cases.  If no constraints are needed, this IG doesn't define any profiles.
+This IG also leverages the [US Core](http://hl7.org/fhir/us/core) set of profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this IG either leverages them directly or uses them as a base for any additional constraints needed to support the member attribution list use cases.  If no constraints are needed, this IG does not define any profiles.
 
-Where US Core profiles do not yet exist (e.g. for PlanDefinition, Bundle), profiles have been created.
+Where US Core profiles do not yet exist (e.g., for PlanDefinition, Bundle), MedMorph profiles have been created.
 
 
 #### SMART on FHIR Backend Services Authorization
-This section outlines how the SMART on FHIR Backend Services Authorization will be used by the MedMorph Architecture implementation guide. 
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the MedMorph Reference Architecture implementation guide. 
 
-* The actors EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA and Research Organizations will be referred to as "System Actors" in this paragraph.
+* The following actors comprise the System Actors: EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA, and Research Organizations.
 
-* System Actors (EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA and Research Organization) SHALL advertise conformance to SMART Backend Services by hosting a Well-Known Uniform Resource Identifiers (URIs) as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
+* System Actors (EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA, and Research Organization) SHALL advertise conformance to SMART Backend Services by hosting a Well-Known Uniform Resource Identifiers (URIs) as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
 
 * System Actors SHALL include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
 
-* When System Actors act as clients, they SHALL share their JWKS with the server System Actors using URLs as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
+* When System Actors act as clients, they SHALL share their JSON Web Key Set (JWKS) with the server System Actors using Uniform Resource Locators (URLs) as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
 
 * Client System Actors SHALL obtain the access token as defined in the [Bulk Data Access IG](http://hl7.org/fhir/uv/bulkdata/export/index.html) specification.
 
-* Content Implementation Guides SHALL specify the scopes required for the different use cases.
+* Content Implementation Guides SHALL each specify the scope of each respective use case.
 
 
 #### System Actors, Requirements and Capability Statements
