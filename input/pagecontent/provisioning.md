@@ -1,4 +1,4 @@
-This section of the implementation guide defines the conformance requirements for systems wishing to conform to Knowledge Artifact Repository actor specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of  the Knowledge Artifacts and their access by the Backend Service App and/or EHRs. 
+This section defines the conformance requirements for systems wishing to conform to Knowledge Artifact Repository actor specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of the Knowledge Artifacts and their access by the Backend Service App and/or EHRs. 
 
 
 ### MedMorph Knowledge Artifacts
@@ -35,9 +35,9 @@ The MedMorph Reference Architecture IG is providing the basic constructs require
 
 <br>
 
-#### Machine Processable Events, Conditions and Actions
+#### Machine Processable Events, Conditions, and Actions
 
-Events, Conditions and Actions which are the basis of knowledge artifacts have to be machine processable and have to be defined (structurally and semantically) to accommodate multiple use cases.
+Events, Conditions, and Actions which are the basis of knowledge artifacts have to be machine processable and have to be defined (structurally and semantically) to accommodate multiple use cases.
 
 MedMorph has defined a list of named events that typically occur in clinical workflows based on which notifications can be performed. MedMorph will use the documented [Named Events List](ValueSet-us-ph-triggerdefinition-namedevent.html) as the starting point to kickoff knowledge artifact processing. Typically named events occur due to updates to patient data within an EHR. The named events are eventually intended to be FHIR Subscription Topics as FHIR subscriptions get implemented in the EHRs. The Backend Service App subscribes to these [Subscription Topics](ValueSet-us-ph-triggerdefinition-namedevent.html) and will get notified when these events occur along with context information. 
 
@@ -69,11 +69,10 @@ In the case of Cancer Reporting, once a named event occurs and the execution of 
 
 The actions are machine processable and are extensible. As new use cases are instantiated using the MedMorph Reference Architecture new actions may be added. For example, if the report needs to be signed, an action called add-digital-signature action can be defined and added to Step 2e. Similarly, new steps could also be introduced as needed. 
 
-
 The next section outlines specific requirements for the creation and consumption of the MedMorph Knowledge Artifacts.
 
 #### Creating Knowledge Artifacts
-PHA or Research Organizations are the actors who create or produce Knowledge Artifacts. 
+PHAs or Research Organizations are the actors who create or produce Knowledge Artifacts. 
 
 * Knowledge Artifact producers SHALL represent Knowledge Artifacts using PlanDefinition Resource.
 
@@ -128,11 +127,11 @@ Should MedMorph add notification requirements to the Knowledge Artifact Reposito
 
 Knowledge Artifacts have to be operationalized by healthcare organizations. Before operationalizing the Knowledge Artifact and its processing by a Backend Service App or by an EHR, healthcare organizations may test and validate the processing of the knowledge artifact before operationalizing in production to enable reporting to Public Health / Research Organizations.
 
-#### Knowledge Artifact Repository specific requirements 
+#### Knowledge Artifact Repository Specific Requirements 
 
 Knowledge Artifact Repository actor SHALL support the PlanDefinition creation, update, retrieval and search mechanisms as identified in the [Knowledge Artifact Repository Capability Statement](CapabilityStatement-medmorph-knowledge-artifact-repository.html).
 
-#### Backend Service App specific requirements 
+#### Backend Service App Specific Requirements 
 
 The Backend Service App actor SHALL support the PlanDefinition retrieval and search mechanisms as identified in the [Backend Service App Capability Statement](CapabilityStatement-medmorph-backend-service-app.html).
 
