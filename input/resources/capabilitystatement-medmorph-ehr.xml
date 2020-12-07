@@ -67,7 +67,7 @@
                 <a title="Allows creation of a specific Subscription Resource instance" href="#Subscription-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows updation of a specific Subscription Resource instance" href="#Subscription-update">SHALL</a>
+                <a title="Allows update of a specific Subscription Resource instance" href="#Subscription-update">SHALL</a>
               </td>
 			  <td>
                 <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">SHALL</a>
@@ -147,7 +147,7 @@
                 <span>update</span>
               </th>
               <td>
-                <p>Allows Updation of Subscription instances</p>
+                <p>Allows Update of Subscription instances</p>
               </td>
             </tr> 
             <tr>
@@ -185,7 +185,7 @@
                 <span>search</span>
               </th>
               <td>
-                <p>Allows searching of pecific US Core resource profile instances.</p>
+                <p>Allows searching of specific US Core resource profile instances.</p>
               </td>
             </tr>
             <tr>
@@ -249,7 +249,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows updation of a Subscription resource instance."/>
+        <documentation value="Allows update of a Subscription resource instance."/>
       </interaction> 
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
