@@ -33,7 +33,7 @@ Note: The Group resource creation process will depend on the healthcare organiza
 
 ```
 Feedback Requested: Since there may be many research activities supported by a healthcare organization, there could be multiple instances of Groups each with overlapping or no-overlapping set of patients. We need to determine what is the best way to search for different groups. 
-Currently, we are prescribing searching for Group by identifier where the identifier and name. However we need some feedback on if this is a good mechanism to search or should a Group resource instance be provisioned for each research activity approved by the IRB ?
+Currently, we are prescribing searching for Group by identifier where the identifier and name. However, we need some feedback on if this is a good mechanism to search or should a Group resource instance be provisioned for each research activity approved by the IRB?
 ```
 
 #### Consent Management  
@@ -42,10 +42,10 @@ Healthcare organizations are responsible for collecting patient Consent before s
 
 ```
 Feedback Requested: 
-1. Should MedMorph prescribe representation of Consent using HL7 FHIR Consent resource ? 
-2. Where should this consent be stored ? In the EHR or External Systems ?
+1. Should MedMorph prescribe representation of Consent using HL7 FHIR Consent resource? 
+2. Where should this consent be stored? In the EHR or External Systems?
 Alternatively: 
-1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study ? 
+1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study? 
 ```
 
 #### Validating Consent Before Disclosing Data
@@ -68,9 +68,9 @@ All US Core profiles have to be supported by the EHR and data exported have to b
 * The Backend Service App SHALL register with the EHRs Authorization Server to obtain client id, client secret to invoke EHR FHIR APIs for Bulk Data Access. 
 
 * The Backend Service App SHALL process a Knowledge Artifact PlanDefinition resource to determine the following 
-	* Which Group to use to export the data for patients ?
-	* How frequently the data has to be exported ?
-	* What translations are required for the data post extraction ? 
+	* Which Group to use to export the data for patients?
+	* How frequently the data has to be exported?
+	* What translations are required for the data post extraction? 
 
 * The Backend Service App SHALL get authorized and obtain necessary access tokens to invoke the operations necessary to export data from the EHR.
 
@@ -108,7 +108,7 @@ The Trust Service Provider supports many of the Data/Trust Services required for
 * The Trust Service Provider SHALL support the Trust Service Operations as specified in the Trust Service Provider Capability Statement. 
 
 ```
-Feedback Requested: Should MedMorph prescribe specific behavior/operation to translate from one data model to another ? Since this is an internal implementation detail of the organization, MedMorph's intention is to leverage the CDMH mappings from FHIR to research data models but not prescribe any behavioral/operational constructs for the actual conversion.
+Feedback Requested: Should MedMorph prescribe specific behavior/operation to translate from one data model to another? Since this is an internal implementation detail of the organization, MedMorph's intention is to leverage the CDMH mappings from FHIR to research data models but not prescribe any behavioral/operational constructs for the actual conversion.
 ```
 
 
