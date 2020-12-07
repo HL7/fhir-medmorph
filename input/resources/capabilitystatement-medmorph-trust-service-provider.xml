@@ -10,7 +10,7 @@
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Trust Service Provider </i> actor.  
-      This actor is responsible for providing trust services which include Psuedonymization, Anonymization, De-identification and Re-identification.</p>
+      This actor is responsible for providing trust services which include Pseudonymization, Anonymization, De-identification and Re-identification.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Trust Service Provider is to provide trust services which include Psuedonymization, Anonymization, De-identification and Re-identification.</p>
+      <p>The primary focus of the Trust Service Provider is to provide trust services which include Pseudonymization, Anonymization, De-identification and Re-identification.</p>
       <p>
         <b>Security:</b>
       </p>
@@ -104,7 +104,7 @@
       
       <ul>
         <li>
-          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle psuedonymize</a>
+          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle pseudonymize</a>
         </li>
         <li>
           <a href="OperationDefinition-Bundle-anonymize.html">Bundle anonymize</a>
@@ -197,7 +197,7 @@
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The focus of the Trust Service Provider is to provide trust services which include Psuedonymization, Anonymization, De-identification and Re-identification. "/>
+    <documentation value="The focus of the Trust Service Provider is to provide trust services which include Pseudonymization, Anonymization, De-identification and Re-identification. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
