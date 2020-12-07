@@ -49,7 +49,7 @@
       <a href="spec.html">Public Health Reporting Specification</a> - defines the specific conformance requirements for systems wishing to conform to public health actors specified in the IG.
     </li>
     <li>
-      <a href="researchdataextraction.html">Research Data Partner Onboarding Sepcification</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
+      <a href="researchdataextraction.html">Research Data Partner Onboarding Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
     </li>
     <li>
       <a href="researchdataquery.html">Research Data Query Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data query actors specified in the IG.
