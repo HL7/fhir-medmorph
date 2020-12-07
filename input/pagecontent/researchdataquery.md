@@ -19,7 +19,7 @@ This section defines the specific conformance requirements for querying a data m
 
 * The Query Translator and Submitter will allow the retrieval of Tasks specific to each Data Mart using search mechanisms.
 
-* The Query Translator and Submitter will allow the updation of the Task Status by the Backend Service App as the Task gets executed in the data mart.
+* The Query Translator and Submitter will allow the update of the Task Status by the Backend Service App as the Task gets executed in the data mart.
 
 ```
 Feedback Requested: In the current CDMH architecture the Query Translator and Submitter is a common service that can be used to translate queries. Should the query translation services be subsumed into the Backend Service App which can leverage common Data/Trust Services for conversion as needed rather than keeping it as a different actor as currently shown in the abstract model. 
