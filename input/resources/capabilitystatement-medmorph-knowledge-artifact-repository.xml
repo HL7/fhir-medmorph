@@ -69,7 +69,7 @@
                 <a title="Allows creation of a specific PlanDefinition Resource instance" href="#PlanDefinition-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows updation of a specific PlanDefinition Resource instance" href="#PlanDefinition-update">SHALL</a>
+                <a title="Allows update of a specific PlanDefinition Resource instance" href="#PlanDefinition-update">SHALL</a>
               </td>
               <td/>
             </tr>
@@ -144,7 +144,7 @@
                 <span>update</span>
               </th>
               <td>
-                <p>Allows Updation of PlanDefinition instances</p>
+                <p>Allows Update of PlanDefinition instances</p>
               </td>
             </tr>   
           </tbody>
@@ -260,7 +260,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows updation of a PlanDefinition resource instance."/>
+        <documentation value="Allows update of a PlanDefinition resource instance."/>
       </interaction>  
       <searchParam>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
