@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates an pseudonymized bundle taking an instance of a Bundle containing PHI/PII data. The pseudonymization algorithm to be used is left to the implementers of the operation."/>
+  <description value="Generates a pseudonymized bundle taking an instance of a Bundle containing PHI/PII data. The pseudonymization algorithm to be used is left to the implementers of the operation."/>
   <code value="pseudonymize"/>
   <resource value="Bundle"/>
   <system value="false"/>
