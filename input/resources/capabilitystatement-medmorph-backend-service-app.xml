@@ -10,7 +10,7 @@
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
       <p>This profile defines the expected capabilities of the <i>MedMorph Backend Service App </i> actor.  
-      This actor is responsible for consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organiation. </p>
+      This actor is responsible for consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organization. </p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Backend Service App is to consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organiation.</p>
+      <p>The primary focus of the Backend Service App is to consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organization.</p>
       <p>
         <b>Security:</b>
       </p>
@@ -169,7 +169,7 @@
       
       <ul>
         <li>
-          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle psuedonymize</a>
+          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle pseudonymize</a>
         </li>
         <li>
           <a href="OperationDefinition-Bundle-anonymize.html">Bundle anonymize</a>
