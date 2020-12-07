@@ -18,7 +18,7 @@ Reports that are created by the Backend Service App are intended to contain all 
 
 * The Backend Service App SHALL populate the sender's FHIR endpoint in the MessageHeader.source.endpoint element.
 
-* The Backend Service App SHALL populate the Bundle.identifier element as the persistent business identifier for coorelating responses. 
+* The Backend Service App SHALL populate the Bundle.identifier element as the persistent business identifier for correlating responses. 
 
 * The Backend Service App SHALL populate the Bundle.timestamp element with the bundle creation time. 
 
@@ -38,9 +38,9 @@ Reports that are created by the Backend Service App are intended to contain all 
 
 * In order to receive asynchronous responses from TTP or PHA or Research Organization, the Backend Service App SHALL implement the $process-message operation on the ROOT URL of the FHIR Server.
 
-* Upon receipt of either synchronous or asynchronous response messages, the Backend Service App SHALL decrpypt the message when required. 
+* Upon receipt of either synchronous or asynchronous response messages, the Backend Service App SHALL decrypt the message when required. 
 
-* Upon receipt of either synchronous or asynchronous response messages, the Backend Servie App SHALL validate the message before accepting the message.
+* Upon receipt of either synchronous or asynchronous response messages, the Backend Service App SHALL validate the message before accepting the message.
 
 * The Backend Service App SHALL track message submissions with the message responses.
 
@@ -61,7 +61,7 @@ Synchronous responses are received as part of the POST response.
 ##### APIs Supported by Backend Service App to Receive Asynchronous Response Messages to TTP or PHA/Research Organization
 
 ```
-POST [Backend Service App Fhir Endpoint]/$process-message for receiving asynchronous message responses. 
+POST [Backend Service App FHIR Endpoint]/$process-message for receiving asynchronous message responses. 
 ```
 
 ##### APIs Supported by Backend Service App to View Responses for Messages Submitted
@@ -75,7 +75,7 @@ POST [Backend Service App Fhir Endpoint]/$process-message for receiving asynchro
 
 * TTP SHALL use the MessageHeader.destination.endpoint to route the message to the final destination. 
 
-* When forwarding a message from heathcare organization to PHA or Research Organization, TTP SHALL forward the message to the final destination by invoking the [PHA or Research Organization FHIR Endpoint]/$process-message operation.
+* When forwarding a message from healthcare organization to PHA or Research Organization, TTP SHALL forward the message to the final destination by invoking the [PHA or Research Organization FHIR Endpoint]/$process-message operation.
 
 ##### Synchronous Message Forwarding Requirements
 
@@ -95,7 +95,7 @@ POST [Backend Service App Fhir Endpoint]/$process-message for receiving asynchro
 POST [PHA or Research Organization FHIR Endpoint]/$process-message when forwarding a message from Backend Service App to the PHA or Research Organization. 
 Synchronous responses get forwarded back to the healthcare organization as part of the POST response.
  
-For Asychronous responses, the TTP has to make a seperate API call as identified below.
+For Asynchronous responses, the TTP has to make a separate API call as identified below.
 POST [Backend Service App FHIR Endpoint]/$process-message when forwarding a message from PHA or Research Organization to the Backend Service App.
 ```
 
@@ -103,7 +103,7 @@ POST [Backend Service App FHIR Endpoint]/$process-message when forwarding a mess
 
 * The PHA/Research Organization SHALL implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the Backend Service App or TTP using the POST operation.
 
-* Upon receipt of the message, the PHA/Research Organization SHALL decrpypt the message when required. 
+* Upon receipt of the message, the PHA/Research Organization SHALL decrypt the message when required. 
 
 * Upon receipt of the message, the PHA/Research Organization SHALL validate the message before accepting the message.
 
@@ -113,7 +113,7 @@ POST [Backend Service App FHIR Endpoint]/$process-message when forwarding a mess
 
 ##### Asynchronous Responses from the PHA/Research Organization
 
-* When the PHA/Research Organization sends an asynchronous message back to the healthcare organization as a reply-to an orginal message, the PHA/Research Organization SHALL 
+* When the PHA/Research Organization sends an asynchronous message back to the healthcare organization as a reply-to an original message, the PHA/Research Organization SHALL 
 	- populate the MessageHeader.response.identifier with the original message identifier 
 	- populate the MessageHeader.destination.endpoint with the Sender's FHIR Endpoint.
 	- populate the MessageHeader.sender with the PHA/Research Organization reference.
@@ -127,12 +127,12 @@ POST [PHA or Research Organization FHIR Endpoint]/$process-message when receivin
 For synchronous responses, the data is sent back as part of the POST response.
 ```
 
-##### APIs Used by PHA/Resarch Organization to Submit a Message to Backend Service App or Trusted Third Party 
+##### APIs Used by PHA/Research Organization to Submit a Message to Backend Service App or Trusted Third Party 
 
 ```
 These APIs are used for sending asynchronous responses back to the healthcare organization directly or via the TTP.
 
-POST [Backend Service App FHIR Endpoint]/$process-message  for submitting a response directly to the Backend Service App (Healthcare Organization)
+POST [Backend Service App FHIR Endpoint]/$process-message for submitting a response directly to the Backend Service App (Healthcare Organization)
 
-POST [Trusted Third Party FHIR Endpoint]/$process-message  for submitting a response via Trusted Third Party FHIR Endpoint.
+POST [Trusted Third Party FHIR Endpoint]/$process-message for submitting a response via Trusted Third Party FHIR Endpoint.
 ```
