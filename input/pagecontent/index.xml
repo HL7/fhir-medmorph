@@ -6,7 +6,7 @@
     The Making EHR Data More Available for Research and Public Health (MedMorph) project seeks to advance public health and patient-centered outcomes 
     by using emerging health data and exchange standards, such as Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) and 
     Clinical Quality Language (CQL), to develop and implement an interoperable solution that will enable access to clinical data. 
-    The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data is collected, 
+    The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data are collected, 
     used, and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
     The MedMorph project is funded by the Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE) 
     Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) Public Health Informatics Office (PHIO) 
@@ -18,12 +18,12 @@
 	Examples such as FHIR, the ONC 2015 Edition Common Clinical Data Set (CCDS), 
 	2015 Edition Cures Update - United States Core Data for Interoperability (USCDI) Version 1, February 2020 and 
 	standardized application programming interfaces (API) for patient services have created a health IT environment that is 
-	ripe for developing standards based scalable and extensible solutions to overcome interoperability challenges. 
+	ripe for developing standards-based scalable and extensible solutions to overcome interoperability challenges. 
     </p>
     
     <p>
     The MedMorph project will create fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C (Hep C) Surveillance, 
-    an infectious disease; Cancer Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These modeled use cases inform the design of a scalable and extensible reference architecture 
+    an infectious disease; Cancer Registry Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These modeled use cases inform the design of a scalable and extensible reference architecture 
     to facilitate data exchange for key patient-centered research questions and public health information system requirements.
     For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
     </p>
