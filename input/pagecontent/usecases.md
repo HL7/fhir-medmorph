@@ -4,7 +4,7 @@
 
 * For Hepatitis C: Leverage existing FHIR infrastructure including electronic case reporting to improve the availability of data that advance national priorities such as eliminating hepatitis C as a public threat in the US, especially if it becomes a chronic condition when not treated acutely. The goal is to optimize access to hepatitis C data already captured within the EHR.
 
-* For Cancer reporting: Leverage existing FHIR infrastructure to transmit cancer case information primarily from ambulatory care practices to state Central Cancer registries. The intent is to automate and provide access to data not currently available to public health and research. This will not replace hospital registry reporting methods which are working well. Automation of cancer case reporting will reduce the burden of the manual data collection process that currently exists. 
+* For Cancer Registry Rporting: Leverage existing FHIR infrastructure to transmit cancer case information primarily from ambulatory care practices to state cancer registries. The intent is to automate and provide access to data not currently available to public health and research. This will not replace hospital registry reporting methods which are working well. Automation of cancer case registry reporting will reduce the burden of manual or other non-standardized data collection processes that currently exist. 
 
 * For Research: Onboard a new research data partner to join a research network, and subsequently allow those researchers within the network the ability to submit specific research questions and receive responses.
 
