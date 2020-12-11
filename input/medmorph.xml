@@ -5,7 +5,7 @@
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
   <name value="MakingEHRDataMoreAvailableToResearchAndPublicHealth"/>
-  <title value="Making EHR Data MOre available for Research and Public Health (MedMorph)"/>
+  <title value="Making EHR Data More available for Research and Public Health (MedMorph)"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -16,7 +16,7 @@
       <value value="http://hl7.org/Special/committees/ph"/>
     </telecom>
   </contact>
-  <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
+  <description value="MedMorph describes a framework to enable submission of data from healthcare organizations to public health and research organizations."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -273,6 +273,10 @@
     <parameter>
       <code value="path-liquid"/>
       <value value="templates\liquid"/>
+    </parameter>
+    <parameter>
+      <code value="path-expansion-params"/>
+      <value value="terminology-settings.json"/>
     </parameter>
 <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
