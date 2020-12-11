@@ -13,7 +13,7 @@
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/ph"/>
+      <value value="http://hl7.org/Special/committees/pher"/>
     </telecom>
   </contact>
   <description value="MedMorph describes a framework to enable submission of data from healthcare organizations to public health and research organizations."/>
