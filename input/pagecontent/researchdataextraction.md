@@ -1,4 +1,4 @@
-This section of the implementation guide defines the specific conformance requirements for onboarding a data partner to populate a data mart.
+This section defines the specific conformance requirements for onboarding a data partner to populate a data mart as specified in this MedMorph Reference Architecture IG.
 
 
 ### Requirements for EHR
@@ -33,7 +33,7 @@ Note: The Group resource creation process will depend on the healthcare organiza
 
 ```
 Feedback Requested: Since there may be many research activities supported by a healthcare organization, there could be multiple instances of Groups each with overlapping or no-overlapping set of patients. We need to determine what is the best way to search for different groups. 
-Currently, we are prescribing searching for Group by identifier where the identifier and name. However we need some feedback on if this is a good mechanism to search or should a Group resource instance be provisioned for each research activity approved by the IRB ?
+Currently, we are prescribing searching for Group by identifier where the identifier and name. However, we need some feedback on if this is a good mechanism to search or should a Group resource instance be provisioned for each research activity approved by the IRB?
 ```
 
 #### Consent Management  
@@ -42,13 +42,13 @@ Healthcare organizations are responsible for collecting patient Consent before s
 
 ```
 Feedback Requested: 
-1. Should MedMorph prescribe representation of Consent using HL7 FHIR Consent resource ? 
-2. Where should this consent be stored ? In the EHR or External Systems ?
+1. Should MedMorph prescribe representation of Consent using HL7 FHIR Consent resource? 
+2. Where should this consent be stored? In the EHR or External Systems?
 Alternatively: 
-1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study ? 
+1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study? 
 ```
 
-#### Validating Consent before disclosing data
+#### Validating Consent Before Disclosing Data
 
 Disclosing data for research requires explicit patient consent. When the Backend Service App requests the EHR to export all the data for one or more patients, the EHRs FHIR Authorization Server has to validate the consent before sharing data for research. Again the process of enforcement of Consent varies by healthcare organization. MedMorph does not prescribe any standard mechanism to enforce Consent but assumes that the EHR Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented for their data to be shared.
 
@@ -68,9 +68,9 @@ All US Core profiles have to be supported by the EHR and data exported have to b
 * The Backend Service App SHALL register with the EHRs Authorization Server to obtain client id, client secret to invoke EHR FHIR APIs for Bulk Data Access. 
 
 * The Backend Service App SHALL process a Knowledge Artifact PlanDefinition resource to determine the following 
-	* Which Group to use to export the data for patients ?
-	* How frequently the data has to be exported ?
-	* What translations are required for the data post extraction ? 
+	* Which Group to use to export the data for patients?
+	* How frequently the data has to be exported?
+	* What translations are required for the data post extraction? 
 
 * The Backend Service App SHALL get authorized and obtain necessary access tokens to invoke the operations necessary to export data from the EHR.
 
@@ -108,11 +108,11 @@ The Trust Service Provider supports many of the Data/Trust Services required for
 * The Trust Service Provider SHALL support the Trust Service Operations as specified in the Trust Service Provider Capability Statement. 
 
 ```
-Feedback Requested: Should MedMorph prescribe specific behavior/operation to translate from one data model to another ? Since this is an internal implementation detail of the organization, MedMorph's intention is to leverage the CDMH mappings from FHIR to research data models but not prescribe any behavioral/operational constructs for the actual conversion.
+Feedback Requested: Should MedMorph prescribe specific behavior/operation to translate from one data model to another? Since this is an internal implementation detail of the organization, MedMorph's intention is to leverage the CDMH mappings from FHIR to research data models but not prescribe any behavioral/operational constructs for the actual conversion.
 ```
 
 
-### Sufficiency of US Core data elements
+### Sufficiency of US Core Data Elements
 
 US Core profiles contain data elements identified in the US regulations with a few additions that have been agreed upon by the EHR vendors as the most important data elements for payment, treatment and operations. However the research data models are richer in nature and contain significantly more data elements not present in the US Core profiles. 
 Acknowledging this fact, the MedMorph Architecture IG is prescribing US Core as starting point to build the framework. As the CDMH project completes, a Content IG could be developed for populating Data Marts leveraging CDMH work to create profiles to populate all the data elements required for each data model.

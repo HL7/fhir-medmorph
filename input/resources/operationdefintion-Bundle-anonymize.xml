@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates an anonymized bundle taking an instance of a Bundle containing PHI/PII data. The anonymization algorithm to be used is left to the implementers of the operation."/>
+  <description value="Generates an anonymized bundle taking an instance of a Bundle containing Protected Health Information (PHI)/personally identifiable information (PII) data. The anonymization algorithm to be used is left to the implementers of the operation."/>
   <code value="anonymize"/>
   <resource value="Bundle"/>
   <system value="false"/>

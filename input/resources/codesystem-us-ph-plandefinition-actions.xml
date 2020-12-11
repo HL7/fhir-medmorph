@@ -21,13 +21,13 @@
   <count value="11"/>
   <concept>
     <code value="initiate-reporting-workflow"/>
-    <display value="Initiatie a reporting workflow"/>
-    <definition value="Request the initiation of a reporting workflow for a patient for a specific context (e.g encounter)."/>
+    <display value="Initiate a reporting workflow"/>
+    <definition value="Request the initiation of a reporting workflow for a patient for a specific context (e.g., encounter)."/>
   </concept>
   <concept>
     <code value="execute-reporting-workflow"/>
     <display value="Execute a series of actions to accomplish reporting"/>
-    <definition value="This is top level action that uses other defined actions to accomplish reporting for a specific context (e.g encounter)."/>
+    <definition value="This is top level action that uses other defined actions to accomplish reporting for a specific context (e.g., encounter)."/>
 	  <concept>
 	    <code value="check-trigger-codes"/>
 	    <display value="Evaluate candidate patient's data against trigger codes to determine reportability"/>
@@ -56,7 +56,7 @@
 	  <concept>
 	    <code value="deidentify-report"/>
 	    <display value="Deidentify the report before submitting the report"/>
-	    <definition value="Deidentify the report beore submitting the report."/>
+	    <definition value="Deidentify the report before submitting the report."/>
 	  </concept>
 	  <concept>
 	    <code value="anonymize-report"/>
@@ -65,8 +65,8 @@
 	  </concept>
 	  <concept>
 	    <code value="psuedonymize-report"/>
-	    <display value="Psuedonymize the report before submitting the report"/>
-	    <definition value="Psuedonymize the report before submitting the report."/>
+	    <display value="Pseudonymize the report before submitting the report"/>
+	    <definition value="Pseudonymize the report before submitting the report."/>
 	  </concept>
 	  <concept>
 	    <code value="encrypt-report"/>
@@ -76,7 +76,7 @@
 	  <concept>
 	    <code value="complete-reporting"/>
 	    <display value="Complete reporting for the patient"/>
-	    <definition value="Complete the reporting for the patient, after which no further reports will be sent for a specific context (e.g Encounter)."/>
+	    <definition value="Complete the reporting for the patient, after which no further reports will be sent for a specific context (e.g., Encounter)."/>
 	  </concept>
   </concept>
   <concept>

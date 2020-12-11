@@ -33,7 +33,7 @@ Technical Expert Panel Co-Chairs:
 
 Technical Expert Panel Members (Represented Organizations) included:
 
-* AHRQ
+* Agency for Healthcare Research and Quality (AHRQ)
 * Allscripts
 * Alphora (formerly Data Consulting Group (DCG))
 * Alta Informatics & Solutions
@@ -43,40 +43,41 @@ Technical Expert Panel Members (Represented Organizations) included:
 * California Department of Public Health
 * Cancer Care Ontario
 * Cancer Registry of Greater California
-* CDC
+* Centers for Disease Control and Prevention (CDC)
+* Centers for Medicare & Medicaid Services (CMS)
 * Cerner
-* CMS
+* College of American Pathologists (CAP)
 * Digital Infuzion
-* Duke
+* Duke University School of Medicine
 * eClinical Works
 * e-HealthSign
 * EHR Standards
 * Epic
-* FDA
+* Georgia Institute of Technology
 * Georgia State University
-* Georgia Tech
-* HHS
 * HLN Consulting
 * Johns Hopkins University
 * Lantana
 * Louisiana Public Health Institute (LPHI)
-* Mass General Hospital 
+* Massachusetts General Hospital 
 * Max MD
 * MITRE
-* NACHC
-* NCQA
+* National Association of Community Health Centers (NACHC) 
+* National Committee for Quality Assurance (NCQA)
+* National Institutes of Health (NIH)
 * New York State Department of Health
-* NIH
 * North Carolina Department of Health and Human Services
+* Office of the National Coordinator for Health Information Technology (ONC)
 * Oregon Health & Science University
-* ONC
-* Regenstrief
-* RTI
+* Regenstrief Institute
+* RTI International
 * South Carolina Department of Health and Environmental Control
 * Texas Department of State Health Services
 * University of North Carolina School of Medicine
 * University of Minnesota
 * University of Washington
+* U.S. Department of Health and Human Services (HHS)
+* U.S. Food and Drug Administration (FDA)
 * Washington State Department of Health
 
 MedMorph FHIR Connectathon Testing Organizations:
