@@ -18,7 +18,7 @@
   "version" : "0.1.0",  
   "date" : "2021-01-01", 
   "desc" : "STU 1 Ballot (Jan 2021 Ballot)",   
-  "path" : "http://hl7.org/fhir/us/medmorph/2021Jan/index.html",   
+  "path" : "http://hl7.org/fhir/us/medmorph/2021Jan",  
   "status" : "ballot",   
   "sequence" : "STU 1",
   "fhirversion" : "4.0.1"
