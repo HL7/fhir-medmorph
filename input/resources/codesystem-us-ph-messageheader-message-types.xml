@@ -25,18 +25,18 @@
     <definition value="Indicates a message that contains data for a specific case report. Case reports can be created for different conditions such as Hep C, Cancer etc."/>
     <concept>
       <code value="cancer-report-message"/>
-      <display value="Indicates a mesage containing cancer reporting data from clinical care to PHA."/>
-      <definition value="Indicates that cancer data is present in the message being sent from clinical care to PHA."/>
+      <display value="Indicates a message containing cancer reporting data from clinical care to PHA."/>
+      <definition value="Indicates that cancer data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="cancer-response-message"/>
-      <display value="Indicates a mesage containing cancer report response data from PHA to clinical care."/>
+      <display value="Indicates a message containing cancer report response data from PHA to clinical care."/>
       <definition value="Indicates that a message containing response data for an already submitted cancer report is being sent from PHA to clinical care."/>
     </concept>
     <concept>
       <code value="hepc-report-message"/>
-      <display value="Indicates a mesage containing Hep C data from clinical care to PHA."/>
-      <definition value="Indicates that Hep C data is present in the message being sent from clinical care to PHA."/>
+      <display value="Indicates a message containing Hep C data from clinical care to PHA."/>
+      <definition value="Indicates that Hep C data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="hepc-response-message"/>
@@ -45,13 +45,13 @@
     </concept>
     <concept>
       <code value="healthcare-survey-report-message"/>
-      <display value="Indicates a mesage containing healthcare survey data from clinical care to PHA."/>
-      <definition value="Indicates a healthcare survey data is present in the message being sent from clinical care to PHA."/>
+      <display value="Indicates a message containing healthcare survey data from clinical care to PHA."/>
+      <definition value="Indicates that healthcare survey data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="healthcare-survey-response-message"/>
-      <display value="Indicates a mesage containing healthcare survey data from PHA to clinical care."/>
-      <definition value="Indicates a healthcare survey data is present in the response being sent from PHA o clinical care in repsonse to a healthcare survey report message."/>
+      <display value="Indicates a message containing healthcare survey data from PHA to clinical care."/>
+      <definition value="Indicates that healthcare survey data are present in the response being sent from PHA o clinical care in response to a healthcare survey report message."/>
     </concept>
   </concept>  
  </CodeSystem>

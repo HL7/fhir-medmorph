@@ -88,7 +88,7 @@
              	 <a title="Allows creation of a specific Subscription Resource instance " href="#Subscription-create">SHALL</a>
               </td>
               <td>
-              	<a title="Allows Updation of a specific Subscription Resource instance " href="#Subscription-update">SHALL</a>
+              	<a title="Allows Updating of a specific Subscription Resource instance " href="#Subscription-update">SHALL</a>
               </td>
               <td>
                  <a title="Allows deletion of a specific Subscription Resource instance version" href="#Subscription-delete">SHALL</a>
@@ -169,7 +169,7 @@
       
       <ul>
         <li>
-          <a href="OperationDefinition-Bundle-psuedonymize.html">Bundle pseudonymize</a>
+          <a href="OperationDefinition-Bundle-pseudonymize.html">Bundle pseudonymize</a>
         </li>
         <li>
           <a href="OperationDefinition-Bundle-anonymize.html">Bundle anonymize</a>
@@ -243,7 +243,7 @@
                 <span>update</span>
               </th>
               <td>
-                <p>Allows Updation of PlanDefinition instances</p>
+                <p>Allows Updating of PlanDefinition instances</p>
               </td>
             </tr>   
           </tbody>
@@ -336,7 +336,7 @@
                 <span>update</span>
               </th>
               <td>
-                <p>Allows Updation of Subscription instances</p>
+                <p>Allows Updating of Subscription instances</p>
               </td>
             </tr>   
             <tr>
@@ -566,8 +566,8 @@
         <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
       </interaction>
       <operation>
-        <name value="psuedonymize"/> 
-        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-psuedonymize"/>
+        <name value="pseudonymize"/> 
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-pseudonymize"/>
       </operation>
       <operation>
         <name value="anonymize"/> 

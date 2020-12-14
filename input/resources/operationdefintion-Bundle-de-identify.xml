@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates an de-identified bundle taking an instance of a Bundle containing PHI/PII data. The de-identification algorithm to be used is left to the implementers of the operation."/>
+  <description value="Generates a de-identified bundle taking an instance of a Bundle containing PHI/PII data. The de-identification algorithm to be used is left to the implementers of the operation."/>
   <code value="deidentify"/>
   <resource value="Bundle"/>
   <system value="false"/>

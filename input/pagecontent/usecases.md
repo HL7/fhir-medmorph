@@ -8,7 +8,7 @@
 
 * For Research: Onboard a new research data partner to join a research network, and subsequently allow those researchers within the network the ability to submit specific research questions and receive responses.
 
-By leveraging FHIR-based APIs, research and public health organizations can automate data collection (based on specific events and conditions in clinical workflows) and submission of the collected data, complying with all necessary authorities and policies applicable. 
+By leveraging FHIR-based APIs, research and public health organizations can automate data collection (based on specific events and conditions in clinical workflows) and submission of the collected data, complying with all necessary authorities and policies applicable. A more detailed discussion of the MedMorph Use Cases can be found [here](https://carradora.atlassian.net/wiki/spaces/MedMorph/pages/381780019/Use+Case+Work+Groups#Use-Cases).
 
 
 ### MedMorph Actors and Definitions
@@ -50,7 +50,7 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 
 ### MedMorph Workflows
 
-The following section details each of the MedMorph workflows, actors, and their interactions. 
+The following section details each of the MedMorph workflows, actors, and their interactions based on [MedMorph Use Cases](https://carradora.atlassian.net/wiki/spaces/MedMorph/pages/381780019/Use+Case+Work+Groups#Use-Cases). 
 
 #### Provisioning Workflow
 

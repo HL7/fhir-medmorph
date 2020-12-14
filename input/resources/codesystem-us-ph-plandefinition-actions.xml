@@ -64,7 +64,7 @@
 	    <definition value="Anonymize the report before submitting the report."/>
 	  </concept>
 	  <concept>
-	    <code value="psuedonymize-report"/>
+	    <code value="pseudonymize-report"/>
 	    <display value="Pseudonymize the report before submitting the report"/>
 	    <definition value="Pseudonymize the report before submitting the report."/>
 	  </concept>

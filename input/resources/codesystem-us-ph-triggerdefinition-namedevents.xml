@@ -71,7 +71,7 @@
   </concept>
   <concept>
     <code value="labresult-change"/>
-    <display value="Indicates a change in the patient's labresults"/>
+    <display value="Indicates a change in the patient's lab results"/>
     <definition value="Indicates a change in the patient's lab results and it includes new lab results or modifications to existing lab results. Changes to lab results could be because of change in the lab result values, lab test names, times or other data elements of the Observation resource where the category is laboratory. LabResult events would be triggered by monitoring the Observation resource with an Observation.category=laboratory."/>
 	  <concept>
 	    <code value="new-labresult"/>

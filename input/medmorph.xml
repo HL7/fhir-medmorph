@@ -127,8 +127,8 @@
       <reference>
         <reference value="Communication/communication-example-cancer-pha-response"/>
       </reference>
-      <name value="Communication example from PHA to Healthcare in response to a receieved cancer report"/>
-      <description value="Communication example from PHA to Healthcare in response to a receieved cancer report"/>
+      <name value="Communication example from PHA to Healthcare in response to a received cancer report"/>
+      <description value="Communication example from PHA to Healthcare in response to a received cancer report"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -151,8 +151,8 @@
       <reference>
         <reference value="Bundle/specification-bundle-example"/>
       </reference>
-      <name value="Example of a Specification Bundle for a Knolwedge Artifact containing a Plan Definition and Value Set"/>
-      <description value="Example of a Specification Bundle for a Knolwedge Artifact containing a Plan Definition and Value Set"/>
+      <name value="Example of a Specification Bundle for a Knowledge Artifact containing a PlanDefinition and ValueSet"/>
+      <description value="Example of a Specification Bundle for a Knowledge Artifact containing a PlanDefinition and ValueSet"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

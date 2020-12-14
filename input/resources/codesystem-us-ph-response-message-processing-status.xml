@@ -36,7 +36,7 @@
   </concept>
   <concept>
     <code value="RRVS4"/>
-    <display value="No Reporting rule met for the data setn from clinical care to PHA."/>
+    <display value="No Reporting rule met for the data sent from clinical care to PHA."/>
     <definition value="No reporting rule met – no reporting rule was completely met because needed data were not available or all needed data were available but did not meet reporting requirements."/>
   </concept>
  </CodeSystem>
