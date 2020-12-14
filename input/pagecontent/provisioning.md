@@ -78,7 +78,7 @@ PHAs or Research Organizations are the actors who create or produce Knowledge Ar
 
 * MedMorph Knowledge Artifacts SHALL be of type eca-rule or workflow-definition and is represented in PlanDefinition.type attribute.
 
-* MedMorph Workflows are triggered by named-events such as Start of an encounter, close of an encounter, new diagnosis etc. Producers SHALL select specific named-events from the [Named Event Valueset](	http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-triggerdefinition-namedevent.html). In case the required named-event is not available in the value set, the value set MAY be extended.
+* MedMorph Workflows are triggered by named-events such as Start of an encounter, close of an encounter, new diagnosis etc. Producers SHALL select specific named-events from the [Named Event Valueset](ValueSet-us-ph-triggerdefinition-namedevent.html). In case the required named-event is not available in the value set, the value set MAY be extended.
 
 * Producers of Knowledge Artifacts SHALL identify the specific named-events to be subscribed to by the Backend Service App in the PlanDefintion.action.trigger.ext-namedEventType extension element.
 

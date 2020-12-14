@@ -135,7 +135,7 @@ This implementation guide sets expectations for the following systems using work
        <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
        <a href="reportsubmission.html">Report Receiving Requirements</a>
     </td>
-    <td><a href="CapabilityStatement-medmorph-public-health-agency.html">Public Health Authority Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-public-health-authority.html">Public Health Authority Capability Statement</a></td>
   </tr>
   <tr>
     <td/>
@@ -148,7 +148,7 @@ This implementation guide sets expectations for the following systems using work
        <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
        <a href="reportsubmission.html">Report Receiving Requirements</a>
     </td>
-    <td><a href="CapabilityStatement-medmorph-public-health-agency.html">Research Organization Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-public-health-authority.html">Research Organization Capability Statement</a></td>
   </tr>
 </table>
 

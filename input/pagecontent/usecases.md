@@ -35,7 +35,7 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 
 	Note: Knowledge artifacts do not contain any PHI or PII information.
 
-4. __Backend Service App__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The system uses the information supplied by the knowledge artifact repository to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and where the data should be reported. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to a SMART on FHIR App which can be distributed to clinical care via EHR vendor-specified processes. The EHR vendor-specified processes enable the Backend Service App the ability to use the EHR's FHIR APIs to access data. The healthcare organization is responsible for choosing/developing and maintaining the Backend Service App within the organization.
+4. __Backend Service App__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The Backend Service App uses the information supplied by the knowledge artifact repository along with applicable authorities and policies to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and where the data should be reported. The term “Backend Service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “App” is used to indicate that it is similar to a SMART on FHIR App which can be distributed to clinical care via EHR vendor-specified processes. The EHR vendor-specified processes enable the Backend Service App the ability to use the EHR's FHIR APIs to access data. The healthcare organization is responsible for choosing/developing and maintaining the Backend Service App within the organization.
 
 5. __Trust Service Provider__:  Trust Service Provider affords capabilities that can be used to pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organizations. These capabilities are called Trust Services. Trust Services are used, when appropriate, by the Backend Service App.  
 
@@ -50,7 +50,7 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 
 ### MedMorph Workflows
 
-The following section details each of the MedMorph workflows, actors, and their interactions based on [MedMorph Use Cases](https://carradora.atlassian.net/wiki/spaces/MedMorph/pages/381780019/Use+Case+Work+Groups#Use-Cases). 
+The following section outlines each of the MedMorph workflows, actors, and their interactions based on [MedMorph Use Cases](https://carradora.atlassian.net/wiki/spaces/MedMorph/pages/381780019/Use+Case+Work+Groups#Use-Cases). 
 
 #### Provisioning Workflow
 

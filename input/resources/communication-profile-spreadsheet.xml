@@ -9,7 +9,7 @@
   <Author>Grahame</Author>
   <LastAuthor>Microsoft Office User</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2020-12-02T20:28:32Z</LastSaved>
+  <LastSaved>2020-12-14T00:51:46Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -6001,7 +6001,7 @@
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><Data ss:Type="String">Indicates the result of processing messages submitted from clinical care to PHA.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s103"><Data ss:Type="String">Indicates the result of processing messages submitted from clinical care to Public Health Agency (PHA).</Data><NamedCell
+    <Cell ss:StyleID="s103"><Data ss:Type="String">Indicates the result of processing messages submitted from clinical care to Public Health Authority (PHA) or Research Organizations.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s104"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -6983,6 +6983,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
+     <ActiveRow>12</ActiveRow>
      <ActiveCol>15</ActiveCol>
     </Pane>
    </Panes>

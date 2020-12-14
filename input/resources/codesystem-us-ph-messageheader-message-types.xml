@@ -20,38 +20,48 @@
   <content value="complete"/>
   <count value="10"/>
   <concept>
-  	<code value="case-report-message"/>
-    <display value="Indicates a message containing a case report from clinical care to PHA."/>
-    <definition value="Indicates a message that contains data for a specific case report. Case reports can be created for different conditions such as Hep C, Cancer etc."/>
+  	<code value="message-report"/>
+    <display value="Indicates a message containing a report exchanged between clinical care and PHA/Research Organization."/>
+    <definition value="Indicates a message that contains data for a specific use case. Hep C, Cancer and Healthcare Surveys are example use cases etc."/>
     <concept>
       <code value="cancer-report-message"/>
-      <display value="Indicates a message containing cancer reporting data from clinical care to PHA."/>
+      <display value="Indicates a message containing cancer reporting data sent from clinical care to PHA."/>
       <definition value="Indicates that cancer data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="cancer-response-message"/>
-      <display value="Indicates a message containing cancer report response data from PHA to clinical care."/>
+      <display value="Indicates a message containing cancer report response data sent from PHA to clinical care."/>
       <definition value="Indicates that a message containing response data for an already submitted cancer report is being sent from PHA to clinical care."/>
     </concept>
     <concept>
       <code value="hepc-report-message"/>
-      <display value="Indicates a message containing Hep C data from clinical care to PHA."/>
+      <display value="Indicates a message containing Hep C data sent from clinical care to PHA."/>
       <definition value="Indicates that Hep C data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="hepc-response-message"/>
-      <display value="Hep C Response Message from PHA to clinical care."/>
+      <display value="Hep C Response Message sent from PHA to clinical care."/>
       <definition value="Indicates that a message containing response data for an already submitted Hep C report message is being sent from PHA to clinical care."/>
     </concept>
     <concept>
       <code value="healthcare-survey-report-message"/>
-      <display value="Indicates a message containing healthcare survey data from clinical care to PHA."/>
+      <display value="Indicates a message containing healthcare survey data sent from clinical care to PHA."/>
       <definition value="Indicates that healthcare survey data are present in the message being sent from clinical care to PHA."/>
     </concept>
     <concept>
       <code value="healthcare-survey-response-message"/>
-      <display value="Indicates a message containing healthcare survey data from PHA to clinical care."/>
-      <definition value="Indicates that healthcare survey data are present in the response being sent from PHA o clinical care in response to a healthcare survey report message."/>
+      <display value="Indicates a message containing healthcare survey data sent from PHA to clinical care."/>
+      <definition value="Indicates that healthcare survey data are present in the response being sent from PHA to clinical care in response to a healthcare survey report message."/>
+    </concept>
+    <concept>
+      <code value="research-report-message"/>
+      <display value="Indicates a message containing healthcare data sent from clinical care to Research Organization."/>
+      <definition value="Indicates that research data are present in the message being sent from clinical care to Research Organization."/>
+    </concept>
+    <concept>
+      <code value="response-response-message"/>
+      <display value="Indicates a message containing response data from Research Organization to clinical care."/>
+      <definition value="Indicates that research data are present in the response being sent from Research Organization to clinical care in response to a submitted research report message."/>
     </concept>
   </concept>  
  </CodeSystem>

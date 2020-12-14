@@ -14,7 +14,7 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-  <description value="The US Public Health PlanDefinition Action Value Set is a &#39;starter set&#39; of codes for identifying actions uniquely in PlanDefinition instances."/>
+  <description value="The US Public Health PlanDefinition Action Value Set is a &#39;starter set&#39; of codes for uniquely identifying actions in PlanDefinition instances."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

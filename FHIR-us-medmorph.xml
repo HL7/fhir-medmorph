@@ -26,7 +26,8 @@
 <artifact id="CapabilityStatement/medmorph-backend-service-app" key="CapabilityStatement-medmorph-backend-service-app" name="MedMorph Backend Service App"/>
 <artifact id="CapabilityStatement/medmorph-ehr" key="CapabilityStatement-medmorph-ehr" name="MedMorph EHR"/>
 <artifact id="CapabilityStatement/medmorph-knowledge-artifact-repository" key="CapabilityStatement-medmorph-knowledge-artifact-repository" name="MedMorph Knowledge Artifact Repository"/>
-<artifact id="CapabilityStatement/medmorph-public-health-agency" key="CapabilityStatement-medmorph-public-health-agency" name="MedMorph Public Health Agency"/>
+<artifact deprecated="true" id="CapabilityStatement/medmorph-public-health-agency" key="CapabilityStatement-medmorph-public-health-agency" name="MedMorph Public Health Agency"/>
+<artifact id="CapabilityStatement/medmorph-public-health-authority" key="CapabilityStatement-medmorph-public-health-authority" name="MedMorph Public Health Authority"/>
 <artifact id="CapabilityStatement/medmorph-trust-service-provider" key="CapabilityStatement-medmorph-trust-service-provider" name="MedMorph Trust Service Provider"/>
 <artifact id="CapabilityStatement/medmorph-trusted-third-party" key="CapabilityStatement-medmorph-trusted-third-party" name="MedMorph Trusted Third Party"/>
 <artifact id="MessageHeader/messageheader-example-reportheader" key="MessageHeader-messageheader-example-reportheader" name="MessageHeader example used in the Cancer Reporting Bundle sent from Healthcare org to PHA"/>
@@ -70,7 +71,7 @@
 <page key="changes" name="IG Change History"/>
 <page key="index" name="MedMorph Home Page"/>
 <page key="provisioning" name="Provisioning Workflow Specification"/>
-<page key="reportgeneration" name="Report Generation"/>
+<page deprecated="true" key="reportgeneration" name="Report Generation"/>
 <page key="reportsubmission" name="Report Submission"/>
 <page key="researchdataextraction" name="Research Data Extraction"/>
 <page key="researchdataquery" name="Research Data Query"/>

@@ -52,6 +52,25 @@ Figure 4.3 shows the steps for a researcher to query a data mart and access data
 
 As shown in Figure 4.3 above, the researcher submits a query to a researcher portal which then sends the query to be submitted to the various data marts after translating the query as needed. The query is then received by the Backend Service App and then executed on the data marts, the results are collected and then sent back to the researcher after translation. This workflow is currently being standardized by the Common Data Model Harmonization (CDMH) project led jointly by FDA and NIH. We will be leveraging many of capabilities being built by the CDMH project to execute this workflow and add additional APIs and standards as needed.
 
+The detailed description of the steps are as described below:
+
+* Step Q1 :  In this Step, the researcher composes a query in FHIR and creates a Knowledge Artifact (PlanDefinition, ValueSets, Data Marts to be queried etc) that contains the query. This is submitted to the Researcher Portal.
+
+* Step Q2:  The FHIR query is then submitted for translation so that it is converted into multiple formats ( OMOP query, FHIR query, i2b2 query, PCORNet CDM query) based on the data models that need to be queried.
+
+* Step Q3: In this step, the query is distributed to each of the data marts to be queried. The query language, syntax and expressions will be specific to the data model supported by each data mart.
+
+* Step Q4: The Backend Service App receives the query via the Knowledge Artifact and runs submits the query for execution to the Data Mart.
+
+* Step Q5: The Data Mart completes the execution and returns the results back to the Backend Service App.
+
+* Step Q6: The results are forwarded to Results Translator and Aggregator to translate back to FHIR and aggregate it as needed.
+
+* Step Q7: The results are then submitted back to the Researcher Portal.
+
+* Step Q8: The results are made available to the researcher in a FHIR format.
+
+
 
 ### MedMorph Research Actors and Definitions
 

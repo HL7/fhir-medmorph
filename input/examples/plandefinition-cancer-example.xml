@@ -85,6 +85,12 @@
             <type value="named-event"/>
             <name value="encounter-close"/>
         </trigger>
+        <input>
+            <type value="Patient"/>
+        </input>
+        <input>
+            <type value="Encounter"/>
+        </input>
         <relatedAction>
             <actionId value="check-trigger-codes"/>
             <relationship value="before-start"/>
@@ -111,6 +117,12 @@
                     <language value="text/fhirpath"/>
                     <expression value="Condition.code.memberof(http://hl7.org/fhir/us/medmorph/ValueSet/valueset-cancer-trigger-codes-example)"/></expression>
             </condition>
+            <input>
+                <type value="Patient"/>
+            </input>
+            <input>
+                <type value="Encounter"/>
+            </input>
             <relatedAction>
                 <actionId value="create-report"/>
                 <relationship value="before-start"/>
@@ -126,5 +138,10 @@
                 <code value="create-report"/>
             </coding>
         </code>
+        <output>
+            <type value="Bundle"/>
+            <profile
+            value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+        </output>
     </action>
 </PlanDefinition>

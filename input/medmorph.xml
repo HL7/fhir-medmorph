@@ -208,11 +208,6 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="reportgeneration.html"/>
-        <title value="Report Generation"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="reportsubmission.html"/>
         <title value="Report Submission"/>
         <generation value="markdown"/>
