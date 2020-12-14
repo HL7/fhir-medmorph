@@ -11,5 +11,3 @@ See the [Content Bundle Example](Bundle-content-bundle-example.json.html)
 **Implementation Requirements**
 
 Implementers are advised to read [Report Submission Requirements](reportsubmission.html) to implement the Bundle profiles.
-
-```

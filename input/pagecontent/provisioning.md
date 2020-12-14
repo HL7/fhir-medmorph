@@ -84,7 +84,7 @@ PHAs or Research Organizations are the actors who create or produce Knowledge Ar
 
 * MedMorph Knowledge Artifacts SHALL use only named-events for triggering and is indicated by setting the PlanDefinition.action.trigger.type to named-event for actions specifying triggers.
 
-* MedMorph Workflow actions are essentially activities that get executed to accomplish a specific task. Producers SHALL  select specific actions from the [Plan Definition Action Valueset](http://hl7.org/fhir/us/fhir-medmorph/ValueSet/us-ph-plandefintion-action.html). In case the required action is not available in the value set, the value set MAY be extended.
+* MedMorph Workflow actions are essentially activities that get executed to accomplish a specific task. Producers SHALL  select specific actions from the [Plan Definition Action Valueset](ValueSet-us-ph-plandefinition-action.html). In case the required action is not available in the value set, the value set MAY be extended.
 
 * Producers of Knowledge Artifacts SHALL use Expressions of type text/fhirpath for defining Knowledge Artifacts. Producers MAY also create the same Knowledge Artifact using Expressions of type text/cql. 
 
