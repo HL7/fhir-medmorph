@@ -9,29 +9,13 @@ The next few sections describe and outline specific requirements that need to be
 
 MedMorph Knowledge Artifacts follow the general Event, Condition, Action (ECA) rule in computer programming. An occurrence of an event triggers specific actions which are only executed when certain conditions are met. In MedMorph these ECA rules are used to enable public health reporting from clinical care without increasing the burden on providers. The figure below gives an overview of ECA rule and examples of how it could be applied for the Cancer Reporting and Healthcare Survey use cases.
 
-**Figure 6.1 - ECA Rule and MedMorph Examples**
-
-{::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ECAExample.png" alt="Figure 6.1 - ECA Rule and MedMorph Examples" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ECAExample.svg" caption="Figure 6.1 - ECA Rule and MedMorph Examples" %}
 
 <br>
   
 The MedMorph Reference Architecture IG is providing the basic constructs required to enable public health and research reporting using  ECA rules embedded in Knowledge Artifacts which are machine processable and can be executed without burdening the provider. In addition to the ECA rules there are references to ValueSets, Library resources, security certificates and Endpoint information. These different artifacts are shown in Figure 6.2 below.
 
-**Figure 6.2 - Knowledge Artifact Components**
-
-{::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="KnowledgeArtifactComponents.png" alt="Figure 6.2 - Knowledge Artifact Components" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="KnowledgeArtifactComponents.svg" caption="Figure 6.2 - Knowledge Artifact Components" %}
 
 <br>
 
@@ -45,15 +29,7 @@ Once the Backend Service App receives notifications of the Named Events via Subs
 
 The Actions that need to be performed are based on the different use cases considered for MedMorph architecture. MedMorph will use the documented [Action List](ValueSet-us-ph-plandefinition-action.html). The execution sequence of the various actions can be visualized as shown in Figure 6.3 below.
 
-**Figure 6.3 - Action Execution Steps**
-
- {::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ActionSequence.png" alt="Figure 6.3 - Action Execution Steps" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ActionSequence.svg" caption="Figure 6.3 - Action Execution Steps" %}
 
 <br>
 
