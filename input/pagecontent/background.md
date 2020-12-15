@@ -23,9 +23,13 @@ For example, the MedMorph Hep C use case overlaps with electronic case reporting
 
 **Figure 2.1 – Relationship among Different IG Types and Basic FHIR Capabilities**
 
+{::options parse_block_html="false" /}
 
-{% include img.html img="IGRelationship.svg" caption="Figure 1: IG Types and Relationships" %}
+<figure>
+  <img height="600px" src="IGRelationship.png" alt="Figure 1: IG Types and Relationships" style="vertical-align:middle"/>
+</figure>
 
+{::options parse_block_html="true" /}
 
 **NOTE to Reviewers:** 
 
