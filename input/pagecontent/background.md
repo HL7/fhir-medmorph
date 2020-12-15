@@ -21,9 +21,7 @@ At the content IG level, the eCR FHIR IG contains content profiles (identified a
 
 For example, the MedMorph Hep C use case overlaps with electronic case reporting. Creation of a new Hep C IG would replicate most, if not all, of the content in the eICR FHIR IG, which is undesirable. In order to minimize proliferation of profiles and implementation guides, the MedMorph Hep C use case will reuse the eICR FHIR IG from a content perspective. Similarly, other content IGs that get created in the future would first examine existing content IGs such as eICR FHIR IG and only create new profiles and data elements that are not present in the eICR FHIR IG or other content IGs. For example, the Cancer Registry Reporting use case partially overlaps with the eICR FHIR IG and so would create a content IG that references the portions of the eICR FHIR IG that overlap and then add extensions, etc. needed for the Cancer Registry Reporting use case that are not included in the eICR FHIR IG. On the other hand, the Health Care Surveys IG does not overlap at all with the eICR FHIR IG from a content perspective but it can use the MedMorph Reference Architecture IG, which includes a broader architecture than the eICR FHIR IG that considers use cases where case reporting is not the main purpose. Therefore, the Health Care Surveys content IG would reference the MedMorph Reference Architecture IG and then add profiles and/or extensions, etc. needed for the Health Care Surveys use case that are not included in the MedMorph Reference Architecture IG (e.g., Health Care Surveys content specifications).
 
-**Figure 2.1 – Relationship among Different IG Types and Basic FHIR Capabilities**
-
-{% include img.html img="IGRelationship.svg" caption="Figure 1: IG Types and Relationships" %}
+{% include img.html img="IGRelationship.svg" caption="Figure 2.1: Relationship among Different IG Types and Basic FHIR Capabilities" %}
 
 **NOTE to Reviewers:** 
 
