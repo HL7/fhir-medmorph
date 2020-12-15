@@ -56,15 +56,9 @@ The following section outlines each of the MedMorph workflows, actors, and their
 
 The Provisioning Workflow involves the activities whereby a PHA or a Research Organization publishes a Knowledge Artifact(s) specific to a use case. The published Knowledge Artifact(s) is then downloaded by the Backend Service App. The Backend Service App may subscribe to notifications from the EHR based on data present within the Knowledge Artifact. The actors and steps involved in the workflow are shown in Figure 3.1 below.
 
-**Figure 3.1 - Provisioning Workflow**
 
-{::options parse_block_html="false" /}
+{% include img.html img="ProvisioningWorkflow.svg" caption="Figure 3.1 - Provisioning Workflow" %}
 
-<figure>
-  <img height="600px" src="ProvisioningWorkflow.png" alt="Figure 3.1 - Provisioning Workflow " style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
 
 <br>
 
@@ -72,15 +66,7 @@ The Provisioning Workflow involves the activities whereby a PHA or a Research Or
 
 The Notification Workflow involves the activities whereby a provider, as part of the care delivery process, updates a patient's medical record within an EHR. The EHR, based on the changes to the medical record and existing subscriptions, will notify the Backend Service App of the changes in the medical record. The Backend Service App will perform actions such as querying the EHR for additional data, scheduling a reporting job, and creating a report for submission based on the notification and the Knowledge Artifact data. The actors and steps involved in the workflow are shown in Figure 3.2 below.
 
-**Figure 3.2 - Notification Workflow**
-
- {::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="NotificationWorkflow.png" alt="Figure 3.2 - Notification Workflow" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="NotificationWorkflow.svg" caption="Figure 3.2 - Notification Workflow" %}
 
 <br>
 
@@ -88,15 +74,7 @@ The Notification Workflow involves the activities whereby a provider, as part of
 
 The Report Creation Workflow involves the activities whereby the Backend Service App collects the data necessary for creating the report to be submitted to the PHA or Research Organization. The Backend Service App may then perform additional activities such as pseudonymization, anonymization or de-identification based on the specific use case and knowledge artifact. Finally, the Backend Service App assembles the data in the required reporting format for submission. The actors and steps involved in the workflow are shown in Figure 3.3 below.
 
-**Figure 3.3 - Report Creation Workflow**
-
- {::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ReportCreationWorkflow.png" alt="Figure 3.3 - Report Creation Workflow" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ReportCreationWorkflow.svg" caption="Figure 3.3 - Report Creation Workflow" %}
 
 <br>
 
@@ -104,15 +82,9 @@ The Report Creation Workflow involves the activities whereby the Backend Service
 
 The Data Submission Workflow involves the activities whereby the Backend Service App packages the data and submits the data to the PHA or Research Organization. The data submission may occur through a Trusted Third Party. The actors and steps involved in the workflow are shown in Figure 3.4 below.
 
-**Figure 3.4 - Data Submission Workflow**
 
- {::options parse_block_html="false" /}
+{% include img.html img="DataSubmissionWorkflow.svg" caption="Figure 3.4 - Data Submission Workflow" %}
 
-<figure>
-  <img height="600px" src="DataSubmissionWorkflow.png" alt="Figure 3.4 - Data Submission Workflow" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
 
 <br>
 
@@ -120,15 +92,7 @@ The Data Submission Workflow involves the activities whereby the Backend Service
 
 The Receiving Response/Acknowledgement Workflow involves the activities whereby the PHA or Research Organization provides a response back to clinical care. This workflow depicts the PUSH method (i.e., PUSH from PHA/Research Organization to Clinical Care). The actors and steps involved in the workflow are shown in Figure 3.5 below.
 
-**Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH Method)**
-
- {::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ResponseWorkflowPush.png" alt="Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH Method)" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ResponseWorkflowPush.svg" caption="Figure 3.5 - Receiving Response/Acknowledgement Workflow (PUSH Method)" %}
 
 <br>
 
@@ -136,14 +100,7 @@ The Receiving Response/Acknowledgement Workflow involves the activities whereby 
 
 The Receiving Response/Acknowledgement Workflow involves the activities whereby the PHA or Research Organization provides a response back to clinical care. This workflow depicts the PULL method (i.e., Clinical Care PULLS the response from PHA/Research Organization). The actors and steps involved in the workflow are shown in Figure 3.6 below.
 
-**Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method)**
 
- {::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ResponseWorkflowPull.png" alt="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method)" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ResponseWorkflowPull.svg" caption="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method" %}
  
 <br>
