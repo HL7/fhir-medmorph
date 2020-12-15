@@ -101,6 +101,6 @@ The Receiving Response/Acknowledgement Workflow involves the activities whereby 
 The Receiving Response/Acknowledgement Workflow involves the activities whereby the PHA or Research Organization provides a response back to clinical care. This workflow depicts the PULL method (i.e., Clinical Care PULLS the response from PHA/Research Organization). The actors and steps involved in the workflow are shown in Figure 3.6 below.
 
 
-{% include img.html img="ResponseWorkflowPull.svg" caption="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method" %}
+{% include img.html img="ResponseWorkflowPull.svg" caption="Figure 3.6 - Receiving Response/Acknowledgement Workflow (PULL Method)" %}
  
 <br>
