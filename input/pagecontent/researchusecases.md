@@ -8,29 +8,13 @@
 
 Figure 4.1 below shows the research abstract model to onboard a data partner who can contribute data from their EHR system to populate a data mart.
 
-**Figure 4.1 - Populating a Data Mart from an EHR**
-
-{::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="DataPartnerOnboarding.png" alt="Figure 4.1 - Populating a Data Mart from an EHR " style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="DataPartnerOnboarding.svg" caption="Figure 4.1 - Populating a Data Mart from an EHR" %}
 
 <br>
 
 As shown in Figure 4.1 above, the Backend Service App will extract data from an EHR for one or more patients and use the Data/Trust Services to perform translation, masking and populate the data mart. In the above diagram the data mart exists within the health care organization. The Data Mart and the Backend Service App could reside outside the health care organization as shown in Figure 4.2 below. 
 
-**Figure 4.2 - Populating an Externally Hosted Data Mart from an EHR**
-
-{::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="OnboardingExternalDataPartner.png" alt="Figure 4.2 - Populating an Externally Hosted Data Mart from an EHR " style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="OnboardingExternalDataPartner.svg" caption="Figure 4.2 - Populating an Externally Hosted Data Mart from an EHR" %}
 
 <br>
 
@@ -38,15 +22,7 @@ As shown in Figure 4.1 above, the Backend Service App will extract data from an 
 
 Figure 4.3 shows the steps for a researcher to query a data mart and access data.
 
-**Figure 4.3 - Researcher Querying a Data Mart**
-
-{::options parse_block_html="false" /}
-
-<figure>
-  <img height="600px" src="ResearchDataQuery.png" alt="Figure 4.3 - Researcher Querying a Data Mart" style="vertical-align:middle"/>
-</figure>
-
-{::options parse_block_html="true" /}
+{% include img.html img="ResearchDataQuery.svg" caption="Figure 4.3 - Researcher Querying a Data Mart" %}
 
 <br>
 
