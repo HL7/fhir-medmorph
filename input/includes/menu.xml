@@ -34,6 +34,7 @@
     </ul>
   </li>
   <li><a href="artifacts.html">FHIR Artifacts</a></li>
+  <li><a href="contentig.html">Content IG Guidance</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>

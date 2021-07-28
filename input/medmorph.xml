@@ -228,6 +228,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="contentig.html"/>
+        <title value="Content IG Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="credits.html"/>
         <title value="Credits"/>
         <generation value="markdown"/>
