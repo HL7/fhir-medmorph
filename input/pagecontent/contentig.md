@@ -31,11 +31,11 @@ The following sections are expected to be created in a Content IG. In addition t
 	<td>This section is to document the use cases, user stories and workflows associated with the use case and/or the reporting program. This should include the identification of the MedMorph Reference Architecture Actors and Systems taht will be used in the workflow. If any new actors or systems are to be used for the use case, they need to be defined in this section along with their roles and interactions with the MedMorph Reference Architecture actors and systems.</td>
   </tr>
   <tr>
-    <td>EHR Data Requirements</td>
+    <td>EHR Requirements</td>
 	<td>This section outlines the specific data elements that are required to be supported by the EHRs. These include the subscription events, notifications and the specific FHIR Resources and data elements required for the use case. The section should also define the specific FHIR APIs that need to be supported by the EHR for the specific use case. Lastly the security requirements for interaction with the EHR must be specified in this section.</td>
   </tr>
   <tr>
-    <td>PHA Submission and Response Requirements</td>
+    <td>PHA Requirements</td>
 	<td>This section outlines the specific requirements for submission to the PHAs. This section should outline the APIs, processing of the data, content to be submitted, support for synchronous vs asynchronous responses. The section should also outline the responses to be expected from the PHA and how these responses should be consumed by the healthcare organization.Lastly the security requirements for interaction with the PHA must be specified in this section.</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ In this section, the authors have to specifically identify the actors and system
 * Documentation of the Main Flow and significant Exception Flows of the use case using the actors and systems using a BPM type of diagram.
 * Identification of any interactions between actors and systems that are not part of the MedMorph RA.
 
-### Capturing the EHR Data Requirements in a Content IG
+### Capturing EHR Requirements in a Content IG
 
 * In this section, the data requirements for the use case should be identified in detail. The requirements can be captured in a spreadsheet and linked into the section. The data requirements should be tagged as being applicable to the EHR where appropriate.
 
@@ -86,7 +86,7 @@ For e.g, In a cancer reporting content ig, the cancer reporting use case may nee
 * The security mechanisms to be used to interact with the EHR (for e.g SMART on FHIR App Launch, SMART on FHIR Backend Services Authorization or other mechanisms) should be identified in this section.
 
 
-### Capturing the PHA Submission and Response Requirements in a Content IG
+### Capturing PHA Requirements in a Content IG
 
 * The data requirements that are relevant to the PHA should be documented in this section. This is normally a subset of all the data requirements identified in the EHR Data Requirements section.
 
