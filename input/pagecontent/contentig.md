@@ -122,7 +122,7 @@ Ideally, creating a Content IG that can leverage existing profiles from other IG
 
 * From the data requirements, identify if there is a specific US Core profile that can be used.
 * If there is not a specific US Core profile to be used, then refer to the US PH Library to determine if there is a profile that can be used.
-* If none are found, refer to other PH initiatives such as eCR, Birth and Death Reporting to identify if there is a profile that can be leveraged. 
+* If none are found, refer to other PH initiatives such as eCR, Birth and Death Reporting to identify if there is a profile that can be leveraged.
 * If none are found or if there are profiles that can be used partially, then create a profile in the Content IG that fits the need. The created profile could be a new profile or a profile of an existing profile. 
 
 ### Content IG Examples
