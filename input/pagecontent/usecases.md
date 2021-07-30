@@ -48,6 +48,41 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 9. __Research Organization__: An organization that can access the data from clinical care or data repositories for research purposes with appropriate data use agreements, authorities, and policies.
 
 
+#### Interactions between MedMorph Actors and Systems
+
+This section outlines the high level interactions between the various MedMorph Actors and Systems defined above. These interactions are shown in the Figure 3.0 below along with the descriptions for each step.
+
+ 
+ 
+ {% include img.html img="MedMorphActorsAndSystems.png" caption="Figure 3.0 - MedMorph Actors, Systems and their Interactions" %}
+
+
+<br>
+The descriptions for each step in the above diagram are described below:
+
+* Step 1: A Public Health Agency (PHA) or a Research Organization (RO) creates a Knowledge Artifact (KA) and makes it available via the Knowledge Artifact Repository (KAR).
+* Step 1a: KARs, which implement notifications, can optionally notify the subscribers (EHRs, Backend System App, Administrators) of changes in the KAs.
+* Step 2: Backend Service App (BSA) queries the KAR to retrieve a KA.
+* Step 2a: BSA receives the KA as a response to the query in Step 2.
+* Step 3: BSA processes the KA and creates subscriptions in the EHR’s FHIR Server so that it can be notified when specific events occur in clinical workflows.
+* Step 4: Providers, as part of their clinical workflows, update the data in the EHR patient chart.
+* Step 5: EHR notifies the BSA based on subscriptions that have been created in Step 3.
+* Step 6: BSA queries the EHR for patient’s data.
+* Step 6a: BSA receives the response from the EHR with the patient’s data.
+* Step 7: After the creation of the report with identifiable data that needs to be submitted, the BSA invokes Data/Trust Services (DTS) to de-identify, anonymize, pseudonymize the report as needed (NOTE: DTS are not invoked if the data must remain identifiable, as with most public health use cases).
+* Step 7a: BSA receives the de-identified, anonymized or pseudonymized report (only if DTS have been invoked).
+* Step 8: The BSA submits the created report in Step 7 to the PHA/RO directly without any Trusted Third Parties (TTPs) acting as intermediaries.
+* Step 8a: PHAs/ROs can require TTPs to act as intermediaries to receive reports from clinical organizations. For these scenarios, the BSA submits the created report to the TTP.
+* Step 8b: The TTP receives a submitted report from the BSA and forwards the report to the PHA/RO.
+* Step 9: The PHA/RO submits a response back to the healthcare organization based on the submitted report. The response transaction can be synchronous (immediately w.r.t. Step 8) or asynchronous (after a period of time).
+* Step 9a: The PHA/RO can require TTP to act as intermediaries to submit reports to clinical organizations. For these scenarios, the PHA/RO submits a response to the TTP.
+* Step 9b: The TTP receives the submitted response from the PHA/RO and forwards the response to the BSA which is part of the healthcare organization.
+* Step 10: The BSA writes back the response from the PHA/Research Organization to the EHR as appropriate. (NOTE: The response may have to be re-identified in some scenarios using Data/Trust Services before it is written back to the EHR.)
+ 
+
+The next few sections considers subsets of the above the interactions for ease of understanding and documenting detailed interactions using applicable FHIR mechanisms. 
+
+
 ### MedMorph Workflows
 
 The following section outlines each of the MedMorph workflows, actors, and their interactions based on [MedMorph Use Cases](https://carradora.atlassian.net/wiki/spaces/MedMorph/pages/381780019/Use+Case+Work+Groups#Use-Cases). 
