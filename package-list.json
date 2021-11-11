@@ -6,7 +6,7 @@
  "category" : "Public Health",
  "list" : [
  {
-  "version" : "1.0.0",
+  "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
   "path" : "http://build.fhir.org/ig/HL7/fhir-medmorph",
   "status" : "ci-build",
