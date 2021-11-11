@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/medmorph/2021Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-medmorph" defaultVersion="0.1.0" defaultWorkgroup="pher" gitUrl="https://github.com/HL7/fhir-medmorph" url="http://hl7.org/fhir/us/medmorph">
-<version code="current" url="http://build.fhir.org/ig/HL7/fhir-medmorph"/>
+<version code="1.0.0" url="http://build.fhir.org/ig/HL7/fhir-medmorph"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/medmorph/2021Jan"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
@@ -66,6 +66,7 @@
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
+<page key="contentig" name="Content IG Guidance"/>
 <page key="credits" name="Credits"/>
 <page key="spec" name="Detailed Specification"/>
 <page key="changes" name="IG Change History"/>
