@@ -1,0 +1,15 @@
+{
+  "resourceType": "Parameters",
+  "id": "encounter-close",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/medmorph/StructureDefinition/encounter-close"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "subscription-topic-canonical",
+      "valueCanonical": "http://hl7.org/fhir/us/medmorph/StructureDefinition/encounter-close"
+    }
+  ]
+}

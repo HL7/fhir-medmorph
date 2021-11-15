@@ -3,3 +3,11 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
+# These errors related to references to the Bulk Data Access IG give broken link errors, however they are false positives and the links are valid.
+# Upon discussion with Grahame, it is understood that these errors cannot be resolved in the IG publisher for now.
+
+The link 'http://hl7.org/fhir/uv/bulkdata/export/index.html' for "Bulk Data Access IG" cannot be resolved
+The link 'http://hl7.org/fhir/uv/bulkdata/authorization/index.html' for "SMART on FHIR Backend Services Authorization" cannot be resolved
+The link 'http://hl7.org/fhir/uv/bulkdata/authorization/index.html' for "Backend Services Authorization - FHIR R4 based IG" cannot be resolved
+The link 'http://hl7.org/fhir/uv/bulkdata/authorization/index.html' for "SMART on FHIR Backend Services Authorization" cannot be resolved
+

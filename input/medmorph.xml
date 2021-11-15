@@ -50,6 +50,23 @@
   
   <definition>
   
+  <resource>
+      <reference>
+        <reference value="Parameters/encounter-start"/>
+      </reference>
+      <name value="Encounter Start Subscription Topic Example"/>
+      <description value="Encounter Start Subscription Topic Example"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Parameters/encounter-close"/>
+      </reference>
+      <name value="Encounter Close Subscription Topic Example"/>
+      <description value="Encounter Close Subscription Topic Example"/>
+      <exampleBoolean value="true"/>
+   </resource>
+  
    <resource>
       <reference>
         <reference value="Patient/1"/>
