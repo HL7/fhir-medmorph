@@ -18,7 +18,7 @@
   <caseSensitive value="true"/>
   <valueSet value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-message-types"/>
   <content value="complete"/>
-  <count value="10"/>
+  <count value="11"/>
   <concept>
   	<code value="message-report"/>
     <display value="Indicates a message containing a report exchanged between clinical care and PHA/Research Organization."/>
@@ -59,9 +59,19 @@
       <definition value="Indicates that research data are present in the message being sent from clinical care to Research Organization."/>
     </concept>
     <concept>
-      <code value="response-response-message"/>
+      <code value="research-response-message"/>
       <display value="Indicates a message containing response data from Research Organization to clinical care."/>
       <definition value="Indicates that research data are present in the response being sent from Research Organization to clinical care in response to a submitted research report message."/>
     </concept>
+    <concept>
+            <code value="eicr-case-report-message"/>
+            <display value="Indicates a message containing electronic case report healthcare data sent from clinical care."/>
+            <definition value="Indicates that electronic case report data are present in the message being sent from clinical care."/>
+        </concept>
+        <concept>
+            <code value="reportability-response-message"/>
+            <display value="Indicates a message containing reportability response data in response to an electronic case report."/>
+            <definition value="Indicates that reportability response data are present in the response to an electronic case report."/>
+        </concept>
   </concept>  
  </CodeSystem>
