@@ -149,4 +149,19 @@
     <display value="A Practitioner or their representatives notify the application about change in patient data"/>
     <definition value="In some cases where automated notifications are not supported, a practitioner or their representative can initiate the public health report processing by notifying the application about change in a patient's data."/>
   </concept>
+  <concept>
+	    <code value="timer-event"/>
+	    <display value="A Timer is setup to kick off processing."/>
+	    <definition value="Indicates a timer based approach to start processing."/>
+	    <concept>
+            <code value="periodic-timer"/>
+            <display value="Setup Periodic Timer"/>
+            <definition value="Indicates that processing must be performed periodically based on a specified duration."/>
+        </concept>
+        <concept>
+            <code value="absolute-timer"/>
+            <display value="Setup Absolute Timer"/>
+            <definition value="Indicates that processing must be performed at a specific time."/>
+        </concept>
+	</concept>
  </CodeSystem>

@@ -11,5 +11,5 @@ EHRs supporting the subscription topic of encounter-close has to ensure that the
 
 1. Are EHRs ensuring closing of encounters ? 
 2. How do EHRs handle long running encounters (Meaning encounters running for months) maybe for long term care etc ?
-3.  
+
  
