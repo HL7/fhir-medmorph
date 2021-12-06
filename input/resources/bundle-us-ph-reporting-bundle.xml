@@ -81,5 +81,19 @@
                 <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
             </type>
         </element>
+        <element id="Bundle.entry:contentBundle">
+            <path value="Bundle.entry"/>
+            <sliceName value="contentBundle"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:contentBundle.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
+            </type>
+        </element>
     </differential>
 </StructureDefinition>

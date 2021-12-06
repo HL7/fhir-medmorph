@@ -89,6 +89,9 @@
             <type value="Patient"/>
         </input>
         <input>
+            <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+                <valueString value="/Encounter?patient={context.patientId}"/>
+            </extension>
             <type value="Encounter"/>
         </input>
         <relatedAction>
