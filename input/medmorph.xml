@@ -3,7 +3,7 @@
   <id value="medmorph"/>
   <url value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/medmorph"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="1.0.0"/>
+  <version value="0.2.0"/>
   <name value="MakingEHRDataMoreAvailableToResearchAndPublicHealth"/>
   <title value="Making EHR Data More available for Research and Public Health (MedMorph)"/>
   <status value="draft"/>
@@ -288,7 +288,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU Ballot"/>
+      <value value="STU 1 draft"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
