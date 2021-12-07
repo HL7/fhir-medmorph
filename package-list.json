@@ -15,6 +15,15 @@
   "fhirversion" : "4.0.1"
  },
  {
+  "version" : "0.2.0",  
+  "date" : "2022-01-01", 
+  "desc" : "Interim release to support MedMorph Content IG ballot - Healthcare Surveys, Cancer Registries, Medmorph Research",   
+  "path" : "http://hl7.org/fhir/us/medmorph/2022Jan",  
+  "status" : "draft",   
+  "sequence" : "STU 1",
+  "fhirversion" : "4.0.1"
+ },
+ {
   "version" : "0.1.0",  
   "date" : "2021-01-01", 
   "desc" : "STU 1 Ballot (Jan 2021 Ballot)",   
