@@ -31,7 +31,7 @@ The current FHIR R4 specification only supports the Subscription Resource and he
 
 * EHRs SHALL support Subscription instance creation for resources identified by each of the named-events in the [Named Event Valueset](	ValueSet-us-ph-triggerdefinition-namedevent.html).
 
-* EHRs SHALL support a criteria of "[ResourceType]?all" as part of the Subscription instance. The criteria "[ResourceType]?all" indicates all creates and updates on the particular type of resource for which Subscription is created. 
+* EHRs SHALL support a criteria of "[ResourceType]" as part of the Subscription instance. The criteria "[ResourceType]" indicates all creates and updates on the particular type of resource for which Subscription is created. 
 
 * EHRs SHALL notify the subscribers of changes based on the named-events using a channel of type ```rest-hook```. 
 
@@ -56,7 +56,7 @@ The following is a Subscription example for Condition resource:
   "status": "requested",
   "end": "2021-01-01T00:00:00Z",
   "reason": "Monitor new or updated Conditions instances",
-  "criteria": "Condition?all",
+  "criteria": "Condition",
   "channel": {
     "type": "rest-hook",
     "endpoint": "https://[FHIR Server URL]/backend-service-app/notify",

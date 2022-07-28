@@ -21,7 +21,7 @@
               <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
               <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
           </meta>
-          <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-receiverAddress">
+          <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-receiverEndpoint">
                       <valueReference>
                           <reference value="Endpoint/example-ph-endpoint"/>
                       </valueReference>
@@ -91,13 +91,13 @@
                       <valueCodeableConcept>
                           <coding>
                               <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
-                              <code value="encounter-close"/>
-                              <display value="Indicates the close of an encounter"/>
+                              <code value="encounter-end"/>
+                              <display value="Indicates the end of an encounter"/>
                           </coding>
                       </valueCodeableConcept>
                   </extension>
                   <type value="named-event"/>
-                  <name value="encounter-close"/>
+                  <name value="encounter-end"/>
               </trigger>
               <relatedAction>
                   <actionId value="check-trigger-codes"/>

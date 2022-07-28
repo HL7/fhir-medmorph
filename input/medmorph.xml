@@ -3,10 +3,10 @@
   <id value="medmorph"/>
   <url value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/medmorph"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.2.0"/>
-  <name value="MakingEHRDataMoreAvailableToResearchAndPublicHealth"/>
+  <version value="1.0.0"/>
+  <name value="MakingEHRDataMoreAvailableForResearchAndPublicHealth"/>
   <title value="Making EHR Data More available for Research and Public Health (MedMorph)"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International - Public Health Work Group"/>
   <contact>
@@ -38,7 +38,13 @@
   <dependsOn id="bulkig">
     <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
     <packageId value="hl7.fhir.uv.bulkdata"/>
-    <version value="1.0.0"/>
+    <version value="1.0.1"/>
+  </dependsOn>
+  
+  <dependsOn id="smartapplaunch">
+    <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
+    <packageId value="hl7.fhir.uv.smart-app-launch"/>
+    <version value="2.0.0"/>
   </dependsOn>
   
   <dependsOn id="subscriptionsig">
@@ -60,10 +66,10 @@
    </resource>
    <resource>
       <reference>
-        <reference value="Parameters/encounter-close"/>
+        <reference value="Parameters/encounter-end"/>
       </reference>
-      <name value="Encounter Close Subscription Topic Example"/>
-      <description value="Encounter Close Subscription Topic Example"/>
+      <name value="Encounter End Subscription Topic Example"/>
+      <description value="Encounter End Subscription Topic Example"/>
       <exampleBoolean value="true"/>
    </resource>
   
@@ -153,14 +159,6 @@
       </reference>
       <name value="Group example showing Providers participating in healthcare surveys"/>
       <description value="Group example showing Providers participating in healthcare surveys"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Communication/communication-example-cancer-pha-response"/>
-      </reference>
-      <name value="Communication example from PHA to Healthcare in response to a received cancer report"/>
-      <description value="Communication example from PHA to Healthcare in response to a received cancer report"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -288,7 +286,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1 draft"/>
+      <value value="STU 1"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

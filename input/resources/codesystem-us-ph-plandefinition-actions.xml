@@ -51,8 +51,8 @@
         </concept>
         <concept>
             <code value="create-report"/>
-            <display value="Create a Report containing Patient's data for patients who passed the check-reportability test"/>
-            <definition value="Create a Report containing Patient's data for patients who passed the check-reportability test."/>
+            <display value="Create a report for submission to a PHA or a Research Organization"/>
+            <definition value="Create a Report containing data for patients or participants who have been identified by other medmorph plandefinition actions such as initiate-reporting-workflow, check-trigger-codes and check-participant-registration."/>
         </concept>
         <concept>
             <code value="validate-report"/>

@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates an anonymized bundle taking an instance of a Bundle containing Protected Health Information (PHI)/personally identifiable information (PII) data. The anonymization algorithm to be used is left to the implementers of the operation."/>
+  <description value="Generates an anonymized bundle taking an instance of a Bundle containing Protected Health Information (PHI)/personally identifiable information (PII) data. The anonymization algorithm to be used is left to the implementers of the operation.Errors during the execution of the operation can be returned as OperationOutcome per the FHIR spec as a return parameter."/>
   <code value="anonymize"/>
   <resource value="Bundle"/>
   <system value="false"/>
@@ -35,13 +35,5 @@
     <max value="1"/>
     <documentation value="The anonymize bundle is returned back from the service."/>
     <type value="Bundle"/>
-  </parameter>
-  <parameter>
-    <name value="issues"/>
-    <use value="out"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="A list of hints and warnings about problems encountered while anonymizing the bundle."/>
-    <type value="OperationOutcome"/>
   </parameter>
 </OperationDefinition>

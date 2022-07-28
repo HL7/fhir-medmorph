@@ -9,7 +9,7 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This profile defines the expected capabilities of the <i>MedMorph Knowledge Artifact Repository </i> actor.  
+      <p>This CapabilityStatement defines the expected capabilities of the <i>MedMorph Knowledge Artifact Repository </i> actor.  
       This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
       <h2>General</h2>
       <div class="table-wrapper">
@@ -213,8 +213,8 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This profile defines the expected capabilities of the ''Knowledge Artifact Repository'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the Knowledge Artifact Repository actor when conforming to the MedMorph Architecture Implementation Guide.  
+  This actor is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>

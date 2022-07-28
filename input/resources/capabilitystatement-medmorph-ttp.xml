@@ -9,8 +9,8 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trusted-third-party</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This profile defines the expected capabilities of the <i>MedMorph Trusted Third Party </i> actor.  
-      This actor is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to clinical care.</p> 
+      <p>This CapabilityStatement defines the expected capabilities of the Trusted Third Party actor.  
+      This actor is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to health care organizations.</p> 
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -79,6 +79,7 @@
       <ul>
         <li>
           <a href="https://www.hl7.org/fhir/messageheader-operation-process-message.html">Bundle process-message</a>
+           <p>An example implementation of the process-message operation can be found at <a href="https://github.com/drajer-health/ecr-on-fhir/tree/master/fhir-eicr-r4">Example process-message operation using HAPI</a></p>
         </li>
       </ul>
       <br/>
@@ -127,8 +128,8 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This profile defines the expected capabilities of the ''Trusted Third Party'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to clinical care."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the Trusted Third Party actor when conforming to the MedMorph Reference Architecture Implementation Guide.  
+  This actor is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to health care organizations."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>

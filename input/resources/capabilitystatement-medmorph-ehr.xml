@@ -9,8 +9,8 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-ehr</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This profile defines the expected capabilities of the <i>MedMorph EHR </i> actor.  
-      This actor is responsible for publishing Subscription Topics based on Named Events, generate notifications base on subscriptions and support US Core FHIR APIs.</p>
+      <p>This is an example CapabilityStatement that defines the expected capabilities of the EHR actor.  
+      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for an EHR actor.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -94,6 +94,29 @@
 			  <td>
               </td>
             </tr>
+            <tr>
+              <th>DocumentReference</th>
+              <td>
+      
+              </td>
+              <td>
+                
+              </td>
+              <td>
+                
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a specific DocumentReference Resource instance used by the Backend Services App to post the response back to the EHR.The attachment will contain the response bundle received from the TTP/PHA." href="#DocumentReference-create">SHOULD</a>
+              </td>
+              <td>
+                
+              </td>
+              <td/>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -158,12 +181,41 @@
               <td>
                 <p>Allows deletion of Subscription instances</p>
               </td>
-            </tr>    
+            </tr>
           </tbody>
         </table>
       </div>
       <br/>
       <br/> 
+      <h3>
+        <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
+      </h3>
+      <p>Profile: None
+      </p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="DocumentReference-create"> </a>
+                <span>create</span>
+              </th>
+              <td>
+                <p>Allows creation of a specific DocumentReference Resource instance used by the Backend Services App to post the response back to the EHR.The attachment will contain the response bundle received from the TTP/PHA.</p>
+              </td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
       <h3>
         <a href="http://hl7.org/fhir/us/core">US Core APIs</a>
       </h3>
@@ -207,7 +259,7 @@
   
   <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-ehr"/>
   <name value="MedMorphEhr"/>
-  <title value="MedMorph EHR"/>
+  <title value="Example MedMorph EHR CapabilityStatement"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -217,8 +269,8 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This profile defines the expected capabilities of the ''EHR'' actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This role is responsible for allowing creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs."/>
+  <description value="This is an example CapabilityStatement that defines the expected capabilities of the EHR actor.  
+      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for an EHR actor."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
@@ -259,5 +311,15 @@
         <documentation value="Allows deletion of a Subscription resource instance."/>
       </interaction>  
     </resource>
+    <resource>
+      <type value="DocumentReference"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows creation of a specific DocumentReference instance."/>
+      </interaction>
+      </resource>
   </rest>
 </CapabilityStatement>

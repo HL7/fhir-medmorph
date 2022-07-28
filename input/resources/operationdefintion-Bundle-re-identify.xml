@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates a re-identified bundle taking an instance of a Bundle containing PHI/PII data. The re-identification algorithm to be used is left to the implementers of the operation."/>
+  <description value="Generates a re-identified bundle containing PHI/PII data​ ​from an instance of a previously de-identified bundle. When the re-identification algorithm is not specified by the Content IG, implementers can choose specific algorithms based on use case needs and other program/policy requirements.Errors during the execution of the operation can be returned as OperationOutcome per the FHIR spec as a return parameter."/>
   <code value="reidentify"/>
   <resource value="Bundle"/>
   <system value="false"/>
@@ -25,7 +25,7 @@
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="An input bundle instance that needs to be re-identified"/>
+    <documentation value="An de-identified input bundle instance that needs to be re-identified"/>
     <type value="Bundle"/>
   </parameter>
   <parameter>
@@ -35,13 +35,5 @@
     <max value="1"/>
     <documentation value="Upon successful re-identification, the re-identified bundle is returned back from the service."/>
     <type value="Bundle"/>
-  </parameter>
-  <parameter>
-    <name value="issues"/>
-    <use value="out"/>
-    <min value="0"/>
-    <max value="1"/>
-    <documentation value="A list of hints and warnings about problems encountered while re-identifying the bundle."/>
-    <type value="OperationOutcome"/>
   </parameter>
 </OperationDefinition>

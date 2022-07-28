@@ -9,7 +9,7 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-backend-service-app</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This profile defines the expected capabilities of the <i>MedMorph Backend Service App </i> actor.  
+      <p>This CapabilityStatement defines the expected capabilities of the Backend Services App actor.  
       This actor is responsible for consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in EHR using Named Events, Creating the submission reports to be sent to the PHA and finally submitting the reports to the PHA/Research Organization. </p>
       <h2>General</h2>
       <div class="table-wrapper">
@@ -456,7 +456,7 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This profile defines the expected capabilities of the ''Backend Service App'' actor when conforming to the MedMorph Architecture Implementation Guide."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the Backend Services App actor when conforming to the MedMorph Architecture Implementation Guide."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>

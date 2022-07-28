@@ -56,7 +56,7 @@
         <reason> 
           <coding> 
             <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/> 
-            <code value="encounter-close"/> 
+            <code value="encounter-end"/> 
           </coding> 
         </reason> 
         <focus>
