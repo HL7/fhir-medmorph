@@ -4,20 +4,17 @@ This section defines the specific requirements related to subscriptions and noti
 
 The MedMorph Reference Architecture IG specifies that EHRs or other systems need to generate notifications based on subscriptions to trigger processes within a Backend Service App. Based on the notifications, the Backend Service App will initiate the reporting workflows based on PlanDefinition resources.
 
-**Note:** 
-FHIR Subscriptions capability is undergoing significant changes in FHIR R5 including the introduction of the SubscriptionTopic resource. However, the MedMorph Reference Architecture IG is based on FHIR R4 and will continue to be based on FHIR R4. There is an effort in HL7 currently to backport the FHIR R5 Subscription model in FHIR R4. Once the backport is finished the MedMorph Reference Architecture IG will be updated to use the latest subscription capabilities.
+#### Subscriptions and Notifications Using SubscriptionTopic
 
-In FHIR R4, the SubscriptionTopic resource does not exist, however Subscriptions exist. The next few sections will outline specific requirements for the EHR and the Backend Service App for subscriptions and notifications.
+The following requirements are based on SubscriptionTopics defined as per the Subscriptions R5 Backport IG.
 
-#### Subscriptions and Notifications Using SubscriptionTopic in FHIR R5
+* EHRs SHOULD support the SubscriptionTopics identified by each of the named-events in the [Named Event Valueset](ValueSet-us-ph-triggerdefinition-namedevent.html). Each MedMorph Content IG should identify the specific named-event required to be supported by the EHR for the use case.   
 
-As the FHIR subscription capabilities get backported to FHIR R4, SubscriptionTopic resources will be supported in the specification. The following requirements are based on SubscriptionTopics.
+* EHRs SHOULD support the channel of type ```rest-hook``` to notify the subscribers of changes.
 
-* EHRs SHALL support the SubscriptionTopics identified by each of the named-events in the [Named Event Valueset](ValueSet-us-ph-triggerdefinition-namedevent.html).
+* EHRs SHOULD support a notification payload type of ```id-only``` where the id of the changed resource is included.   
 
-* EHRs SHALL notify the subscribers of changes based on the named-events using a channel of type ```rest-hook```. 
-
-* EHRs SHALL include in the notification the resources that were changed along with context information. The context information SHALL always include the patient whose data was modified. The context information SHOULD include the encounter during which the change was recorded when applicable.
+* EHRs MAY include in the notification the resources that were changed along with context information. EHRs SHOULD consider including context information such as the patient and the encounter resources. The MedMorph Content IGs will specify the detailed notifications required as per the use case.
 
 * Backend Service App SHALL subscribe to the EHR SubscriptionTopics identified by each of the named-events in the [Named Event Valueset](	ValueSet-us-ph-triggerdefinition-namedevent.html).
 
@@ -25,42 +22,4 @@ As the FHIR subscription capabilities get backported to FHIR R4, SubscriptionTop
 
 * Backend Service App SHALL start the reporting workflow processing using appropriate PlanDefinition instances based on the notification received from the EHR.
 
-#### Subscriptions and Notifications Using Subscription Resource in FHIR R4 
-
-The current FHIR R4 specification only supports the Subscription Resource and hence until the SubscriptionTopic is backported to FHIR R4 the following requirements need to be followed to subscribe and receive notifications.
-
-* EHRs SHALL support Subscription instance creation for resources identified by each of the named-events in the [Named Event Valueset](	ValueSet-us-ph-triggerdefinition-namedevent.html).
-
-* EHRs SHALL support a criteria of "[ResourceType]" as part of the Subscription instance. The criteria "[ResourceType]" indicates all creates and updates on the particular type of resource for which Subscription is created. 
-
-* EHRs SHALL notify the subscribers of changes based on the named-events using a channel of type ```rest-hook```. 
-
-* EHRs SHALL support the POST API to create the Subscription instance.
-
-* EHRs SHALL support the DELETE API to delete the Subscription instance.
-
-* EHRs SHALL include in the notification the resource that were changed along with context information. The context information SHALL always include the patient whose data was modified. The context information SHOULD include the encounter during which the change was recorded when applicable.
-
-* Backend Service App SHALL create EHR Subscription instances identified by each of the named-events in the [Named Event Valueset](ValueSet-us-ph-triggerdefinition-namedevent.html).
-
-* Backend Service App SHALL implement a rest-hook channel to receive notifications from EHR Subscriptions.
-
-* Backend Service App SHALL start the reporting workflow processing using appropriate PlanDefinition instances based on the notification received from the EHR.
-
-The following is a Subscription example for Condition resource:
-
-```
-{
-  "resourceType": "Subscription",
-  "id": "example",
-  "status": "requested",
-  "end": "2021-01-01T00:00:00Z",
-  "reason": "Monitor new or updated Conditions instances",
-  "criteria": "Condition",
-  "channel": {
-    "type": "rest-hook",
-    "endpoint": "https://[FHIR Server URL]/backend-service-app/notify",
-    "payload": "application/fhir+json"
-  }
-}
-```
+Note: Examples of the Subscription Topics are available on the [FHIR Artifacts](artifacts.html) examples section. Content IGs will define specific Subscription Topics required for the use case.

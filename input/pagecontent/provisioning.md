@@ -15,7 +15,7 @@ MedMorph Knowledge Artifacts follow the general Event, Condition, Action (ECA) r
   
 The MedMorph Reference Architecture IG is providing the basic constructs required to enable public health and research reporting using  ECA rules embedded in Knowledge Artifacts which are machine processable and can be executed without burdening the provider. In addition to the ECA rules there are references to ValueSets, Library resources, security certificates and Endpoint information. These different artifacts are shown in Figure 6.2 below.
 
-{% include img.html img="KnowledgeArtifactComponents.svg" caption="Figure 6.2 - Knowledge Artifact Components" %}
+{% include img.html img="KnowledgeArtifactComponents.png" caption="Figure 6.2 - Knowledge Artifact Components" %}
 
 <br>
 
@@ -84,7 +84,7 @@ PHAs or Research Organizations are the actors who create or produce Knowledge Ar
 
 * To specify related actions which are delayed by a time duration, the PlanDefinition.action.relatedAction.offsetDuration element SHALL be used.
 
-* MedMorph Knowledge Artifact producers SHALL populate all applicable "MUST SUPPORT" elements in the PlanDefinition including inherited "MUST SUPPORT" elements from Shareable PlanDefinition profile. 
+* MedMorph Knowledge Artifact producers SHALL demonstrate the ability to populate all applicable "MUST SUPPORT" elements in the PlanDefinition including inherited "MUST SUPPORT" elements from Shareable PlanDefinition profile. 
 
 #### APIs
 
@@ -94,10 +94,11 @@ The example APIs that can be used to create, update, retrieve, and search for Pl
 
 Knowledge Artifacts get changed from time to time and healthcare organizations implementing Knowledge Artifacts have to regularly update the PlanDefinition instances based on changes. Currently the MedMorph Architecture IG does not prescribe any specific notification mechanism.
 
-```
-**Feedback Requested:** 
-Should MedMorph add notification requirements to the Knowledge Artifact Repository actor. For example, the Knowledge Artifact Repository could support Subscription Topics for changes and clinical organizations can subscribe to these topics and get notified when changes are made. The current mechanism in the MedMorph Reference Architecture IG allow EHRs or the Backend Service App to query the PlanDefinition instances, download them, and compare them using versions and timestamps to detect changes but there are no subscription-based notifications.
-```
+* The Knowledge Artifact Repository SHALL support retrieval of Knowledge Artifacts using a GET request.
+
+* The Knowledge Artifact Repository SHOULD allow consumers to subscribe for notifications so that they get notified of changes via a REST hook or Email as specified in the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
+
+* The consumers of Knowledge Artifacts MAY choose to either subscribe for notifications of changes or poll the Knowledge Artifact Repository and retrieve the latest information and determine if changes have been made.
 
 #### Operationalization of Knowledge Artifacts
 

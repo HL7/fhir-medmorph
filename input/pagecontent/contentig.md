@@ -28,7 +28,7 @@ The following sections are expected to be created in a Content IG. In addition t
   </tr>
   <tr>
     <td>Use Cases and Workflows</td>
-	<td>This section is to document the use cases, user stories and workflows associated with the use case and/or the reporting program. This should include the identification of the MedMorph Reference Architecture Actors and Systems taht will be used in the workflow. If any new actors or systems are to be used for the use case, they need to be defined in this section along with their roles and interactions with the MedMorph Reference Architecture actors and systems.</td>
+	<td>This section is to document the use cases, user stories and workflows associated with the use case and/or the reporting program. This should include the identification of the MedMorph Reference Architecture Actors and Systems taht will be used in the workflow. If any new actors or systems are to be used for the use case, they need to be defined in this section along with their roles and interactions with the MedMorph Reference Architecture actors and systems. Any requirements that depend on previous state, current state and cached state should be captured as part of the use case to inform the processing and the capabilities required for each actor.</td>
   </tr>
   <tr>
     <td>EHR Requirements</td>
@@ -127,7 +127,7 @@ Ideally, creating a Content IG that can leverage existing profiles from other IG
 
 ### Content IG Examples
 
-The section should have an example for each data element that is part of the IG.
+The Content IG section should have an example for each data element that is part of the IG.
 These examples should have been validated for compliance to their specific profile using the FHIR Validator.
 Ideally examples should be generated from the Connectathon testing activities.
 

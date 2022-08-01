@@ -22,14 +22,33 @@
     </p>
     
     <p>
-    The MedMorph project will create fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C (Hep C) Surveillance, 
-    an infectious disease; Cancer Registry Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These modeled use cases inform the design of a scalable and extensible reference architecture 
+    The MedMorph project will use three fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C (Hep C) Surveillance, 
+    an infectious disease; Cancer Registry Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These three use cases inform the design of a scalable and extensible reference architecture 
     to facilitate data exchange for key patient-centered research questions and public health information system requirements.
-    For more detailed explanation on the reference architecture refer to <a href="background.html">Implementation Guide Overview</a>.
+    For more detailed explanation on the reference architecture refer to next paragraph and the <a href="background.html">Implementation Guide Overview</a> section.
     </p>
 	
+	
+	<a name="ra-overview"></a>
+<h3>Reference Architecture Overview</h3>
+	<p>
+	The MedMorph Implementation Guide presented here is also known as the MedMorph Reference Architecture (RA) Implementation Guide (IG). 
+	Reference Architecture refers to a common framework (e.g., Actors, Systems, FHIR resources, FHIR APIs, FHIR operations, security mechanisms) that will be leveraged by multiple public health and research use cases.
+	The Medmorph RA IG is accompanied by what are called as Content IGs. These content IGs provide specific content profiles that are to be used for a specific use case.
+	Requirements for specific use cases will be driven by the Content IGs where as the requirements for the framework components such as a Backend Services App, Knowledge Artifact Repository, TTP etc are identified in the MedMorph RA.
+	There are example capability statements created for actors whose specific requirements will be identified in the Content IGs.   
+	</p>
+	<p>Examples of Content IGs include <a href="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/">Central Cancer Registry Reporting IG</a> and <a href="http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/">Health Care Survey Reporting IG</a>.
+	The relationship between these IGs are further explained in the <a href="background.html#implementation-guides-types-and-their-relationships">IG Relationships section</a> section.
+	An overview of these actors, systems and interactions are explained further in the <a href="usecases.html#medmorph-actors-and-definitions"><b>MedMorph Actors and Systems</b></a> section and a thumbnail is provided below for reference.
+	</p>
+	
+	<a target="_blank" href="usecases.html#interactions-between-medmorph-actors-and-systems">
+  		<img src="ThumbNailMedMorphActors.png" alt="ThumbNailMedMorphActors"></img>
+	</a>
+	
 	<a name="technical"> </a>
-	<h3>Technical Overview</h3>
+	<h3>IG Sections Overview</h3>
   <a name="walkthrough"> </a>
   <p>
     The main sections of this IG are:
@@ -40,19 +59,13 @@
       familiar with before reading the remainder of the IG.  
     </li>
     <li>
-      <a href="usecases.html">Public Health Use Cases</a> - describes the business need, actors, and workflows applicable for public health reporting in MedMorph.  
-    </li>
-    <li>
-      <a href="researchusecases.html">Research Use Cases</a> - describes the business need, actors, and workflows applicable for researcher data access in MedMorph.  
+      <a href="usecases.html">Use Cases and Workflows</a> - describes the business need, actors, and workflows applicable for public health reporting in MedMorph.  
     </li>
     <li>
       <a href="spec.html">Public Health Reporting Specification</a> - defines the specific conformance requirements for systems wishing to conform to public health actors specified in the IG.
     </li>
     <li>
-      <a href="researchdataextraction.html">Research Data Partner Onboarding Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
-    </li>
-    <li>
-      <a href="researchdataquery.html">Research Data Query Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data query actors specified in the IG.
+      <a href="researchdataextraction.html">Research Data Partner On-boarding Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
     </li>
     <li>
       <a href="downloads.html">Useful Downloads</a> - provides the ability to download a copy of the entire implementation guide, artifact definitions, or examples.

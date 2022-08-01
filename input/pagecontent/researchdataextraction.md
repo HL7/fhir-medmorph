@@ -27,26 +27,15 @@ This section defines the specific conformance requirements for onboarding a data
 
 #### Creation of Group Resource 
 
-* The EHR system SHALL support the creation of the Group Resource using the POST API. The Group will contain a list of patients who have consented to contribute their data for research.
+* The EHR system SHOULD support the creation of the Group Resource using the POST API. The Group will contain a list of patients who have consented to contribute their data for research.
 
 Note: The Group resource creation process will depend on the healthcare organizations and the workflows used and the approvals required. This varies widely and hence this will be left to the healthcare organizations. 
 
-```
-Feedback Requested: Since there may be many research activities supported by a healthcare organization, there could be multiple instances of Groups each with overlapping or no-overlapping set of patients. We need to determine what is the best way to search for different groups. 
-Currently, we are prescribing searching for Group by identifier where the identifier and name. However, we need some feedback on if this is a good mechanism to search or should a Group resource instance be provisioned for each research activity approved by the IRB?
-```
 
 #### Consent Management  
 
-Healthcare organizations are responsible for collecting patient Consent before sharing the patient data for research. Each healthcare organization follows their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an EHR or an external system. Because of these variations we are requesting the following feedback.
+Healthcare organizations are responsible for collecting patient Consent before sharing the patient data for research. Each healthcare organization follows their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an EHR or an external system. As part of the MedMorph IG development, consent management is not in-scope due to the above variations and lack of standardization. 
 
-```
-Feedback Requested: 
-1. Should MedMorph prescribe representation of Consent using HL7 FHIR Consent resource? 
-2. Where should this consent be stored? In the EHR or External Systems?
-Alternatively: 
-1. Should MedMorph prescribe the use of ResearchStudy resource for each Study and enroll each participant as a ResearchParticipant and assume that Consent collection and validation is performed as the patient is enrolled in the study? 
-```
 
 #### Validating Consent Before Disclosing Data
 

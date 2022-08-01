@@ -10,10 +10,7 @@
         <a href="{{site.data.info.assets}}background.html">Implementation Guide Overview</a>
       </li>
       <li>
-        <a href="{{site.data.info.assets}}usecases.html">Public Health Use Cases and Workflows</a>
-      </li>
-      <li>
-        <a href="{{site.data.info.assets}}researchusecases.html">Research Use Cases and Workflows</a>
+        <a href="{{site.data.info.assets}}usecases.html">Use Cases and Workflows</a>
       </li>
     </ul>
   </li>
@@ -26,10 +23,7 @@
         <a href="spec.html">Public Health Reporting Specification</a>
       </li>
       <li>
-        <a href="researchdataextraction.html">Research Data Partner Onboarding Specification</a>
-      </li>
-      <li>
-        <a href="researchdataquery.html">Research Data Query Specification</a>
+        <a href="researchdataextraction.html">Research Data Partner On-boarding Specification</a>
       </li>
     </ul>
   </li>
