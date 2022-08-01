@@ -31,8 +31,8 @@
       <p>
         <b>Security:</b>
       </p>
-      <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the Knowledge Artifact Repository needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">Formal Specification - Security Section.</a></p>
+      <p>Knowledge Artifact Repository hosting Knowledge Artifacts which do not contain any PII, PHI or other organizational sensitive information, the Knowledge Artifact Repository SHALL follow the security requirements identified in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>. 
+		For Knowledge Artifact Repository transactions involving Knowledge Artifacts containing PII and/or PHI, the SMART on FHIR Backend Services should be used. For example, Health Care Surveys may want to publish sampled providers via the Knowledge Artifact Repository.</p>
       <h3>Resource summary</h3>
       <div class="table-wrapper">
         <table class="grid">
@@ -182,11 +182,6 @@
               <th>title</th>
               <td>string</td>
               <td>Search using title.</td>
-            </tr>
-            <tr>
-              <th>version</th>
-              <td>string</td>
-              <td>Search using version.</td>
             </tr>
             <tr>
               <th>name and version</th>

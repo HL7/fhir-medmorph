@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
-  <id value="Bundle-re-identify"/>
-  <url value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-re-identify"/>
-  <name value="BundleReIdentify"/>
-  <title value="Generate Re-Identified Bundle"/>
+  <id value="Bundle-hash"/>
+  <url value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-hash"/>
+  <name value="BundleHash"/>
+  <title value="Generate Hashed Bundle"/>
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2020-11-19T21:48:56+10:00"/>
@@ -14,8 +14,9 @@
       <value value="http://www.hl7.org/Special/committees/phwg"/>
     </telecom>
   </contact>
-  <description value="Generates a re-identified bundle containing PHI/PII data​ ​from an instance of a previously de-identified bundle. When the re-identification algorithm is not specified by the Content IG, implementers can choose specific algorithms based on use case needs and other program/policy requirements.Errors during the execution of the operation can be returned as OperationOutcome per the FHIR spec as a return parameter."/>
-  <code value="reidentify"/>
+  <description value="Generates a hashed bundle taking an instance of a Bundle containing Protected Health Information (PHI)/personally identifiable information (PII) data. The hashing algorithm to be used is left to the implementers of the operation.
+  Hashing will be used to de-duplicate patient records. Errors during the execution of the operation can be returned as OperationOutcome per the FHIR spec as a return parameter."/>
+  <code value="hash"/>
   <resource value="Bundle"/>
   <system value="false"/>
   <type value="true"/>
@@ -25,7 +26,7 @@
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="An de-identified input bundle instance that needs to be re-identified"/>
+    <documentation value="An input bundle instance that needs to be hashed."/>
     <type value="Bundle"/>
   </parameter>
   <parameter>
@@ -33,7 +34,7 @@
     <use value="out"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Upon successful re-identification, the re-identified bundle is returned back from the service."/>
+    <documentation value="The hashed bundle is returned back from the service."/>
     <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

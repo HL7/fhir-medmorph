@@ -29,7 +29,7 @@
     <type value="Bundle"/>
   </parameter>
   <parameter>
-    <name value="outputBundle"/>
+    <name value="return"/>
     <use value="out"/>
     <min value="0"/>
     <max value="1"/>

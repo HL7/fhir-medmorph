@@ -27,7 +27,9 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the EHR is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs.</p>
+      <p>The primary focus of the EHR is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs when implementing MedMorph RA and its Content IGs.
+      This capability statement is an example and an actual EHR CapabilityStatement will be defined for each use case in its Content IG. This is present here to guide the Content IG creators on how to create an EHR CapabilityStatement.
+      </p>
       <p>
         <b>Security:</b>
       </p>
