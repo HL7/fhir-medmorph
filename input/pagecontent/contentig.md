@@ -6,7 +6,7 @@ This section provides guidance to content implementation guide authors on how to
 
 MedMorph Content Implementation Guides (IGs) are created to address specific reporting requirements for specific use cases and/or reporting programs. Each Content IG will focus on a specific use case such as Cancer reporting, Healthcare Survey reporting, Hepatitis C reporting. Each Content IG is expected to leverage the MedMorph reference architecture during the development and experiment with the reference implementation before finalizing the content implementation guide (ig) for publishing. 
 
-For a deeper understanding of the Content IG and its relationships with other implementation guides, refer to the section [Implementation Guide Types and Relationships](background.html#implementation-guides-types-and-their-relationships).
+For a deeper understanding of the Content IG and its relationships with other implementation guides, refer to the section [Implementation Guide Types and Relationships](background.html#ig-types-and-their-relationships).
 
 The next few paragraphs outline the various sections that are expected to be in a Content IG and the creation process for the sections.
 

@@ -1,8 +1,8 @@
 {
  "package-id" : "hl7.fhir.us.medmorph",
- "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph)", 
+ "title" : "Making Electronic Data MOre available for Research and Public Health (MedMorph)", 
  "canonical" : "http://hl7.org/fhir/us/medmorph", 
- "introduction" : "The MedMorph FHIR IG enables Public Health and Research Organizations to access EHR data without increasing provider burden.",
+ "introduction" : "The MedMorph FHIR IG enables Public Health and Research Organizations to access data from EHRs, HIEs and other data sources without increasing provider burden.",
  "category" : "Public Health",
  "list" : [
  {

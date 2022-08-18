@@ -4,8 +4,8 @@
   <url value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/medmorph"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="1.0.0"/>
-  <name value="MakingEHRDataMoreAvailableForResearchAndPublicHealth"/>
-  <title value="Making EHR Data More available for Research and Public Health (MedMorph)"/>
+  <name value="MakingElectronicDataMoreAvailableForResearchAndPublicHealth"/>
+  <title value="Making Electronic Data More available for Research and Public Health (MedMorph)"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International - Public Health Work Group"/>

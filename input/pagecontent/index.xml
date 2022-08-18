@@ -3,48 +3,60 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
 	<p>
-    The Making EHR Data More Available for Research and Public Health (MedMorph) project seeks to advance public health and patient-centered outcomes 
-    by using emerging health data and exchange standards, such as Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) and 
-    Clinical Quality Language (CQL), to develop and implement an interoperable solution that will enable access to clinical data. 
-    The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data are collected, 
-    used, and shared through modern Information Technology (IT) capabilities to save lives and improve health.  
-    The MedMorph project is funded by the Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE) 
-    Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by the Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) Public Health Informatics Office (PHIO) 
-    to advance research and public health goals.
+    The Making Electronic Data More Available for Research and Public Health (MedMorph) project seeks to use 
+    emerging health data and exchange standards, namely Health Level 7 (HL7®) Fast Healthcare Interoperability 
+    Resources (FHIR®), to develop and implement an interoperable solution to 
+    enable access to clinical data. The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) 
+    strategic imperative of transforming how data are collected, used, and shared through modern Information Technology (IT) 
+    capabilities to save lives and improve health. The initial phase of the MedMorph project was funded by the Health and Human Services (HHS) 
+    Assistant Secretary for Planning and Evaluation (ASPE) Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by 
+    CDC’s Center for Surveillance, Epidemiology, and Laboratory Services (CSELS) Public Health Informatics Office (PHIO) to advance 
+    research and public health goals.
     </p>
     <p>
-	The project aims to leverage the maturation of standards and requirements for certification of health information technology by the 
-	Office of the National Coordinator for Health IT (ONC) that underpin many EHRs. 
-	Examples such as FHIR, the ONC 2015 Edition Common Clinical Data Set (CCDS), 
-	2015 Edition Cures Update - United States Core Data for Interoperability (USCDI) Version 1, February 2020 and 
-	standardized application programming interfaces (API) for patient services have created a health IT environment that is 
-	ripe for developing standards-based scalable and extensible solutions to overcome interoperability challenges. 
+	The project aims to leverage the maturation of standards and requirements for certification of health information technology 
+	by the Office of the National Coordinator for Health IT (ONC) that underpin many EHRs. ONC’s 2015 Edition Health IT Certification Criteria 
+	and the Cures Update include, but are not limited to, the United States Core Data for Interoperability (USCDI) Version 1 and the 
+	use of standardized application programming interfaces (API) for patient services (such as FHIR R4 and Bulk FHIR APIs). 
+	Broader implementation of these certification criteria has created a health IT environment ripe for developing standards-based 
+	scalable and extensible solutions to overcome interoperability challenges.
     </p>
     
     <p>
-    The MedMorph project will use three fully modeled use cases across three distinct areas that are representative of broader areas of research and public health: Chronic Hepatitis C (Hep C) Surveillance, 
-    an infectious disease; Cancer Registry Reporting, a chronic disease; and Health Care Surveys, pertaining to health care utilization and not a specific condition. These three use cases inform the design of a scalable and extensible reference architecture 
-    to facilitate data exchange for key patient-centered research questions and public health information system requirements.
-    For more detailed explanation on the reference architecture refer to next paragraph and the <a href="background.html">Implementation Guide Overview</a> section.
+    The MedMorph project modeled four use cases that are representative of broader areas of research and public health: 
+    Chronic Hepatitis C (Hep C) Surveillance, an infectious disease; Central Cancer Registry Reporting, a chronic disease; 
+    Health Care Surveys, pertaining to health care utilization and not a specific condition; and Research, 
+    supporting standardized data exchange for public health research. 
+    These representative use cases informed the design of a scalable and extensible reference architecture to facilitate 
+    interoperable data exchange for a variety of research and public health use cases. 
+    For more detailed explanation on the reference architecture refer to next paragraph and the Implementation Guide 
+    Overview section.<a href="background.html">Implementation Guide Overview</a> section.
     </p>
 	
 	
 	<a name="ra-overview"></a>
 <h3>Reference Architecture Overview</h3>
 	<p>
-	The MedMorph Implementation Guide presented here is also known as the MedMorph Reference Architecture (RA) Implementation Guide (IG). 
-	Reference Architecture refers to a common framework (e.g., Actors, Systems, FHIR resources, FHIR APIs, FHIR operations, security mechanisms) that will be leveraged by multiple public health and research use cases.
-	The Medmorph RA IG is accompanied by what are called as Content IGs. These content IGs provide specific content profiles that are to be used for a specific use case.
-	Requirements for specific use cases will be driven by the Content IGs where as the requirements for the framework components such as a Backend Services App, Knowledge Artifact Repository, TTP etc are identified in the MedMorph RA.
-	There are example capability statements created for actors whose specific requirements will be identified in the Content IGs.   
+	The Implementation Guide (IG) presented here is also known as the MedMorph Reference Architecture (RA) IG. 
+	“Reference Architecture” refers to a common framework (e.g., actors, systems, FHIR resources, FHIR APIs, FHIR operations, security mechanisms) 
+	leveraged by multiple use cases. The MedMorph RA IG is accompanied by content IGs, which provide content profiles pertaining to a 
+	specific use case. Requirements for specific use cases are driven by the content IGs whereas the requirements for the framework components, 
+	such as the Health Data Exchange App (HDEA) (MedMorph’s backend services app), Knowledge Artifact Repository (KAR), 
+	Trusted Third Party (TTP), etc., are identified as actors in the MedMorph RA. There are example capability statements created for 
+	actors whose specific requirements would be detailed in the content IGs.
 	</p>
-	<p>Examples of Content IGs include <a href="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/">Central Cancer Registry Reporting IG</a> and <a href="http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/">Health Care Survey Reporting IG</a>.
-	The relationship between these IGs are further explained in the <a href="background.html#implementation-guides-types-and-their-relationships">IG Relationships section</a> section.
-	An overview of these actors, systems and interactions are explained further in the <a href="usecases.html#medmorph-actors-and-definitions"><b>MedMorph Actors and Systems</b></a> section and a thumbnail is provided below for reference.
+	<p>
+	<b>NOTE:</b> Implementers of the MedMorph RA IG have to use one or more Content IGs to operationalize the framework as this IG provides only the 
+	framework and does not provide all the necessary content profiles that will be required to implement a use case.  
+	</p>
+	<p>Examples of Content IGs include <a href="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/">Central Cancer Registry Reporting IG</a> and <a href="http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/">Health Care Survey Reporting IG</a> 
+	and <a href="http://hl7.org/fhir/us/medmorph-research-dex/2022Jan/">Research Data Exchange IG.</a>
+	The relationship between these IGs are further explained in the <a href="background.html#ig-types-and-their-relationships">IG Types and their Relationships section</a> section.
+	An overview of this MedMorph RA IG actors, systems and interactions are explained further in the <a href="usecases.html#medmorph-actors-and-definitions"><b>MedMorph Actors and Systems</b></a> section and a thumbnail is provided below for reference.
 	</p>
 	
 	<a target="_blank" href="usecases.html#interactions-between-medmorph-actors-and-systems">
-  		<img src="ThumbNailMedMorphActors.png" alt="ThumbNailMedMorphActors"></img>
+  		<img src="ThumbNailMedMorphActors.jpg" alt="ThumbNailMedMorphActors"></img>
 	</a>
 	
 	<a name="technical"> </a>
@@ -55,17 +67,23 @@
   </p>
   <ul>
     <li>
-      <a href="background.html">Implementation Guide Overview</a> - provides context for the implementation guide and information that implementers should be
+      <a href="background.html">Implementation Guide Overview</a> - provides context for the implementation guide and information implementers should be
       familiar with before reading the remainder of the IG.  
     </li>
     <li>
-      <a href="usecases.html">Use Cases and Workflows</a> - describes the business need, actors, and workflows applicable for public health reporting in MedMorph.  
+      <a href="usecases.html">Use Cases and Workflows</a> - describes the business need, actors, and workflows applicable for public health and research use cases in MedMorph.  
     </li>
     <li>
-      <a href="spec.html">Public Health Reporting Specification</a> - defines the specific conformance requirements for systems wishing to conform to public health actors specified in the IG.
+      <a href="spec.html">Public Health Reporting Specification Framework</a> - defines the specific conformance requirements for systems wishing to conform to public health actors specified in the IG.
     </li>
     <li>
-      <a href="researchdataextraction.html">Research Data Partner On-boarding Specification</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
+      <a href="researchdataextraction.html">Research Data Extraction Specification Framework</a> - defines the specific conformance requirements for systems wishing to conform to research data partner onboarding and data mart population.
+    </li>
+    <li>
+      <a href="artifacts.html">FHIR Profiles, Extensions and Capability Statements</a> - defines specific profiles used by the IG, extensions, CapabilityStatements and examples for the IG. 
+    </li>
+    <li>
+      <a href="contentig.html">Content IG creation Guidance</a> - provides detailed guidance to content IG creators on how to leverage the MedMorph architecture and create a use case specific content IG. 
     </li>
     <li>
       <a href="downloads.html">Useful Downloads</a> - provides the ability to download a copy of the entire implementation guide, artifact definitions, or examples.
