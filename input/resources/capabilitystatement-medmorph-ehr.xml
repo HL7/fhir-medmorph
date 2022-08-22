@@ -259,7 +259,7 @@
     </div>
   </text>
   
-  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-ehr"/>
+  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-data-source"/>
   <name value="MedMorphDataSource"/>
   <title value="Example MedMorph Data Source CapabilityStatement"/>
   <status value="draft"/>
