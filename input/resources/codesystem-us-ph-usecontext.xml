@@ -17,7 +17,7 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="11"/>
+  <count value="2"/>
   <concept>
     <code value="ph-reporting"/>
     <display value="ValueSet is to be used in the context of public health reporting use cases."/>

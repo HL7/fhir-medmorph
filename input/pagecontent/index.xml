@@ -74,6 +74,9 @@
       <a href="usecases.html">Use Cases and Workflows</a> - describes the business need, actors, and workflows applicable for public health and research use cases in MedMorph.  
     </li>
     <li>
+      <a href="provisioning.html">Knowledge Artifacts, Trigger Events and Actions</a> - provides an overview of Knowledge Artifacts, trigger events and actions used to implement MedMorph workflows.  
+    </li>
+    <li>
       <a href="spec.html">Public Health Reporting Specification Framework</a> - defines the specific conformance requirements for systems wishing to conform to public health actors specified in the IG.
     </li>
     <li>

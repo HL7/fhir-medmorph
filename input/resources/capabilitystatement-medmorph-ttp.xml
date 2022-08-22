@@ -9,8 +9,8 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trusted-third-party</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This CapabilityStatement defines the expected capabilities of the Trusted Third Party actor.  
-      This actor is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to health care organizations.</p> 
+      <p>This CapabilityStatement defines the expected capabilities of the TTP actor when conforming to the MedMorph RA IG. 
+      This actor is responsible for receiving messages and forwarding messages from health care organizations to a public health authority (PHA) or Research Organization (RO) and send responses back from PHA/RO to health care organizations.</p> 
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,12 +27,12 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Trusted Third Party is to receive messages and forward messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to clinical care.</p>
+      <p>The primary focus of the TTP is to receive messages and forward messages from clinical care to PHA/RO and send responses back from PHA/Research Organization to clinical care.</p>
       <p>
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the Trusted Third Party needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">Formal Specification - Security Section.</a></p>
+      <p>In addition the TTP needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
       <h3>Resource summary</h3>
       <div class="table-wrapper">
         <table class="grid">
@@ -118,7 +118,7 @@
   
   <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trusted-third-party"/>
   <name value="TrustedThirdParty"/>
-  <title value="MedMorph Trusted Third Party"/>
+  <title value="Trusted Third Party (TTP)"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -128,14 +128,14 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This CapabilityStatement defines the expected capabilities of the Trusted Third Party actor when conforming to the MedMorph Reference Architecture Implementation Guide.  
-  This actor is responsible for receiving messages and forwarding messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to health care organizations."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the TTP actor when conforming to the MedMorph RA IG. 
+  This actor is responsible for receiving messages and forwarding messages from health care organizations to a public health authority (PHA) or Research Organization (RO) and send responses back from PHA/RO to health care organizations."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The focus of the Trusted Third Party is to receive messages and forward messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to clinical care."/>
+    <documentation value="The focus of the TTP is to receive messages and forward messages from health care organizations to a public health authority (PHA) or Research Organization (RO) and send responses back from PHA/RO to health care organizations."/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
@@ -157,7 +157,7 @@
   </rest>
   <rest>
     <mode value="client"/>
-    <documentation value="The focus of the Trusted Third Party is to receive messages and forward messages from clinical care to PHA/Research Organization and send responses back from PHA/Research Organization to clinical care."/>
+    <documentation value="The focus of the Trusted Third Party is to receive messages and forward messages from clinical care to PHA/Research Organization and send responses back from PHA/RO to clinical care."/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>

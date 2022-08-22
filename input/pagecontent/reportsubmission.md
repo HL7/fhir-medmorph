@@ -1,81 +1,74 @@
-This section defines the specific requirements for submitting reports that are created by the Backend Service App as specified in this MedMorph Reference Architecture IG.
+This section defines the specific requirements for submitting reports that are created by the Health Data Exchange App (HDEA), MedMorph’s backend services app, as specified in this MedMorph Reference Architecture (RA) Implementation Guide (IG).
 
 ### MedMorph Reports
 
-Reports that are created by the Backend Service App are intended to contain all the resource instances necessary to be send to the PHA/Research Organizations. The following are specific requirements for report submission.
+Reports created by the HDEA contain all the resource instances (data) necessary for sending to the Public Health Authority (PHA)/Research Organization (RO). The specific resources (data) to be contained in the report will be defined by the Content IG specific to the use case. The following are specific framework requirements for report submission across all use cases.
 
 #### Backend Service App Requirements for Messaging
 
 ##### Message Submission
 
-* The Backend Service App SHALL create reports to be sent to the PHA/RO in form of a Bundle of type 'message' as indicated by the profile [MedMorph Report Bundle](StructureDefinition-us-ph-reporting-bundle.html).
+* The HDEA SHALL create reports to be sent to the PHA/RO in form of a Bundle of type 'message' as indicated by the profile [MedMorph Reporting Bundle](StructureDefinition-us-ph-reporting-bundle.html).
 
-* The Backend Service App SHALL include the MessageHeader resource as the first entry in the Bundle. 
+* The HDEA SHALL include the MessageHeader resource as the first entry in the Bundle. 
 
-* The Backend Service App SHALL copy the receiver address from the PlanDefintion.ext-receiversAddress extension element into the MessageHeader.destination.endpoint element.
+* The HDEA SHALL copy the receiver address from the Knowledge Artifact's PlanDefintion.ext-receiversAddress extension element into the MessageHeader.destination.endpoint element.
 
-* The Backend Service App SHALL populate the sender information as a reference to the Organization resource representing the healthcare organization.
+* The HDEA SHALL populate the sender information as a reference to the Organization resource representing the health care organization.
 
-* The Backend Service App SHALL populate the sender's FHIR endpoint in the MessageHeader.source.endpoint element.
+* The HDEA SHALL populate the sender's FHIR endpoint in the MessageHeader.source.endpoint element.
 
-* The Backend Service App SHALL populate the Bundle.identifier element as the persistent business identifier for correlating responses. 
+* The HDEA SHALL populate the Bundle.identifier element as the persistent business identifier for correlating responses. 
 
-* The Backend Service App SHALL populate the Bundle.timestamp element with the bundle creation time. 
+* The HDEA SHALL populate the Bundle.timestamp element with the bundle creation time. 
 
-* The Backend Service App SHALL validate the bundle created when required as defined by the PlanDefinition.action requirements.
+* The HDEA SHALL encrypt the bundle created based on the PlanDefinition.action requirements. All Resource entries within the Bundle except the MessageHeader resource SHALL be encrypted when specified as part of the actions required in the PlanDefinition. 
 
-* The Backend Service App SHALL encrypt the bundle created based on the PlanDefinition.action requirements. All Resource entries within the Bundle except the MessageHeader resource SHALL be encrypted when specified as part of the actions required in the PlanDefinition. 
+* The HDEA SHALL submit the bundle by invoking the [Data Receiver's FHIR Endpoint]/$process-message operation.
 
-* The Backend Service App SHALL submit the bundle by invoking the [Receiver's Address]/$process-message operation.
+* When submitting the bundle via Trusted Third Party(TTP), The HDEA SHALL submit the bundle by invoking the [Trusted Third Party FHIR Endpoint]/$process-message operation.
 
-* When submitting the bundle via Trusted Third Party, The Backend Service App SHALL submit the bundle by invoking the [Trusted Third Party FHIR Endpoint]/$process-message operation.
-
-* When submitting the bundle directly to the PHA or Research Organization, The Backend Service App SHALL submit the bundle by invoking the [PHA or Research Organization FHIR Endpoint]/$process-message operation.
 
 ##### Message Receiving
 
-* When responses are delivered synchronously by the TTP/PHA or Research Organization, the Backend Service App SHALL process the response message. 
+* When responses are delivered synchronously by the TTP/PHA or RO, the HDEA SHALL process the response message. 
 
-* In order to receive asynchronous responses from TTP or PHA or Research Organization, the Backend Service App SHALL implement the $process-message operation on the ROOT URL of the FHIR Server.
+* In order to receive asynchronous responses from TTP or PHA or RO, the HDEA SHALL implement the $process-message operation on the ROOT URL of the FHIR Server.
 
-* Upon receipt of either synchronous or asynchronous response messages, the Backend Service App SHALL decrypt the message when required. 
+* Upon receipt of either synchronous or asynchronous response messages, the HDEA SHALL decrypt the message when required. 
 
-* Upon receipt of either synchronous or asynchronous response messages, the Backend Service App SHALL validate the message before accepting the message.
+* Upon receipt of either synchronous or asynchronous response messages, the HDEA SHALL validate the message before accepting the message.
 
-* The Backend Service App SHALL track message submissions with the message responses.
+* The HDEA SHALL track message submissions with the message responses.
 
-* For each message submission, The Backend Service App SHALL provide the ability for an administrator or the provider to view the message submissions and message responses received. 
+* For each message submission, The HDEA SHALL provide the ability for an administrator or the provider to view the message submissions and message responses received. 
 
-##### APIs Used by Backend Service App to Submit Messages to TTP or PHA/Research Organization
+
+##### APIs Used by HDEA to Submit Messages to TTP or PHA/RO
 
 ```
-For Message Submission to PHA/Research Organization directly:
-POST [PHA or Research Organization FHIR Endpoint]/$process-message when submitting directly to the PHA or Research Organization.
+For Message Submission to PHA/RO directly:
+POST [PHA or RO FHIR Endpoint]/$process-message when submitting directly to the PHA or RO.
 Synchronous responses are received as part of the POST response.
 
 For Message submission via TTP:
-POST [Trusted Third Party FHIR Endpoint]/$process-message when submitting via Trusted Third Party FHIR endpoint.
+POST [TTP FHIR Endpoint]/$process-message when submitting via TTP FHIR endpoint.
 Synchronous responses are received as part of the POST response.
 ```
 
-##### APIs Supported by Backend Service App to Receive Asynchronous Response Messages to TTP or PHA/Research Organization
+##### APIs Supported by HDEA to Receive Asynchronous Response Messages 
 
 ```
-POST [Backend Service App FHIR Endpoint]/$process-message for receiving asynchronous message responses. 
+POST [HDEA FHIR Endpoint]/$process-message for receiving asynchronous message responses. 
 ```
 
-##### APIs Supported by Backend Service App to View Responses for Messages Submitted
+#### Message Forwarding Requirements for TTP
 
-```
-```
-
-#### Message Forwarding Requirements for Trusted Third Party (TTP)
-
-* The TTP SHALL implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the Backend Service App using the POST operation.
+* The TTP SHALL implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the HDEA using the POST operation.
 
 * TTP SHALL use the MessageHeader.destination.endpoint to route the message to the final destination. 
 
-* When forwarding a message from healthcare organization to PHA or Research Organization, TTP SHALL forward the message to the final destination by invoking the [PHA or Research Organization FHIR Endpoint]/$process-message operation.
+* When forwarding a message from health care organization to PHA or RO, the TTP SHALL forward the message to the final destination by invoking the [PHA or RO FHIR Endpoint]/$process-message operation.
 
 ##### Synchronous Message Forwarding Requirements
 
@@ -85,54 +78,54 @@ POST [Backend Service App FHIR Endpoint]/$process-message for receiving asynchro
 
 ##### Asynchronous Message Forwarding Requirements 
 
-* When a PHA/Research Organization submits an asynchronous response back to the healthcare organization, the Trusted Third Party SHALL forward the message to the healthcare organization using the MessageHeader.destination.endpoint address. This is nothing but the healthcare organization (Sender's) FHIR Endpoint.
+* When a PHA/RO submits an asynchronous response back to the health care organization, the TTP SHALL forward the message to the health care organization using the MessageHeader.destination.endpoint address. This is nothing but the health care organization (Sender's) FHIR Endpoint.
 
-* In order to forward the response message to the healthcare organization, the TTP SHALL invoke the [Backend Service App FHIR Endpoint]/$process-message operation including the response message data sent by the PHA/Research Organization. 
 
 ##### APIs used by Trusted Third Party for Message Forwarding  
 
 ```
-POST [PHA or Research Organization FHIR Endpoint]/$process-message when forwarding a message from Backend Service App to the PHA or Research Organization. 
+POST [PHA or RO FHIR Endpoint]/$process-message when forwarding a message from HDEA to the PHA or RO. 
 Synchronous responses get forwarded back to the healthcare organization as part of the POST response.
  
 For Asynchronous responses, the TTP has to make a separate API call as identified below.
-POST [Backend Service App FHIR Endpoint]/$process-message when forwarding a message from PHA or Research Organization to the Backend Service App.
+POST [HDEA FHIR Endpoint]/$process-message when forwarding a message from PHA or RO to the HDEA.
 ```
 
-#### PHA/Research Organization Requirements for Receiving Messages from TTP or Backend Service App
+#### PHA/RO Requirements for Receiving Messages from TTP or HDEA
 
-* The PHA/Research Organization SHALL implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the Backend Service App or TTP using the POST operation.
+* The PHA/RO SHALL implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the HDEA or TTP using the POST operation.
 
-* Upon receipt of the message, the PHA/Research Organization SHALL decrypt the message when required. 
+* Upon receipt of the message, the PHA/RO SHALL decrypt the message when required. 
 
-* Upon receipt of the message, the PHA/Research Organization SHALL validate the message before accepting the message.
+* Upon receipt of the message, the PHA/RO SHALL validate the message before accepting the message.
 
-##### Synchronous Responses from the PHA/Research Organization
+##### Synchronous Responses from the PHA/RO
 
-* When there are validation failures, the PHA/Research Organization SHALL return a message bundle back with the details of the failures as part of the POST response.
+* When there are validation failures, the PHA/RO SHALL return a message bundle back with the details of the failures as part of the POST response.
 
 ##### Asynchronous Responses from the PHA/Research Organization
 
-* When the PHA/Research Organization sends an asynchronous message back to the healthcare organization as a reply-to an original message, the PHA/Research Organization SHALL 
+* When the PHA/RO sends an asynchronous message back to the health care organization as a reply-to an original message, the PHA/RO SHALL 
 	- populate the MessageHeader.response.identifier with the original message identifier 
 	- populate the MessageHeader.destination.endpoint with the Sender's FHIR Endpoint.
-	- populate the MessageHeader.sender with the PHA/Research Organization reference.
-	- populate the MessageHeader.source.endpoint with the PHA/Research Organization FHIR endpoint.
+	- populate the MessageHeader.sender with the PHA/RO reference.
+	- populate the MessageHeader.source.endpoint with the PHA/RO FHIR endpoint.
 
 
-##### APIs Supported by PHA/Research Organization to Receive a Message from Backend Service App or Trusted Third Party 
+##### APIs Supported by PHA/RO to Receive a Message from HDEA or TTP 
 
 ```
-POST [PHA or Research Organization FHIR Endpoint]/$process-message when receiving a message from Backend Service App or TTP. 
+POST [PHA or RO FHIR Endpoint]/$process-message when receiving a message from HDEA or TTP. 
 For synchronous responses, the data is sent back as part of the POST response.
 ```
 
-##### APIs Used by PHA/Research Organization to Submit a Message to Backend Service App or Trusted Third Party 
+##### APIs Used by PHA/RO to Submit a Message to HDEA or TTP
 
-```
 These APIs are used for sending asynchronous responses back to the healthcare organization directly or via the TTP.
 
-POST [Backend Service App FHIR Endpoint]/$process-message for submitting a response directly to the Backend Service App (Healthcare Organization)
+```
 
-POST [Trusted Third Party FHIR Endpoint]/$process-message for submitting a response via Trusted Third Party FHIR Endpoint.
+POST [BHDEA FHIR Endpoint]/$process-message for submitting a response directly to the HDEA (Healthcare Organization)
+
+POST [TTP FHIR Endpoint]/$process-message for submitting a response via TTP FHIR Endpoint.
 ```

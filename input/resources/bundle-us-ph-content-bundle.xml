@@ -21,7 +21,7 @@
             <value value="http://hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
-    <description value="Bundle Resource profile for exchanging public health messages, knowledge artifacts or content."/>
+    <description value="Bundle Resource profile for organizing the content of the Public Health Message to be exchanged with a Public Health Agency."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

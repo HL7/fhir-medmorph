@@ -1,109 +1,102 @@
-This section defines the specific conformance requirements for onboarding a data partner to populate a data mart as specified in this MedMorph Reference Architecture IG.
+This section defines the specific conformance requirements for onboarding a data partner to populate a data mart as specified in this MedMorph Reference Architecture (RA) Implementation Guide (IG).
 
 
-### Requirements for EHR
+### Data Source Requirements
 
-* EHR system SHALL support the [base]/Group/[id]/$export operation for exporting data of one or more patients.
+* The Data Source system SHALL support the [base]/Group/[id]/$export operation for exporting data for one or more patients.
 
-* The EHR system SHALL support search of Group resources using identifier, name.
+* The Data Source system SHALL support search of Group resources using identifier and name.
 
-* EHR system SHALL support all resource types available in the EHR related to Patient compartment for the [base]/Group/[id]/$export?_type parameter.
+* The Data Source system SHALL support all resource types available in the Data Source related to Patient compartment for the [base]/Group/[id]/$export?_type parameter.
 
-* EHR system SHALL support the Bulk Data Request Flow as defined in the Bulk Data Access IG specification.
+* The Data Source system SHALL support the Bulk Data Request Flow as defined in the [Bulk Data Access IG specification]({{site.data.fhir.bulkig}}/index.html)
 
-* EHR system MAY support the Bulk Data Delete Request as defined in the Bulk Data Access IG specification.
+* The Data Source system MAY support the Bulk Data Delete Request as defined in the Bulk Data Access IG specification.
 
-* EHR system SHALL support the Bulk Data Status Request as defined in the Bulk Data Access IG specification.
+* The Data Source system SHALL support the Bulk Data Status Request as defined in the Bulk Data Access IG specification.
 
-* EHR system SHALL set the requireAccessToken to true within the Bulk Data Status Request response body as defined in the Bulk Data Access IG specification.
+* The Data Source system SHALL set the requireAccessToken to true within the Bulk Data Status Request response body as defined in the Bulk Data Access IG specification.
 
-* EHR system SHALL require Backend Service App to provide valid access token to export the data.
+* The Data Source system SHALL require HDEA to provide valid access token to export the data.
 
-* When the Backend Service App does not have appropriate authorization to the data requested, the EHR system SHALL return OperationOutcome with appropriate error message.
+* When the HDEA does not have appropriate authorization to the data requested, the Data Source system SHALL return OperationOutcome with appropriate error message.
 
-* The EHR system SHALL support the US Core profiles as identified in the US Core STU 3 implementation guide to export the content for each patient.
+* The Data Source system SHALL support the [US Core profiles]({{site.data.fhir.uscoreR4}}/index.html) to export the content for each patient.
 
-* The EHR system SHALL support ```system/*.read and patient/*.read`` scopes to access data for multiple patients.
+* The Data Source system SHALL support ```system/*.read and patient/*.read`` scopes to access data for multiple patients.
 
 #### Creation of Group Resource 
 
-* The EHR system SHOULD support the creation of the Group Resource using the POST API. The Group will contain a list of patients who have consented to contribute their data for research.
+* The Data Source system SHOULD support the creation of the Group Resource using the POST API. The Group will contain a list of patients who have consented to contribute their data for research.
 
-Note: The Group resource creation process will depend on the healthcare organizations and the workflows used and the approvals required. This varies widely and hence this will be left to the healthcare organizations. 
+Note: The Group Resource creation process depends on the health care organizations, the workflows used, and the approvals required. This varies widely and will be left to each health care organization.
 
 
 #### Consent Management  
 
-Healthcare organizations are responsible for collecting patient Consent before sharing the patient data for research. Each healthcare organization follows their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an EHR or an external system. As part of the MedMorph IG development, consent management is not in-scope due to the above variations and lack of standardization. 
+Health care organizations are responsible for collecting patient Consent before sharing the patient data for research. Each health care organization follows applicable laws and their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an Data Source or an external system. As part of the MedMorph RA IG development, Consent Management is not in-scope due to the above variations and the current lack of standardization.
 
 
 #### Validating Consent Before Disclosing Data
 
-Disclosing data for research requires explicit patient consent. When the Backend Service App requests the EHR to export all the data for one or more patients, the EHRs FHIR Authorization Server has to validate the consent before sharing data for research. Again the process of enforcement of Consent varies by healthcare organization. MedMorph does not prescribe any standard mechanism to enforce Consent but assumes that the EHR Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented for their data to be shared.
+Disclosing identifiable data for research requires explicit patient consent. When the HDEA requests the Data Source to export all the data for one or more patients, the Data Sources FHIR Authorization Server must validate the consent before sharing data for research. The process of enforcement of Consent varies by health care organization. MedMorph does not prescribe any standard mechanism to enforce Consent but assumes that the Data Source Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented to share their data.
 
-#### EHR APIs and Profiles to be Supported
 
-The following APIs have to be supported by the EHR
+#### Data Source APIs and Profiles to be Supported
+
+The following APIs have to be supported by the Data Source
 
 ```
 [FHIR base URL]/Group/[id]/$export with all available types in a Patient Compartment.
 ```
 
-All US Core profiles have to be supported by the EHR and data exported have to be represented using the US Core profiles. 
+All US Core profiles must be supported by the Data Source and data exported have to be represented using the US Core profiles. 
 
 
-### Requirements for a Backend Service App
+### HDEA Requirements
 
-* The Backend Service App SHALL register with the EHRs Authorization Server to obtain client id, client secret to invoke EHR FHIR APIs for Bulk Data Access. 
+* The HDEA SHALL register with the Data Sources Authorization Server to obtain client id, client secret to invoke Data Source FHIR APIs for Bulk Data Access. 
 
-* The Backend Service App SHALL process a Knowledge Artifact PlanDefinition resource to determine the following 
-	* Which Group to use to export the data for patients?
+* The HDEA SHALL process a Knowledge Artifact PlanDefinition resource to determine the following 
 	* How frequently the data has to be exported?
-	* What translations are required for the data post extraction? 
 
-* The Backend Service App SHALL get authorized and obtain necessary access tokens to invoke the operations necessary to export data from the EHR.
+* The HDEA SHALL get authorized and obtain necessary access tokens to invoke the operations necessary to export data from the Data Source.
 
-* The Backend Service App SHALL invoke [FHIR Base URL]/Group/[id]/$export and include all types from the Patient compartment in the export request.
+* The HDEA SHALL invoke [FHIR Base URL]/Group/[id]/$export and include all types from the Patient compartment in the export request.
 
-* Once the data is exported, The Backend Service App SHALL download/fetch the data from the EHR per the Bulk Data Access IG specification.
+* Once the data is exported, The HDEA SHALL download/fetch the data from the Data Source per the Bulk Data Access IG specification.
 
-* The Backend Service App SHALL apply translations to the data as needed using the Data/Trust Services. 
+* The HDEA SHALL apply translations to the data as needed using the Trust Service Provider when specified by the Knowledge Artifact. 
 
-* For Data Marts supporting FHIR APIs for data ingestion, the Backend Service App SHALL invoke the POST APIs for each resource to create the resource in the Data Mart.
-
-* The Backend Service App SHALL leverage FHIR to research data model mappings developed by CDMH to identify the FHIR resources and APIs required to populate the Data Marts.
+* The HDEA SHOULD leverage FHIR to research data model mappings in the Common Data Models Harmonization (CDMH) IG to identify the FHIR resources and APIs required to populate the Data Marts.
 
 
-### Requirements for a Data Mart
+### Data Mart Requirements
 
-Data Marts store the extracted data from the EHR using different data models and technologies. Once the data is extracted from the EHRs the Backend Service App could automatically populate the data mart if it supports FHIR APIs. Currently most Data Marts do not support FHIR. Standardizing the ability to populate a data mart using FHIR APIs will be desirable to enable efficient data partner onboarding and data mart population. 
+Data Marts store the extracted data from the Data Source using different data models and technologies. Once the data is extracted from the Data Sources the HDEA could automatically populate the Data Mart if it supports FHIR APIs. Currently most Data Marts do not support FHIR. Standardizing the ability to populate a Data Mart using FHIR APIs will be desirable to enable efficient data partner onboarding and data mart population. 
 
-* Data Marts SHALL support POST FHIR APIs for each of the US Core resource profiles so that the Backend Service App can populate the Data Mart.
+* Data Marts SHOULD support POST FHIR APIs for each of the US Core resource profiles so that the HDEA can populate the Data Mart.
 
-* The Data Mart SHALL leverage FHIR to research data model mappings developed by CDMH to identify the FHIR resources and APIs to be supported.
+* The Data Mart SHOULD leverage FHIR to research data model mappings in the CDMH IG to identify the FHIR resources and APIs to be supported.
 
-* The Data Mart SHALL accept the data for each resource in FHIR format and translate to internal data models leveraging the CDMH developed mappings where applicable. 
+* The Data Mart SHOULD accept the data for each resource in FHIR format and translate to internal data models leveraging the CDMH IG mappings where applicable. 
 
 #### APIs and Profiles to be Supported by Data Mart
 
 ```
-POST [FHIR Base URL]/[Resource]/ for each US Core resource and profile specified in the US Core implementation guide.
+POST [FHIR Base URL]/[Resource]/ for each resource and profile specified in the US Core IG and CDMH IG.
 ```
 
-### Requirements for a Trust Service Provider
+### Trust Service Provider Requirements
 
-The Trust Service Provider supports many of the Data/Trust Services required for the various research use cases. 
+The Trust Service Provider supports services required for the various research use cases. 
 
-* The Trust Service Provider SHALL support the Trust Service Operations as specified in the Trust Service Provider Capability Statement. 
-
-```
-Feedback Requested: Should MedMorph prescribe specific behavior/operation to translate from one data model to another? Since this is an internal implementation detail of the organization, MedMorph's intention is to leverage the CDMH mappings from FHIR to research data models but not prescribe any behavioral/operational constructs for the actual conversion.
-```
+* The Trust Service Provider SHALL support the operations as specified in the Trust Service Provider Capability Statement. 
 
 
 ### Sufficiency of US Core Data Elements
 
-US Core profiles contain data elements identified in the US regulations with a few additions that have been agreed upon by the EHR vendors as the most important data elements for payment, treatment and operations. However the research data models are richer in nature and contain significantly more data elements not present in the US Core profiles. 
-Acknowledging this fact, the MedMorph Architecture IG is prescribing US Core as starting point to build the framework. As the CDMH project completes, a Content IG could be developed for populating Data Marts leveraging CDMH work to create profiles to populate all the data elements required for each data model.
+US Core profiles contain data elements identified in the US regulations with a few additions that have been agreed upon by the Data Source vendors as the most important data elements for payment, treatment and operations. However the research data models are richer in nature and contain significantly more data elements not present in the US Core profiles. 
+Acknowledging this fact, the MedMorph RA IG is prescribing US Core as starting point to build the framework. Content IG developers SHOULD leverage CDMH IG to populate the data elements required for common research data models.
 
  

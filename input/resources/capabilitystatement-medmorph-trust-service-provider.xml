@@ -9,9 +9,7 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trust-service-provider</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This CapabilityStatement defines the expected capabilities of the Trust Service Provider actor  
-      when conforming to the MedMorph Reference Architecture Implementation Guide. 
-      This actor is responsible for providing trust services. (e.g., Pseudonymization, Anonymization, De-identification, Re-identification).</p>
+      <p>This CapabilityStatement defines the expected capabilities of the Trust Service Provider actor when conforming to the MedMorph RA IG. This actor is responsible for providing trust services. (e.g., Pseudonymization, Anonymization, De-identification, Re-identification).</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -36,7 +34,7 @@
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the Trust Service Provider needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">Formal Specification - Security Section.</a></p>
+      <p>In addition the Trust Service Provider needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
       <h3>Resource summary</h3>
       <div class="table-wrapper">
         <table class="grid">
@@ -184,7 +182,7 @@
   
   <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-trust-service-provider"/>
   <name value="TrustServiceProvider"/>
-  <title value="MedMorph Trust Service Provider"/>
+  <title value="Trust Service Provider"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -194,8 +192,7 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This CapabilityStatement defines the expected capabilities of the Trust Service Provider actor when conforming to the MedMorph Reference Architecture Implementation Guide. 
-    This actor is responsible for providing trust services. (e.g., Pseudonymization, Anonymization, De-identification, Re-identification)."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the Trust Service Provider actor when conforming to the MedMorph RA IG. This actor is responsible for providing trust services. (e.g., Pseudonymization, Anonymization, De-identification, Re-identification)."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>

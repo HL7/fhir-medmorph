@@ -9,8 +9,7 @@
       <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This CapabilityStatement defines the expected capabilities of the <i>MedMorph Knowledge Artifact Repository </i> actor.  
-      This actor is responsible for hosting Knowledge Artifacts created by Public Health Agencies and/or Research Organizations.</p>
+      <p>This CapabilityStatement defines the expected capabilities of the Knowledge Artifact Repository actor when conforming to the MedMorph RA IG. This actor is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,12 +26,12 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Knowledge Artifact Repository is to allow the creation, modification and retrieval of Knowledge Artifacts.</p>
+      <p>This CapabilityStatement defines the expected capabilities of the Knowledge Artifact Repository actor when conforming to the MedMorph RA IG. This actor is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts.</p>
       <p>
         <b>Security:</b>
       </p>
       <p>Knowledge Artifact Repository hosting Knowledge Artifacts which do not contain any PII, PHI or other organizational sensitive information, the Knowledge Artifact Repository SHALL follow the security requirements identified in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>. 
-		For Knowledge Artifact Repository transactions involving Knowledge Artifacts containing PII and/or PHI, the SMART on FHIR Backend Services should be used. For example, Health Care Surveys may want to publish sampled providers via the Knowledge Artifact Repository.</p>
+		For Knowledge Artifact Repository transactions involving Knowledge Artifacts containing PII and/or PHI, the SMART on FHIR Backend Services authorization should be used.</p>
       <h3>Resource summary</h3>
       <div class="table-wrapper">
         <table class="grid">
@@ -198,7 +197,7 @@
   
   <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-knowledge-artifact-repository"/>
   <name value="KnowledgeArtifactRepository"/>
-  <title value="MedMorph Knowledge Artifact Repository"/>
+  <title value="Knowledge Artifact Repository"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -208,8 +207,7 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This CapabilityStatement defines the expected capabilities of the Knowledge Artifact Repository actor when conforming to the MedMorph Architecture Implementation Guide.  
-  This actor is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the Knowledge Artifact Repository actor when conforming to the MedMorph RA IG. This actor is responsible for allowing creation, modification, and hosting of the Knowledge Artifacts."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>

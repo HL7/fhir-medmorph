@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="us-ph-reporting-bundle"/>
+    <id value="us-ph-specification-bundle"/>
     <meta>
         <versionId value="3"/>
         <lastUpdated value="2021-08-13T05:43:12.456+00:00"/>
         <source value="#op9qv8RqccCL7zOB"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-specification-bundle"/>
     <version value="0.1.0"/>
-    <name value="USPublicHealthReportingBundle"/>
-    <title value="US Public Health Reporting Bundle"/>
+    <name value="USPublicHealthSpecificationBundle"/>
+    <title value="US Public Health Specification Bundle"/>
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
@@ -21,7 +21,7 @@
             <value value="http://hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
-    <description value="Bundle Resource profile for exchanging a public health report to be submitted to a PHA."/>
+    <description value="Bundle Resource profile for exchanging a Knowledge Artifact."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -37,8 +37,8 @@
     <differential>
         <element id="Bundle">
             <path value="Bundle"/>
-            <short value="US Public Health Reporting Bundle"/>
-            <definition value="Sets expectations for supported capabilities for Bundles used for reporting purposes in public health."/>
+            <short value="US Public Health Specification Bundle"/>
+            <definition value="Sets expectations for supported capabilities for Bundles used for specifying Knowledge Artifacts using MedMorph architecture."/>
         </element>
         <element id="Bundle.type">
             <path value="Bundle.type"/>
@@ -47,7 +47,7 @@
             <type>
                 <code value="code"/>
             </type>
-            <fixedCode value="message"/>
+            <fixedCode value="collection"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.timestamp">
@@ -67,32 +67,46 @@
             </slicing>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:sliceMessageHeader">
+        <element id="Bundle.entry:slicePlanDefinition">
             <path value="Bundle.entry"/>
-            <sliceName value="sliceMessageHeader"/>
+            <sliceName value="slicePlanDefinition"/>
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:sliceMessageHeader.resource">
+        <element id="Bundle.entry:slicePlanDefinition.resource">
             <path value="Bundle.entry.resource"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
             </type>
         </element>
-        <element id="Bundle.entry:contentBundle">
+        <element id="Bundle.entry:triggeringValueSetLibrary">
             <path value="Bundle.entry"/>
-            <sliceName value="contentBundle"/>
-            <min value="1"/>
+            <sliceName value="sliceTriggeringValueSetLibrary"/>
+            <min value="0"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:contentBundle.resource">
+        <element id="Bundle.entry:triggeringValueSetLibrary.resource">
             <path value="Bundle.entry.resource"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-triggering-valueset-library"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:valueSets">
+            <path value="Bundle.entry"/>
+            <sliceName value="valueSets"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:valueSets.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-valueset"/>
             </type>
         </element>
     </differential>

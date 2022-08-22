@@ -1,18 +1,18 @@
-This section defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture IG.  The specification focuses on the creation of the Knowledge Artifacts and their usage by the Backend Service App. It also describes the use of [SMART on FHIR Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) and provides guidance on privacy, security, and other implementation requirements.
+This section defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Reference Architecture (RA)  Implementation Guide (IG). The specification focuses on the creation of the Knowledge Artifacts and their usage by the Health Data Exchange App (HDEA), MedMorph’s backend services app. It also describes the use of [SMART on FHIR Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) and provides guidance on privacy, security, and other implementation requirements.
 
 
 ### Context
 
 #### Pre-reading
-Before reading this formal specification, implementers should first be familiar with two other key portions of the specification:
+Before reading this formal specification, implementers should first be familiar with two other key portions of the IG:
 
-* The [Use Cases](usecases.html) page provides the business context and general process flow enabled by the formal specification.
+* The [Use Cases](usecases.html) page provides the business context and general process flow enabled by this  specification.
 
-* The [Background](background.html) page provides information about the underlying specifications and indicates what portions of each should be reviewed in order to have the necessary foundation to understand the constraints and usage guidance described in this detailed specification.
+* The [Implementation Guide overview](background.html) page provides information about the underlying specifications and indicates what portions of each should be reviewed in order to have the necessary foundation to understand the constraints and usage guidance described in this specification.
 
 
 #### Conventions
-This implementation guide uses specific terminology to flag statements that have relevance for the evaluation of conformance with the guide:
+The IG uses specific terminology to flag statements that have relevance for the evaluation of conformance with this specification:
 
 * **SHALL** indicates requirements that must be met to be conformant with the specification.
 
@@ -23,7 +23,11 @@ This implementation guide uses specific terminology to flag statements that have
 
 #### Claiming Conformance 
 
-Actors and Systems asserting conformance to this implementation guide have to implement the requirements outlined in the corresponding capability statements. The following definition of MUST SUPPORT is to be used in the implementation of the requirements.
+Actors and Systems asserting conformance to this implementation guide must implement the requirements outlined in the corresponding capability statements. 
+
+**NOTE**: This MedMorph RA IG is a framework IG and hence actors and systems will claim conformance to this MedMorph IG in combination with Content IGs. The Content IGs specify detailed requirements including portions of this IG that will be used for the specific use case implementation. However for Knowledge Artifact Repository, TTP and Trust Service Provider actors Content IGs MAY reuse the corresponding MedMorph RA IG capability statements completely.   
+
+The following definition of MUST SUPPORT is to be used in the implementation of the requirements.
 
 ##### MUST SUPPORT Definition
 
@@ -35,50 +39,49 @@ Actors and Systems asserting conformance to this implementation guide have to im
 
 
 #### Profiles
-This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The implementation guide is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
+This specification makes use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The IG is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are used as part of each interaction.
 
-The full set of profiles defined in this implementation guide can be found by following the links on the MedMorph [FHIR Artifacts](artifacts.html) page.
-
-
-#### US Core
-This IG also leverages the [US Core]({{site.data.fhir.uscoreR4}}/index.html) set of profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this IG either leverages them directly or uses them as a base for any additional constraints needed to support the member attribution list use cases.  If no constraints are needed, this IG does not define any profiles.
-
-Where US Core profiles do not yet exist (e.g., for PlanDefinition, Bundle), MedMorph profiles have been created.
+The full set of profiles defined in this implementation guide can be found on the [FHIR Artifacts](artifacts.html) page.
 
 
-#### SMART on FHIR Backend Services Authorization
-This section outlines how the SMART on FHIR Backend Services Authorization will be used by the MedMorph Reference Architecture implementation guide. 
+#### Authentication and Authorization Requirements
 
-* The following actors comprise the System Actors: EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA, and Research Organizations.
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the MedMorph RA IG. The requirements in this section is applicable to Data Source, Knowledge Artifact Repository, Health Data Exchange App (HDEA), Trusted Third Party (TTP), and Data Receiver actors. These actors will be designated as MedMorph System Actors in this section.
 
-* System Actors (EHRs, Knowledge Artifact Repository, Backend Service App, Trust Service Provider, Trusted Third Party, PHA, and Research Organization) SHOULD advertise conformance to SMART Backend Services Authorization by hosting a Well-Known Uniform Resource Identifiers (URIs) as defined in the [SMART on FHIR IG Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+* MedMorph System Actors **SHOULD** advertise conformance to SMART Backend Services Authorization IG by hosting a Well-Known Uniform Resource Identifiers (URIs) as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
-* When conforming to the SMART Backend Services Authorization, System Actors SHALL include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [SMART on FHIR IG Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+* When conforming to the SMART Backend Services Authorization IG, MedMorph System Actors **SHALL** include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
-* When System Actors act as clients, they SHOULD share their JSON Web Key Set (JWKS) with the server System Actors using Uniform Resource Locators (URLs) as defined in the [SMART on FHIR IG Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+* When MedMorph System Actors act as clients, they **SHOULD** share their JSON Web Key Set (JWKS) with the server System Actors using Uniform Resource Locators (URLs) as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
-* Client System Actors SHALL obtain the access token as defined in the [SMART on FHIR Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+* All MedMorph System Actors **SHOULD** support the system/*.read scope to faciliate the MedMorph RA IG workflows.
 
-* Content Implementation Guides SHALL each specify the scopes of each respective use case and any additional constraints on the authentication and authorization flows using SMART on FHIR Backend Services.
+* Client System Actors **SHALL** obtain the access token as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+
+* Server System Actors **SHALL** process and validate incoming requests for resources as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
+
+* Content IGs SHALL specify granular scopes required for authorization based on use case requirements using [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html)
 
 
-#### System Actors, Requirements and Capability Statements
+#### MedMorph Actors, Requirements and Capability Statements
 
-This implementation guide sets expectations for the following systems using workflow specific requirements and capability statements as shown below. Implementers are advised to review the workflow requirements and then review the capability statements before implementing the corresponding actor.
+This MedMorph RA IG defines common requirements and generalized capability statements using the MedMorph workflows. Implementers are advised to review the requirements below along with Content IG requirements before implementing the corresponding actor.
+
+**NOTE**: Content IGs **SHALL** define conformance requirements applicable to each actor based on the use case and **SHOULD** reuse the MedMorph RA IG common requirements from below.     
 
 
 <table>
   <thead>
     <tr>
-      <th>System Actor Name</th>
-      <th> Requirements</th>
-      <th>Capability Statement Link</th>
+      <th> Actor Name</th>
+      <th> Requirements for MedMorph Workflow</th>
+      <th> Capability Statement</th>
     </tr>
   </thead>
   <tr>
     <td>Knowledge Artifact Repository</td>
-    <td><a href="provisioning.html">Provisioning Workflow Requirements</a></td>
-    <td><a href="CapabilityStatement-medmorph-knowledge-artifact-repository.html">Knowledge Artifact Repository Capability Statement</a></td>
+    <td><a href="provisioning.html">Provisioning</a></td>
+    <td><a href="CapabilityStatement-medmorph-knowledge-artifact-repository.html">Knowledge Artifact Repository Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
@@ -86,14 +89,14 @@ This implementation guide sets expectations for the following systems using work
     <td/>
   </tr>
   <tr>
-    <td>Backend Service App</td>
+    <td>Health Data Exchange App (HDEA)</td>
     <td>
-    	   <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
-    	   <a href="subscription.html">Subscriptions and Notifications Requirements</a> <br/>
-    	   <a href="trustservices.html">Trust Services Requirements</a> <br/>
-    	   <a href="reportsubmission.html">Report Submission Requirements</a> <br/>
+    	   <a href="provisioning.html">Provisioning Workflow</a> <br/>
+    	   <a href="subscription.html">Notifications</a> <br/>
+    	   <a href="trustservices.html">Report Creation</a> <br/>
+    	   <a href="reportsubmission.html">Data Submission and Response Receiving</a> <br/>
     	</td>
-    <td><a href="CapabilityStatement-medmorph-backend-service-app.html">Backend Service App Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-healthdata-exchange-app.html">HDEA Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
@@ -101,9 +104,9 @@ This implementation guide sets expectations for the following systems using work
     <td/>
   </tr>
   <tr>
-    <td>EHR</td>
-    <td><a href="subscription.html">Subscriptions and Notifications Requirements</a></td>
-    <td><a href="CapabilityStatement-medmorph-ehr.html">EHR Capability Statement</a></td>
+    <td>Data Source</td>
+    <td><a href="subscription.html">Notifications</a></td>
+    <td><a href="CapabilityStatement-medmorph-ehr.html">Data Source Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
@@ -112,8 +115,8 @@ This implementation guide sets expectations for the following systems using work
   </tr>
   <tr>
     <td>Trust Service Provider</td>
-    <td><a href="trustservices.html">Trust Services Requirements</a></td>
-    <td><a href="CapabilityStatement-medmorph-trust-service-provider.html">Trust Service Provider Capability Statement</a></td>
+    <td><a href="trustservices.html">Report Creation</a></td>
+    <td><a href="CapabilityStatement-medmorph-trust-service-provider.html">Trust Service Provider Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
@@ -122,8 +125,8 @@ This implementation guide sets expectations for the following systems using work
   </tr>
   <tr>
     <td>Trusted Third Party</td>
-    <td><a href="reportsubmission.html">Report Forwarding Requirements</a></td>
-    <td><a href="CapabilityStatement-medmorph-trusted-third-party.html">Trusted Third Party Capability Statement</a></td>
+    <td><a href="reportsubmission.html">Data Submission and Response Receiving</a></td>
+    <td><a href="CapabilityStatement-medmorph-trusted-third-party.html">Trusted Third Party Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
@@ -131,25 +134,17 @@ This implementation guide sets expectations for the following systems using work
     <td/>
   </tr>
   <tr>
-    <td>Public Health Authority</td>    
+    <td>Data Receiver - PHA/RO</td>    
     <td>
-       <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
-       <a href="reportsubmission.html">Report Receiving Requirements</a>
+       <a href="provisioning.html">Provisioning</a> <br/>
+       <a href="reportsubmission.html">Data Submission and Response Receiving</a>
     </td>
-    <td><a href="CapabilityStatement-medmorph-public-health-authority.html">Public Health Authority Capability Statement</a></td>
+    <td><a href="CapabilityStatement-medmorph-data-receiver.html">Data Receiver Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
     <td/>
     <td/>
-  </tr>
-  <tr>
-    <td>Research Organization</td>
-    <td>
-       <a href="provisioning.html">Provisioning Workflow Requirements</a> <br/>
-       <a href="reportsubmission.html">Report Receiving Requirements</a>
-    </td>
-    <td><a href="CapabilityStatement-medmorph-public-health-authority.html">Research Organization Capability Statement</a></td>
   </tr>
 </table>
 

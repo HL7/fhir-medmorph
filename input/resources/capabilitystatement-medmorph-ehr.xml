@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
-  <id value="medmorph-ehr"/>
+  <id value="medmorph-data-source"/>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>EHR</h2>
       <p>(Requirements Definition Capability Statement)</p>
-      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-ehr</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-data-source</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This is an example CapabilityStatement that defines the expected capabilities of the EHR actor.  
-      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for an EHR actor.</p>
+      <p>This is an example CapabilityStatement that defines the expected capabilities of the Data Source actor.  
+      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for a Data Source actor.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table>
@@ -27,14 +27,14 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the EHR is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs when implementing MedMorph RA and its Content IGs.
-      This capability statement is an example and an actual EHR CapabilityStatement will be defined for each use case in its Content IG. This is present here to guide the Content IG creators on how to create an EHR CapabilityStatement.
+      <p>The primary focus of the Data Source is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs when implementing MedMorph RA and its Content IGs.
+      This capability statement is an example and an actual Data Source CapabilityStatement will be defined for each use case in its Content IG. This is present here to guide the Content IG creators on how to create a Data Source CapabilityStatement.
       </p>
       <p>
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the EHR needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">Formal Specification - Security Section.</a></p>
+      <p>In addition the Data Source actor needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
       <h3>Resource summary</h3>
       <div class="table-wrapper">
         <table class="grid">
@@ -260,8 +260,8 @@
   </text>
   
   <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-ehr"/>
-  <name value="MedMorphEhr"/>
-  <title value="Example MedMorph EHR CapabilityStatement"/>
+  <name value="MedMorphDataSource"/>
+  <title value="Example MedMorph Data Source CapabilityStatement"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -271,14 +271,14 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This is an example CapabilityStatement that defines the expected capabilities of the EHR actor.  
-      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for an EHR actor."/>
+  <description value="This is an example CapabilityStatement that defines the expected capabilities of the Data Source actor.  
+      This CapabilityStatement is an example for Content IG creators on how to create a capability statement for a Data Source actor."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The focus of the EHR is to allow creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs. "/>
+    <documentation value="The focus of the Data Source is to allow creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
