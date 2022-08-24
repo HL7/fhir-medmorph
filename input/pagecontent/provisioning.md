@@ -1,4 +1,4 @@
-This section defines the conformance requirements for systems wishing to implement the Provisioning workflow. More Specifically the specification focuses on the creation of the Knowledge Artifacts, publishing them in Knowledge Artifact Repository and their access by the Health Data Exchange App and/or Data Sources. 
+This section defines the conformance requirements for systems wishing to implement the Provisioning Workflow. More specifically, the creation of the Knowledge Artifacts, publishing them in a Knowledge Artifact Repository, and their access by the Health Data Exchange App (HDEA) and/or Data Sources. 
 
 
 ### MedMorph Knowledge Artifacts
@@ -13,7 +13,7 @@ MedMorph Knowledge Artifacts follow the general Event, Condition, Action (ECA) r
 
 <br>
   
-The MedMorph RA IG provides the basic constructs required to enable public health and research reporting using ECA rules embedded in Knowledge Artifacts which are machine processable and can be executed without burdening the provider. In addition to the ECA rules there are references to ValueSets, Library Resources, Security certificates and Endpoint information. These different artifacts are shown in Figure 6.2 below.
+The MedMorph RA IG provides the basic constructs required to enable public health and research reporting using ECA rules embedded in Knowledge Artifacts which are machine processable and can be executed without burdening the provider. In addition to the ECA rules there are references to ValueSets, Library Resources, Security Certificates, and Endpoint information. These different artifacts are shown in Figure 6.2 below.
 
 {% include img.html img="KnowledgeArtifactComponents.png" caption="Figure 6.2 - Knowledge Artifact Components" %}
 
@@ -21,13 +21,13 @@ The MedMorph RA IG provides the basic constructs required to enable public healt
 
 #### Machine Processable Events, Conditions, and Actions
 
-MedMoprh Knowledge Artifacts which are built using ECA rules have to be machine processable (structurally and semantically) to reduce provider burden. In addition, the Knowledge Artifacts have to be generalized to accommodate multiple use cases specified in Content IGs.
+MedMorph Knowledge Artifacts which are built using ECA rules have to be machine processable (structurally and semantically) to reduce provider burden. In addition, the Knowledge Artifacts have to be generalized to accommodate multiple use cases specified in Content IGs.
 
-MedMorph has defined a list of named events that typically occur in clinical workflows based on which notifications can be performed. MedMorph Content IGs will select events from the documented [Named Events](ValueSet-us-ph-triggerdefinition-namedevent.html) to start any MedMorph reporting workflow. Typically named events occur due to updates to patient data within a Data Source. The named events are eventually intended to be FHIR Subscription Topics once FHIR subscriptions get implemented in the Data Sources. The HDEA subscribes to these [Subscription Topics](ValueSet-us-ph-triggerdefinition-namedevent.html) and will get notified when the corresponding events occur in the workflows. 
+MedMorph has defined a list of named events that typically occur in clinical workflows based on which notifications can be performed. MedMorph Content IGs will select events from the documented [Named Events](ValueSet-us-ph-triggerdefinition-namedevent.html) to start any MedMorph reporting workflow. Typically named events occur due to updates to patient data within a Data Source. The named events are eventually intended to be FHIR Subscription Topics once FHIR subscriptions get implemented in the Data Source. The HDEA subscribes to these [Subscription Topics](ValueSet-us-ph-triggerdefinition-namedevent.html) and will get notified when the corresponding events occur in the workflow. 
 
 Once the HDEA receives notifications for a specific Named Event via FHIR Subscriptions, the HDEA will evaluate the data according to the conditions specified in the Knowledge Artifact. If conditions are met then the actions will be executed as per the ECA rules in the Knowledge Artifact. If conditions are not met actions will not be executed. To describe machine processable conditions, FHIR Expressions are used. MedMorph will use [FHIR Path](https://www.hl7.org/fhir/fhirpath.html) expressions or [CQL](https://cql.hl7.org/) expressions. 
 
-The Actions that can be executed are based on the different use cases considered for MedMorph architecture. MedMorph Content IGs will select actions from the documented [List of PlanDefinition Actions](ValueSet-us-ph-plandefinition-action.html) during the creation of the Knowledge Artifact. The execution sequence of the various actions can be visualized as shown in Figure 6.3 below.
+The Actions that can be executed are based on the different use cases considered for the MedMorph RA. MedMorph Content IGs will select actions from the documented [List of PlanDefinition Actions](ValueSet-us-ph-plandefinition-action.html) during the creation of the Knowledge Artifact. The execution sequence of the various actions can be visualized as shown in Figure 6.3 below.
 
 {% include img.html img="ActionSequence.svg" caption="Figure 6.3 - Action Execution Steps" %}
 
@@ -37,19 +37,19 @@ As shown in Figure 6.3 above, actions will start in Step 1 when a notification f
 
 In the case of Central Cancer Registry Reporting, once a named event occurs and the execution of the reporting workflow starts, the following actions will be executed in a sequence.
 
-* Determine if the patient has a reportable Cancer condition, by executing the check-trigger-codes action in Step 2a. In Step 2a, the check-participant-registration action is not required for this scenario and hence it is skipped.
+* Determine if the patient has a reportable cancer condition, by executing the check-trigger-codes action in Step 2a. In Step 2a, the check-participant-registration action is not required for this scenario and hence it is skipped.
 
 * If the patient has a reportable condition, the Cancer Report will be created by accessing appropriate data from the Data Source in Step 2b. The accessed data and executed queries will be defined in the Content IG. The create-report action will assemble the data into a bundle per the MedMorph RA IG and Central Cancer Registry Reporting Content IG.
 
-* Step 2c will be skipped since there is no specific requirement to anonymize, pseudonymize or de-identify the data. 
+* Step 2c will be skipped since there is no specific requirement to anonymize, pseudonymize, or de-identify the data. 
 
 * The report is validated in Step 2d to conform to the various profiles specified by the Content IG by executing the validate-report action. 
 
 * Once the report is validated and ready for transmission, the report is submitted by executing the submit-report action in Step 2e.
 
-These actions described above are machine processable and are extensible. As new use cases are instantiated using the MedMorph RA new actions may be added. For example, if the report needs to be signed, an action called add-digital-signature action can be defined and added to Step 2e. Similarly, new steps could also be introduced as needed. 
+These actions described above are machine processable and are extensible. As new use cases are instantiated using the MedMorph RA IG, new actions may be added. For example, if the report needs to be signed, an action called add-digital-signature action can be defined and added to Step 2e. Similarly, new steps could also be introduced as needed. 
 
-The next section outlines specific requirements for the creation and consumption of the Knowledge Artifacts by MedMorph actors.
+The next section outlines specific requirements for the creation and consumption of the Knowledge Artifacts by MedMorph RA actors.
 
 #### Creating Knowledge Artifacts
 
@@ -65,11 +65,11 @@ Data Receivers such as PHAs or ROs who receive the data are the actors who creat
 
 * Producers of Knowledge Artifacts SHALL identify the specific named-events to be subscribed to by the HDEA in the PlanDefintion.action.trigger element.
 
-* MedMorph Knowledge Artifacts SHALL use only named-events for triggering and is indicated by setting the PlanDefinition.action.trigger.type to named-event for actions specifying triggers.
+* MedMorph Knowledge Artifacts SHALL use only named-events for triggering which is indicated by setting the PlanDefinition.action.trigger.type to named-event for actions specifying triggers.
 
 * MedMorph workflow actions are essentially activities that get executed to accomplish a specific task. Knowledge Artifact producers SHALL  select specific actions from the [Plan Definition Action Valueset](ValueSet-us-ph-plandefinition-action.html). In case the required action is not available in the value set, the value set MAY be extended in the Content IGs.
 
-* Producers of Knowledge Artifacts SHALL use Expressions of type text/fhirpath for defining Knowledge Artifacts. Producers MAY also provide an alternative representation of the same expression using Expressions of type text/cql. 
+* Producers of Knowledge Artifacts SHALL use Expressions of type text/fhirpath or text/cql or text/cql.identifier for defining Knowledge Artifacts.  
 
 * MedMorph Conditions SHALL always be of kind "applicability" and are specified in PlanDefinition.Condition.kind element.
 
@@ -102,21 +102,21 @@ The APIs that can be used to create, update, retrieve, and search for Knowledge 
 
 #### Notifications of Changes in Knowledge Artifacts
 
-Knowledge Artifacts get changed from time to time and health care organizations implementing Knowledge Artifacts have to regularly update the PlanDefinition instances based on changes. Currently the MedMorph Architecture IG does not prescribe any specific notification mechanism.
+Knowledge Artifacts get changed from time to time and health care organizations implementing Knowledge Artifacts have to regularly update the PlanDefinition instances based on changes. Currently the MedMorph RA IG does not prescribe any specific notification mechanism.
 
 * The Knowledge Artifact Repository SHALL support retrieval of Knowledge Artifacts using a GET request.
 
-* The Knowledge Artifact Repository SHOULD allow consumers to subscribe for notifications so that they get notified of changes via a REST hook or Email as specified in the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
+* The Knowledge Artifact Repository SHOULD allow consumers to subscribe to notifications ensuring they get notified of changes via a REST hook or Email as specified in the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
 
-* The consumers of Knowledge Artifacts MAY choose to either subscribe for notifications of changes or poll the Knowledge Artifact Repository and retrieve the latest information and determine if changes have been made.
+* The consumers of Knowledge Artifacts MAY choose to either subscribe to notifications of changes or poll the Knowledge Artifact Repository and retrieve the latest information and determine if changes have been made.
 
 #### Operationalization of Knowledge Artifacts
 
-Knowledge Artifacts have to be operationalized by healthcare organizations. Before operationalizing the Knowledge Artifact and its processing by a Backend Service App or by an EHR, healthcare organizations may test and validate the processing of the knowledge artifact before operationalizing in production to enable reporting to Public Health / Research Organizations.
+Knowledge Artifacts have to be operationalized by healthcare organizations. Before operationalizing the Knowledge Artifact and processing by the HDEA/ Backend Services App or by a Data Source, healthcare organizations may test and validate the processing of the Knowledge Artifact before reporting to Data Receivers.
 
 #### Knowledge Artifact Repository Specific Requirements 
 
-Knowledge Artifact Repository actor SHALL support the PlanDefinition creation, update, retrieval and search mechanisms as identified in the [Knowledge Artifact Repository Capability Statement](CapabilityStatement-medmorph-knowledge-artifact-repository.html).
+The Knowledge Artifact Repository actor SHALL support the PlanDefinition creation, update, retrieval and search mechanisms as identified in the [Knowledge Artifact Repository Capability Statement](CapabilityStatement-medmorph-knowledge-artifact-repository.html).
 
 #### HDEA Specific Requirements 
 
@@ -126,7 +126,7 @@ Knowledge Artifact Repository actor SHALL support the PlanDefinition creation, u
 
 * The HDEA SHALL be capable of processing FHIR Path Expressions to evaluate Conditions which are specified as part of the PlanDefinition.action.condition elements
 
-* The HDEA SHALL implement the ability to process action dependencies specified via the PlanDefinition.action.relatedAction elements. Typical implementations will build a graph or a tree structure that can be used to identify dependencies between actions.
+* The HDEA SHALL implement the ability to process action dependencies specified via the PlanDefinition.action.relatedAction elements. Typical implementations will build a graph or a tree structure to identify dependencies between actions.
 
 * The HDEA SHALL be capable of scheduling jobs based on timing offsets specified in the PlanDefinition.action.timing and PlanDefinition.action.relationAction.offsetDuration elements.
 
