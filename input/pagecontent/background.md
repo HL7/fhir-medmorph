@@ -1,6 +1,6 @@
-### Implementation Guide Overview
+### Implementation Guide (IG) Overview
 
-Read the <a href="usecases.html">Use Cases</a> section for background on the initial representative MedMorph use cases that have been used to identify the MedMorph actors, create the MedMorph abstract model and workflows from which the MedMorph Reference Architecture (RA) is derived. 
+Read the <a href="usecases.html">Use Cases</a> section for background on the initial representative MedMorph use cases that have been used to create the data exchange abstract model and workflows from which the MedMorph Reference Architecture (RA) is derived. 
 The MedMorph Reference Architecture (RA) IG aims to minimize the burden on both the senders and receivers of data by providing a common method for obtaining data for research and public health for multiple use cases. The CDC established a Technical Expert Panel (TEP) comprised of a wide variety of representatives with relevant expertise to inform the development of the technical approach and the MedMorph RA IG.
 
 ### Guiding Principles 
@@ -15,10 +15,10 @@ The following are the guiding principles for the MedMorph Reference Architecture
 
 The following requirements are in-scope for the MedMorph RA IG based on the use cases.
 
-* Define the RA framework which includes APIs for data exchange, operations, profiles for notifications, payload creation and exchange.
+* Define the API mechanisms, Inputs, and Outputs used to access and exchange data.
 * Define the mechanisms used to trigger the workflows. 
 * Define the provisioning mechanisms used to automate the triggering and reporting of data. 
-* Define trust services (e.g., pseudonymization, anonymization, de-identification) that will be needed for use cases when appropriate.
+* Define trust services (e.g., pseudonymization, anonymization, de-identification) needed for use cases when appropriate.
 
 ### IG Out-of-Scope 
 
@@ -27,19 +27,19 @@ The following aspects are out-of-scope for the MedMorph RA IG based on the use c
 * Enabling claims data access to research and public health.
 * Changes to the EHR data capture screens and/or changes to clinical workflows. Providers may use their choice of apps/screens/systems to enter the data into the EHR independent of the IG.
 * Data not accessible by a FHIR API.
-* Policies and processes followed by healthcare organizations to allow data sharing,  collecting of consent, compliance with regulatory requirements are out-of-scope. The technical APIs to exchange required data for the use cases are in-scope as specified in the In-Scope section.
+* Policies and processes followed by healthcare organizations to allow data sharing,  collecting of consent, or compliance with regulatory requirements. The technical APIs to exchange required data for the use cases are in-scope as specified in the In-Scope section.
 
 
 ### Underlying Specifications
 
 This guide is based on the [HL7 FHIR R4]({{site.data.fhir.path}}index.html) standard, as well as [US Core IG]({{site.data.fhir.uscoreR4}}/index.html), [Bulk Data Access IG]({{site.data.fhir.bullkig}}/index.html), [SMART App Launch IG for Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) and the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html) specifications. This MedMorph RA IG is intended to maximize the number of clinical systems that can conform to this guide as well as to allow for extensibility of system capabilities in the future.
 
-Implementers of the MedMorph RA IG must understand some basic information about the underlying specifications listed above prior to implementing the MedMorph RA.
+Implementers of the MedMorph RA IG must understand some basic information about the underlying specifications listed above.
 
 
 #### FHIR Resources used for MedMorph RA
 
-The table below identifies the specific FHIR Resources and their purposes that will be used in the MedMorph RA IG.
+The table below identifies the specific FHIR Resources and their use in the MedMorph RA IG.
 Implementers should familiarize themselves with these FHIR resources and their purposes.
 
 <table>
@@ -101,7 +101,7 @@ The relationships among different FHIR IG types are depicted in Figure 2.1, with
 Although the US PH Profiles Library is in the process of being balloted at the time of publication of v1.0.0 of the MedMorph RA IG, it is included to show the direction MedMorph will take under the guidance of the HL7 Public Health Work Group (WG). The US PH Profiles Library will harmonize similar profiles from multiple IGs being produced under the sponsorship of the HL7 Public Health WG. This will ensure consistency across IGs, reduce profile proliferation, and provide a starting point for future content IGs.
 
 
-#### Relationship between MedMorph RA IG, Electronic Case Reporting (eCR) FHIR IG, and US Public Health (PH) Profiles Library 
+#### Relationship between MedMorph RA IG, electronic Case Reporting (eCR) FHIR IG, and US Public Health (PH) Profiles Library 
 
 The [United States Public Health (US PH) Profiles Library](https://build.fhir.org/ig/HL7/fhir-us-ph-common-library-ig/index.html) establishes a baseline of common artifacts that will be used by multiple public health IGs as shown in Figure 2.1. It provides a way to harmonize profiles needed for multiple public health use cases that are not already in US Realm foundational IGs such as US Core. The initial content for the US PH Profiles Library is derived from the MedMorph RA and eCR FHIR IGs, and in the future will likely include reusable profiles from other IGs as well (see Section on “Other Existing Public Health IGs contributing to a common US PH Profiles Library” for more details). The MedMorph RA IG and v2.0.0 of the [eCR FHIR IG](http://hl7.org/fhir/us/ecr/STU2/) were balloted in January 2021, and both of these IGs created aligned artifacts that can be reflected in the US PH Profiles Library, which is being balloted in September 2022. All artifacts that are candidates for promotion to the US PH Profiles Library will use the words “us” or “US” and “ph” or “PH” as part of the profile definition, name, and title elements. This RA IG will harmonize with the US PH Profiles Library going forward to reduce implementer burden for supporting public health use cases.
 At the architectural level, this RA IG aligned with and then expanded from the architectural components of the eCR FHIR IG. In this way, the MedMorph and eCR architectures are harmonized while the MedMorph RA also allows for public health use cases beyond reportable conditions (which is the focus of eCR), research use cases, and potentially other types of use cases in the future. 
