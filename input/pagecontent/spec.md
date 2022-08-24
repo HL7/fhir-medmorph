@@ -106,7 +106,7 @@ This MedMorph RA IG defines common requirements and generalized capability state
   <tr>
     <td>Data Source</td>
     <td><a href="subscription.html">Notifications</a></td>
-    <td><a href="CapabilityStatement-medmorph-data-receiver.html">Data Source Capability Statement Example</a></td>
+    <td><a href="CapabilityStatement-medmorph-data-source.html">Data Source Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>
