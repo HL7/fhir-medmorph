@@ -1,4 +1,4 @@
-This section defines the specific conformance requirements for onboarding a data partner to populate a data mart as specified in this MedMorph Reference Architecture (RA) Implementation Guide (IG).
+This section defines the specific conformance requirements for onboarding a data partner to populate a Data Mart as specified in this MedMorph Reference Architecture (RA) Implementation Guide (IG).
 
 
 ### Data Source Requirements
@@ -9,7 +9,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * The Data Source system SHALL support all resource types available in the Data Source related to Patient compartment for the [base]/Group/[id]/$export?_type parameter.
 
-* The Data Source system SHALL support the Bulk Data Request Flow as defined in the [Bulk Data Access IG specification]({{site.data.fhir.bulkig}}/index.html)
+* The Data Source system SHALL support the Bulk Data Request Flow as defined in the [Bulk Data Access IG specification.]({{site.data.fhir.bulkig}}/index.html)
 
 * The Data Source system MAY support the Bulk Data Delete Request as defined in the Bulk Data Access IG specification.
 
@@ -17,7 +17,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * The Data Source system SHALL set the requireAccessToken to true within the Bulk Data Status Request response body as defined in the Bulk Data Access IG specification.
 
-* The Data Source system SHALL require HDEA to provide valid access token to export the data.
+* The Data Source system SHALL require the HDEA to provide valid access token to export the data.
 
 * When the HDEA does not have appropriate authorization to the data requested, the Data Source system SHALL return OperationOutcome with appropriate error message.
 
@@ -34,12 +34,12 @@ Note: The Group Resource creation process depends on the health care organizatio
 
 #### Consent Management  
 
-Health care organizations are responsible for collecting patient Consent before sharing the patient data for research. Each health care organization follows applicable laws and their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an Data Source or an external system. As part of the MedMorph RA IG development, Consent Management is not in-scope due to the above variations and the current lack of standardization.
+Health care organizations are responsible for collecting patient consent before sharing the patient data for research. Each health care organization follows applicable laws and their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an Data Source or an external system. As part of the MedMorph RA IG development, Consent Management is not in-scope due to the above variations and the current lack of standardization.
 
 
 #### Validating Consent Before Disclosing Data
 
-Disclosing identifiable data for research requires explicit patient consent. When the HDEA requests the Data Source to export all the data for one or more patients, the Data Sources FHIR Authorization Server must validate the consent before sharing data for research. The process of enforcement of Consent varies by health care organization. MedMorph does not prescribe any standard mechanism to enforce Consent but assumes that the Data Source Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented to share their data.
+Disclosing identifiable data for research requires explicit patient consent. When the HDEA requests the Data Source to export all the data for one or more patients, the Data Sources FHIR Authorization Server must validate the consent before sharing data for research. The process of enforcement of consent varies by health care organization. MedMorph does not prescribe any standard mechanism to enforce consent but assumes that the Data Source Authorization Server will allow the [base]/Group/[id]/$export to continue if all the patients in the Group have consented to share their data.
 
 
 #### Data Source APIs and Profiles to be Supported
@@ -68,7 +68,7 @@ All US Core profiles must be supported by the Data Source and data exported have
 
 * The HDEA SHALL apply translations to the data as needed using the Trust Service Provider when specified by the Knowledge Artifact. 
 
-* The HDEA SHOULD leverage FHIR to research data model mappings in the Common Data Models Harmonization (CDMH) IG to identify the FHIR resources and APIs required to populate the Data Marts.
+* The HDEA SHOULD leverage FHIR to research data model mappings in the [CDMH IG](http://hl7.org/fhir/us/cdmh/index.html) to identify the FHIR resources and APIs required to populate the Data Marts.
 
 
 ### Data Mart Requirements
@@ -96,7 +96,7 @@ The Trust Service Provider supports services required for the various research u
 
 ### Sufficiency of US Core Data Elements
 
-US Core profiles contain data elements identified in the US regulations with a few additions that have been agreed upon by the Data Source vendors as the most important data elements for payment, treatment and operations. However the research data models are richer in nature and contain significantly more data elements not present in the US Core profiles. 
-Acknowledging this fact, the MedMorph RA IG is prescribing US Core as starting point to build the framework. Content IG developers SHOULD leverage CDMH IG to populate the data elements required for common research data models.
+US Core profiles contain data elements identified in US regulations with a few additions agreed upon by the Data Source vendors. These additions are identified as the most important data elements for payment, treatment, and operations. However, the research data models are richer in nature and contain significantly more data elements, many of which are not present in the US Core profiles. 
+Acknowledging this fact, the MedMorph RA IG is prescribing US Core as starting point. Content IG developers SHOULD leverage CDMH IG to populate the data elements required for common research data models.
 
  
