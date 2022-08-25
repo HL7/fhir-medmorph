@@ -77,7 +77,7 @@ Data Receivers such as PHAs or ROs who receive the data are the actors who creat
 
 * Producers of Knowledge Artifacts using Expressions of type text/cql SHALL include the CQL library reference in the PlanDefinition.library element.
 
-* Producers of Knowledge Artifacts SHALL represent the Data Receiver's endpoint where data has to be submitted in the PlanDefinition.ext-receiverAddress extension.
+* Producers of Knowledge Artifacts SHALL represent the Data Receiver's endpoint where data has to be submitted in the PlanDefinition.ext-receiverEndpoint extension.
 
 * Producers of Knowledge Artifacts SHALL indicate the input data requirements for a specific action in PlanDefinition.action.input element.
 

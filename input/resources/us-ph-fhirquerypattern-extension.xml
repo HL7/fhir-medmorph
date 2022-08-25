@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="us-ph-fhirquerypattern-extension"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-11-17T04:21:04.772+00:00"/>
-        <source value="#Headmg6LqF2safeP"/>
+        <versionId value="2"/>
+        <lastUpdated value="2022-07-12T02:02:58.143+00:00"/>
+        <source value="#YngChiu9nzzvgigf"/>
     </meta>
     <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"/>
     <version value="0.2.0"/>
@@ -29,7 +29,11 @@
     <abstract value="false"/>
     <context>
         <type value="fhirpath"/>
-        <expression value="PlanDefinition.repeat(action).input"/>
+        <expression value="PlanDefinition.action.input"/>
+    </context>
+    <context>
+        <type value="fhirpath"/>
+        <expression value="PlanDefinition.action.action.input"/>
     </context>
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>

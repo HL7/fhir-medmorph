@@ -7,31 +7,15 @@
         <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
         <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
     </meta>
-    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-receiverEndpoint">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint">
                 <valueReference>
                     <reference value="Endpoint/example-ph-endpoint"/>
                 </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-authorSignature">
-                <valueSignature>
-                    <type> 
-                      <system value="urn:iso-astm:E1762-95:2013"/> 
-                      <code value="1.2.840.10065.1.12.1.5"/> 
-                      <display value="Verification Signature"/> 
-                    </type> 
-                    <when value="2015-08-27T08:39:24+10:00"/> 
-                    <who> 
-                      <reference value="Organization/example-pha-org"/> 
-                    </who>   
-                    <targetFormat value="application/fhir+xml"/> 
-                    <sigFormat value="application/signature+xml"/> 
-                    <data value="Li4u"/>
-                </valueSignature>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-asyncIndicator">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-async-indicator">
                 <valueBoolean value="true"/>
     </extension>
-    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-expectedResponseTime">
+    <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-expected-responsetime">
                 <valueDuration>
                     <value value="1"/>
                     <system value="http://unitsofmeasure.org"/>
@@ -73,7 +57,7 @@
             </coding>
         </code>
         <trigger>
-            <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-us-ph-namedEventType">
+            <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype">
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
@@ -90,7 +74,7 @@
         </input>
         <input>
             <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
-                <valueString value="/Encounter?patient={context.patientId}"/>
+                <valueString value="/Encounter?patient={{context.patientId}}"/>
             </extension>
             <type value="Encounter"/>
         </input>
