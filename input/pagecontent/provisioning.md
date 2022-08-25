@@ -69,7 +69,9 @@ Data Receivers such as PHAs or ROs who receive the data are the actors who creat
 
 * MedMorph workflow actions are essentially activities that get executed to accomplish a specific task. Knowledge Artifact producers SHALL  select specific actions from the [Plan Definition Action Valueset](ValueSet-us-ph-plandefinition-action.html). In case the required action is not available in the value set, the value set MAY be extended in the Content IGs.
 
-* Producers of Knowledge Artifacts SHALL use Expressions of type text/fhirpath or text/cql or text/cql.identifier for defining Knowledge Artifacts.  
+* Producers of Knowledge Artifacts SHALL use Expressions of type text/fhirpath.
+
+* Producers of Knowledge Artifacts MAY use alternative expression of text/cql or text/cql.identifier for defining Knowledge Artifacts.  
 
 * MedMorph Conditions SHALL always be of kind "applicability" and are specified in PlanDefinition.Condition.kind element.
 

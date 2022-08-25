@@ -194,7 +194,7 @@
             <path value="PlanDefinition.action.condition.expression.language"/>
             <min value="1"/>
             <max value="1"/>
-            <fixedCode value="text/cql | text/fhirpath"/>
+            <fixedCode value="text/fhirpath"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action.input">

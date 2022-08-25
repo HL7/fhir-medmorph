@@ -88,9 +88,6 @@
             </offsetDuration>
         </relatedAction>
     </action>
-    <action id="check-trigger-codes">
-        <description value="This action represents the execution of the checking trigger codes in the  workflow."/>
-        <textEquivalent value="Check Trigger Codes"/>
         <action>
             <code>
                 <coding>
@@ -115,7 +112,6 @@
                 <relationship value="before-start"/>
             </relatedAction>
         </action>
-    </action>
     <action id="create-report">
         <description value="This action represents the creation of a cancer report."/>
         <textEquivalent value="Create Report"/>

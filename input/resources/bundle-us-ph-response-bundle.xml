@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="us-ph-response-bundle"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-08-13T05:43:12.456+00:00"/>
+        <source value="#op9qv8RqccCL7zOB"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-response-bundle"/>
+    <version value="0.1.0"/>
+    <name value="USPublicHealthResponseBundle"/>
+    <title value="US Public Health Response Bundle"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-09-01"/>
+    <publisher value="HL7 International - Public Health Work Group"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="Bundle Resource profile for exchanging a public health response to be submitted from a Data Receiver to a Data Source."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Bundle">
+            <path value="Bundle"/>
+            <short value="US Public Health Response Bundle"/>
+            <definition value="Sets expectations for supported capabilities for Bundles used for sending responses from Data Receivers to Data Sources."/>
+        </element>
+        <element id="Bundle.type">
+            <path value="Bundle.type"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <fixedCode value="message"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.timestamp">
+            <path value="Bundle.timestamp"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resource"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:sliceMessageHeader">
+            <path value="Bundle.entry"/>
+            <sliceName value="sliceMessageHeader"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:sliceMessageHeader.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:contentBundle">
+            <path value="Bundle.entry"/>
+            <sliceName value="contentBundle"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:contentBundle.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:documentReference">
+            <path value="Bundle.entry"/>
+            <sliceName value="documentReference"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:documentReference.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

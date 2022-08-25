@@ -26,11 +26,19 @@
             <p>Reporting Data</p> 
           </div> 
         </text> 
-        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-dataEncrypted">
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension">
                       <valueBoolean value="false"/>
         </extension>
-        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-messageProcessingCategory">
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-message-processing-category-extension">
                       <valueCode value="consequence"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type">
+                      <valueCodeableConcept>
+                      <coding> 
+           					 <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/> 
+            					<code value="subscription-notification"/> 
+         				 </coding> 
+                      </valueCodeableConcept>
         </extension>
         <eventCoding> 
           <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/> 

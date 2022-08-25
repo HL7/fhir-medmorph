@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-ph-report-initiation-type-valueset"/>
+  <url value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-report-initiation-type-valueset"/>
+  <version value="1.0.0"/>
+  <name value="USPublicHealthReportInitiationType"/>
+  <title value="US Public Health Report Initiation Type"/>
+  <status value="active"/>
+  <date value="2020-09-06"/>
+  <publisher value="HL7 Public Health WG"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="The US Public Health Message Types Value Set is a &#39;starter set&#39; of codes to indicate how the messages were initiated within the health care organization."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/>
+    </include>
+  </compose>
+</ValueSet>
+
