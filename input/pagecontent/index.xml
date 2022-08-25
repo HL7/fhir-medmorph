@@ -5,8 +5,7 @@
 	<p>
     The Making Electronic Data More Available for Research and Public Health (MedMorph) project seeks to use 
     emerging health data and exchange standards, namely Health Level 7 (HL7®) Fast Healthcare Interoperability 
-    Resources (FHIR®), to develop and implement an interoperable solution to 
-    enable access to clinical data. The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) 
+    Resources (FHIR®), to develop and implement an interoperable solution to enable access to clinical data. The MedMorph project fits within the Centers for Disease Control and Prevention (CDC) 
     strategic imperative of transforming how data are collected, used, and shared through modern Information Technology (IT) 
     capabilities to save lives and improve health. The initial phase of the MedMorph project was funded by the Health and Human Services (HHS) 
     Assistant Secretary for Planning and Evaluation (ASPE) Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by 
@@ -29,8 +28,7 @@
     supporting standardized data exchange for public health research. 
     These representative use cases informed the design of a scalable and extensible reference architecture to facilitate 
     interoperable data exchange for a variety of research and public health use cases. 
-    For more detailed explanation on the reference architecture refer to next paragraph and the Implementation Guide 
-    Overview section.<a href="background.html">Implementation Guide Overview</a> section.
+    For more detailed explanation on the reference architecture refer to next paragraph and the <a href="background.html">Implementation Guide Overview</a> section.
     </p>
 	
 	
@@ -46,7 +44,7 @@
 	actors whose specific requirements would be detailed in the content IGs.
 	</p>
 	<p>
-	<b>NOTE:</b> Implementers of the MedMorph RA IG have to use one or more Content IGs to operationalize the framework as this IG provides only the 
+	<b>NOTE:</b> Implementers of the MedMorph RA IG have to use one or more content IGs to operationalize the framework as this IG provides only the 
 	framework and does not provide all the necessary content profiles that will be required to implement a use case.  
 	</p>
 	<p>Examples of Content IGs include <a href="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/">Central Cancer Registry Reporting IG</a> and <a href="http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/">Health Care Survey Reporting IG</a> 
@@ -86,7 +84,7 @@
       <a href="artifacts.html">FHIR Profiles, Extensions and Capability Statements</a> - defines specific profiles used by the IG, extensions, CapabilityStatements and examples for the IG. 
     </li>
     <li>
-      <a href="contentig.html">Content IG creation Guidance</a> - provides detailed guidance to content IG creators on how to leverage the MedMorph architecture and create a use case specific content IG. 
+      <a href="contentig.html">Content IG Guidance</a> - provides detailed guidance to content IG creators on how to leverage the MedMorph architecture and create a use case specific content IG. 
     </li>
     <li>
       <a href="downloads.html">Useful Downloads</a> - provides the ability to download a copy of the entire implementation guide, artifact definitions, or examples.
