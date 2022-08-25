@@ -3,7 +3,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 ### Data Source Requirements
 
-* The Data Source system SHALL support the [base]/Group/[id]/$export operation for exporting data for one or more patients.
+* The Data Source (e.g., EHR) system SHALL support the [base]/Group/[id]/$export operation for exporting data for one or more patients.
 
 * The Data Source system SHALL support search of Group resources using identifier and name.
 
@@ -17,7 +17,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * The Data Source system SHALL set the requireAccessToken to true within the Bulk Data Status Request response body as defined in the Bulk Data Access IG specification.
 
-* The Data Source system SHALL require the HDEA to provide valid access token to export the data.
+* The Data Source system SHALL require the Health Data Exchange App (HDEA) to provide valid access token to export the data.
 
 * When the HDEA does not have appropriate authorization to the data requested, the Data Source system SHALL return OperationOutcome with appropriate error message.
 
@@ -34,7 +34,7 @@ Note: The Group Resource creation process depends on the health care organizatio
 
 #### Consent Management  
 
-Health care organizations are responsible for collecting patient consent before sharing the patient data for research. Each health care organization follows applicable laws and their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could just be a signed PDF document. Consent also may be stored as part of an Data Source or an external system. As part of the MedMorph RA IG development, Consent Management is not in-scope due to the above variations and the current lack of standardization.
+Health care organizations are responsible for collecting patient consent before sharing the patient data for research. Each health care organization follows applicable laws and their own policies and processes to obtain consent. Consent obtained may be represented using electronic and structured data or could be a signed PDF document. Consent also may be stored as part of a Data Source or an external system. As part of the MedMorph RA IG development, Consent Management is not in-scope due to the above variations and the current lack of standardization.
 
 
 #### Validating Consent Before Disclosing Data
@@ -68,12 +68,12 @@ All US Core profiles must be supported by the Data Source and data exported have
 
 * The HDEA SHALL apply translations to the data as needed using the Trust Service Provider when specified by the Knowledge Artifact. 
 
-* The HDEA SHOULD leverage FHIR to research data model mappings in the [CDMH IG](http://hl7.org/fhir/us/cdmh/index.html) to identify the FHIR resources and APIs required to populate the Data Marts.
+* The HDEA SHOULD leverage FHIR to research data model mappings in the [Common Data Models Harmonization (CDMH) IG](http://hl7.org/fhir/us/cdmh/index.html) to identify the FHIR resources and APIs required to populate the Data Marts.
 
 
 ### Data Mart Requirements
 
-Data Marts store the extracted data from the Data Source using different data models and technologies. Once the data is extracted from the Data Sources the HDEA could automatically populate the Data Mart if it supports FHIR APIs. Currently most Data Marts do not support FHIR. Standardizing the ability to populate a Data Mart using FHIR APIs will be desirable to enable efficient data partner onboarding and data mart population. 
+Data Marts store the extracted data from the Data Source using different data models and technologies. Once the data is extracted from the Data Sources the HDEA could automatically populate the Data Mart if it supports FHIR APIs. Currently most Data Marts do not support FHIR. Standardizing the ability to populate a Data Mart using FHIR APIs is desirable to enable efficient data partner onboarding and data mart population. 
 
 * Data Marts SHOULD support POST FHIR APIs for each of the US Core resource profiles so that the HDEA can populate the Data Mart.
 
