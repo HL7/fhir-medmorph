@@ -1,4 +1,4 @@
-This section provides guidance to content implementation guide authors on how to leverage the MedMorph Reference Architecture (RA) and create a Content Implementation Guide (IG).
+This section provides guidance to content implementation guide authors on how to leverage the MedMorph Reference Architecture (RA) and create a content implementation guide (IG).
 
 ***NOTE: This section is only included in this IG as guidance to inform content IG authors.***
 
@@ -25,11 +25,11 @@ The table below identifies the necessary sections of a content IG. In addition t
   <tbody>
   <tr>
     <td>Introduction</td>
-	<td>This section provide an introduction and background on the specific use case for which the Content IG is being created.</td>
+	<td>This section provides an introduction and background on the specific use case for which the content IG is being created.</td>
   </tr>
   <tr>
     <td>Use Cases and Workflows</td>
-	<td>This section  describes the use cases, user stories, and workflows associated with the use case and/or the reporting program. This section should include identifying the MedMorph Reference Architecture  actors and systems  needed for the workflow. If any new actors or systems are identified for the use case, they must be defined in this section along with their roles and interactions with the MedMorph Reference Architecture actors and systems. Any requirements that depend on previous state, current state, and cached state should be captured as part of the use case to inform the processing and capabilities required for each actor.</td>
+	<td>This section describes the use cases, user stories, and workflows associated with the use case and/or the reporting program. This section should include identifying the MedMorph RA actors and systems needed for the workflow. If any new actors or systems are identified for the use case, they must be defined in this section along with their roles and interactions with the MedMorph RA actors and systems. Any requirements that depend on previous state, current state, and cached state should be captured as part of the use case to inform the processing and capabilities required for each actor.</td>
   </tr>
   <tr>
     <td>Data Source (e.g EHR) Requirements</td>
@@ -37,7 +37,7 @@ The table below identifies the necessary sections of a content IG. In addition t
   </tr>
   <tr>
     <td>Data Receiver Requirements</td>
-	<td>This section outlines the specific requirements for submission to the data receiver (e.g., PHAs, ROs, TTPs). This section should delineate the APIs, processing of the data, content necessary for submission, and support for synchronous vs. asynchronous responses. Additionally, this section should include the expected responses from the data receiver and how these responses should be consumed by the healthcare organization.  Lastly, the security requirements for interaction with the data receiver must be specified in this section.</td>
+	<td>This section outlines the specific requirements for submission to the Data Receiver (e.g., PHAs, ROs, TTPs). This section should delineate the APIs, processing of the data, content necessary for submission, and support for synchronous vs. asynchronous responses. Additionally, this section should include the expected responses from the Data Receiver and how these responses should be consumed by the healthcare organization.  Lastly, the security requirements for interaction with the Data Receiver must be specified in this section.</td>
   </tr>
   <tr>
     <td>Knowledge Artifact Requirements</td>
@@ -49,7 +49,7 @@ The table below identifies the necessary sections of a content IG. In addition t
   </tr>
   <tr>
     <td>FHIR Artifacts</td>
-	<td>This section provides the following FHIR Artifacts for the Content IG. 
+	<td>This section provides the following FHIR Artifacts for the content IG. 
 	<ul>
 	<li>Profiles</li>
 	<li>Capability Statements</li>
@@ -68,18 +68,18 @@ In this section, the authors must reference the actors and systems specified by 
  
 The section should contain the following sub-sections:
 
-* **Business Objectives** being met by the Content IG
-* **User Story(ies)** the Content IG is addressing.
+* **Business Objectives** being met by the content IG
+* **User Story(ies)** the content IG is addressing.
 * Identification and/or definition of the Actors and Systems based on the user story(ies)
 * Documentation of the Main Flow and significant Exception Flows of the use case using the identified actors and systems. (e.g., a business process model [BPM] type of diagram).
 * Identification of any interactions between actors and systems that are not part of the MedMorph RA IG.
 
 
-### Capturing Data Source (e.g EHR) Requirements in a Content IG
+### Capturing Data Source (e.g., EHR) Requirements in a Content IG
 
 * •	In this section, the data requirements for the use case should be identified in detail. The requirements can be captured in a spreadsheet and linked from this section.
 
-For example, the level of detail that should be documented in this section of the Central Cancer Registry Reporting content IG includes requirements the cancer reporting use case needs to capture Condition data, including but not limited to the relevant ICD10/SNOMED codes, the status of the condition (e.g., active, resolved, readmission), onset data of the condition, encounter where the diagnosis was performed, etc.  Additionally, the following topics are necessary to fully specify this section of the content IG:
+For example, the level of detail that should be documented in this section of the Central Cancer Registry Reporting Content IG includes requirements the cancer reporting use case needs to capture Condition data, including but not limited to the relevant ICD10/SNOMED codes, the status of the condition (e.g., active, resolved, readmission), onset data of the condition, encounter where the diagnosis was performed, etc.  Additionally, the following topics are necessary to fully specify this section of the content IG:
 
 * The named event requirements for the use cases have to be selected from the [Named Event Value Set](ValueSet-us-ph-triggerdefinition-namedevent.html). If the events defined are not sufficient for the use case, then the authors should contact the HL7 PH WG for guidance. 
 
@@ -92,10 +92,10 @@ For example, the level of detail that should be documented in this section of th
 
 ### Capturing Data Receiver Requirements in a Content IG
 
-The data requirements relevant to the data receiver (e.g., PHA) should be documented in this section. Typically, this is a subset of all the data requirements identified in the Data Source Data Requirements section
-The data submission requirements must be documented in this section. This includes any timing constraints on when the data must be submitted any periodic data submission requirements, and the content of the Report that is generated and sent to the data receiver.
+The data requirements relevant to the Data Receiver (e.g., PHA) should be documented in this section. Typically, this is a subset of all the data requirements identified in the Data Source Data Requirements section
+The data submission requirements must be documented in this section. This includes any timing constraints on when the data must be submitted any periodic data submission requirements, and the content of the report that is generated and sent to the Data Receiver.
 
-* The Data Receiver responses to the submission must be outlined. This includes documenting the  main workflow, success paths, exception paths, and the data that will be included.
+* The Data Receiver responses to the submission must be outlined. This includes documenting the main workflow, success paths, exception paths, and the data that will be included.
 
 * Additionally, this section should identify if the interactions are synchronous and/or asynchronous and document any routing and validation requirements.
 
