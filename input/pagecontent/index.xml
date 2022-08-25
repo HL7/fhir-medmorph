@@ -49,7 +49,7 @@
 	</p>
 	<p>Examples of Content IGs include <a href="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/">Central Cancer Registry Reporting IG</a> and <a href="http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/">Health Care Survey Reporting IG</a> 
 	and <a href="http://hl7.org/fhir/us/medmorph-research-dex/2022Jan/">Research Data Exchange IG.</a>
-	The relationship between these IGs are further explained in the <a href="background.html#ig-types-and-their-relationships">IG Types and their Relationships section</a> section.
+	The relationship between these IGs is further explained in the <a href="background.html#ig-types-and-their-relationships">IG Types and their Relationships section</a> section.
 	An overview of this MedMorph RA IG actors, systems and interactions are explained further in the <a href="usecases.html#medmorph-actors-and-definitions"><b>MedMorph Actors and Systems</b></a> section and a thumbnail is provided below for reference.
 	</p>
 	
