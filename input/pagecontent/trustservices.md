@@ -10,7 +10,7 @@ The next section identifies specific requirements for a Trust Service Provider:
 
 * Trust Service Providers SHALL allow re-identification of bundles that were previously de-identified.
 
-* Trust Service Providers SHOULD implement  algorithms specified by the Content IGs for the different use cases. Trust Service Provider MAY  choose their own anonymization, de-identification, re-identification, and pseudonymization algorithms in case none are specified in the Content IGs.
+* Trust Service Providers SHOULD implement  algorithms specified by the content IGs for the different use cases. Trust Service Provider MAY  choose their own anonymization, de-identification, re-identification, hashing and pseudonymization algorithms in case none are specified in the content IGs.
 
 * Content IGs will identify specific data elements within resources that need to be processed by Trust Services based on the use case.
 
