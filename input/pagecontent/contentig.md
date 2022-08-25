@@ -1,4 +1,4 @@
-This section provides guidance to content implementation guide authors on how to leverage the MedMorph Reference Architecture (RA) and create a content implementation guide (IG).
+This section provides guidance to content implementation guide authors on how to leverage the MedMorph Reference Architecture (RA) to create a content implementation guide (IG).
 
 ***NOTE: This section is only included in this IG as guidance to inform content IG authors.***
 
@@ -32,12 +32,12 @@ The table below identifies the necessary sections of a content IG. In addition t
 	<td>This section describes the use cases, user stories, and workflows associated with the use case and/or the reporting program. This section should include identifying the MedMorph RA actors and systems needed for the workflow. If any new actors or systems are identified for the use case, they must be defined in this section along with their roles and interactions with the MedMorph RA actors and systems. Any requirements that depend on previous state, current state, and cached state should be captured as part of the use case to inform the processing and capabilities required for each actor.</td>
   </tr>
   <tr>
-    <td>Data Source (e.g EHR) Requirements</td>
+    <td>Data Source (e.g., EHR) Requirements</td>
 	<td>This section outlines the specific data elements necessary for the use case that must also be supported by Data Sources. These data elements include subscription events, notifications, and mapping to FHIR Resources. This section should also define the necessary FHIR APIs that the Data Sources must support and the security requirements for interaction with the Data Source if different from the MedMorph RA IG.</td>
   </tr>
   <tr>
     <td>Data Receiver Requirements</td>
-	<td>This section outlines the specific requirements for submission to the Data Receiver (e.g., PHAs, ROs, TTPs). This section should delineate the APIs, processing of the data, content necessary for submission, and support for synchronous vs. asynchronous responses. Additionally, this section should include the expected responses from the Data Receiver and how these responses should be consumed by the healthcare organization.  Lastly, the security requirements for interaction with the Data Receiver must be specified in this section.</td>
+	<td>This section outlines the specific requirements for submission to the Data Receiver (e.g., Public Health Authority (PHA), Research Organization (RO), Trusted Third Party (TTP)). This section should delineate the APIs, processing of the data, content necessary for submission, and support for synchronous vs. asynchronous responses. Additionally, this section should include the expected responses from the Data Receiver and how these responses should be consumed by the healthcare organization.  Lastly, the security requirements for interaction with the Data Receiver must be specified in this section.</td>
   </tr>
   <tr>
     <td>Knowledge Artifact Requirements</td>
@@ -70,20 +70,20 @@ The section should contain the following sub-sections:
 
 * **Business Objectives** being met by the content IG
 * **User Story(ies)** the content IG is addressing.
-* Identification and/or definition of the Actors and Systems based on the user story(ies)
-* Documentation of the Main Flow and significant Exception Flows of the use case using the identified actors and systems. (e.g., a business process model [BPM] type of diagram).
-* Identification of any interactions between actors and systems that are not part of the MedMorph RA IG.
+* Identification and/or definition of the **Actors and Systems** based on the user story(ies).
+* Documentation of the **Main Flow** and significant **Exception Flows** of the use case using the identified actors and systems. (e.g., a business process model [BPM] type of diagram).
+* **Identification of any interactions** between actors and systems that are not part of the MedMorph RA IG.
 
 
 ### Capturing Data Source (e.g., EHR) Requirements in a Content IG
 
-* •	In this section, the data requirements for the use case should be identified in detail. The requirements can be captured in a spreadsheet and linked from this section.
+In this section, the data requirements for the use case should be identified in detail. The requirements can be captured in a spreadsheet and linked from this section.
 
 For example, the level of detail that should be documented in this section of the Central Cancer Registry Reporting Content IG includes requirements the cancer reporting use case needs to capture Condition data, including but not limited to the relevant ICD10/SNOMED codes, the status of the condition (e.g., active, resolved, readmission), onset data of the condition, encounter where the diagnosis was performed, etc.  Additionally, the following topics are necessary to fully specify this section of the content IG:
 
-* The named event requirements for the use cases have to be selected from the [Named Event Value Set](ValueSet-us-ph-triggerdefinition-namedevent.html). If the events defined are not sufficient for the use case, then the authors should contact the HL7 PH WG for guidance. 
+* The named event requirements for the use cases have to be selected from the [Named Event Value Set](ValueSet-us-ph-triggerdefinition-namedevent.html). If the events defined are not sufficient for the use case, then the authors should contact the HL7 Public Health (PH) Workgroup (WG) for guidance. 
 
-* The Subscription Topics that will be used based on the named events should be defined per the Subscription Backport IG.
+* The Subscription Topics that will be used based on the named events should be defined per the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
 
 * The specific APIs and Operations that need to be supported by the Data Sources should be identified and documented in the Capability Statement and linked from this section.
 
@@ -128,9 +128,9 @@ For each CodeSystem and ValueSet used in the IG, the source must be identified. 
 
 Ideally, creating a content IG that can leverage existing profiles from other IGs would reduce implementation burden on both Data Sources (e.g., EHRs) and Data Receivers. To achieve this goal, the following  is recommended:
 
-* From the data requirements, identify if there is a specific US Core profile that can be used.
+* From the data requirements, identify if there is a specific [US Core IG]({{site.data.fhir.uscoreR4}}/index.html) profile that can be used.
 
-* If there is not a specific US Core profile, then refer to the US Public Health (PH) Library to determine if there is a profile that can be used.
+* If there is not a specific US Core profile, then refer to the [US Public Health (PH) Library](https://build.fhir.org/ig/HL7/fhir-us-ph-common-library-ig/index.html) to determine if there is a profile that can be used.
 
 * If no profiles are found in either US Core or the US PH Library, refer to other PH initiatives (e.g., eCR, Vital Records Birth and Fetal Death Reporting) to identify if there is a profile that can be leveraged.
 
@@ -138,6 +138,6 @@ Ideally, creating a content IG that can leverage existing profiles from other IG
 
 ### Content IG Examples
 
-The content IG Examples section should have an example for each data element that is part of the IG. These examples should be validated for compliance to their specific profile using the FHIR Validator. Ideally, examples should be generated from the Connectathon testing activities.
+The content IG Examples section should have an example for each data element that is part of the IG. These examples should be validated for compliance to their specific profile using the [FHIR Validator](https://inferno.healthit.gov/validator/). Ideally, examples should be generated from the Connectathon testing activities.
 
  
