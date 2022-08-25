@@ -17,31 +17,31 @@ By leveraging FHIR-based APIs, research and public health organizations can auto
 
 This section defines the Actors and Systems that interact within the MedMorph Reference Architecture to realize the capabilities of the use cases listed above.
 
-1. __Data Source (e.g., EHR, HIE, Data Warehouse)__:  Any system that is used in a health care organization to capture, store patient data and make the data available securely with authorized users. The most widely used Data Source is the EHR system, however other systems such as data warehouses, Health Information Exchanges (HIE), or registries can also serve as Data Sources. In the MedMorph RA, FHIR APIs will be used to extract data from the data source, process, package the data as needed, and then submit the data finally to the Data Receiver (e.g., Public Health Agency (PHA) or Research Organization (RO)).
+1. __Data Source (e.g., Electronic Health Record (EHR), Health Information Exchange (HIE), Data Warehouse)__:  Any system that is used in a health care organization to capture, store patient data and make the data available securely with authorized users. The most widely used Data Source is the EHR system, however other systems such as data warehouses, HIE, or registries can also serve as Data Sources. In the MedMorph RA, FHIR APIs will be used to extract data from the data source, process, package the data as needed, and then submit the data to the Data Receiver (e.g., Public Health Agency (PHA) or Research Organization (RO)).
 
 
 2. __Provider__:  A person who delivers health care to a patient. In addition to delivering care, the provider also updates patient data and signs off on the content added, deleted, or modified in the patient record once it is updated. The provider can be the individual doctor, nurse, or a combination of different people that are part of the care team.
 
 3. __Knowledge Artifact Repository__:  Enables the full spectrum of reporting and querying for programs, studies, and initiatives by distributing metadata such as surveys, trigger codes, timing constraints, decision support artifacts, and other knowledge artifacts to:
 
-	* Identify that the criteria to trigger reporting have been met (e.g., triggering a report for a patient case or for bulk data transfer)
+	* Identify that the criteria necessary to trigger reporting have been met (e.g., triggering a report for a patient case or for bulk data transfer)
 	* Identify the timing parameters for the reporting (e.g., immediate, batched at the end of the day/week/month/quarter/etc.)
 	* Identify the data that needs to be collected for reporting 
 	* Identify the structure of the report
 	* Identify decision support rules for reporting
-	**NOTE:** Knowledge artifacts may contain PHI or PII information
+	**NOTE:** Knowledge artifacts may contain Protected Health Information (PHI) or Personally Identifiable Information (PII) information.
 
 	An example of a Knowledge Artifact Repository is the Association of Public Health Laboratories (APHL) Informatics Messaging Services (AIMS) Platform. The [AIMS Platform](https://www.aphl.org/programs/informatics/Pages/aims_platform.aspx) hosts the Electronic Reporting and Surveillance  Distribution (eRSD) Knowledge Artifact used for the eCR program.
 
-4. __Health Data Exchange App (HDEA)__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The HDEA, MedMorph’s backend services app, uses the information supplied by the knowledge artifact repository along with applicable authorities and policies to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and where the data should be reported. MedMorph's backend services app reference implementation is an example of HDEA. The term “backend service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “app” is used to indicate that it is like a SMART on FHIR App which can be distributed to clinical care via Data Source (e.g EHR) vendor-specified processes. The Data Source (e.g EHR) vendor-specified processes enable the HDEA the ability to use the Data Source's FHIR APIs to access data. The health care organization is responsible for implementing and maintaining the HDEA within the organization.
+4. __Health Data Exchange App (HDEA)__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The HDEA, MedMorph’s backend services app, uses the information supplied by the knowledge artifact repository along with applicable authorities and policies to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and where the data should be reported. The term “backend service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “app” is used to indicate that it is like a SMART on FHIR App which can be distributed to clinical care via Data Source (e.g., EHR) vendor-specified processes. The Data Source vendor-specified processes enable the HDEA the ability to use the Data Source's FHIR APIs to access data. The health care organization is responsible for implementing and maintaining the HDEA within the organization.
 
 5. __Trust Service Provider__:  Trust Service Provider affords capabilities that can be used to pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organizations. These capabilities are called Trust Services. Trust Services are used, when appropriate, by the HDEA.  
 
 6. __Trusted Third Party (TTP)__: A system at an intermediary organization that serves as a conduit to exchange data between health care organizations and a data receiving organization and may perform other intermediary functions (e.g., apply additional business logic) using appropriate authorities and policies. Examples of TTP include Health Information Exchange (HIE), Reportable Condition Knowledge Management System (RCKMS)/Association of Public Health Laboratories (APHL) Informatics Messaging Services (AIMS) Platform). For example, in the eCR use case RCKMS on the AIMS platform is playing a critical compliance role to confirm reportability (i.e., the Reportability Response) in accordance with state laws.
 
-7. __Data Receiver (e.g., PHA, RO)__: A system that receives and stores the data (e.g., Public Health Authority (PHA), Research Organization (RO). A PHA is a government or government-designated organization allowed to receive the data from provider organizations or TTPs using appropriate authorities and policies. PHA may also analyze the data and initiate responses back to health care organizations. For more detailed information on how the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule applies to Public Health, please refer to [HIPAA Rules](https://www.hhs.gov/hipaa/for-professionals/special-topics/public-health/index.html). A RO is an organization that can access the data from clinical care or data marts for research purposes with appropriate data use agreements, authorities, and policies
+7. __Data Receiver (e.g., PHA, RO)__: A system that receives and stores the data. A PHA is a government or government-designated organization allowed to receive the data from provider organizations or TTPs using appropriate authorities and policies. PHA may also analyze the data and initiate responses back to health care organizations. For more detailed information on how the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule applies to Public Health, please refer to [HIPAA Rules](https://www.hhs.gov/hipaa/for-professionals/special-topics/public-health/index.html). A RO is an organization that can access the data from clinical care or data marts for research purposes with appropriate data use agreements, authorities, and policies
 
-8. __Data Mart also known as Data Repository__: A system receiving the data from the clinical care system. A Data Mart / Data Repository is used to represent systems such as cancer registries, National Health Care Survey data stores, surveillance systems, electronic vital records systems, or research databases. Data Marts are actively managed and are used to receive data, store data, and perform analysis as appropriate. These data marts can be operated or accessed with appropriate authorities and policies (e.g., by Public Health Authority or their designated organizations such as trusted third parties, health care organizations, research organizations)
+8. __Data Mart also known as Data Repository__: A system receiving the data from the clinical care system. A Data Mart / Data Repository is used to represent systems such as cancer registries, National Health Care Survey data stores, surveillance systems, electronic vital records systems, or research databases. Data Marts are actively managed and are used to receive data, store data, and perform analysis as appropriate. These data marts can be operated or accessed with appropriate authorities and policies (e.g., by a PHA or their designated organizations such as trusted third parties, health care organizations, research organizations)
 
 	A **Local Data Mart** is hosted by the health care organization itself and may be used to support research use cases, reporting use cases, and other analytic capabilities.
 	
@@ -104,7 +104,7 @@ NOTE: No additional data entry is required by the provider to enable MedMorph RA
 
 Note: The response may have to be re-identified in some scenarios using Trust Service Provider before it is written back to the Data Source.
 
-The next few sections considers subsets of the above the interactions for ease of understanding and documenting detailed interactions using applicable FHIR mechanisms. 
+The next few sections details the subsets of the above interactions for ease of understanding and documenting detailed interactions using applicable FHIR mechanisms. 
 
 
 ### MedMorph Workflows
@@ -126,12 +126,11 @@ The descriptions for each step in the above diagram are described below:
 
 * Step P2: The HDEA queries the Knowledge Artifact Repository for the appropriate artifact. 
 
-Note: Step P2 could be a result of a out of band notification (e.g., email/sms) that something has changed or it could be a response to a subscription notification.
+Note: Step P2 could be a result of an out of band notification (e.g., email/sms) that something has changed, or it could be a response to a subscription notification.
 
 * Step P3: The HDEA receives the knowledge artifact in response to the query in Step P2.
 
-* Step P4: The HDEA subscribes to topics in the Data Source based on the metadata received in Step P3 for reporting. 
-. 
+* Step P4: The HDEA subscribes to topics in the Data Source based on the metadata received in Step P3 for reporting.
 
 <br>
 
