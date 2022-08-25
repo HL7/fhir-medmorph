@@ -41,7 +41,7 @@ The following definition of MUST SUPPORT is to be used in the implementation of 
 #### Profiles
 This specification makes use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph workflows. The IG is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are used as part of each interaction.
 
-The full set of profiles defined in this implementation guide can be found on the [FHIR Artifacts](artifacts.html) page.
+The full set of profiles defined in this IG can be found on the [FHIR Artifacts](artifacts.html) page.
 
 
 #### Authentication and Authorization Requirements
@@ -54,18 +54,18 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * When MedMorph System Actors act as clients, they **SHOULD** share their JSON Web Key Set (JWKS) with the server System Actors using Uniform Resource Locators (URLs) as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
-* All MedMorph System Actors **SHOULD** support the system/*.read scope to faciliate the MedMorph RA IG workflows.
+* All MedMorph System Actors **SHOULD** support the system/*.read scope to facilitate the MedMorph RA IG workflows.
 
 * Client System Actors **SHALL** obtain the access token as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
 * Server System Actors **SHALL** process and validate incoming requests for resources as defined in the [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.
 
-* Content IGs SHALL specify granular scopes required for authorization based on use case requirements using [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html)
+* Content IGs SHALL specify granular scopes required for authorization based on use case requirements using [SMART on FHIR - Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html).
 
 
 #### MedMorph Actors, Requirements and Capability Statements
 
-This MedMorph RA IG defines common requirements and generalized capability statements using the MedMorph workflows. Implementers are advised to review the requirements below along with Content IG requirements before implementing the corresponding actor.
+This MedMorph RA IG defines common requirements and generalized capability statements using the MedMorph workflows. Implementers are advised to review the requirements below along with content IG requirements before implementing the corresponding actor.
 
 **NOTE**: Content IGs **SHALL** define conformance requirements applicable to each actor based on the use case and **SHOULD** reuse the MedMorph RA IG common requirements from below.     
 
