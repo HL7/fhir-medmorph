@@ -35,71 +35,6 @@
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
       <p>In addition the Trust Service Provider needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
-      <h3>Resource summary</h3>
-      <div class="table-wrapper">
-        <table class="grid">
-          <thead>
-            <tr>
-              <th>Resource</th>
-              <th>Search</th>
-              <th>Read</th>
-              <th>Read Version</th>
-              <th>Instance History</th>
-              <th>Resource History</th>
-              <th>Create</th>
-              <th>Update</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-           <tr>
-              <th>Reporting Bundle (<a href="StructureDefinition-us-ph-reporting-bundle.html">Profile</a>)</th>
-              <td>
-             
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific Reporting Bundle Resource instance " href="#ReportingBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            <tr>
-              <th>Content Bundle (<a href="StructureDefinition-us-ph-content-bundle.html">Profile</a>)</th>
-              <td>
-             
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific content Bundle Resource instance " href="#ContentBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
      
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the Trust Service Provider.</p>
@@ -117,65 +52,11 @@
         <li>
           <a href="OperationDefinition-Bundle-re-identify.html">Bundle re-identify</a>
         </li>
+        <li>
+          <a href="OperationDefinition-Bundle-hash.html">Bundle hash</a>
+        </li>
       </ul>
       <br/>
-      <br/>
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ReportingBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ReportingBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/> 
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ContentBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ContentBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
       <br/>                
     </div>
   </text>
@@ -201,18 +82,7 @@
     <documentation value="The focus of the Trust Service Provider is to provide trust services which include Pseudonymization, Anonymization, De-identification and Re-identification. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
-    </security>
-    <resource>
-      <type value="Bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
-      </interaction>
+    </security> 
       <operation>
         <name value="pseudonymize"/> 
         <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-pseudonymize"/>
@@ -229,6 +99,9 @@
         <name value="re-identify"/> 
         <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-re-identify"/>
       </operation>
-    </resource>
+      <operation>
+        <name value="hash"/> 
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-hash"/>
+      </operation>
   </rest>
 </CapabilityStatement>

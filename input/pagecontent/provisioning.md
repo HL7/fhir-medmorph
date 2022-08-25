@@ -83,6 +83,10 @@ Data Receivers such as PHAs or ROs who receive the data are the actors who creat
 
 * Producers of Knowledge Artifacts SHALL indicate the input data requirements for a specific action in PlanDefinition.action.input element.
 
+* Producers of Knowledge Artifacts SHOULD define the queries to be used to extract the data from the Data Source using the PlanDefinition.action.input.defaultQuery extension element. 
+
+* Producers of Knowledge Artifacts SHOULD use the PlanDefinition.action.input.relatedDataId extension to reuse data across actions and avoid the same query being executed on the Data Source multiple times.
+
 * Producers of Knowledge Artifacts SHALL indicate the output data requirements for a specific action in PlanDefinition.action.output element.
 
 * Producers of Knowledge Artifacts SHALL include the sub-steps for an action in PlanDefinition.action.action element.

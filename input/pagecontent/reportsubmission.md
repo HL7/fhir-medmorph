@@ -18,8 +18,6 @@ Reports created by the HDEA contain all the resource instances (data) necessary 
 
 * The HDEA SHALL populate the sender's FHIR endpoint in the MessageHeader.source.endpoint element.
 
-* The HDEA SHALL populate the Bundle.identifier element as the persistent business identifier for correlating responses. 
-
 * The HDEA SHALL populate the Bundle.timestamp element with the bundle creation time. 
 
 * The HDEA SHALL encrypt the bundle created based on the PlanDefinition.action requirements. All Resource entries within the Bundle except the MessageHeader resource SHALL be encrypted when specified as part of the actions required in the PlanDefinition. 

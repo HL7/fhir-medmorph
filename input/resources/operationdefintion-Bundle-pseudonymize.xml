@@ -29,6 +29,14 @@
     <type value="Bundle"/>
   </parameter>
   <parameter>
+    <name value="context"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A context value for the operation. This could be used for providing salt values, program names etc. "/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
     <name value="return"/>
     <use value="out"/>
     <min value="0"/>

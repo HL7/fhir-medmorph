@@ -19,7 +19,7 @@
   <valueSet value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-plandefinition-action"/>
   <hierarchyMeaning value="grouped-by"/>
   <content value="complete"/>
-  <count value="11"/>
+  <count value="19"/>
   <concept>
         <code value="initiate-reporting-workflow"/>
         <display value="Initiate a reporting workflow"/>
@@ -91,8 +91,13 @@
         </concept>
         <concept>
             <code value="extract-research-data"/>
-            <display value="Extract data from an EHR for one or more patients."/>
-            <definition value="Extract data from an EHR for one or more patients for research purposes."/>
+            <display value="Extract data from a Data Source for one or more patients."/>
+            <definition value="Extract data from a Data Source for one or more patients for research purposes."/>
+        </concept>
+        <concept>
+            <code value="load-research-data"/>
+            <display value="Load extracted data from a Data Source to a data mart."/>
+            <definition value="Extracted data from a Data Source for one or more patients for research purposes."/>
         </concept>
     </concept>
     <concept>

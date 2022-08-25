@@ -23,7 +23,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * The Data Source system SHALL support the [US Core profiles]({{site.data.fhir.uscoreR4}}/index.html) to export the content for each patient.
 
-* The Data Source system SHALL support ```system/*.read and patient/*.read`` scopes to access data for multiple patients.
+* The Data Source system SHALL support ```system/*.read`` scope to access data for multiple patients.
 
 #### Creation of Group Resource 
 

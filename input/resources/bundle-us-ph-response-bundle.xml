@@ -58,6 +58,8 @@
         </element>
         <element id="Bundle.entry">
             <path value="Bundle.entry"/>
+            <min value="2"/>
+            <max value="*"/>
             <slicing>
                 <discriminator>
                     <type value="profile"/>

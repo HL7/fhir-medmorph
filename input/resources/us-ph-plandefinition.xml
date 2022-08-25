@@ -243,6 +243,12 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
+        <element id="PlanDefinition.action.output.profile">
+            <path value="PlanDefinition.action.output.profile"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="PlanDefinition.action.relatedAction">
             <path value="PlanDefinition.action.relatedAction"/>
             <min value="0"/>

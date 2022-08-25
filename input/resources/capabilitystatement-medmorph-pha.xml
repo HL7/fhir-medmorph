@@ -72,63 +72,6 @@
               </td>
               <td/>
             </tr>
-            <tr>
-              <th>Bundle (<a href="StructureDefinition-us-ph-reporting-bundle.html">Profile</a>)</th>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>              
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-                <a title="Allows creation of a specific Reporting Bundle Resource instance" href="#ReportingBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            <tr>
-              <th>Bundle (<a href="StructureDefinition-us-ph-content-bundle.html">Profile</a>)</th>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>              
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-                <a title="Allows creation of a specific Content Bundle Resource instance" href="#ContentBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            <tr>
-              <th>Bundle (<a href="StructureDefinition-us-ph-messageheader.html">Profile</a>)</th>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>              
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-                <a title="Allows creation of a specific MessageHeader Resource instance" href="#MessageHeader-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -254,94 +197,7 @@
         </table>
       </div>    
       <br/>
-      <br/> 
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ReportingBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ReportingBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/> 
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ContentBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ContentBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/>     
-      <h3>
-        <a href="{{site.data.fhir.path}}messageheader.html">MessageHeader</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-messageheader.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="MessageHeader-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of MessageHeader instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/>     
+      <br/>   
     </div>
   </text>
   
@@ -439,29 +295,6 @@
         <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-title"/>
         <type value="string"/>
       </searchParam>
-    </resource>
-    <resource>
-      <type value="Bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
-      </interaction>
-    </resource>
-    <resource>
-      <type value="MessageHeader"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a MessageHeader instance."/>
-      </interaction>
     </resource>
     <operation>
        <name value="process-message"/> 
