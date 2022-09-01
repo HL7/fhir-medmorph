@@ -96,7 +96,7 @@ This MedMorph RA IG defines common requirements and generalized capability state
     	   <a href="trustservices.html">Report Creation</a> <br/>
     	   <a href="reportsubmission.html">Data Submission and Response Receiving</a> <br/>
     	</td>
-    <td><a href="CapabilityStatement-medmorph-healthdata-exchange-app.html">HDEA Capability Statement Example</a></td>
+    <td><a href="CapabilityStatement-medmorph-healthdata-exchange-app-client.html">HDEA Capability Statement Example</a></td>
   </tr>
   <tr>
     <td/>

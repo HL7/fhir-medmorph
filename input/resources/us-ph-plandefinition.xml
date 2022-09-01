@@ -57,6 +57,39 @@
             </type>
             <mustSupport value="true"/>
         </element>
+        <element id="PlanDefinition.extension:contentEncrypted">
+            <path value="PlanDefinition.extension"/>
+            <sliceName value="contentEncrypted"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.extension:jwksForContentEncryption">
+            <path value="PlanDefinition.extension"/>
+            <sliceName value="jwksForContentEncryption"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-jwks-url"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.extension:contentEncryptionAlgorithm">
+            <path value="PlanDefinition.extension"/>
+            <sliceName value="contentEncryptionAlgorithm"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encryption-algorithm"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
         <element id="PlanDefinition.extension:expectedResponseDuration">
             <path value="PlanDefinition.extension"/>
             <sliceName value="expectedResponseDuration"/>
@@ -120,6 +153,17 @@
             <short value="All constraints on action are intended to apply to any nested constraints."/>
             <min value="0"/>
             <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action.extension:trustServiceEndpoint">
+            <path value="PlanDefinition.action.extension"/>
+            <sliceName value="trustServiceEndpoint"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-trust-service-endpoint"/>
+            </type>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action.description">

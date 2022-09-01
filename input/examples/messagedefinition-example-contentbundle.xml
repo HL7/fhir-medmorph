@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MessageDefinition xmlns="http://hl7.org/fhir">
+  <id value="messagedefinition-example-contentbundle"/> 
+  <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messagedefinition"/>
+  </meta>
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Sample MedMorph Message : Cancer Report Message</p> 
+    </div> 
+  </text> 
+  <eventCoding> 
+    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
+    <code value="cancer-report-message"/> 
+  </eventCoding> 
+  <category value="notification"/>
+  <focus> 
+    <code value="Bundle"/> 
+    <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/> 
+    <min value="1"/> 
+    <max value="1"/> 
+  </focus>
+</MessageDefinition>

@@ -89,6 +89,14 @@ For example, the level of detail that should be documented in this section of th
 
 * The security mechanisms to be used to interact with the Data Source (e.g., SMART on FHIR Backend Services Authorization or other mechanisms) should be identified in this section.
 
+### Capturing Trust Service Provider Requirements in a Content IG
+
+For each use case, the Trust Service Provider requirements have to be analyzed and captured. If the Data Receiver does not have the authorities or policies to receive PHI/PII data, then the HDEA will have to use the Trust Service Provider to appropriately de-identify, anonymize or psuedonymize the data as needed. For more information on the trust services please refer to the reading material on [Trust Service Provider Requirements](trustservices.html).
+
+Content IG authors should identify the specific data elements which needs to be de-identified or anonymized or psuedonymized per the use case requirements. 
+
+NOTE: Data Receivers may create generalized trust services that can be used by health care organizations with appropriate authorities and policies and may provide endpoints to use these services by health care organizations. 
+
 
 ### Capturing Data Receiver Requirements in a Content IG
 
@@ -107,6 +115,12 @@ The data submission requirements must be documented in this section. This includ
 ### Capturing the Knowledge Artifact Requirements in a Content IG
 
 * Refer to [Provisioning workflow specifications](provisioning.html) on how to create a Knowledge Artifact. 
+
+The following are examples of Knowledge Artifacts that have been created in conformance with the MedMorph RA IG.
+
+* [Central Cancer Registry Reporting Knowledge Artifact example](http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan/StructureDefinition-ccrr-plandefinition.html)
+* [Health Care Survey Reporting Knowledge Artifact example](http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan/StructureDefinition-hcs-plandefinition.html)
+* [Research data extraction Knowledge Artifact example](http://hl7.org/fhir/us/medmorph-research-dex/2022Jan/StructureDefinition-medmorph-research-dex-plandefinition.html)
 
 ### Dealing with CodeSystems and ValueSets
 

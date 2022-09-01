@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Organization xmlns="http://hl7.org/fhir">
   <id value="example-pha-org"/>
+  <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2022-07-29T23:37:47.365+00:00"/>
+        <source value="#YCkzCMwHIRSF9qF9"/>
+        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-organization"/>
+    </meta>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml"><p> Public Health Organization</p> 

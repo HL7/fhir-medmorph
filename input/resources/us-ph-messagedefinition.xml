@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="us-ph-messagedefinition"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
+        <source value="#DggdH1djbgWRgxnJ"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messagedefinition"/>
+    <version value="0.1.0"/>
+    <name value="USPublicHealthMessageDefinition"/>
+    <title value="US Public Health MessageDefinition"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-09-01"/>
+    <publisher value="HL7 International - Public Health Work Group"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="This is the MessageDefinition Resource profile for the IG."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MessageDefinition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageDefinition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MessageDefinition">
+            <path value="MessageDefinition"/>
+            <short value="US Public Health MessageDefinition"/>
+            <definition value="Sets expectations for supported capabilities for MessageDefinition resource for public health."/>
+            <mustSupport value="false"/>
+        </element>       
+        <element id="MessageDefinition.event[x]">
+            <path value="MessageDefinition.event[x]"/>
+            <short value="Types of messages being sent between systems"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="US Public Health Message Types ValueSet"/>
+                <valueSet value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-message-types"/>
+            </binding>
+        </element>
+        <element id="MessageDefinition.category">
+            <path value="MessageDefinition.category"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageDefinition.focus">
+            <path value="MessageDefinition.focus"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageDefinition.focus.code">
+            <path value="MessageDefinition.focus.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageDefinition.focus.profile">
+            <path value="MessageDefinition.focus.profile"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

@@ -126,7 +126,7 @@ The Knowledge Artifact Repository actor SHALL support the PlanDefinition creatio
 
 #### HDEA Specific Requirements 
 
-* The HDEA actor SHALL support the Knowledge Artifact retrieval and search mechanisms as identified in the [HDEA Capability Statement Example](CapabilityStatement-medmorph-healthdata-exchange-app.html).
+* The HDEA actor SHALL support the Knowledge Artifact retrieval and search mechanisms as identified in the [HDEA Capability Statement Example](CapabilityStatement-medmorph-healthdata-exchange-app-client.html).
 
 * The HDEA SHALL be capable of processing the PlanDefinition instances specified in the Knowledge Artifact and creating Subscriptions in the Data Source based on the named-events specified in the PlanDefinition.action.trigger elements.
 

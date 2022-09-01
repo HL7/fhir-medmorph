@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
-  <id value="medmorph-healthdata-exchange-app"/>
+  <id value="medmorph-healthdata-exchange-app-client"/>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>Health Data Exchange App  (HDEA) - (MedMorph backend services app)</h2>
+      <h2>Health Data Exchange App  (HDEA) Client Application - (MedMorph backend services app)</h2>
       <p>(Requirements Definition Capability Statement)</p>
-      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-healthdata-exchange-app</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-healthdata-exchange-app-client</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This CapabilityStatement defines the expected capabilities of the HDEA actor when conforming to the MedMorph IG.  
+      <p>This CapabilityStatement defines the expected capabilities of the HDEA actor when conforming to the MedMorph IG and acting as a client initiating the interactions with both the Data Source and the Data Receivers/TTP.  
       This actor is responsible for consuming Knowledge Artifacts created by Public Health Agencies and/or Research Organizations, subscribing to topics in Data Sources using Named Events, Creating the submission reports and finally submitting the reports to the Data Receiver. </p>
       <h2>General</h2>
       <div class="table-wrapper">
@@ -93,72 +93,6 @@
               <td>
                  <a title="Allows deletion of a specific Subscription Resource instance version" href="#Subscription-delete">SHALL</a>
               </td>
-            </tr>
-            <tr>
-              <th>Reporting Bundle (<a href="StructureDefinition-us-ph-reporting-bundle.html">Profile</a>)</th>
-              <td>
-             
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific Reporting Bundle Resource instance " href="#ReportingBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            <tr>
-              <th>Content Bundle (<a href="StructureDefinition-us-ph-content-bundle.html">Profile</a>)</th>
-              <td>
-             
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific content Bundle Resource instance " href="#ContentBundle-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
-            </tr>
-            <tr>
-              <th>MessageHeader (<a href="StructureDefinition-us-ph-messageheader.html">Profile</a>)</th>
-              <td>
-             
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific MessageHeader Resource instance " href="#MessageHeader-create">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td/>
             </tr>
           </tbody>
         </table>
@@ -332,101 +266,39 @@
         </table>
       </div>
       <br/>
-      <br/> 
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-reporting-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ReportingBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ReportingBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
+      <br/>      
+      
+      <h3>FHIR Operations summary</h3>
+        <p>The HDEA SHALL be capable of invoking these operations passing and collecting FHIR resources</p>
+      
+      <ul>
+        <li>
+          <a href="OperationDefinition-Bundle-pseudonymize.html">Bundle pseudonymize</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-anonymize.html">Bundle anonymize</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-de-identify.html">Bundle de-identify</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-re-identify.html">Bundle re-identify</a>
+        </li>
+        <li>
+          <a href="OperationDefinition-Bundle-hash.html">Bundle hash</a>
+        </li>
+        <li>
+        <a href="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message">process-message</a>
+        </li>
+      </ul>
       <br/>
-      <br/> 
-      <h3>
-        <a href="{{site.data.fhir.path}}bundle.html">Bundle</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-content-bundle.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="ContentBundle-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of ContentBundle instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/>     
-      <h3>
-        <a href="{{site.data.fhir.path}}messageheader.html">MessageHeader</a>
-      </h3>
-      <p>Profile: <a href="StructureDefinition-us-ph-messageheader.html">http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader</a>
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="MessageHeader-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of MessageHeader instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/>     
     
     </div>
   </text>
   
-  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-healthdata-exchange-app"/>
-  <name value="HealthDataExchangeApp"/>
-  <title value="Health Data Exchange App (HDEA) - (MedMorph backend services app)"/>
+  <url value="http://hl7.org/fhir/us/medmorph/CapabilityStatement/medmorph-healthdata-exchange-app-client"/>
+  <name value="HealthDataExchangeAppClientMode"/>
+  <title value="Health Data Exchange App (HDEA) Client Application - (MedMorph backend services app)"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International - Public Health Work Group"/>
@@ -436,7 +308,7 @@
       <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
     </telecom>
   </contact>
-  <description value="This CapabilityStatement defines the expected capabilities of the HDEA actor when conforming to the MedMorph RA IG."/>
+  <description value="This CapabilityStatement defines the expected capabilities of the HDEA actor when conforming to the MedMorph RA IG and playing the role of a client initiating the interactions with both Data Sources and Data Receivers/TTP."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
@@ -538,13 +410,6 @@
       <type value="Bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
       <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Reporting or Content Bundle instance."/>
-      </interaction>
       <operation>
         <name value="pseudonymize"/> 
         <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-pseudonymize"/>
@@ -561,17 +426,6 @@
         <name value="re-identify"/> 
         <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/Bundle-re-identify"/>
       </operation>
-    </resource>
-    <resource>
-      <type value="MessageHeader"/>
-      <supportedProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a MessageHeader instance."/>
-      </interaction>
     </resource>
     <operation>
        <name value="process-message"/> 

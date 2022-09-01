@@ -52,17 +52,6 @@
             </type>
             <mustSupport value="true"/>
         </element>
-        <element id="MessageHeader.extension:messageProcessingCategory">
-            <path value="MessageHeader.extension"/>
-            <sliceName value="messageProcessingCategory"/>
-            <min value="1"/>
-            <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-message-processing-category-extension"/>
-            </type>
-            <mustSupport value="true"/>
-        </element>
         <element id="MessageHeader.extension:reportInitiationType">
             <path value="MessageHeader.extension"/>
             <sliceName value="reportInitiationType"/>
@@ -160,6 +149,16 @@
             <path value="MessageHeader.response.details"/>
             <min value="0"/>
             <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.definition">
+            <path value="MessageHeader.definition"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="canonical"/>
+                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messagedefinition"/>
+            </type>
             <mustSupport value="true"/>
         </element>
     </differential>

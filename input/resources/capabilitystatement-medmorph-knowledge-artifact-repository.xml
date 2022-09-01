@@ -72,6 +72,26 @@
               </td>
               <td/>
             </tr>
+            <tr>
+              <th>ValueSets, Library, Endpoint, Bundle (Knowledge Artifact Supporting Resources)</th>
+              <td>
+              </td>
+              <td>
+              </td>
+              <td>
+              </td>
+              <td>               
+              </td>
+              <td>
+              </td>
+              <td>
+                <a title="Allows creation of a Knowledge Artifact Supporting Resources - Valuesets, Libraries, Bundles, Endpoint">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows update of Knowledge Artifact Supporting Resources - Valuesets, Libraries, Bundles, Endpoint">SHALL</a>
+              </td>
+              <td/>
+            </tr>
           </tbody>
         </table>
       </div>

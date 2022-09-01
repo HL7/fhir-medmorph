@@ -139,26 +139,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MessageDefinition/messagedefinition-example-contentbundle"/>
+      </reference>
+      <name value="Message Definition example used to define a cancer report message."/>
+      <description value="Message Definition example used to define a cancer report message."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/valueset-cancer-trigger-codes-example"/>
       </reference>
       <name value="ValueSet example for Cancer Reporting"/>
       <description value="An example showing a ValueSet for Cancer reporting"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Group/group-example-research"/>
-      </reference>
-      <name value="Group example showing patients participating in research at a healthcare organization"/>
-      <description value="Group example showing patients participating in research at a healthcare organization"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Group/group-example-survey"/>
-      </reference>
-      <name value="Group example showing Providers participating in healthcare surveys"/>
-      <description value="Group example showing Providers participating in healthcare surveys"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

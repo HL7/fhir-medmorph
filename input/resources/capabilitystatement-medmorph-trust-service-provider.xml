@@ -27,8 +27,7 @@
       </div>
       <h2>REST  behavior</h2>
       <p>The primary focus of the Trust Service Provider is to provide trust services which include Pseudonymization, Anonymization, De-identification and Re-identification.
-      Additional information on trust services from CDC can be found <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02_143.pdf">here.</a>
-      Additional information on trust services from NIST can be found <a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf">here.</a>
+      For additional reading material on trust services, refer to [Trust Service Requirements](trustservices.html).    
       </p>
       <p>
         <b>Security:</b>
