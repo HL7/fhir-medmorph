@@ -176,8 +176,6 @@
             <system
                     value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
             <code value="program"/>
-            <!-- ERROR in Build Tool, pulling wrong display string -->
-         <!--   <display value="Program"/> -->
           </code>
           <valueCodeableConcept>
             <coding>
@@ -206,14 +204,6 @@
                   <display value="Abdominothoracic neuroblastoma"/>
                </concept>
           </include>
-       <!-- ERROR in Build Tool, not recognizing icd-10-cm codes
-         <include>
-            <system value="http://hl7.org/fhir/sid/icd-10"/>
-              <concept>
-                  <code value="C44.101"/>
-                  <display value="Unspecified malignant neoplasm of skin of unspecified eyelid, including ?canthus (C44.101)"/>
-               </concept>
-          </include> -->
          </compose>
       </ValueSet>
     </resource>

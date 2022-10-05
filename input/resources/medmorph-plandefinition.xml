@@ -91,14 +91,14 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <definition value="Defines extensions for the action." />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="PlanDefinition.action.input.extension:fhirquerypattern">
       <path value="PlanDefinition.action.input.extension" />
-      <sliceName value="us-ph-fhirquerypattern-extension" />
+      <sliceName value="fhirquerypattern" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -112,6 +112,24 @@
       <min value="1" />
       <max value="1" />
       <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.input.extension:relateddata">
+      <path value="PlanDefinition.action.input.extension" />
+      <sliceName value="relateddata" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.input.extension:relateddata.url">
+      <path value="PlanDefinition.action.input.extension.url" />
+      <min value="1" />
+      <max value="1" />
+      <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension" />
       <mustSupport value="true" />
     </element>
     <element id="PlanDefinition.action.relatedAction.offsetDuration">
@@ -351,7 +369,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="2" />
+      <min value="1" />
     </element>
 
     <element id="PlanDefinition.action:executeReportingWorkflow.action:isEncounterReportable">

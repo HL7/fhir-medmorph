@@ -13,7 +13,7 @@
         </div>
   </text>
   <identifier>
-    <system value="http://example.pha.org/fhir"/>
+    <system value="http://example.org/fhir"/>
     <value value="1063494177"/>
   </identifier>
   <active value="true"/>

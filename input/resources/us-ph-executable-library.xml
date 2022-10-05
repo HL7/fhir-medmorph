@@ -79,9 +79,8 @@
             <max value="1"/>
             <type>
                 <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablelibrary"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-executable-valueset"/>
             </type>
             <mustSupport value="true"/>
         </element>

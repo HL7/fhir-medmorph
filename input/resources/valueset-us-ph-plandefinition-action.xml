@@ -6,6 +6,7 @@
   <name value="USPublicHealthPlanDefinitionAction"/>
   <title value="US Public Health PlanDefinition Action"/>
   <status value="active"/>
+  <experimental value="true"/>
   <date value="2020-09-06"/>
   <publisher value="HL7 Public Health WG"/>
 	<contact>

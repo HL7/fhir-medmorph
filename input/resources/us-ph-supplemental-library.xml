@@ -132,50 +132,26 @@
             <min value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Library.relatedArtifact:sliceComputableLibrary">
+        <element id="Library.relatedArtifact:sliceSupplementalValueSet">
             <path value="Library.relatedArtifact"/>
-            <sliceName value="sliceComputableLibrary"/>
-            <short value="US Public Health Computable Library"/>
-            <definition value="Reference to a US Public Health Computable Library"/>
+            <sliceName value="sliceSupplementalValueSet"/>
+            <short value="US Public Health Triggering ValueSet"/>
+            <definition value="Reference to a US Public Health Supplemental ValueSet"/>
             <min value="1"/>
-            <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Library.relatedArtifact:sliceComputableLibrary.type">
+        <element id="Library.relatedArtifact:sliceSupplementalValueSet.type">
             <path value="Library.relatedArtifact.type"/>
             <short value="composed-of"/>
             <definition value="The type of relationship to the related artifact. Fixed to composed-of."/>
             <patternCode value="composed-of"/>
         </element>
-        <element id="Library.relatedArtifact:sliceComputableLibrary.resource">
+        <element id="Library.relatedArtifact:sliceSupplementalValueSet.resource">
             <path value="Library.relatedArtifact.resource"/>
             <min value="1"/>
             <type>
                 <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-computable-library"/>
-            </type>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Library.relatedArtifact:sliceSupplementalValueSetLibrary">
-            <path value="Library.relatedArtifact"/>
-            <sliceName value="sliceSupplementalValueSetLibrary"/>
-            <short value="US Public Health Triggering ValueSet Library"/>
-            <definition value="Reference to a US Public Health Triggering ValueSet Library"/>
-            <min value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Library.relatedArtifact:sliceSupplementalValueSetLibrary.type">
-            <path value="Library.relatedArtifact.type"/>
-            <short value="composed-of"/>
-            <definition value="The type of relationship to the related artifact. Fixed to composed-of."/>
-            <patternCode value="composed-of"/>
-        </element>
-        <element id="Library.relatedArtifact:sliceSupplementalValueSetLibrary.resource">
-            <path value="Library.relatedArtifact.resource"/>
-            <min value="1"/>
-            <type>
-                <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-supplemental-valueset-library"/>
+                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-supplemental-valueset"/>
             </type>
             <mustSupport value="true"/>
         </element>

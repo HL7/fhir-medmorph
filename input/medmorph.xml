@@ -123,10 +123,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="PlanDefinition/plandefinition-cancer-example"/>
+        <reference value="PlanDefinition/medmorph-plandefinition-example"/>
       </reference>
-      <name value="Plan Definition example for Cancer Reporting"/>
-      <description value="An example showing a Plan Definition for Cancer reporting"/>
+      <name value="Plan Definition example for MedMorph"/>
+      <description value="An example showing a Plan Definition for reporting use cases"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -151,6 +151,46 @@
       </reference>
       <name value="ValueSet example for Cancer Reporting"/>
       <description value="An example showing a ValueSet for Cancer reporting"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/us-ph-triggering-valueset-chlamydia-example"/>
+      </reference>
+      <name value="ValueSet example for a Triggering Valueset"/>
+      <description value="An example showing a Triggering Valueset"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Library/us-ph-triggering-valueset-library-example"/>
+      </reference>
+      <name value="ValueSet example for a Triggering Valueset Library"/>
+      <description value="An example showing a Triggering Valueset Library"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Library/us-ph-supplemental-library-example"/>
+      </reference>
+      <name value="An example for a Supplemental Library"/>
+      <description value="An example showing a Supplemental Library"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/us-ph-executable-valueset-chlamydia-example"/>
+      </reference>
+      <name value="ValueSet example for a Executable Valueset"/>
+      <description value="An example showing a Executable Valueset"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/us-ph-valueset-chlamydia-example"/>
+      </reference>
+      <name value="ValueSet example for a US PH Valueset"/>
+      <description value="An example showing a US PH Valueset"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

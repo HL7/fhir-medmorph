@@ -83,9 +83,8 @@
             <max value="1"/>
             <type>
                 <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablelibrary"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+                <targetProfile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-computable-valueset"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -113,7 +112,7 @@
             <sliceName value="cqlContent"/>
             <short value="CQL Content"/>
             <definition value="The CQL content represented as base-64 encoded data."/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
             <mustSupport value="false"/>
         </element>

@@ -1,0 +1,106 @@
+{
+  "resourceType" : "Library",
+  "id" : "us-ph-supplemental-library-example",
+  "meta" : {
+    "versionId" : "4",
+    "lastUpdated" : "2022-07-29T23:37:47.364+00:00",
+    "source" : "#I9GJEoGXKxtMVsat",
+    "profile" : [
+      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-supplemental-library"
+    ]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>composed-of</td><td><a href=\"ValueSet-us-ph-supplemental-valueset-example.html\">US Public Health Supplemental Valueset Example</a></td></tr></table><h2>Contents</h2></div>"
+  },
+  "url" : "http://hl7.org/fhir/us/medmorph/Library/us-ph-supplemental-library-example",
+  "identifier" : [
+    {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.114222.4.11.11111"
+    }
+  ],
+  "version" : "1.0.0-ballot",
+  "name" : "USPublicHealthSupplementalLibraryExample",
+  "title" : "US Public Health Supplemental Library Example",
+  "status" : "active",
+  "experimental" : true,
+  "type" : {
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "code" : "asset-collection"
+      }
+    ]
+  },
+  "date" : "2022-08-05T18:57:38+00:00",
+  "publisher" : "HL7 Public Health Work Group (http://www.hl7.org/Special/committees/pher/index.cfm)",
+  "contact" : [
+    {
+      "name" : "HL7 International - Public Health",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "http://www.hl7.org/Special/committees/pher"
+        }
+      ]
+    }
+  ],
+  "description" : "Description of library",
+  "useContext" : [
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-usage-context-type",
+        "code" : "reporting",
+        "display" : "Reporting"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-usage-context",
+            "code" : "supplemental",
+            "display" : "Supplemental"
+          }
+        ]
+      }
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-usage-context-type",
+        "code" : "specification-type",
+        "display" : "Specification Type"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-usage-context",
+            "code" : "program",
+            "display" : "Program"
+          }
+        ]
+      }
+    }
+  ],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }
+      ],
+      "text" : "United States of America"
+    }
+  ],
+  "purpose" : "Purpose of library",
+  "effectivePeriod" : {
+    "start" : "2020-11-01"
+  },
+  "relatedArtifact" : [
+    {
+      "type" : "composed-of",
+      "resource" : "http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-supplemental-valueset-example"
+    }
+  ]
+}
