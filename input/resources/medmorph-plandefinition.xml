@@ -354,7 +354,8 @@
     </element>
     <element id="PlanDefinition.action:executeReportingWorkflow.action:isEncounterReportable.code">
       <path value="PlanDefinition.action.action.code" />
-      <min value="1" />
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions" />
@@ -422,6 +423,8 @@
     </element>
     <element id="PlanDefinition.action:createReport.code">
       <path value="PlanDefinition.action.code" />
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions" />
@@ -463,6 +466,8 @@
     </element>
     <element id="PlanDefinition.action:validateReport.code">
       <path value="PlanDefinition.action.code" />
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions" />
@@ -514,6 +519,8 @@
     </element>
     <element id="PlanDefinition.action:routeAndSendReport.code">
       <path value="PlanDefinition.action.code" />
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions" />
