@@ -3,6 +3,7 @@
    "id":"medmorph-plandefinition-example",
    "meta":{
       "profile":[
+      	"http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition",
          "http://hl7.org/fhir/us/medmorph/StructureDefinition/medmorph-plandefinition"
       ]
    },
@@ -10,6 +11,16 @@
       "status":"extensions",
       "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>MedMorph PlanDefinition Example</b></p></div>"
    },
+   "extension":[
+       {
+           "url":"http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-jwks-url",
+            "valueUrl" : "http://example.org/jwks/123"
+       },
+       {
+           "url":"http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encryption-algorithm",
+            "valueCode" : "RSA384"
+       }
+   ],
    "url":"http://hl7.org/fhir/us/medmorph/StructureDefinition/medmorph-plandefinition-example",
    "version":"2.0.0",
    "name":"MedMorphPlanDefinitionExample",
@@ -548,6 +559,52 @@
             {
                "actionId":"validate-report",
                "relationship":"before-start"
+            }
+         ],
+         "action":[
+            {  
+               "extension":[
+                  {
+                     "url":"http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-trust-service-endpoint",
+                     "valueReference" : {
+		              	"reference" : "Endpoint/example-ph-endpoint"
+		            }
+                  }
+               ],
+               "id":"anonymize-report",
+               "description":"This action is used to anonymize a identifiable report",
+               "textEquivalent":"Anonymize the report.",
+               "code":[
+                  {
+                     "coding":[
+                        {
+                           "system":"http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                           "code":"anonymize-report"
+                        }
+                     ]
+                  }
+               ],
+               "input":[
+                  {
+                     "id":"report-to-be-anonymized",
+                     "extension":[
+                        {
+                           "url":"http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension",
+                           "valueString":"output-report"
+                        }
+                     ],
+                     "type":"Bundle"
+                  }
+                ],
+                "output":[
+	            	{
+		               "id":"anonymized-report",
+		               "type":"Bundle",
+		               "profile":[
+		                  "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"
+		               ]
+	            	}
+         		]
             }
          ]
       },

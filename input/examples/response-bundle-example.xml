@@ -29,9 +29,6 @@
         <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension">
                       <valueBoolean value="false"/>
         </extension>
-        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-message-processing-category-extension">
-                      <valueCode value="consequence"/>
-        </extension>
         <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type">
                       <valueCodeableConcept>
                       <coding> 

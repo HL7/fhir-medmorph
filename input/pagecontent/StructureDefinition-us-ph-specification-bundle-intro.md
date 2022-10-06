@@ -18,10 +18,10 @@ Also refer to the [Plan Definition profile](StructureDefinition-us-ph-plandefini
 
 **API : Knowledge Artifact Retrieval:**
 
-The bundles are retrieved using the GET API on the PlanDefinition resource using search parameters. The syntax is as shown below.
+The bundles are retrieved using the GET API on the PlanDefinition resource using $get-kar operation. The syntax is as shown below.
 
 ```
-GET http://<FHIR Server URL>/PlanDefinition?name=<Cancer-Reporting-KA>
+GET http://<FHIR Server URL>/PlanDefinition/[id]/$get-kar
 
 The response of the request will be the Knowlege Artifact returned via a Specification Bundle.
 ```

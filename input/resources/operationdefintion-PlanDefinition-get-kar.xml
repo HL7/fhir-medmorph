@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
+  <id value="PlanDefinition-get-kar"/>
+  <url value="http://hl7.org/fhir/us/medmorph/OperationDefinition/PlanDefinition-get-kar"/>
+  <name value="PlanDefinitionGetKar"/>
+  <title value="Get Knowledge Artifact"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2020-11-19T21:48:56+10:00"/>
+  <publisher value="HL7 International - Public Health Work Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/phwg"/>
+    </telecom>
+  </contact>
+  <description value="The operation is used to retrieve the knowledge artifact associated with the PlanDefinition."/>
+  <code value="get-kar"/>
+  <resource value="PlanDefinition"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The Knowledge Artifact Bundle containing all the related resources will be returned."/>
+    <type value="Bundle"/>
+  </parameter>
+  
+</OperationDefinition>

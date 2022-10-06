@@ -98,14 +98,16 @@
      
         <h3>FHIR Operations summary</h3>
         <p>The following FHIR operations SHALL be supported by the Knowledge Artifact Repository.</p>
-      
+        <p>The following FHIR operations SHALL be supported by the Trusted Third Party.</p>
+     
       <ul>
         <li>
-          <a>None</a>
+          <a href="OperationDefinition-PlanDefinition-get-kar.html">Get Knowledge Artifact Operation</a>
         </li>
       </ul>
       <br/>
       <br/>
+      
       <h3>
         <a href="{{site.data.fhir.path}}plandefinition.html">PlanDefinition</a>
       </h3>
@@ -308,5 +310,9 @@
         <type value="string"/>
       </searchParam>
     </resource>
+    <operation>
+        <name value="get-kar"/> 
+        <definition value="http://hl7.org/fhir/us/medmorph/OperationDefinition/PlanDefinition-get-kar"/>
+      </operation>
   </rest>
 </CapabilityStatement>

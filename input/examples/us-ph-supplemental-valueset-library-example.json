@@ -6,7 +6,7 @@
     "lastUpdated" : "2022-07-29T23:37:47.364+00:00",
     "source" : "#I9GJEoGXKxtMVsat",
     "profile" : [
-      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-supplemental-library"
+      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-supplemental-valueset-library"
     ]
   },
   "text" : {

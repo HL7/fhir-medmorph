@@ -104,7 +104,8 @@ Data Receivers such as PHAs or ROs who receive the data are the actors who creat
 
 #### APIs
 
-The APIs that can be used to create, update, retrieve, and search for Knowledge Artifacts is specified [Specification Bundle profile](StructureDefinition-us-ph-specification-bundle.html) page.
+The APIs that can be used to retrieve the Knowledge Artifacts is specified on [Specification Bundle profile](StructureDefinition-us-ph-specification-bundle.html) page.
+The APIs to create and update the resources related to the Knowledge Artifacts are specified in the [Knowledge Artifact Repository Capability Statement](CapabilityStatement-medmorph-knowledge-artifact-repository.html)
 
 #### Notifications of Changes in Knowledge Artifacts
 

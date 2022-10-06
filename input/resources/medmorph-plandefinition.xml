@@ -96,42 +96,6 @@
       <definition value="Defines extensions for the action." />
       <mustSupport value="false" />
     </element>
-    <element id="PlanDefinition.action.input.extension:fhirquerypattern">
-      <path value="PlanDefinition.action.input.extension" />
-      <sliceName value="fhirquerypattern" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="PlanDefinition.action.input.extension:fhirquerypattern.url">
-      <path value="PlanDefinition.action.input.extension.url" />
-      <min value="1" />
-      <max value="1" />
-      <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension" />
-      <mustSupport value="true" />
-    </element>
-    <element id="PlanDefinition.action.input.extension:relateddata">
-      <path value="PlanDefinition.action.input.extension" />
-      <sliceName value="relateddata" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="PlanDefinition.action.input.extension:relateddata.url">
-      <path value="PlanDefinition.action.input.extension.url" />
-      <min value="1" />
-      <max value="1" />
-      <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension" />
-      <mustSupport value="true" />
-    </element>
     <element id="PlanDefinition.action.relatedAction.offsetDuration">
       <path value="PlanDefinition.action.relatedAction.offsetDuration" />
       <definition
@@ -479,7 +443,6 @@
       <path value="PlanDefinition.action.relatedAction.relationship" />
       <fixedCode value="before-start" />
     </element>
-
     <element id="PlanDefinition.action:validateReport">
       <path value="PlanDefinition.action" />
       <sliceName value="validateReport" />
@@ -507,21 +470,20 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="PlanDefinition.action:createReport.relatedAction">
+    <element id="PlanDefinition.action:validateReport.relatedAction">
       <path value="PlanDefinition.action.relatedAction" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:createReport.relatedAction.actionId">
+    <element id="PlanDefinition.action:validateReport.relatedAction.actionId">
       <path value="PlanDefinition.action.relatedAction.actionId" />
       <fixedId value="route-and-send-report" />
     </element>
-    <element id="PlanDefinition.action:createReport.relatedAction.relationship">
+    <element id="PlanDefinition.action:validateReport.relatedAction.relationship">
       <path value="PlanDefinition.action.relatedAction.relationship" />
       <fixedCode value="before-start" />
     </element>
-
     <element id="PlanDefinition.action:routeAndSendReport">
       <path value="PlanDefinition.action" />
       <sliceName value="routeAndSendReport" />

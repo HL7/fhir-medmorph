@@ -195,6 +195,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-ph-computable-valueset-example"/>
+      </reference>
+      <name value="ValueSet example for a Computable Valueset"/>
+      <description value="An example showing a Computable Valueset"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/content-bundle-example"/>
       </reference>
       <name value="Example of a Content Bundle containing Patient Data"/>

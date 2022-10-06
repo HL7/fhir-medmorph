@@ -1,19 +1,19 @@
 {
   "resourceType" : "Library",
-  "id" : "us-ph-executable-library-example",
+  "id" : "us-ph-computable-library-example",
   "meta" : {
     "versionId" : "4",
     "lastUpdated" : "2022-07-29T23:37:47.364+00:00",
     "source" : "#I9GJEoGXKxtMVsat",
     "profile" : [
-      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-executable-library"
+      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-computable-library"
     ]
   },
   "text" : {
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>composed-of</td><td><a href=\"ValueSet-us-ph-executable-valueset-chlamydia-example.html\">US Public Health executable Valueset Example</a></td></tr></table><h2>Contents</h2></div>"
   },
-  "url" : "http://hl7.org/fhir/us/medmorph/Library/us-ph-executable-library-example",
+  "url" : "http://hl7.org/fhir/us/medmorph/Library/us-ph-computable-library-example",
   "identifier" : [
     {
       "system" : "urn:ietf:rfc:3986",
@@ -21,8 +21,8 @@
     }
   ],
   "version" : "1.0.0-ballot",
-  "name" : "USPublicHealthExecutableLibraryExample",
-  "title" : "US Public Health Executable Library Example",
+  "name" : "USPublicHealthComputableLibraryExample",
+  "title" : "US Public Health Computable Library Example",
   "status" : "active",
   "experimental" : true,
   "type" : {
@@ -66,7 +66,7 @@
   "relatedArtifact" : [
     {
       "type" : "depends-on",
-      "resource" : "http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-executable-valueset-chlamydia-example"
+      "resource" : "http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-computable-valueset-example"
     }
   ]
 }
