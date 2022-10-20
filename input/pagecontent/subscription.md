@@ -63,4 +63,4 @@ This section identifies a list of all the notification events that could be used
 
 This section in the future will identify specific conformance requirements for Data Sources based on Subscriptions Backport IG when the version compatible with FHIR Release 4.0.1 is available.
 
-**Note**: Some Examples of the Subscription Topics are available on the [FHIR Artifacts](artifacts.html) examples section. Content IGs will define specific Subscription Topics required for the use case in the future.
+**Note**: Content IGs will define specific Subscription Topics required for the use case in the future.
