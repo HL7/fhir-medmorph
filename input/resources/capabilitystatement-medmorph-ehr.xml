@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the Data Source is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs when implementing MedMorph RA and its Content IGs.
+      <p>The primary focus of the Data Source is to notify subscribers based on subscriptions or other events and support US Core APIs when implementing MedMorph RA and its Content IGs.
       This capability statement is an example and an actual Data Source CapabilityStatement will be defined for each use case in its Content IG. This is present here to guide the Content IG creators on how to create a Data Source CapabilityStatement.
       </p>
       <p>
@@ -52,29 +52,6 @@
             </tr>
           </thead>
           <tbody>
-           <tr>
-              <th>Subscription</th>
-              <td>
-              </td>
-              <td>
-                <a title="Allows retrieval of a specific Subscription Resource instances." href="#Subscription-read">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-                <a title="Allows creation of a specific Subscription Resource instance" href="#Subscription-create">SHALL</a>
-              </td>
-              <td>
-                <a title="Allows update of a specific Subscription Resource instance" href="#Subscription-update">SHALL</a>
-              </td>
-			  <td>
-                <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">SHALL</a>
-              </td>
-            </tr>
             <tr>
               <th>US Core APIs</th>
               <td>
@@ -133,62 +110,6 @@
       </ul>
       <br/>
       <br/>
-      <h3>
-        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
-      </h3>
-      <p>Profile: None
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="Subscription-read"> </a>
-                <span>read</span>
-              </th>
-              <td>
-                <p>Allows retrieval of a specific Subscription instance.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="Subscription-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of Subscription instances</p>
-              </td>
-            </tr> 
-            <tr>
-              <th>
-                <a name="Subscription-update"> </a>
-                <span>update</span>
-              </th>
-              <td>
-                <p>Allows Update of Subscription instances</p>
-              </td>
-            </tr> 
-            <tr>
-              <th>
-                <a name="Subscription-delete"> </a>
-                <span>update</span>
-              </th>
-              <td>
-                <p>Allows deletion of Subscription instances</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/> 
       <h3>
         <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
       </h3>
@@ -282,37 +203,6 @@
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
-    <resource>
-      <type value="Subscription"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="read"/>
-        <documentation value="Allows retrieval of a specific Subscription instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Subscription resource instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="update"/>
-        <documentation value="Allows update of a Subscription resource instance."/>
-      </interaction> 
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="delete"/>
-        <documentation value="Allows deletion of a Subscription resource instance."/>
-      </interaction>  
-    </resource>
     <resource>
       <type value="DocumentReference"/>
       <interaction>

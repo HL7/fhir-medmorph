@@ -32,7 +32,7 @@ The following aspects are out-of-scope for the MedMorph RA IG based on the use c
 
 ### Underlying Specifications
 
-This guide is based on the [HL7 FHIR R4]({{site.data.fhir.path}}index.html) standard, as well as [US Core IG]({{site.data.fhir.uscoreR4}}/index.html), [Bulk Data Access IG]({{site.data.fhir.bullkig}}/index.html), [SMART App Launch IG for Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) and the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html) specifications. This IG is intended to maximize the number of clinical systems that can conform to this guide as well as to allow for extensibility of system capabilities in the future.
+This guide is based on the [HL7 FHIR R4]({{site.data.fhir.path}}index.html) standard, as well as [US Core IG]({{site.data.fhir.uscoreR4}}/index.html), [Bulk Data Access IG]({{site.data.fhir.bullkig}}/index.html), [SMART App Launch IG for Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) specifications. This IG is intended to maximize the number of clinical systems that can conform to this guide as well as to allow for extensibility of system capabilities in the future.
 
 Implementers of the MedMorph RA IG must understand some basic information about the underlying specifications listed above.
 
@@ -81,10 +81,6 @@ Implementers should familiarize themselves with these FHIR resources and their p
     <td><a href="{{site.data.fhir.path}}endpoint.html">Endpoint</a></td>
 	<td>Used to represent sender and receiver addresses during data exchange.</td>
   </tr>
-  <tr>
-    <td><a href="{{site.data.fhir.path}}subscription.html">Subscription</a></td>
-	<td>Used to create subscriptions based on trigger events.</td>
-  </tr>
 </table>
 
 
@@ -125,7 +121,7 @@ The MedMorph RA IG uses [SMART App Launch IG for Backend Services Authorization]
 
 #### Relationship between MedMorph RA IG and Subscriptions Backport IG
 
-The MedMorph RA IG uses [Subscriptions Backport IG]({{site.data.fhir.subscriptionsig}}/index.html) to enable content IGs to define specific trigger events using Subscription Topics. These subscription topics will be subscribed to by the HDEA per the Knowledge Artifact. Upon receiving notifications, the HDEA will process the notification and automate the MedMorph workflows without additional provider burden.
+The MedMorph RA IG intends to use the Subscriptions Backport IG to enable content IGs to define specific trigger events using Subscription Topics. These subscription topics will be subscribed to by the HDEA per the Knowledge Artifact. Upon receiving notifications, the HDEA will process the notification and automate the MedMorph workflows without additional provider burden.However currently there is no Subscriptions Backport IG that is compatible with FHIR Release 4.0.1 hence the MedMorph RA IG currently does not include a dependency on the Subscriptions Backport IG, however an STU2 update will be made on MedMorph RA IG when the Subscriptions Backport IG becomes available. 
 
 
 #### Other Existing Public Health IGs contributing to a common US PH Profiles Library

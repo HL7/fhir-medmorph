@@ -45,4 +45,13 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<p>
+
+    #include cross-version-analysis.xhtml
+    <a href="dependency-table.xhtml">Dependency Table</a>
+    <a href="globals-table.xhtml">Globals Table</a>
+    <a href="ip-statements.xhtml">Ip Statements</a>
+
+	</p>
 </div>

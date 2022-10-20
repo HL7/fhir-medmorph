@@ -83,7 +83,7 @@ For example, the level of detail that should be documented in this section of th
 
 * The named event requirements for the use cases have to be selected from the [Named Event Value Set](ValueSet-us-ph-triggerdefinition-namedevent.html). If the events defined are not sufficient for the use case, then the authors should contact the HL7 Public Health (PH) Workgroup (WG) for guidance. 
 
-* The Subscription Topics that will be used based on the named events should be defined per the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
+* The Subscription Topics that will be used based on the named events should be defined per the topics defined in [Subscriptions and Notifications](subscription.html).
 
 * The specific APIs and Operations that need to be supported by the Data Sources should be identified and documented in the Capability Statement and linked from this section.
 

@@ -71,29 +71,6 @@
               </td>
               <td/>
             </tr>
-            <tr>
-              <th>Subscription (<a href="http://hl7.org/fhir/R4/subscription.html">Profile</a>)</th>
-              <td>
-              </td>
-              <td>
-                <a title="Allows retrieval of a specific Subscription Resource instance " href="#Subscription-read">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-             	 <a title="Allows creation of a specific Subscription Resource instance " href="#Subscription-create">SHALL</a>
-              </td>
-              <td>
-              	<a title="Allows Updating of a specific Subscription Resource instance " href="#Subscription-update">SHALL</a>
-              </td>
-              <td>
-                 <a title="Allows deletion of a specific Subscription Resource instance version" href="#Subscription-delete">SHALL</a>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -210,62 +187,6 @@
         </table>
       </div>    
       <br/>
-      <br/>
-      <h3>
-        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
-      </h3>
-      <p>Profile: None
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="Subscription-read"> </a>
-                <span>read</span>
-              </th>
-              <td>
-                <p>Allows retrieval of a specific Subscription instance.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="Subscription-create"> </a>
-                <span>create</span>
-              </th>
-              <td>
-                <p>Allows creation of Subscription instances</p>
-              </td>
-            </tr> 
-            <tr>
-              <th>
-                <a name="Subscription-update"> </a>
-                <span>update</span>
-              </th>
-              <td>
-                <p>Allows Updating of Subscription instances</p>
-              </td>
-            </tr>   
-            <tr>
-              <th>
-                <a name="Subscription-delete"> </a>
-                <span>update</span>
-              </th>
-              <td>
-                <p>Allows Deletion of Subscription instances</p>
-              </td>
-            </tr>   
-          </tbody>
-        </table>
-      </div>
-      <br/>
       <br/>      
       
       <h3>FHIR Operations summary</h3>
@@ -374,37 +295,6 @@
         <definition value="http://hl7.org/fhir/SearchParameter/PlanDefinition-title"/>
         <type value="string"/>
       </searchParam>
-    </resource>
-    <resource>
-      <type value="Subscription"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="read"/>
-        <documentation value="Allows retrieval of a specific Subscription instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows creation of a Subscription instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="update"/>
-        <documentation value="Allows updation of a Subscription instance."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="delete"/>
-        <documentation value="Allows deletion of a Subscription instance."/>
-      </interaction>
     </resource>
     <resource>
       <type value="Bundle"/>

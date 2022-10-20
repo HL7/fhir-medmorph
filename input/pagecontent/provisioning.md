@@ -113,9 +113,7 @@ Knowledge Artifacts get changed from time to time and health care organizations 
 
 * The Knowledge Artifact Repository SHALL support retrieval of Knowledge Artifacts using a GET request.
 
-* The Knowledge Artifact Repository SHOULD allow consumers to subscribe to notifications ensuring they get notified of changes via a REST hook or Email as specified in the [Subscriptions R5 Backport IG]({{site.data.fhir.subscriptionsig}}/index.html).
-
-* The consumers of Knowledge Artifacts MAY choose to either subscribe to notifications of changes or poll the Knowledge Artifact Repository and retrieve the latest information and determine if changes have been made.
+* The consumers of Knowledge Artifacts MAY choose to be notified of changes or poll the Knowledge Artifact Repository and retrieve the latest information and determine if changes have been made.
 
 #### Operationalization of Knowledge Artifacts
 
@@ -128,8 +126,6 @@ The Knowledge Artifact Repository actor SHALL support the PlanDefinition creatio
 #### HDEA Specific Requirements 
 
 * The HDEA actor SHALL support the Knowledge Artifact retrieval and search mechanisms as identified in the [HDEA Capability Statement Example](CapabilityStatement-medmorph-healthdata-exchange-app-client.html).
-
-* The HDEA SHALL be capable of processing the PlanDefinition instances specified in the Knowledge Artifact and creating Subscriptions in the Data Source based on the named-events specified in the PlanDefinition.action.trigger elements.
 
 * The HDEA SHALL be capable of processing FHIR Path Expressions to evaluate Conditions which are specified as part of the PlanDefinition.action.condition elements
 
