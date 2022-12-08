@@ -57,6 +57,13 @@
   		<img src="ThumbNailMedMorphActors.jpg" alt="ThumbNailMedMorphActors"></img>
 	</a>
 	
+	<h3>IG Dependencies</h3>
+  <a name="walkthrough"> </a>
+  <p>
+    This IG depends on FHIR R4 (4.0.1), US Core 3.1.1, Bulk Data IG 1.0.1, SMART App Launch IG 2.0.0 and Subscriptions Backport IG 1.1.0. 
+    The reason for depending on the above specific versions of the specifications and implementation guides is to be compatible with the US regulatory requirements related to USCDI and Cures Update. 
+  </p>
+	
 	<a name="technical"> </a>
 	<h3>IG Sections Overview</h3>
   <a name="walkthrough"> </a>

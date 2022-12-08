@@ -47,24 +47,30 @@
     <version value="2.0.0"/>
   </dependsOn>
   
+  <dependsOn id="subscriptionsIg">
+    <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport"/>
+    <version value="current"/>
+  </dependsOn>
+  
   <definition>
   
- <!-- <resource>
+  <resource>
       <reference>
-        <reference value="Parameters/encounter-start"/>
+        <reference value="Subscription/encounter-end-subscription-example"/>
+      </reference>
+      <name value="Encounter End Subscription Topic Example"/>
+      <description value="Encounter End Subscription Topic Example"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Subscription/encounter-start-subscription-example"/>
       </reference>
       <name value="Encounter Start Subscription Topic Example"/>
       <description value="Encounter Start Subscription Topic Example"/>
       <exampleBoolean value="true"/>
    </resource>
-   <resource>
-      <reference>
-        <reference value="Parameters/encounter-end"/>
-      </reference>
-      <name value="Encounter End Subscription Topic Example"/>
-      <description value="Encounter End Subscription Topic Example"/>
-      <exampleBoolean value="true"/>
-   </resource> -->
   
    <resource>
       <reference>
@@ -298,7 +304,7 @@
       <page>
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <!-- copyright year is a mandatory parameter -->

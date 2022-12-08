@@ -9,7 +9,7 @@
   <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/medmorph-plandefinition" />
   <version value="1.0.0" />
   <name value="MedMorphPlanDefinition" />
-  <title value="MedMorph PlanDefinition example showing how to create the various action slices for a reporting workflow." />
+  <title value="MedMorph PlanDefinition" />
   <status value="active" />
   <experimental value="false" />
   <publisher value="HL7 Public Health Work Group" />

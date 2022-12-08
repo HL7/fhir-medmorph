@@ -32,7 +32,7 @@ The following aspects are out-of-scope for the MedMorph RA IG based on the use c
 
 ### Underlying Specifications
 
-This guide is based on the [HL7 FHIR R4]({{site.data.fhir.path}}index.html) standard, as well as [US Core IG]({{site.data.fhir.uscoreR4}}/index.html), [Bulk Data Access IG]({{site.data.fhir.bullkig}}/index.html), [SMART App Launch IG for Backend Services Authorization]({{site.data.fhir.smartapplaunch}}/backend-services.html) specifications. This IG is intended to maximize the number of clinical systems that can conform to this guide as well as to allow for extensibility of system capabilities in the future.
+This guide is based on the [HL7 FHIR R4]({{site.data.fhir.path}}index.html) standard, as well as [US Core IG]({{site.data.fhir.ver.uscoreR4}}/index.html), [Bulk Data Access IG]({{site.data.fhir.ver.bulkig}}/index.html), [SMART App Launch IG for Backend Services Authorization]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specifications. This IG is intended to maximize the number of clinical systems that can conform to this guide as well as to allow for extensibility of system capabilities in the future.
 
 Implementers of the MedMorph RA IG must understand some basic information about the underlying specifications listed above.
 
@@ -108,11 +108,11 @@ For example, the MedMorph Hep C use case data requirements overlap with the cont
 
 #### Relationship between MedMorph RA IG and US Core FHIR IG  
 
-As shown in Figure 2.1, the MedMorph RA IG is built on other FHIR specifications, including the [US Core IG]({{site.data.fhir.uscoreR4}}/index.html). The MedMorph RA IG will use US Core IG profiles as required for each use case. In addition to the profiles, the patient level FHIR APIs specified in US Core will be leveraged for all public health reporting use cases that leverage the MedMorph RA. The version of the US Core IG referenced is the one widely implemented across the US to support United States Core Data for Interoperability (USCDI) as required in the Office of the National Coordinator (ONC) 21st Century Cures Act certification criteria.
+As shown in Figure 2.1, the MedMorph RA IG is built on other FHIR specifications, including the [US Core IG]({{site.data.fhir.ver.uscoreR4}}/index.html). The MedMorph RA IG will use US Core IG profiles as required for each use case. In addition to the profiles, the patient level FHIR APIs specified in US Core will be leveraged for all public health reporting use cases that leverage the MedMorph RA. The version of the US Core IG referenced is the one widely implemented across the US to support United States Core Data for Interoperability (USCDI) as required in the Office of the National Coordinator (ONC) 21st Century Cures Act certification criteria.
 
 #### Relationship between MedMorph RA IG and FHIR Bulk Data Access IG
  
-For research use cases and potentially some public health use cases, specifically when data about multiple patients is needed but does not require real-time reporting, MedMorph will leverage the [Bulk Data Access IG]({{site.data.fhir.bulkig}}/index.html). The Bulk Data Access IG is used to retrieve population level information from EHRs, subject to applying appropriate authorities and policies. The version of the Bulk Data Access IG referenced is the one being widely implemented across the US to support USCDI required in the ONC 21<sup>st</sup> Century Cures Act certification criteria.
+For research use cases and potentially some public health use cases, specifically when data about multiple patients is needed but does not require real-time reporting, MedMorph will leverage the [Bulk Data Access IG]({{site.data.fhir.ver.bulkig}}/index.html). The Bulk Data Access IG is used to retrieve population level information from EHRs, subject to applying appropriate authorities and policies. The version of the Bulk Data Access IG referenced is the one being widely implemented across the US to support USCDI required in the ONC 21<sup>st</sup> Century Cures Act certification criteria.
 
 
 #### Relationship between MedMorph RA IG and SMART App Launch IG
@@ -121,7 +121,7 @@ The MedMorph RA IG uses [SMART App Launch IG for Backend Services Authorization]
 
 #### Relationship between MedMorph RA IG and Subscriptions Backport IG
 
-The MedMorph RA IG intends to use the Subscriptions Backport IG to enable content IGs to define specific trigger events using Subscription Topics. These subscription topics will be subscribed to by the HDEA per the Knowledge Artifact. Upon receiving notifications, the HDEA will process the notification and automate the MedMorph workflows without additional provider burden.However currently there is no Subscriptions Backport IG that is compatible with FHIR Release 4.0.1 hence the MedMorph RA IG currently does not include a dependency on the Subscriptions Backport IG, however an STU2 update will be made on MedMorph RA IG when the Subscriptions Backport IG becomes available. 
+The MedMorph RA IG intends to use the [Subscriptions Backport IG]({{site.data.fhir.ver.subscriptionsIg}})/index.html) to enable content IGs to define specific trigger events using Subscription Topics. These subscription topics will be subscribed to by the HDEA per the Knowledge Artifact. Upon receiving notifications, the HDEA will process the notification and automate the MedMorph workflows without additional provider burden.However currently there is no Subscriptions Backport IG that is compatible with FHIR Release 4.0.1 hence the MedMorph RA IG currently does not include a dependency on the Subscriptions Backport IG, however an STU2 update will be made on MedMorph RA IG when the Subscriptions Backport IG becomes available. 
 
 
 #### Other Existing Public Health IGs contributing to a common US PH Profiles Library

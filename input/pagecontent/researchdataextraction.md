@@ -9,7 +9,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * The Data Source system SHALL support all resource types available in the Data Source related to Patient compartment for the [base]/Group/[id]/$export?_type parameter.
 
-* The Data Source system SHALL support the Bulk Data Request Flow as defined in the [Bulk Data Access IG specification.]({{site.data.fhir.bulkig}}/index.html)
+* The Data Source system SHALL support the Bulk Data Request Flow as defined in the [Bulk Data Access IG specification.]({{site.data.fhir.ver.bulkig}}/index.html)
 
 * The Data Source system MAY support the Bulk Data Delete Request as defined in the Bulk Data Access IG specification.
 
@@ -21,7 +21,7 @@ This section defines the specific conformance requirements for onboarding a data
 
 * When the HDEA does not have appropriate authorization to the data requested, the Data Source system SHALL return OperationOutcome with appropriate error message.
 
-* The Data Source system SHALL support the [US Core profiles]({{site.data.fhir.uscoreR4}}/index.html) to export the content for each patient.
+* The Data Source system SHALL support the [US Core profiles]({{site.data.fhir.ver.uscoreR4}}/index.html) to export the content for each patient.
 
 * The Data Source system SHALL support ```system/*.read`` scope to access data for multiple patients.
 

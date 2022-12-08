@@ -1,0 +1,10 @@
+{
+  "package-id" : "hl7.fhir.us.medmorph",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/us/medmorph/STU1",
+  "milestone" : "false",
+  "status" : "trial-use",
+  "sequence" : "STU1 Release 1",
+  "desc" : "This release is the first release of the MedMorph Reference Architecture which provides the framework and an architecture to use FHIR to support publichealth reporting and research data submission use cases.",
+  "changes" : "changes.html"
+}
