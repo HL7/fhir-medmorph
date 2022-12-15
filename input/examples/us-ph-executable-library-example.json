@@ -11,7 +11,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>composed-of</td><td><a href=\"ValueSet-us-ph-executable-valueset-chlamydia-example.html\">US Public Health executable Valueset Example</a></td></tr></table><h2>Contents</h2></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts </h2><table class=\"grid\"><tr><td>composed-of</td><td><a href=\"ValueSet-us-ph-executable-valueset-chlamydia-example.html\">US Public Health executable Valueset Example</a></td></tr></table><h2>Contents</h2></div>"
   },
   "url" : "http://hl7.org/fhir/us/medmorph/Library/us-ph-executable-library-example",
   "identifier" : [
