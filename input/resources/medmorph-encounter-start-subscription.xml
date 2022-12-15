@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="medmorph-encounter-start-subscription"/>
+    <meta>
+        <versionId value="14"/>
+        <lastUpdated value="2022-07-12T02:03:21.910+00:00"/>
+        <source value="#wufqk4CETLbSXTp3"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/medmorph/StructureDefinition/medmorph-encounter-start-subscription"/>
+    <version value="1.0.0"/>
+    <name value="MedMorphEncounterStartSubscription"/>
+    <title value="MedMorph Encounter Start Subscription"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="HL7 Public Health Work Group"/>
+    <description value="This profile describes the US Public Health Encounter Start Subscription to be used for MedMorph based plandefinition actions."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+        <text value="United States of America"/>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Subscription"/>
+    <baseDefinition value="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Subscription">
+            <path value="Subscription"/>
+            <short value="MedMorph Encounter Start Subscription"/>
+            <definition value="Defines a MedMorph Encounter Start Subscription Topic."/>
+        </element>
+        <element id="Subscription.criteria">
+            <path value="Subscription.criteria"/>
+            <short value="MedMorph Encounter Start Topic URL"/>
+            <definition value="Defines a MedMorph Encounter Start Subscription Topic."/>
+            <patternString value="http://hl7.org/fhir/us/medmorph/SubscriptionTopic/encounter-start"/>
+        </element>
+        <element id="Subscription.criteria.extension:filterCriteria">
+            <path value="Subscription.criteria.extension"/>
+            <sliceName value="filterCriteria"/>
+            <min value="1"/>
+      		<max value="1"/>
+     		<type>
+		        <code value="Extension"/>
+		        <profile
+		                 value="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"/>
+		    </type>
+        </element>
+        <element id="Subscription.criteria.extension:filterCriteria.value">
+            <path value="Subscription.criteria.extension.valueString"/>
+            <min value="1"/>
+      		<max value="1"/>
+     		<type>
+		        <code value="string"/>
+		    </type>
+		    <patternString value="Encounter?status=in-progress"/>
+        </element>
+        <element id="Subscription.channel.type">
+            <path value="Subscription.channel.type"/>
+            <min value="1"/>
+      		<max value="1"/>
+     		<type>
+		        <code value="code"/>
+		    </type>
+		    <fixedCode value="rest-hook"/>
+        </element>
+    </differential>
+</StructureDefinition>
