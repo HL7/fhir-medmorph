@@ -111,6 +111,8 @@ The data submission requirements must be documented in this section. This includ
 
 * The security mechanisms needed to interact with the Data Receiver (e.g., SMART on FHIR Backend Services Authorization, or other mechanisms) should be documented in this section.
 
+* Expectations of the Data Receiver with respect to duplicate data has to be specified in the Content IG and corresponding requirements have to be added to the HDEA in the Content IG.
+
 
 ### Capturing the Knowledge Artifact Requirements in a Content IG
 
