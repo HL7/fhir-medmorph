@@ -49,8 +49,8 @@
   
   <dependsOn id="subscriptionsIg">
     <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
-    <packageId value="hl7.fhir.uv.subscriptions-backport"/>
-    <version value="current"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport.r4"/>
+    <version value="1.1.0"/>
   </dependsOn>
   
   <definition>
