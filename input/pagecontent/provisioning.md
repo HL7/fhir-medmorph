@@ -117,7 +117,7 @@ Knowledge Artifacts get changed from time to time and health care organizations 
 
 #### Operationalization of Knowledge Artifacts
 
-Knowledge Artifacts have to be operationalized by healthcare organizations. Before operationalizing the Knowledge Artifact and processing by the HDEA/ Backend Services App or by a Data Source, healthcare organizations may test and validate the processing of the Knowledge Artifact before reporting to Data Receivers.
+Knowledge Artifacts have to be understood and operationalized by healthcare organizations during implementation. Before operationalizing the Knowledge Artifact and processing by the HDEA (Backend Services App) or by a Data Source (such as EHR) directly, healthcare organizations shall test and validate the processing of the Knowledge Artifact before enabling reporting to Data Receivers. Specific requirements for  healthcare organization to receive a Knowledge Artifact shall be specified in the MedMorph Content IGs.
 
 #### Knowledge Artifact Repository Specific Requirements 
 
