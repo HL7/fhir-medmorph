@@ -35,7 +35,7 @@ This section defines the Actors and Systems that interact within the MedMorph Re
 
 4. __Health Data Exchange App (HDEA)__:  A system that resides within the clinical care setting and performs the reporting functions to public health and/or research registries. The HDEA, MedMorph’s backend services app, uses the information supplied by the knowledge artifact repository along with applicable authorities and policies to determine when reporting needs to be done, what data needs to be reported, how the data needs to be reported, and where the data should be reported. The term “backend service” is used to refer to the fact that the system does not require user intervention to perform reporting. The term “app” is used to indicate that it is like a SMART on FHIR App which can be distributed to clinical care via Data Source (e.g., EHR) vendor-specified processes. The Data Source vendor-specified processes enable the HDEA the ability to use the Data Source's FHIR APIs to access data. The health care organization is responsible for implementing and maintaining the HDEA within the organization.
 
-**NOTE**: The HDEA functionality can be implemented by EHRs themselves.
+	**NOTE**: The HDEA functionality can be implemented by EHRs themselves.
 
 5. __Trust Service Provider__:  Trust Service Provider affords capabilities that can be used to pseudonymize, anonymize, de-identify, hash, or re-link data that is submitted to public health and/or research organizations. These capabilities are called Trust Services. Trust Services are used, when appropriate, by the HDEA.  
 
