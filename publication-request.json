@@ -2,6 +2,7 @@
   "package-id" : "hl7.fhir.us.medmorph",
   "version" : "1.0.0",
   "path" : "http://hl7.org/fhir/us/medmorph/STU1",
+  "mode" : "milestone",
   "milestone" : "true",
   "status" : "trial-use",
   "sequence" : "STU1 Release 1",
