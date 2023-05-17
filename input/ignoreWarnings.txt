@@ -1,4 +1,4 @@
 == Suppressed Messages ==
 
 # This errors have to be ignored because of the way the publisher tooling enables the dependency of the Backport Subsciptions IG for IGs based on FHIR R4.0.1
-# The link 'http://hl7.org/fhir/R4B/extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
+The link 'http://hl7.org/fhir/R4B/extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
