@@ -44,16 +44,23 @@
         <element id="Subscription.criteria.extension:filterCriteria">
             <path value="Subscription.criteria.extension"/>
             <sliceName value="filterCriteria"/>
-            <min value="1"/>
+            <min value="0"/>
       		<max value="1"/>
      		<type>
 		        <code value="Extension"/>
-		        <profile
-		                 value="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"/>
 		    </type>
         </element>
-        <element id="Subscription.criteria.extension:filterCriteria.value">
-            <path value="Subscription.criteria.extension.valueString"/>
+        <element id="Subscription.criteria.extension:filterCriteria.url">
+            <path value="Subscription.criteria.extension.url"/>
+            <min value="1"/>
+      		<max value="1"/>
+     		<type>
+		        <code value="uri"/>
+		    </type>
+		    <fixedUri value="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"/>
+        </element>
+        <element id="Subscription.criteria.extension:filterCriteria.value[x]">
+            <path value="Subscription.criteria.extension.value[x]"/>
             <min value="1"/>
       		<max value="1"/>
      		<type>
