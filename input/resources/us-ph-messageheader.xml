@@ -41,6 +41,18 @@
             <definition value="Sets expectations for supported capabilities for MessageHeader resource for public health."/>
             <mustSupport value="false"/>
         </element>
+        <element id="MessageHeader.extension">
+            <path value="MessageHeader.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="MessageHeader.extension:dataEncrypted">
             <path value="MessageHeader.extension"/>
             <sliceName value="dataEncrypted"/>

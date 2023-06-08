@@ -35,6 +35,18 @@
             <path value="ValueSet"/>
             <short value="US Public Health Executable ValueSet"/>
         </element>
+        <element id="ValueSet.extension">
+            <path value="ValueSet.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="3"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="ValueSet.extension:usageWarning">
             <path value="ValueSet.extension"/>
             <sliceName value="usageWarning"/>

@@ -44,7 +44,7 @@
         <element id="Subscription.criteria.extension:filterCriteria">
             <path value="Subscription.criteria.extension"/>
             <sliceName value="filterCriteria"/>
-            <min value="1"/>
+            <min value="0"/>
       		<max value="1"/>
      		<type>
 		        <code value="Extension"/>
